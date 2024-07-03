@@ -20,4 +20,4 @@ jobs:
           nos: "true"
           validator_cli: "true"
           generate_testscript: "false"
-          generate_plantuml : "true"
+          generate_plantuml : "false"
