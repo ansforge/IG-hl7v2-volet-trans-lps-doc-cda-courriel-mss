@@ -30,9 +30,9 @@ Seul le processus « Transmission de documents reçus par MSS » des spécificat
 Les workflows associés à ce repository (.github/workflows) permettent :
 
 * D'executer Sushi pour vérifier la grammaire
-* De publier les pages : https://ansforge.github.io/IG-hl7v2-volet-transmission-document-cda-r2/{nom de la branche}/ig/
+* De publier les pages : https://ansforge.github.io/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/{nom de la branche}/ig/
 
-Accès à la version ci-build : https://ansforge.github.io/IG-hl7v2-volet-transmission-document-cda-r2/main/ig/
+Accès à la version ci-build : https://ansforge.github.io/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/main/ig/
 
 # Notes
 
