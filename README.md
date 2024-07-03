@@ -40,7 +40,6 @@ Accès à la version ci-build : https://ansforge.github.io/IG-hl7v2-volet-trans-
 
 
 ## Acronymes
-
 <table width="100%">
 <tbody>
 <tr>
@@ -85,26 +84,18 @@ Accès à la version ci-build : https://ansforge.github.io/IG-hl7v2-volet-trans-
 </tr>
 <tr>
 <td width="22%">
-<p><strong>DMP&nbsp;:</strong></p>
-</td>
-<td width="77%">
-<p>Dossier M&eacute;dical Partag&eacute;</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p><strong>DRIM-M&nbsp;: </strong></p>
-</td>
-<td width="77%">
-<p>Data Radiologie Imagerie M&eacute;dicale et M&eacute;decine Nucl&eacute;aire</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p><strong>INS</strong></p>
+<p><strong>INS&nbsp;:</strong></p>
 </td>
 <td width="77%">
 <p>Identit&eacute; Nationale de Sant&eacute;</p>
+</td>
+</tr>
+<tr>
+<td width="22%">
+<p><strong>LPS&nbsp;:</strong></p>
+</td>
+<td width="77%">
+<p>Logiciel Professionnel de Sant&eacute;</p>
 </td>
 </tr>
 <tr>
@@ -141,36 +132,11 @@ Accès à la version ci-build : https://ansforge.github.io/IG-hl7v2-volet-trans-
 </tr>
 <tr>
 <td width="22%">
-<p><strong>ORU&nbsp;: </strong></p>
-</td>
-<td width="77%">
-<p>Unsolicited transmission of an Observation Message</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
 <p><strong>PFI&nbsp;: </strong></p>
 </td>
 <td width="77%">
 <p>Plateforme Interm&eacute;diation</p>
 </td>
 </tr>
-<tr>
-<td width="22%">
-<p><strong>RIS&nbsp;: </strong></p>
-</td>
-<td width="77%">
-<p>Radiology information System</p>
-</td>
-</tr>
-<tr>
-<td width="22%">
-<p><strong>SGL&nbsp;: </strong></p>
-</td>
-<td width="77%">
-<p>Syst&egrave;me de Gestion de Laboratoire</p>
-</td>
-</tr>
 </tbody>
 </table>
-
