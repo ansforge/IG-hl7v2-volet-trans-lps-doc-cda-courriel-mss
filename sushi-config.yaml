@@ -1,14 +1,14 @@
 # Documentation à propos de cette page : https://fshschool.org/docs/sushi/configuration/
 
-id: ans.fhir.fr.[code]
-canonical: https://interop.esante.gouv.fr/ig/fhir/[code] # the last part of canonical and id must be the same
-name: ExampleIG # Should be an acronym
-title: ANS IG Example
+id: ans.hl7v2.fr.trans.cda.mss
+canonical: https://interop.esante.gouv.fr/ig/hl7v2/ans.hl7v2.fr.trans.cda.mss # the last part of canonical and id must be the same
+name: HL7v2_CDAr2 # Should be an acronym
+title: Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté
 publisher:
   name: Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris
   url: https://esante.gouv.fr
 status: draft
-version: 0.1.0 # shall conforms to Semantic Versioning https://fr.wiktionary.org/wiki/SemVer
+version: 1.1.0 # shall conforms to Semantic Versioning https://fr.wiktionary.org/wiki/SemVer
 fhirVersion: 4.0.1
 copyrightYear: 2020+
 releaseLabel: ci-build
@@ -17,34 +17,78 @@ jurisdiction: urn:iso:std:iso:3166#FR "FRANCE"
 parameters:
     shownav: 'true'
 
-
-
 pages:
     index.md:
-        title: Accueil
-    specifications_techniques.md:
-        construction_des_flux.md:
-        st_flux1.md:
-            title: Flux 01
-        st_flux2.md:
-            title: Flux 02
-    autres_ressources.md:
-        title: Autres Ressources
-        securite.md:
-            title: Sécurité
-        downloads.md:
-            title: Téléchargements et usages
+        title: "Accueil"
+    cas-usage.md:
+        title: "Cas d'usage"
+    contexte-metier.md:
+        title: "Organisation du contexte métier"
+    acteurs-transactions.md:
+        title: "Acteurs et transactions"
+    def-proc-collab.md:
+        title: "Définition des processus collaboratifs"
+    identification-flux.md:
+        title: "identification des flux"
+    volume2.md:
+    perimetre-transaction.md:
+        title: "Périmètre de la transaction"
+    role.md:
+        title: "Rôle des acteurs pour cette transaction"
+    standards.md:
+        title: "Choix des standards"
+    evenements-declenchants.md:
+        title: "Evènements déclenchants"
+    interactions-acteurs.md:
+        title: "Interactions entre les Acteurs"
+    profils-messages.md:
+        title: "Profils de messages"
+    regles-gestion-mssante.md:
+        title: "Règles de gestion MSSANTE"
+    testplan.md:
+        title: "Test Plan"
+    issues.md:
+        title: "Issues"
+    meta-dmp-mss.md:
+        title: "Table MetaDMP/MSS"
+    ack-metier-zam.md:
+        title: "Table AckMetierZAM"
+    exemples.md:
+        title: "Exemples de messages"
+    error-codes.md:
+        title: "Error codes"
+    change-log.md:
+        title: "Historique des versions"
+    glossaire.md:
+        title: "Glossaire"
+    download.md:
+        title: "Téléchargements"
+        generation: markdown
 
 menu:
     Accueil: index.html
-    Description des flux:
-        Construction des flux: construction_des_flux.html
-        Flux 01: st_flux1.html
-        Flux 02: st_flux2.html
-    Ressources de conformité: artifacts.html
-    Autres ressources:
-        Sécurité: securite.html
-        Téléchargements et usage: downloads.html
-        "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
-        "Site de l'ANS ": new-tab https://esante.gouv.fr/
-    Documentation: new-tab https://interop.esante.gouv.fr/ig/documentation/
+    Volume 1 - Etude fonctionnelle: 
+        "Cas d'usage": cas-usage.html
+        "Organisation du contexte métier": contexte-metier.html
+        "Acteurs et transactions": acteurs-transactions.html
+        "Définition des processus collaboratifs": def-proc-collab.html
+        "identification des flux": identification-flux.html
+    Volume 2 – Détail des Transactions: 
+        "Volume 2 : Introduction": volume2.html
+        "Périmètre de la transaction": perimetre-transaction.html
+        "Rôle des acteurs pour cette transaction": role.html
+        "Choix des standards": standards.html
+        "Evènements déclenchants": evenements-declenchants.html
+        "Interactions entre les Acteurs": interactions-acteurs.html
+        "Profils de messages": profils-messages.html
+        "Règles de gestion MSSANTE": regles-gestion-mssante.html
+    Volume 3:
+        "Table MetaDMP/MSS": meta-dmp-mss.html
+        "Table AckMetierZAM": ack-metier-zam.html
+        "Exemples de messages": exemples.html
+        "Error Codes": error-codes.html
+        "Glossaire": glossaire.html
+    Test Plan: testplan.html
+    Historique des versions: change-log.html
+    Téléchargements: download.html
+ #   Documentation: new-tab https://interop.esante.gouv.fr/ig/documentation/
