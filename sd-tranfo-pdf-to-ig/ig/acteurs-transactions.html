@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Acteurs et transactions - Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté v1.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style-ans.css"/>
+    <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+<div id="family-nav">
+    <img height="50" alt="HL7 v2" src="assets/images/hl7v2-logo.png"/>
+  </div>
+  <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
+    <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+  </div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Volet Transmission au LPS de documents CDA provenant d&#39;un courriel MSSanté</span>
+            <br/>
+            <span style="display:inline-block;">1.1.0 - ci-build
+
+
+
+  <img alt="France flag" src="assets/images/fra.svg" height="16" title="France"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 1 - Etude fonctionnelle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="cas-usage.html">Cas d&apos;usage</a>
+      </li>
+      <li>
+        <a href="contexte-metier.html">Organisation du contexte métier</a>
+      </li>
+      <li>
+        <a href="acteurs-transactions.html">Acteurs et transactions</a>
+      </li>
+      <li>
+        <a href="def-proc-collab.html">Définition des processus collaboratifs</a>
+      </li>
+      <li>
+        <a href="identification-flux.html">identification des flux</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2 – Détail des Transactions
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="volume2.html">Volume 2 : Introduction</a>
+      </li>
+      <li>
+        <a href="perimetre-transaction.html">Périmètre de la transaction</a>
+      </li>
+      <li>
+        <a href="role.html">Rôle des acteurs pour cette transaction</a>
+      </li>
+      <li>
+        <a href="standards.html">Choix des standards</a>
+      </li>
+      <li>
+        <a href="evenements-declenchants.html">Evènements déclenchants</a>
+      </li>
+      <li>
+        <a href="interactions-acteurs.html">Interactions entre les Acteurs</a>
+      </li>
+      <li>
+        <a href="profils-messages.html">Profils de messages</a>
+      </li>
+      <li>
+        <a href="regles-gestion-mssante.html">Règles de gestion MSSANTE</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 3
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="meta-dmp-mss.html">Table MetaDMP/MSS</a>
+      </li>
+      <li>
+        <a href="ack-metier-zam.html">Table AckMetierZAM</a>
+      </li>
+      <li>
+        <a href="exemples.html">Exemples de messages</a>
+      </li>
+      <li>
+        <a href="error-codes.html">Error Codes</a>
+      </li>
+      <li>
+        <a href="glossaire.html">Glossaire</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="testplan.html">Test Plan</a>
+  </li>
+  <li>
+    <a href="change-log.html">Historique des versions</a>
+  </li>
+  <li>
+    <a href="download.html">Téléchargements</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Acteurs et transactions</b></li>
+
+          <span style="float:right;">
+
+            <a href="contexte-metier.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="def-proc-collab.html">next&gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/hl7v2/ans.hl7v2.fr.trans.cda.mss/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Acteurs et transactions</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#liste-des-acteurs-et-systèmes-concernés" id="markdown-toc-liste-des-acteurs-et-systèmes-concernés">Liste des Acteurs et systèmes concernés</a></li>
+  <li><a href="#diagramme-des-acteurstransactions" id="markdown-toc-diagramme-des-acteurstransactions">Diagramme des Acteurs/Transactions</a></li>
+  <li><a href="#regroupement-requis-des-acteurs" id="markdown-toc-regroupement-requis-des-acteurs">Regroupement requis des Acteurs</a></li>
+</ul>
+
+</div>
+<h3 id="liste-des-acteurs-et-systèmes-concernés">Liste des Acteurs et systèmes concernés</h3>
+
+<p>Le présent volet met en œuvre les Acteurs IHE suivants, représentant le
+rôle joué par un ou plusieurs composants du système d’information :</p>
+<table>
+<tbody>
+<tr>
+<td width="141">
+<p><strong>Acteur&nbsp;:</strong></p>
+</td>
+<td width="508">
+<p><strong>Description&nbsp;:</strong></p>
+</td>
+</tr>
+<tr>
+<td width="141">
+<p>CREATEUR</p>
+</td>
+<td width="508">
+<p>Syst&egrave;me &agrave; l&rsquo;origine de la cr&eacute;ation de document(s). Il transmet au syst&egrave;me GESTIONNAIRE des demandes de transmission initiale/de remplacement/de suppression de document(s) pour publication sur le DMP et/ou envoi vers une ou plusieurs BAL MSSant&eacute;. Le CREATEUR pr&eacute;cise &eacute;galement les retours m&eacute;tiers attendus du DMP et/ou de la MSSant&eacute;.<br /> Le CREATEUR r&eacute;ceptionne, le cas &eacute;ch&eacute;ant, les retours m&eacute;tiers du DMP et/ou de la MSSant&eacute; demand&eacute;s et renvoy&eacute;s par le GESTIONNAIRE (accus&eacute; de r&eacute;ception DMP, accus&eacute; de r&eacute;ception MSSant&eacute; et accus&eacute; de lecture MSSant&eacute;).</p>
+</td>
+</tr>
+<tr>
+<td width="141">
+<p>GESTIONNAIRE</p>
+</td>
+<td width="508">
+<p>Le GESTIONNAIRE r&eacute;ceptionne les demandes de transmission initiale</p>
+<p>/remplacement/suppression de document(s) provenant du CREATEUR et envoie le(s) document(s) vers le DMP et/ou la MSSant&eacute; <sup>(1)</sup> en fonction des informations port&eacute;es par la transaction.</p>
+<p>Le GESTIONNAIRE r&eacute;ceptionne, g&egrave;re et redistribue vers le CREATEUR, le cas &eacute;ch&eacute;ant, les retours m&eacute;tiers provenant du DMP et/ou de la MSSant&eacute;.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Note (1):</strong> l’acteur CREATEUR, relayé par le GESTIONNAIRE peut décider
+d’envoyer un courriel en direction d’une BAL personnelle (par exemple,
+le médecin traitant du patient), d’une BAL organisationnelle (par
+exemple, un cabinet médical en ville, le service de cardiologie de
+l’établissement destinataire) ou d’une BAL applicative (par exemple, la
+BAL applicative du DPI d’un établissement hospitalier destinataire)._</p>
+
+<p>Le tableau suivant liste, pour chacun des acteurs, les systèmes du SIH concernés :</p>
+
+<table>
+<tbody>
+<tr>
+<td width="141">
+<p><strong>Acteur&nbsp;:</strong></p>
+</td>
+<td width="508">
+<p><strong>Syst&egrave;mes concern&eacute;s&nbsp;:</strong></p>
+</td>
+</tr>
+<tr>
+<td width="141">
+<p>CREATEUR</p>
+</td>
+<td width="508">
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Les syst&egrave;mes informatiques de gestion des laboratoires (SGL), de gestion de radiologie (RIS), de gestion de cardiologie (SIC), tout syst&egrave;me du SIH de production de documents pour un patient.</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Les logiciels de dossier patient informatis&eacute; (DPI) en &eacute;tablissement et tout logiciel de sp&eacute;cialit&eacute; cr&eacute;ateur de documents cliniques.</p>
+</td>
+</tr>
+<tr>
+<td width="141">
+<p>GESTIONNAIRE</p>
+</td>
+<td width="508">
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Les Plateformes d&rsquo;Interm&eacute;diation (PFI) qui assurent la transmission de document(s) cliniques vers les services socles.</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Les DRIMBox-Source qui publient sur le DMP le document de r&eacute;f&eacute;rence d&rsquo;objets d&rsquo;examen d&rsquo;imagerie (KOS).</p>
+<p>La DRIMBox-Source g&egrave;re l&rsquo;accus&eacute; technique de la transaction de transmission par le RIS du compte-rendu d&rsquo;imagerie en CDA. Elle transmet ensuite le document KOS correspondant au DMP. L&rsquo;accus&eacute; de r&eacute;ception du document KOS par le DMP n&rsquo;est pas &agrave; transmettre au syst&egrave;me Cr&eacute;ateur de documents.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="diagramme-des-acteurstransactions">Diagramme des Acteurs/Transactions</h3>
+
+<div class="figure">
+    <img src="image12.png" alt="Figure 7" title="Figure 7 : Diagramme des Acteurs/Transactions." style="width:100%;" />
+    <figcaption>Figure 7 : Diagramme des Acteurs/Transactions.</figcaption>
+</div>
+<p><br /></p>
+
+<p>Dans le contexte du SEGUR, le flux Provide&amp;Register Document Set-b (hors
+périmètre de ce volet) est mis en œuvre par :</p>
+
+<ul>
+  <li>
+    <p>La transaction TD2.2 (Alimentation d’un DMP par CPE) ou TD2.1
+(Alimentation du DMP en authentification indirecte) pour une demande
+d’intégration ou de remplacement d’un document dans le DMP,</p>
+  </li>
+  <li>
+    <p>La transaction TD3.3c (Gestion des attributs d’un document) pour une
+demande de suppression d’un document du DMP.</p>
+  </li>
+</ul>
+
+<p>Le tableau ci-dessous représente l’ensemble des acteurs directement
+impliqués dans ce volet ainsi que les transactions entre ces acteurs.</p>
+
+<p>Pour être en conformité avec ce volet, chaque acteur doit supporter les
+transactions obligatoires (R-Required) et peut supporter les
+transactions optionnelles (O-Optional).</p>
+
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="652" style="width:488.8pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td width="113" valign="top" style="width:84.8pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><b><span style="mso-bidi-font-size:10.0pt;
+  color:black;mso-themecolor:text1">Acteur<o:p></o:p></span></b></span></span></span></span></p>
+  </td>
+  
+  <td width="406" valign="top" style="width:304.8pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><b><span style="mso-bidi-font-size:10.0pt;
+  color:black;mso-themecolor:text1">Transaction<o:p></o:p></span></b></span></span></span></span></p>
+  </td>
+  
+  <td width="132" valign="top" style="width:99.2pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" align="center" style="margin-bottom:0cm;text-align:center;
+  line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><b><span style="mso-bidi-font-size:10.0pt;
+  color:black;mso-themecolor:text1">Caractère requis/optionnel<o:p></o:p></span></b></span></span></span></span></p>
+  </td>
+  
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td width="113" rowspan="5" valign="top" style="width:84.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">CREATEUR<o:p></o:p></span></span></span></span></span></p>
+  </td>
+  
+  <td width="406" valign="top" style="width:304.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">Flux 1 en
+  émission&nbsp;:<span style="mso-spacerun:yes">&nbsp; </span>Demande de
+  transmission/remplacement/suppression de document(s) CDA (Flux HL7-ORU </span></span></span></span></span><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;font-family:Wingdings;mso-fareast-font-family:
+  Wingdings;mso-bidi-font-family:Wingdings;color:black;mso-themecolor:text1;
+  mso-char-type:symbol;mso-symbol-font-family:Wingdings"><span style="mso-char-type:symbol;mso-symbol-font-family:Wingdings">à</span></span></span></span></span></span><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">)<o:p></o:p></span></span></span></span></span></p>
+  </td>
+  
+  <td width="132" valign="top" style="width:99.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">O <o:p></o:p></span></span></span></span></span></p>
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">(Note 1)<o:p></o:p></span></span></span></span></span></p>
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">(Note 4)<o:p></o:p></span></span></span></span></span></p>
+  </td>
+  
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  
+  <td width="406" valign="top" style="width:304.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">Flux 2 en
+  émission : Demande de transmission/remplacement/suppression d’un document CDA
+  (Flux HL7- MDM </span></span></span></span></span><span style="mso-bookmark:
+  _Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;font-family:Wingdings;mso-fareast-font-family:
+  Wingdings;mso-bidi-font-family:Wingdings;color:black;mso-themecolor:text1;
+  mso-char-type:symbol;mso-symbol-font-family:Wingdings"><span style="mso-char-type:symbol;mso-symbol-font-family:Wingdings">à</span></span></span></span></span></span><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">)<o:p></o:p></span></span></span></span></span></p>
+  </td>
+  
+  <td width="132" valign="top" style="width:99.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">O<o:p></o:p></span></span></span></span></span></p>
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">(Note 1)<o:p></o:p></span></span></span></span></span></p>
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">(Note 4)<o:p></o:p></span></span></span></span></span></p>
+  </td>
+  
+ </tr>
+ <tr style="mso-yfti-irow:3">
+  
+  <td width="406" valign="top" style="width:304.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">Flux 3 en
+  réception&nbsp;: Accusé métier de réception DMP<o:p></o:p></span></span></span></span></span></p>
+  </td>
+  
+  <td width="132" valign="top" style="width:99.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">O (Note 2)<o:p></o:p></span></span></span></span></span></p>
+  </td>
+  
+ </tr>
+ <tr style="mso-yfti-irow:4">
+  
+  <td width="406" valign="top" style="width:304.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">Flux
+  4&nbsp;en réception : Accusé métier de réception MSSanté<o:p></o:p></span></span></span></span></span></p>
+  </td>
+  
+  <td width="132" valign="top" style="width:99.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">O (Note 2)<o:p></o:p></span></span></span></span></span></p>
+  </td>
+  
+ </tr>
+ <tr style="mso-yfti-irow:5">
+  
+  <td width="406" valign="top" style="width:304.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt">Flux 5&nbsp;en réception : Accusé métier de
+  lecture MSSanté<o:p></o:p></span></span></span></span></span></p>
+  </td>
+  
+  <td width="132" valign="top" style="width:99.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">O (Note 3)<o:p></o:p></span></span></span></span></span></p>
+  </td>
+  
+ </tr>
+ <tr style="mso-yfti-irow:6">
+  <td width="113" rowspan="5" valign="top" style="width:84.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">GESTIONNAIRE<o:p></o:p></span></span></span></span></span></p>
+  </td>
+  
+  <td width="406" valign="top" style="width:304.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">Flux 1 en
+  réception : Demande de transmission/remplacement/suppression de document(s)
+  CDA par un message HL7v2.5 ORU (Flux HL7-ORU)<o:p></o:p></span></span></span></span></span></p>
+  </td>
+  
+  <td width="132" valign="top" style="width:99.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">R<o:p></o:p></span></span></span></span></span></p>
+  </td>
+  
+ </tr>
+ <tr style="mso-yfti-irow:7">
+  
+  <td width="406" valign="top" style="width:304.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">Flux 2 en
+  réception : Demande de transmission/remplacement/suppression d’un document
+  CDA par un message HL7v2.6 MDM (Flux HL7- MDM)<o:p></o:p></span></span></span></span></span></p>
+  </td>
+  
+  <td width="132" valign="top" style="width:99.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">R<o:p></o:p></span></span></span></span></span></p>
+  </td>
+  
+ </tr>
+ <tr style="mso-yfti-irow:8;height:5.75pt">
+  
+  <td width="406" valign="top" style="width:304.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:5.75pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">Flux 3 en
+  émission&nbsp;: Accusé métier de réception DMP<o:p></o:p></span></span></span></span></span></p>
+  </td>
+  
+  <td width="132" valign="top" style="width:99.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:5.75pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">O (Note 2)<o:p></o:p></span></span></span></span></span></p>
+  </td>
+  
+ </tr>
+ <tr style="mso-yfti-irow:9;height:5.75pt">
+  
+  <td width="406" valign="top" style="width:304.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:5.75pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">Flux 4 en
+  émission&nbsp;: Accusé métier de réception MSSanté<o:p></o:p></span></span></span></span></span></p>
+  </td>
+  
+  <td width="132" valign="top" style="width:99.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:5.75pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">O (Note 2)<o:p></o:p></span></span></span></span></span></p>
+  </td>
+  
+ </tr>
+ <tr style="mso-yfti-irow:10;mso-yfti-lastrow:yes;height:5.75pt">
+  
+  <td width="406" valign="top" style="width:304.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:5.75pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt">Flux 5&nbsp;en émission : Accusé métier de
+  lecture MSSanté<span style="color:black;mso-themecolor:text1"><o:p></o:p></span></span></span></span></span></span></p>
+  </td>
+  
+  <td width="132" valign="top" style="width:99.2pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:5.75pt">
+  <p class="MsoNormal" style="margin-bottom:0cm;line-height:normal"><span style="mso-bookmark:_Toc518305025"><span style="mso-bookmark:_Toc494980146"><span style="mso-bookmark:_Toc486516985"><span style="mso-bookmark:_Toc486516539"><span style="mso-bidi-font-size:10.0pt;color:black;mso-themecolor:text1">O (Note 3)<o:p></o:p></span></span></span></span></span></p>
+  </td>
+  
+ </tr>
+</tbody></table>
+<p>Figure 8 : Tableau des Acteurs/Transactions</p>
+
+<p><strong>[Note 1]</strong> : <em>l’acteur CREATEUR choisit d’implémenter l’une
+ou l’autre des transactions : le Flux 1 (Flux HL7-ORU) ou le flux 2
+(Flux HL7-MDM) en émission. L’acteur GESTIONNAIRE DOIT implémenter les
+deux transactions Flux HL7-ORU et Flux HL7-MDM en réception.</em></p>
+
+<p><strong>[Note 2]</strong> : _dans le contexte du SEGUR vague 2, couloirs DPI
+et PFI, l’accusé métier de réception DMP ainsi que l’accusé métier de
+réception MSSanté sont requis.</p>
+
+<p>L’accusé métier de réception DMP est généré par le GESTIONNAIRE à partir
+de la réponse du DMP à une requête d’alimentation, de remplacement ou de
+suppression de document(s). La réponse du DMP contient le statut du
+résultat de la transaction (Success ou Failure) ainsi que le code erreur
+en cas de problème. Ces informations sont relayées par le GESTIONNAIRE
+au CREATEUR au travers du flux 3.</p>
+
+<p>L’accusé métier de réception MSSanté est généré par le GESTIONNAIRE à
+partir de la réponse du serveur de messagerie du destinataire qui
+atteste de la réception du courriel (mécanisme Delivery Status
+Notification – DSN – RFC 3461 à 3464 et 6522 qui permet de savoir si
+un courriel a été remis avec succès dans la BAL du destinataire). Il est
+relayé au CREATEUR au travers du flux 4._</p>
+
+<p><strong>[Note 3]</strong> : _l’accusé métier de lecture MSSanté n’est requis
+ni dans ce volet du CI_SIS ni dans le contexte du SEGUR vague2.</p>
+
+<p>Le flux d’accusé métier de lecture MSSanté est généré par le
+GESTIONNAIRE conformément au Message Disposition Notification – MDN de
+la RFC 8098. Il permet de savoir quel traitement a été effectué sur le
+courriel réceptionné (lecture du courriel par un utilisateur, courriel
+dispatché, courriel traité, courriel détruit) et de préciser les causes
+d’erreur éventuelles de traitement. Il est relayé au CREATEUR au travers
+du flux 5.</p>
+
+<p>La gestion de cet accusé de lecture MSSanté (MDN) va dépendre de
+l’organisation choisie par l’établissement pour réceptionner les
+courriels.</p>
+
+<p>Ce flux d’accusé de lecture MSSanté (message MDN) rend compte de la
+lecture du courriel par le destinataire lorsque ce courriel est traité
+de façon manuelle. Dans le cas d’un traitement automatique du courriel
+par la PFI de l’établissement destinataire, ce flux d’accusé de lecture
+rend compte de la réalisation de la demande de traitement sur le
+document contenu dans le courriel par le logiciel métier associé à la
+BAL destinatrice du courriel._</p>
+
+<p><strong>[Note 4]</strong> : <em>Le Flux HL7-MDM permet de transmettre undocument unique.
+Le Flux HL7-ORU peut, le cas échéant, transporter deux documents, un
+CDAr2 Niv1 et un CDAr2 Niv3, dans la même transaction. Dans ce cas, il
+s’agit de deux instances de documents dont le contenu clinique est
+identique. Ce besoin de transmettre dans une même transaction les deux
+formats CDAr2 Niv1 et CDAr2 Niv3 d'un même document clinique a été
+exprimé, en particulier par les biologistes, afin de permettre à
+l'utilisateur du système consommateur de visualiser le document tel
+qu'il a été remis au patient (PDF). Chaque format de document a son
+identifiant propre.</em></p>
+
+<blockquote class="stu-note">
+    <p>
+    <b>Point d'attention :</b> dans le contexte de la vague 2 du SEGUR, le compte-rendu de biologie, le volet de synthèse médicale ainsi que la prescription de produits de santé sont spécifiés sous la forme d'un CDAr2 Niv3 intégrant le document remis au patient sous forme papier (format PDF) dans une section dédiée. Pour ces cas d'usage, un seul document sera donc produit.
+    Néanmoins cette version du présent volet conserve la possibilité de transmettre les 2 formats de documents (CDAr2 Niv1 et CDAr2 Niv3) dans la transaction HL7-ORU permettant ainsi de ne pas limiter l'implémentation du volet seulement aux SGL référencés SEGUR.
+    </p>
+</blockquote>
+
+<h3 id="regroupement-requis-des-acteurs">Regroupement requis des Acteurs</h3>
+
+<p>Cette section décrit les exigences en termes de regroupement d’acteurs pour chacun des acteurs identifiés précédemment.</p>
+
+<table>
+<tbody>
+<tr>
+<td width="216">
+<p><strong>Acteur de ce volet</strong></p>
+</td>
+<td width="216">
+<p><strong>Group&eacute; avec un autre acteur</strong></p>
+</td>
+<td width="217">
+<p><strong>R&eacute;f&eacute;rence</strong></p>
+</td>
+</tr>
+<tr>
+<td width="216">
+<p>CREATEUR</p>
+</td>
+<td width="216">
+<p>Content Creator <a href="https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_TF_Vol1.pdf">(TF PCC : Patient Care Coordination – Appendix A : Actors definition)</a></p>
+</td>
+<td width="217">
+<p>TF Patient Care Coordination (PCC) d&rsquo;IHE &ndash; Annexe A : d&eacute;finition des acteurs</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2" width="216">
+<p>GESTIONNAIRE</p>
+</td>
+<td width="216">
+<p>Producteur (Document Source) XDS-b</p>
+</td>
+<td width="217">
+<p><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/CISIS_SERVICE_SPECIFICATIONS_TECHNIQUES_PARTAGE_DOCUMENTS_DE_SANTE_V1.13.pdf">Volet Partage de documents de sant&eacute;</a> dans un contexte g&eacute;n&eacute;ral ou le R&eacute;f&eacute;rentiel Service DMP int&eacute;gr&eacute; aux LPS dans le contexte du SEGUR.</p>
+</td>
+</tr>
+<tr>
+<td width="216">
+<p>Syst&egrave;me initiateur (Portable Media Creator) XDM</p>
+</td>
+<td width="217">
+<p><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-echange-documents-sante_v1.8.pdf">Volet Echange de documents de sant&eacute;</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<p>L’acteur CREATEUR est groupé avec l’acteur CONTENT CREATOR définit dans
+le Technical Framework PCC d’IHE pour permettre la création du document
+CDA.</p>
+
+<p>L’acteur GESTIONNAIRE est groupé avec :</p>
+
+<ul>
+  <li>
+    <p>L’acteur Producteur (Document Source) du volet de <em>Partage de
+document de santé</em>, pour permettre à la PFI d’implémenter la
+transaction ITI-41 Provide &amp; Register Document Set dans un contexte
+général ou les transactions TDT2.1/TD2.2 (Alimentation du DMP) ou
+TD3.3c (Gestion des attributs d’un document) dans le contexte SEGU
+(pour intégration/remplacement/suppression de document(s) dans le
+DMP en tenant compte des spécificités ajoutées par le référentiel
+Service DMP intégré aux LPS),</p>
+  </li>
+  <li>
+    <p>L’acteur Système initiateur du volet <em>d’Echange de documents de
+santé</em>, pour permettre à la PFI de construire l’archive IHE_XDM
+inclue dans le courriel émis vers le destinataire,</p>
+  </li>
+</ul>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&#xA0;
+
+                <a href="contexte-metier.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&#xA0;
+
+                <a href="def-proc-collab.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans.cda.mss#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jul 5, 2024 16:28+0000">2024-07-05</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)"></span>
+            Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/hl7v2/ans.hl7v2.fr.trans.cda.mss/history.html">Historique des versions </a>
+ | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ansforge/IG-hl7v2-volet-transmission-document-cda-r2/issues/new/choose">New Issue</a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+
+  <!-- Ajout ANS -->
+  <script src="assets/js/app.js" type="text/javascript"> </script>
+  <script src="assets/js/vendor.js" type="text/javascript"> </script>
+  <!-- Fin ajout ANS -->
+
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+
+  <!-- Analytics Below
+  ================================================== -->
+
+
+  <!-- AJOUT ANS -->
+
+<footer class="footer footer-principal" role="contentinfo">
+  <div class="footer__region1">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4 text-center text-md-left">
+          <div class="logos">        
+            <div class="logo logo--0">
+              <a href="https://solidarites-sante.gouv.fr" title="Ministère des Solidarités et de la Santé (nouvelle fenêtre)" target="_blank" rel="nofollow">
+                
+                <img src="assets/images/logo-ministere.svg" alt="Ministère des Solidarités et de la Santé" width="133" height="77" loading="lazy" />
+                
+              </a>
+            </div>
+        
+            <div class="logo logo--1">
+              <a href="https://esante.gouv.fr/" title="Agence du numérique en santé (nouvelle fenêtre)" target="_blank" rel="nofollow">
+                
+                <img src="assets/images/logo-ANS-footer.svg" alt="Agence du numérique en santé" width="106" height="74" loading="lazy" />
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 text-center text-md-left">
+          <p class="footer__title">Agence du Numérique en Santé</p>
+          <p>2-10 Rue d'Oradour-sur-Glane 75015 Paris</p>
+
+          <!-- <div class="m-social">
+            <ul class="m-social__list">        
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://www.linkedin.com/company/agence-du-numerique-en-sante/" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-linkedin" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#linkedin"></use></svg>
+                  </div>
+                  <span class="sr-only">linkedin</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://twitter.com/esante_gouv_fr" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-twitter" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#twitter"></use></svg>
+                  </div>
+                  <span class="sr-only">twitter</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://www.youtube.com/channel/UCd1zuSaU5cE1lRCpwv_HSMA" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-youtube" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#youtube"></use></svg>
+                  </div>
+                  <span class="sr-only">youtube</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://esante.gouv.fr/rss.xml" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-rss" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#rss"></use></svg>
+                  </div>
+                  <span class="sr-only">rss</span>
+                </a>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+        
+        <div class="col-6 col-lg-4">
+          <ul class="footer-list">
+            <li class="footer-list__item footer-list__item--hasIcon">
+              <a href="mailto:ci-sis@esante.gouv.fr" class="mailto-link">
+                <svg class="svg-icon svg-angle-right" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#angle-right"></use></svg>Contact</a>
+              </li>
+              <!-- <li class="footer-list__item">
+                <a href="https://interop-pprod.esante.gouv.fr/ci-sis-specifications/wp-content/uploads/CGU_espace_de_tests_v1.1.pdf" class="file-link">Mentions légales</a>
+              </li>
+               -->
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    <!-- <div class="footer__region2">
+      <div class="container">
+        <div class="footer-contentinfo">
+          <ul class="footer-list footer-list--inline">
+
+          </ul>
+        </div>
+      </div>
+    </div> -->
+  </footer>
+  </body>
+</html>
+

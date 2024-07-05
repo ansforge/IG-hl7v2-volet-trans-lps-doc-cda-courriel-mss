@@ -1,0 +1,22 @@
+HL7v2_CDAr2 : Validation Results
+=========================================
+
+err = 1, warn = 4, info = 0
+$--
+Generated $--. FHIR version $-- for ans.hl7v2.fr.trans.cda.mss#$-- (canonical = https://interop.esante.gouv.fr/ig/hl7v2/ans.hl7v2.fr.trans.cda.mss)
+ Build Errors : 6 / 4 / 0
+ /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/fsh-generated/resources/ImplementationGuide-ans.hl7v2.fr.trans.cda.mss : 1 / 0 / 1
+</table>
+== n/a ==
+ERROR: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/cas-usage.html#/html/body/div/div/div/div/div/div/img at Line 341, column 6: The image source 'image6.png' cannot be resolved
+ERROR: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/profils-messages.html#/html/body/div/div/div/div/div/div/img at Line 656, column 6: The image source 'fig17.png' cannot be resolved
+ERROR: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/profils-messages.html#/html/body/div/div/div/div/div/div/img at Line 1052, column 6: The image source 'fig18.png' cannot be resolved
+ERROR: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/profils-messages.html#/html/body/div/div/div/div/div/table/tbody/tr/td/p/a at Line 2313, column 73: The link '#_ftn2' for "[2]" cannot be resolved (valid targets: 96 targets)
+ERROR: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/profils-messages.html#/html/body/div/div/div/div/div/div/img at Line 6657, column 6: The image source 'image26.png' cannot be resolved
+ERROR: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/profils-messages.html#/html/body/div/div/div/div/div/div/img at Line 7688, column 6: The image source 'image27.png' cannot be resolved
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/ImplementationGuide-ans.hl7v2.fr.trans.cda.mss.json ==
+ERROR: ImplementationGuide/ans.hl7v2.fr.trans.cda.mss: ImplementationGuide.definition: ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1)

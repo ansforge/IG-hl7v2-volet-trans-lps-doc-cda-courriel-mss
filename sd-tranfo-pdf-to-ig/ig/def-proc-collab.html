@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Définition des processus collaboratifs - Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté v1.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style-ans.css"/>
+    <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"5"}
+    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+<div id="family-nav">
+    <img height="50" alt="HL7 v2" src="assets/images/hl7v2-logo.png"/>
+  </div>
+  <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
+    <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+  </div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Volet Transmission au LPS de documents CDA provenant d&#39;un courriel MSSanté</span>
+            <br/>
+            <span style="display:inline-block;">1.1.0 - ci-build
+
+
+
+  <img alt="France flag" src="assets/images/fra.svg" height="16" title="France"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 1 - Etude fonctionnelle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="cas-usage.html">Cas d&apos;usage</a>
+      </li>
+      <li>
+        <a href="contexte-metier.html">Organisation du contexte métier</a>
+      </li>
+      <li>
+        <a href="acteurs-transactions.html">Acteurs et transactions</a>
+      </li>
+      <li>
+        <a href="def-proc-collab.html">Définition des processus collaboratifs</a>
+      </li>
+      <li>
+        <a href="identification-flux.html">identification des flux</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2 – Détail des Transactions
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="volume2.html">Volume 2 : Introduction</a>
+      </li>
+      <li>
+        <a href="perimetre-transaction.html">Périmètre de la transaction</a>
+      </li>
+      <li>
+        <a href="role.html">Rôle des acteurs pour cette transaction</a>
+      </li>
+      <li>
+        <a href="standards.html">Choix des standards</a>
+      </li>
+      <li>
+        <a href="evenements-declenchants.html">Evènements déclenchants</a>
+      </li>
+      <li>
+        <a href="interactions-acteurs.html">Interactions entre les Acteurs</a>
+      </li>
+      <li>
+        <a href="profils-messages.html">Profils de messages</a>
+      </li>
+      <li>
+        <a href="regles-gestion-mssante.html">Règles de gestion MSSANTE</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 3
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="meta-dmp-mss.html">Table MetaDMP/MSS</a>
+      </li>
+      <li>
+        <a href="ack-metier-zam.html">Table AckMetierZAM</a>
+      </li>
+      <li>
+        <a href="exemples.html">Exemples de messages</a>
+      </li>
+      <li>
+        <a href="error-codes.html">Error Codes</a>
+      </li>
+      <li>
+        <a href="glossaire.html">Glossaire</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="testplan.html">Test Plan</a>
+  </li>
+  <li>
+    <a href="change-log.html">Historique des versions</a>
+  </li>
+  <li>
+    <a href="download.html">Téléchargements</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Définition des processus collaboratifs</b></li>
+
+          <span style="float:right;">
+
+            <a href="acteurs-transactions.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="identification-flux.html">next&gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/hl7v2/ans.hl7v2.fr.trans.cda.mss/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Définition des processus collaboratifs</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#processus-collaboratif-demande-de-transmission-initiale-de-documents" id="markdown-toc-processus-collaboratif-demande-de-transmission-initiale-de-documents">Processus collaboratif « Demande de transmission initiale de document(s) »</a></li>
+  <li><a href="#processus-collaboratif-demande-de-remplacement-de-documents" id="markdown-toc-processus-collaboratif-demande-de-remplacement-de-documents">Processus collaboratif « Demande de remplacement de document(s) »</a></li>
+  <li><a href="#processus-collaboratif-demande-de-suppression-de-documents" id="markdown-toc-processus-collaboratif-demande-de-suppression-de-documents">Processus collaboratif « Demande de suppression de document(s) »</a></li>
+</ul>
+
+</div>
+<p>Pour l’ensemble des processus décrits :</p>
+
+<ul>
+  <li>
+    <p>L’accusé de réception MSSanté correspond à la prise en compte du courriel par le serveur de messagerie du destinataire du courriel,</p>
+  </li>
+  <li>
+    <p>L’accusé de lecture MSSanté défini par la RFC 8098 (Message Disposition Notification) comprend un élément dénommé Disposition types qui rend compte à l’expéditeur du courriel du traitement advenu sur ce courriel au niveau du destinataire : lecture du courriel, transfert du courriel, traitement automatique du courriel, suppression du courriel.</p>
+  </li>
+</ul>
+
+<h3 id="processus-collaboratif-demande-de-transmission-initiale-de-documents">Processus collaboratif « Demande de transmission initiale de document(s) »</h3>
+
+<div class="figure">
+    <img src="image13.png" alt="Figure 9" title="Figure 9 : Processus collaboratif « Demande de transmission initiale de document(s) » pour publication sur DMP et envoi par MSS" style="width:100%;" />
+    <figcaption>Figure 9 : Processus collaboratif « Demande de transmission initiale de document(s) » pour publication sur DMP et envoi par MSS</figcaption>
+</div>
+<p><br /></p>
+
+<table width="650">
+<tbody>
+<tr>
+<td width="151">
+<p><strong>Service Attendu</strong></p>
+</td>
+<td width="499">
+<p>Le CREATEUR &eacute;met le(s) document(s) valid&eacute;(s) vers le GESTIONNAIRE qui publie ce(s) document(s) sur le DMP et/ou r&eacute;alise un envoi par MSSant&eacute;.</p>
+</td>
+</tr>
+<tr>
+<td width="151">
+<p><strong>Pr&eacute;-Conditions</strong></p>
+</td>
+<td width="499">
+<p>Les m&eacute;tadonn&eacute;es de contexte DMP/MSSant&eacute; doivent &ecirc;tre renseign&eacute;es (soit par param&eacute;trage de l&rsquo;application soit par l&rsquo;utilisateur) et l&rsquo;utilisateur doit valider ce(s) document(s) au niveau de l&rsquo;application m&eacute;tier dans laquelle il a &eacute;t&eacute; g&eacute;n&eacute;r&eacute; via un statut de validation g&eacute;r&eacute; en interne. Chaque document CDA doit &ecirc;tre valide et disponible.</p>
+<p>L&rsquo;INS du patient est obligatoirement qualifi&eacute;e dans le cas o&ugrave; la publication sur le DMP est demand&eacute;e.</p>
+<p>Une d&eacute;rogation valable jusqu&rsquo;&agrave; fin 2023, puis renouvelable jusqu&rsquo;&agrave; sa r&eacute;vocation qui sera indiqu&eacute;e dans les futures versions du r&eacute;f&eacute;rentiel socle MSSant&eacute;#2, permet d&rsquo;&eacute;changer un courriel par MSSant&eacute; en l&rsquo;absence d&rsquo;un INS qualifi&eacute;.</p>
+</td>
+</tr>
+<tr>
+<td width="151">
+<p><strong>Post-Conditions</strong></p>
+</td>
+<td width="499">
+<p>Le document est partag&eacute; sur le DMP et/ou re&ccedil;u par le(s) destinataire(s) via MSSant&eacute;.</p>
+</td>
+</tr>
+<tr>
+<td width="151">
+<p><strong>Contraintes fonctionnelles</strong></p>
+</td>
+<td width="499">
+<p>Dans le cas o&ugrave; le CREATEUR de documents transmet les 2 formats de documents s&eacute;par&eacute;ment (CDA Niv1 et CDA Niv3), ces 2 documents sont transmis simultan&eacute;ment dans la m&ecirc;me transaction. (<em>Note1)</em></p>
+</td>
+</tr>
+<tr>
+<td width="151">
+<p><strong>Sc&eacute;nario Nominal</strong></p>
+</td>
+<td width="499">
+<p>Le CREATEUR transmet une demande de transmission initiale de document(s) au GESTIONNAIRE en pr&eacute;cisant si ce(s) document(s) doit(vent) &ecirc;tre transmis au DMP et/ou &agrave; un ou plusieurs destinataire(s) via la MSSant&eacute;.</p>
+<p>Le CREATEUR permet &eacute;galement &agrave; l&rsquo;utilisateur de pr&eacute;ciser&nbsp;les m&eacute;tadonn&eacute;es DMP/MSSant&eacute;&nbsp;: masquage au(x) PS, visibilit&eacute; au patient, visibilit&eacute; au(x) repr&eacute;sentant(s) l&eacute;gaux. Il permet &eacute;galement &agrave; l&rsquo;utilisateur de pr&eacute;ciser s&rsquo;il souhaite recevoir un accus&eacute; de r&eacute;ception DMP/MSSant&eacute; et/ou un accus&eacute; de lecture MSSant&eacute;.</p>
+<p>Le GESTIONNAIRE r&eacute;ceptionne cette demande et utilise les informations port&eacute;es par la transaction ainsi que les informations contenues dans le(s) document(s) CDA pour r&eacute;aliser la transaction d&rsquo;alimentation du DMP et/ou l&rsquo;envoi vers le(s) destinataire(s) (Patient et/ou PS) via la MSSant&eacute; (i.e.&nbsp;; produire les m&eacute;tadonn&eacute;es XDS).</p>
+<p>En fonction de la demande, le GESTIONNAIRE transmet au CREATEUR l&rsquo;accus&eacute; de r&eacute;ception DMP, l&rsquo;accus&eacute; de r&eacute;ception MSSant&eacute; et/ou l&rsquo;accus&eacute; de lecture MSSant&eacute;.</p>
+<p>Dans le cas de la DrimBox, seule l&rsquo;alimentation du DMP avec le document de r&eacute;f&eacute;rence d&rsquo;objets d&rsquo;examen d&rsquo;imagerie (KOS) est r&eacute;alis&eacute;e. La DRIMBox-Source n&rsquo;est pas concern&eacute;e par la MSSant&eacute;.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<p><strong>(Note 1)</strong> : <em>les systèmes référencés SEGUR vague 2 ne sont pas concernés
+car, dans ce cas, le PDF est inclus dans une section du CDA Niv3.</em></p>
+
+<h3 id="processus-collaboratif-demande-de-remplacement-de-documents">Processus collaboratif « Demande de remplacement de document(s) »</h3>
+
+<div class="figure">
+    <img src="image14.png" alt="Figure 10" title="Figure 10 : Processus collaboratif « Demande de remplacement de document(s) » pour publication sur DMP et envoi par MSSanté" style="width:100%;" />
+    <figcaption>Figure 10 : Processus collaboratif « Demande de remplacement de document(s) » pour publication sur DMP et envoi par MSSanté</figcaption>
+</div>
+<p><br /></p>
+
+<p>Le processus « Demande de remplacement de document(s) permet également
+de gérer la mise à jour des métadonnées associées au(x) document(s). En
+effet, la PFI, en authentification indirecte vis-à-vis du DMP, n’a pas
+la possibilité d’utiliser la transaction « TD3.3 Gestion des attributs
+d’un document » du profil Alimentation du DMP car celle-ci nécessite une
+authentification directe.</p>
+
+<p>Ainsi, dans le cas d’une demande de mise à jour des métadonnées de
+masquage/démasquage aux PS et de visibilité du document au patient, une
+nouvelle version de document est générée par le CREATEUR de documents.
+Cette nouvelle version vient remplacer la précédente au niveau du
+consommateur (DMP et/ou application métier destinatrice).</p>
+
+<table width="650">
+<tbody>
+<tr>
+<td width="151">
+<p><strong>Service Attendu</strong></p>
+</td>
+<td width="499">
+<p>Le CREATEUR &eacute;met une demande de remplacement de document(s) vers le GESTIONNAIRE. Celui-ci r&eacute;alisera ensuite le relais vers le DMP pour r&eacute;aliser un Replace et vers MSSant&eacute; pour r&eacute;aliser un nouvel envoi contenant le(s) document(s) rempla&ccedil;ant le(s) document(s) initialement envoy&eacute;s.</p>
+</td>
+</tr>
+<tr>
+<td width="151">
+<p><strong>Pr&eacute;-Conditions</strong></p>
+</td>
+<td width="499">
+<p>Le document CDA doit &ecirc;tre disponible, valid&eacute; et identifi&eacute; comme rempla&ccedil;ant un document pr&eacute;c&eacute;demment envoy&eacute; par MSSant&eacute; et/ou publi&eacute; sur le DMP.</p>
+<p>L&rsquo;INS du patient doit &ecirc;tre obligatoirement qualifi&eacute; dans le cas o&ugrave; le remplacement du document est demand&eacute; au niveau du DMP.</p>
+<p>Une d&eacute;rogation valable jusqu&rsquo;&agrave; fin 2023, puis renouvelable jusqu&rsquo;&agrave; sa r&eacute;vocation qui sera indiqu&eacute;e dans les futures versions du r&eacute;f&eacute;rentiel socle MSSant&eacute;#2, permet d&rsquo;&eacute;changer un courriel par MSSant&eacute; en l&rsquo;absence d&rsquo;un INS qualifi&eacute;.</p>
+</td>
+</tr>
+<tr>
+<td width="151">
+<p><strong>Post-Conditions</strong></p>
+</td>
+<td width="499">
+<p>La nouvelle version de document est publi&eacute;e sur le DMP et envoy&eacute;e par MSSant&eacute; (Patient et/ou PS). L&rsquo;ancienne version de document est mise au statut &laquo;&nbsp;Deprecated&nbsp;&raquo; au niveau du CONSOMMATEUR MSSant&eacute; et/ou sur le DMP.</p>
+</td>
+</tr>
+<tr>
+<td width="151">
+<p><strong>Contraintes fonctionnelles</strong></p>
+</td>
+<td width="499">
+<p>Dans le cas o&ugrave; le CREATEUR de document(s) transmet les 2 formats de documents s&eacute;par&eacute;ment (CDA Niv1 et CDA Niv3), le remplacement (ou de la mise &agrave; jour des m&eacute;tadonn&eacute;es) d&rsquo;un des formats doit s&rsquo;accompagner du remplacement (ou de la mise &agrave; jour des m&eacute;tadonn&eacute;es) du format li&eacute;. La transaction doit contenir les 2 nouvelles versions de documents. Cf <em>Note 1</em></p>
+</td>
+</tr>
+<tr>
+<td width="151">
+<p><strong>Sc&eacute;nario Nominal</strong></p>
+</td>
+<td width="499">
+<p>Le CREATEUR transmet une demande de remplacement de document(s) au GESTIONNAIRE. Il peut s&rsquo;agir de mettre jour le document, de masquer/d&eacute;masquer le document aux PS, de rendre visible le document au patient ou de rendre visible le document aux repr&eacute;sentants l&eacute;gaux.</p>
+<p>&nbsp;</p>
+<p>Le GESTIONNAIRE r&eacute;ceptionne cette demande de remplacement et utilise les informations port&eacute;es par la transaction ainsi que les informations contenues dans le(s) document(s) CDA pour r&eacute;aliser la transaction d&rsquo;alimentation du DMP et/ou l&rsquo;envoi vers le(s) destinataire(s) (Patient et/ou PS) via la MSS (i.e.&nbsp;; produire les m&eacute;tadonn&eacute;es XDS).</p>
+<p>Le code RPLC dans clinicalDocument/relatedDocument@typeCode dans le CDA-R2 &lt;a href= https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_contenu_volet-structuration-minimale_v1.15.pdf&gt; [cf: : volet CI-SIS : CONTENU_VOLET-STRUCTURATION-MINIMALE_V1.15]&lt;/a&gt; permet de constituer l&rsquo;association RPLC dans la soumission XDS sur le DMP pour le remplacement &lt;a href= https://industriels.sesam-vitale.fr&gt; [cf: SESAM-VITALE : Service DMP intégré aux LPS - Version 2.10.0]&lt;/a&gt;.</p>
+<p><sup>&nbsp;</sup></p>
+<p>En fonction de la demande, le GESTIONNAIRE transmet au CREATEUR l&rsquo;accus&eacute; de r&eacute;ception DMP, l&rsquo;accus&eacute; de r&eacute;ception MSSant&eacute; et/ou l&rsquo;accus&eacute; de lecture MSSant&eacute;.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Note 1</strong> : <em>les systèmes référencés SEGUR vague 2 ne sont pas concernés
+car, dans ce cas, le PDF est inclus dans une section du CDA Niv3.</em></p>
+
+<blockquote class="stu-note">
+    <p>
+    <b>Point d'attention :</b> La mise à jour du document ou de ses métadonnées de masquage/visibilité a pour impact la création d'une nouvelle version du document avec un nouvel identifiant et une nouvelle séquence hash.
+    </p>
+</blockquote>
+
+<h3 id="processus-collaboratif-demande-de-suppression-de-documents">Processus collaboratif « Demande de suppression de document(s) »</h3>
+
+<div class="figure">
+    <img src="image15.png" alt="Figure 11" title="Figure 11 : Processus collaboratif « Demande de suppression de document(s) » pour publication sur DMP et envoi par MSSanté" style="width:100%;" />
+    <figcaption>Figure 11 : Processus collaboratif « Demande de suppression de document(s) » pour publication sur DMP et envoi par MSSanté</figcaption>
+</div>
+<p><br /></p>
+
+<table width="650">
+<tbody>
+<tr>
+<td width="151">
+<p><strong>Service Attendu</strong></p>
+</td>
+<td width="499">
+<p>Le CREATEUR &eacute;met une demande de suppression de document(s) vers le GESTIONNAIRE. Celui-ci r&eacute;alisera ensuite le relais vers le DMP pour r&eacute;aliser un Delete et vers MSSant&eacute; pour r&eacute;aliser un nouvel envoi contenant le(s) document(s) &agrave; supprimer.</p>
+</td>
+</tr>
+<tr>
+<td width="151">
+<p><strong>Pr&eacute;-Conditions</strong></p>
+</td>
+<td width="499">
+<p>Le document a &eacute;t&eacute; envoy&eacute; pr&eacute;alablement pour soumission au DMP et/ou pour envoi par MSSant&eacute;.</p>
+<p>L&rsquo;INS du patient doit obligatoirement &ecirc;tre qualifi&eacute; dans le cas o&ugrave; la suppression du document du DMP est demand&eacute;e.</p>
+<p>Une d&eacute;rogation valable jusqu&rsquo;&agrave; fin 2023, puis renouvelable jusqu&rsquo;&agrave; sa r&eacute;vocation qui sera indiqu&eacute;e dans les futures versions du r&eacute;f&eacute;rentiel socle MSSant&eacute;#2, permet d&rsquo;&eacute;changer un courriel par MSSant&eacute; en l&rsquo;absence d&rsquo;un INS qualifi&eacute;.</p>
+</td>
+</tr>
+<tr>
+<td width="151">
+<p><strong>Post-Conditions</strong></p>
+</td>
+<td width="499">
+<p>Le document est supprim&eacute; du DMP (availabilityStatus = Deleted) &lt;a href= https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_contenu_volet-structuration-minimale_v1.15.pdf&gt; [cf: : volet CI-SIS : CONTENU_VOLET-STRUCTURATION-MINIMALE_V1.15]&lt;/a&gt;
+<p>TD3.3 (Supprimer un document) &lt;a href= https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_contenu_volet-structuration-minimale_v1.15.pdf&gt; [cf: : volet CI-SIS : CONTENU_VOLET-STRUCTURATION-MINIMALE_V1.15]&lt;/a&gt;
+<p>Le document est &eacute;galement supprim&eacute; au niveau de chacun des destinataire(s) de l&rsquo;envoi par MSS.</p>
+&lt;/td&gt;
+&lt;/tr&gt;
+<tr>
+<td width="151">
+<p><strong>Contraintes fonctionnelles</strong></p>
+</td>
+<td width="499">
+<p>Dans le cas o&ugrave; le CREATEUR de documents transmet les 2 formats de documents s&eacute;par&eacute;ment (CDA Niv1 et CDA Niv3), la suppression d&rsquo;un des formats doit s&rsquo;accompagner de la suppression du format li&eacute;. La transaction doit contenir les 2 formats de document &agrave; supprimer. Hors p&eacute;rim&egrave;tre SEGUR.</p>
+</td>
+</tr>
+<tr>
+<td width="151">
+<p><strong>Sc&eacute;nario Nominal</strong></p>
+</td>
+<td width="499">
+<p>Une erreur d&eacute;tect&eacute;e n&eacute;cessite la suppression du document sans qu&rsquo;il soit remplac&eacute; par une autre version (ex. erreur d&rsquo;association entre le CR et le patient).</p>
+<p>Le CREATEUR transmet une demande de suppression de document(s) au GESTIONNAIRE.</p>
+<p>Le GESTIONNAIRE r&eacute;ceptionne cette demande de suppression et utilise les informations port&eacute;es par la transaction ainsi que les informations contenues dans le(s) document(s) CDA pour r&eacute;aliser la transaction de suppression du document sur le DMP et/ou l&rsquo;envoi vers le(s) destinataire(s) (Patient et/ou PS) via la MSS (i.e.&nbsp;; produire les m&eacute;tadonn&eacute;es XDS).</p>
+<p>Un message est envoy&eacute; par le GESTIONNAIRE vers le(s) destinataire(s) MSSant&eacute; indiquant dans le corps du mail que le document doit &ecirc;tre supprim&eacute;.</p>
+<p>&lt;a href=https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-echange-documents-sante_v1.8.pdf&gt;cf :  volet Volet Echange des Documents de Santé 1.8&lt;/a&gt;.</p>
+<p>En fonction de la demande, le GESTIONNAIRE transmet au CREATEUR l&rsquo;accus&eacute; de r&eacute;ception DMP, l&rsquo;accus&eacute; de r&eacute;ception MSSant&eacute; et/ou l&rsquo;accus&eacute; de lecture MSSant&eacute;.</p>
+</td>
+</tr>
+&lt;/tbody&gt;
+&lt;/table&gt;
+</p></p></td></tr></tbody></table>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&#xA0;
+
+                <a href="acteurs-transactions.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&#xA0;
+
+                <a href="identification-flux.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans.cda.mss#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jul 5, 2024 16:28+0000">2024-07-05</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)"></span>
+            Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/hl7v2/ans.hl7v2.fr.trans.cda.mss/history.html">Historique des versions </a>
+ | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ansforge/IG-hl7v2-volet-transmission-document-cda-r2/issues/new/choose">New Issue</a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+
+  <!-- Ajout ANS -->
+  <script src="assets/js/app.js" type="text/javascript"> </script>
+  <script src="assets/js/vendor.js" type="text/javascript"> </script>
+  <!-- Fin ajout ANS -->
+
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+
+  <!-- Analytics Below
+  ================================================== -->
+
+
+  <!-- AJOUT ANS -->
+
+<footer class="footer footer-principal" role="contentinfo">
+  <div class="footer__region1">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4 text-center text-md-left">
+          <div class="logos">        
+            <div class="logo logo--0">
+              <a href="https://solidarites-sante.gouv.fr" title="Ministère des Solidarités et de la Santé (nouvelle fenêtre)" target="_blank" rel="nofollow">
+                
+                <img src="assets/images/logo-ministere.svg" alt="Ministère des Solidarités et de la Santé" width="133" height="77" loading="lazy" />
+                
+              </a>
+            </div>
+        
+            <div class="logo logo--1">
+              <a href="https://esante.gouv.fr/" title="Agence du numérique en santé (nouvelle fenêtre)" target="_blank" rel="nofollow">
+                
+                <img src="assets/images/logo-ANS-footer.svg" alt="Agence du numérique en santé" width="106" height="74" loading="lazy" />
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 text-center text-md-left">
+          <p class="footer__title">Agence du Numérique en Santé</p>
+          <p>2-10 Rue d'Oradour-sur-Glane 75015 Paris</p>
+
+          <!-- <div class="m-social">
+            <ul class="m-social__list">        
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://www.linkedin.com/company/agence-du-numerique-en-sante/" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-linkedin" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#linkedin"></use></svg>
+                  </div>
+                  <span class="sr-only">linkedin</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://twitter.com/esante_gouv_fr" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-twitter" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#twitter"></use></svg>
+                  </div>
+                  <span class="sr-only">twitter</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://www.youtube.com/channel/UCd1zuSaU5cE1lRCpwv_HSMA" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-youtube" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#youtube"></use></svg>
+                  </div>
+                  <span class="sr-only">youtube</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://esante.gouv.fr/rss.xml" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-rss" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#rss"></use></svg>
+                  </div>
+                  <span class="sr-only">rss</span>
+                </a>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+        
+        <div class="col-6 col-lg-4">
+          <ul class="footer-list">
+            <li class="footer-list__item footer-list__item--hasIcon">
+              <a href="mailto:ci-sis@esante.gouv.fr" class="mailto-link">
+                <svg class="svg-icon svg-angle-right" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#angle-right"></use></svg>Contact</a>
+              </li>
+              <!-- <li class="footer-list__item">
+                <a href="https://interop-pprod.esante.gouv.fr/ci-sis-specifications/wp-content/uploads/CGU_espace_de_tests_v1.1.pdf" class="file-link">Mentions légales</a>
+              </li>
+               -->
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    <!-- <div class="footer__region2">
+      <div class="container">
+        <div class="footer-contentinfo">
+          <ul class="footer-list footer-list--inline">
+
+          </ul>
+        </div>
+      </div>
+    </div> -->
+  </footer>
+  </body>
+</html>
+
