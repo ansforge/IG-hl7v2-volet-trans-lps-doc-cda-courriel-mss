@@ -23,7 +23,7 @@ pages:
     cas-usage.md:
         title: "Cas d'usage"
     contexte-metier.md:
-        title: "Organisation du contexte métier"
+        title: "Organisation métier"
     acteurs-transactions.md:
         title: "Acteurs et transactions"
     def-proc-collab.md:
@@ -69,7 +69,7 @@ menu:
     Accueil: index.html
     Volume 1 - Etude fonctionnelle: 
         "Cas d'usage": cas-usage.html
-        "Organisation du contexte métier": contexte-metier.html
+        "Organisation métier": contexte-metier.html
         "Acteurs et transactions": acteurs-transactions.html
         "Définition des processus collaboratifs": def-proc-collab.html
         "identification des flux": identification-flux.html
