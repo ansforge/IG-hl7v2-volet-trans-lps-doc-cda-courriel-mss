@@ -10,7 +10,7 @@
   "name" : "HL7v2_CDAr2",
   "title" : "Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté",
   "status" : "draft",
-  "date" : "2024-07-05T16:48:46+00:00",
+  "date" : "2024-07-08T13:31:20+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -658,7 +658,7 @@
           "valueUrl" : "contexte-metier.html"
         }],
         "nameUrl" : "contexte-metier.html",
-        "title" : "Organisation du contexte métier",
+        "title" : "Organisation métier",
         "generation" : "markdown"
       },
       {
