@@ -152,13 +152,13 @@
         <a href="meta-dmp-mss.html">Table MetaDMP/MSS</a>
       </li>
       <li>
-        <a href="ack-metier-zam.html">Table AckMetierZAM</a>
-      </li>
-      <li>
         <a href="exemples.html">Exemples de messages</a>
       </li>
       <li>
         <a href="error-codes.html">Error Codes</a>
+      </li>
+      <li>
+        <a href="struct-msg-mdn.html">Structure du message MDN (MSS)</a>
       </li>
       <li>
         <a href="glossaire.html">Glossaire</a>
@@ -232,93 +232,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div class="markdown-toc">
-<ul id="markdown-toc">
-  <li><a href="#implémentation-du-message-oru-et-de-ses-acquittements-métier-hl7" id="markdown-toc-implémentation-du-message-oru-et-de-ses-acquittements-métier-hl7">Implémentation du message ORU et de ses acquittements métier HL7</a></li>
-  <li><a href="#implémentation-du-message-mdm-et-de-ses-acquittements-métier-hl7" id="markdown-toc-implémentation-du-message-mdm-et-de-ses-acquittements-métier-hl7">Implémentation du message MDM et de ses acquittements métier HL7</a></li>
-</ul>
-
-</div>
-<p>Les échanges sont représentés de bout en bout pour permettre au lecteur
-d’avoir une vision de l’ensemble des échanges, y compris du côté du
-destinataire. Cependant, le périmètre du présent volet est limité aux
-transactions représentées en bleu sur les figures suivantes.</p>
-
-<h3 id="implémentation-du-message-oru-et-de-ses-acquittements-métier-hl7">Implémentation du message ORU et de ses acquittements métier HL7</h3>
-
-<div class="figure">
-    <img src="image17.png" alt="Figure 13" title="Figure 13 : Diagramme de séquence -- Message ORU" style="width:100%;" />
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
 <div class="figure">
-    <img src="image18.png" alt="Figure 13" />
-    <figcaption>Figure 13 : Diagramme de séquence -- Message ORU</figcaption>
+    <img src="image19.png" alt="Figure 13" title="Figure 13 : Diagramme de séquence – Message MDM" style="width:100%;" />
+    <figcaption>Figure 13 : Diagramme de séquence – Message MDM</figcaption>
 </div>
-<p><br /></p>
+<p><br />
+La gestion de cet accusé de lecture MSSanté (MDN-Message Disposition Notification) va dépendre de l’organisation choisie par l’établissement pour traiter les courriels réceptionnés.
+Ce flux d’accusé de lecture MSSanté (message MDN) rend compte de la lecture du courriel par le destinataire lorsque ce courriel est traité de façon manuelle. Dans le cas d’un traitement automatique du courriel par la PFI de l’établissement destinataire, ce flux d’accusé de lecture rend compte de la réalisation de la demande de traitement sur le document contenu dans le courriel par le logiciel métier associé à la BAL destinatrice du courriel
+Dans le cas où le courriel entrant, réceptionné par une BAL organisationnelle, est transféré vers la BAL applicative associée pour traitement automatique de la demande, le message MDN généré par le GESTIONNAIRE (PFI) et envoyé à la BAL organisationnelle demandeuse est indispensable pour avertir l’utilisateur du succès ou de l’échec de la demande de traitement par le CONSOMMATEUR.
+La structure du message MDN (Message Disposition Notification) est précisée <a href="struct-msg-mdn.html">ici</a>.</p>
 
-<p>Les interactions de la transaction de
-transmission/remplacement/suppression de document(s) utilisent le
-message HL7 ORU\^R01\^ORU_R01 en version 2.5 ainsi que ses acquittements
-métiers HL7 ZAM\^Z01\^ZAM_Z01 (accusé métier de réception DMP),
-ZAM\^Z02\^ZAM_Z01 (accusé métier de réception MSSanté) et
-ZAM_Z03\^ZAM_Z01 (accusé métier de lecture MSSanté).</p>
-
-<p>L’action à réaliser sur le document porté par la transaction est
-indiquée par la valeur renseignée au niveau du champ OBX-11 du segment
-OBX portant le document (cf section 12.2.6 LIEN), qui prend la valeur F (pour
-demande d’intégration du document), C (pour demande de remplacement de
-document) et D (pour demande de suppression de document), et sur la
-valeur du champ ORC-1 (cf section 12.2.4 LIEN).</p>
-
-<p>Pour des questions de lisibilité, la figure 13 représente sur le même
-schéma la possibilité pour l’acteur CREATEUR d’envoyer une demande
-d’intégration, de remplacement ou de suppression de document(s) au moyen
-d’un message HL7 ORU.</p>
-
-<h3 id="implémentation-du-message-mdm-et-de-ses-acquittements-métier-hl7">Implémentation du message MDM et de ses acquittements métier HL7</h3>
-
-<p>Les interactions de la transaction de
-transmission/remplacement/suppression de document(s) utilisent
-respectivement les messages HL7 MDM\^T02\^MDM_T02, MDM\^T10\^MDM_T10 et
-MDM\^T04\^MDM_T04 en version 2.6 ainsi que ses acquittements métiers HL7
-ZAM\^Z01\^ZAM_Z01 (accusé métier de réception DMP), ZAM\^Z02\^ZAM_Z01
-(accusé métier de réception MSSanté) et ZAM_Z03\^ZAM_Z01 (accusé métier
-de lecture MSSanté).</p>
-
-<p>L’action à réaliser sur le document porté par la transaction est
-indiquée par la nature de l’événement (T02, T10 et T04).</p>
-
-<h4 id="demande-de-transmission-initiale-dun-document">Demande de transmission initiale d’un document</h4>
-
-<div class="figure">
-    <img src="image19.png" alt="Figure 14" title="Figure 14 : Diagramme de séquence -- Message MDM -- Transmission initiale d'un document" style="width:100%;" />
-</div>
-<div class="figure">
-    <img src="image18.png" alt="Figure 14" />
-    <figcaption>Figure 14 : Diagramme de séquence -- Message MDM -- Transmission initiale d'un document</figcaption>
-</div>
-<p><br /></p>
-
-<h4 id="demande-de-remplacement-dun-document">Demande de remplacement d’un document</h4>
-
-<div class="figure">
-    <img src="image20.png" alt="Figure 15" title="Figure 15 : Diagramme de séquence -- Message MDM -- Remplacement d'un document" style="width:100%;" />
-</div>
-<div class="figure">
-    <img src="image18.png" alt="Figure 15" />
-    <figcaption>Figure 15 : Diagramme de séquence -- Message MDM -- Remplacement d'un document</figcaption>
-</div>
-<p><br /></p>
-
-<h4 id="demande-de-suppression-dun-document">Demande de suppression d’un document</h4>
-
-<div class="figure">
-    <img src="image21.png" alt="Figure 16" title="Figure 16 : Diagramme de séquence -- Message MDM -- Suppression de document(s)" style="width:100%;" />
-</div>
-<div class="figure">
-    <img src="image18.png" alt="Figure 16" />
-    <figcaption>Figure 16 : Diagramme de séquence -- Message MDM -- Suppression de document(s)</figcaption>
-</div>
-<p><br /></p>
 
 
 
@@ -360,7 +286,7 @@ indiquée par la nature de l’événement (T02, T10 et T04).</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans.cda.mss#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jul 8, 2024 13:31+0000">2024-07-08</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans.cda.mss#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 10, 2024 10:41+0000">2024-07-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

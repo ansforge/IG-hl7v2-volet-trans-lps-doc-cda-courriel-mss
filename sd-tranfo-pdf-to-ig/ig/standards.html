@@ -152,13 +152,13 @@
         <a href="meta-dmp-mss.html">Table MetaDMP/MSS</a>
       </li>
       <li>
-        <a href="ack-metier-zam.html">Table AckMetierZAM</a>
-      </li>
-      <li>
         <a href="exemples.html">Exemples de messages</a>
       </li>
       <li>
         <a href="error-codes.html">Error Codes</a>
+      </li>
+      <li>
+        <a href="struct-msg-mdn.html">Structure du message MDN (MSS)</a>
       </li>
       <li>
         <a href="glossaire.html">Glossaire</a>
@@ -235,67 +235,41 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div>
 <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
-
 <ul>
   <li>
-    <p><em>HL7 v2.5 Chapitre 7</em>, message ORU (Unsolicited transmission of an
-observation message), <em>HL7 v2.6 Chapitre 9,</em> message MDM (Medical
-Document Management) (1)</p>
+    <p><em>HL7 v2.6 : Chapitre 9,</em> message MDM (Medical Document Management) ^(1)^~,~</p>
   </li>
   <li>
-    <p>Le présent document spécifie également une nouvelle structure de
-message HL7, le message ZAM spécifique à ce volet, basé sur HL7v2.6
-et utilisé pour implémenter les accusés métier (accusé de réception
-DMP, accusé de réception MSSanté et accusé de lecture MSSanté),</p>
+    <p><a href="https://old.interopsante.org/offres/doc_inline_src/412/Publication-IHE_FRANCE_PAM_National_Extension_v2.11.pdf">Extension française du profil IHE PAM : PAM.fr, version 2.11</a></p>
   </li>
   <li>
-    <p>Extension française du profil IHE PAM : PAM.fr, version 2.11 (1),</p>
+    <p>Les types de données utilisés ^(2)^ doivent se conformer aux spécifications <a href="https://old.interopsante.org/offres/doc_inline_src/412/IHE_France_Constraints_on_HL7_data_types_for_ITI_V1.8.pdf">« Contraintes sur les types de données HL7 v2.5 applicables aux profils d’intégration du cadre technique IT Infrastructure dans le périmètre d’IHE France » release 1.8</a></p>
   </li>
   <li>
-    <p>Les types de données utilisés (2) doivent se conformer aux
-spécifications « INTEROP’SANTE : ITI - Contraintes sur les types de données HL7 v2.5 applicables aux profils d’intégration du cadre technique IT Infrastructure dans le périmètre d’IHE France - Release 1.8 – Final Text – 31 janvier 2024 »</p>
+    <p>Le choix du protocole de transport est libre. L’utilisation du protocole MLLP est à privilégier pour gérer au mieux les accusés de réception techniques (ACK).</p>
   </li>
   <li>
-    <p>Le choix du protocole de transport est libre. L’utilisation du
-protocole MLLP est à privilégier pour gérer au mieux les accusés de
-réception techniques (ACK).</p>
+    <p>Dans le cadre de cette spécification, les documents médicaux véhiculés correspondent à des documents au format CDA-R2 conformes au <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_contenu_volet-structuration-minimale_v1.15.pdf">volet du CI-SIS « Structuration minimale des documents de santé »</a>.</p>
   </li>
   <li>
-    <p>Dans le cadre de cette spécification, les documents médicaux
-véhiculés correspondent à des documents au format CDA-R2 conformes
-au volet du CI-SIS « <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_contenu_volet-structuration-minimale_v1.15.pdf">Structuration minimale des documents de santé</a> ».</p>
+    <p>Les documents transmis par le message HL7 doivent être validés par le professionnel de santé dans l’application métier qui les a générés via un statut de validation géré en interne.</p>
   </li>
   <li>
-    <p>Les documents transmis par le message HL7 doivent être validés par
-le professionnel de santé dans l’application métier qui les a
-générés via un statut de validation géré en interne.</p>
-  </li>
-  <li>
-    <p>Dans le cas d’une publication de(s) document(s) sur le DMP, l’INS du
-patient doit être qualifié en suivant <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ans_cisis-tec_annexe-ins_1.5.pdf">les spécifications de l’annexe
-INS CI-SIS</a> et les règles du corpus documentaire INS (lien?).</p>
-  </li>
-  <li>
-    <p>Les échanges MSSanté doivent prendre en compte les restrictions
-positionnées sur le message. (Exemple : un document avec un masquage
-Médecin ne doit pas être envoyé sur le mail MSSanté du médecin).</p>
+    <p>Les échanges MSSanté doivent prendre en compte les restrictions positionnées sur le message. (Exemple : Un document avec un masquage Médecin ne doit pas être envoyé sur le mail MSSanté du médecin).</p>
   </li>
 </ul>
 
 <blockquote class="stu-note">
     <p>
-    <b>(1) :</b> Les messages décrits au niveau de cette transaction implémentent la version 2.5 (message ORU) ou la version 2.6 (message MDM) du standard HL7 mais pré adoptent le segment PRT de la version 2.9, permettant de spécifier l'expéditeur et le(s) destinataire(s) d'un courriel.
-    Le message ORU permet de transmettre, si nécessaire, deux formats de
-    document (CDAr2 Niv1 et CDAr2 Niv3). Le message MDM permet de transmettre un seul document.
+    <b>(1) :</b> Les messages décrits au niveau de cette transaction implémentent la version 2.6 (message MDM) du standard HL7 mais pré adoptent le segment PRT de la version 2.9, permettant de spécifier l’expéditeur et le(s) destinataire(s) d’un courriel.
+    Le message MDM permet de transmettre un seul document.
     </p>
 </blockquote>
 
 <blockquote class="stu-note">
     <p>
-    <b>(2) :</b> Pour l\'ensemble des champs de type CE en HL7v2.5 et CWE en HL7v2.6, la contrainte imposée en version 2.7 sur le type de donnée CE/CWE est pré adoptée. En conséquence, ces spécifications imposent de préciser le système de codage (CE/CWE.3) lorsque le code (CE/CWE.1) est renseigné.
-    Les bonnes pratiques consistent à renseigner systématiquement les 3
-    composantes : le code, le libellé du code et le libellé de la
-    nomenclature.
+    <b>(2) :</b> Pour l'ensemble des champs de type CE en HL7v2.5 et CWE en HL7v2.6, la contrainte imposée en version 2.7 sur le type de donnée CE/CWE est pré adoptée. En conséquence, ces spécifications imposent de préciser le système de codage (CE/CWE.3) lorsque le code (CE/CWE.1) est renseigné. 
+Les bonnes pratiques consistent à renseigner systématiquement les 3 composantes : le code, le libellé du code et le libellé de la nomenclature.
     </p>
 </blockquote>
 
@@ -339,7 +313,7 @@ Médecin ne doit pas être envoyé sur le mail MSSanté du médecin).</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans.cda.mss#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jul 8, 2024 13:31+0000">2024-07-08</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans.cda.mss#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 10, 2024 10:41+0000">2024-07-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

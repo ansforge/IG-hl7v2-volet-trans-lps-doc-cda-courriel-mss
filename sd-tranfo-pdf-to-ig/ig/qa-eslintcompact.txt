@@ -1,16 +1,11 @@
 HL7v2_CDAr2
 =========================================
 
-Generic: line 0, col 0, Error - The image source 'fig17.png' cannot be resolved (NOTFOUND)
-Generic: line 0, col 0, Error - The image source 'fig18.png' cannot be resolved (NOTFOUND)
-Generic: line 0, col 0, Error - The link '#_ftn2' for "[2]" cannot be resolved (valid targets: 96 targets) (NOTFOUND)
-Generic: line 0, col 0, Error - The image source 'image26.png' cannot be resolved (NOTFOUND)
-Generic: line 0, col 0, Error - The image source 'image27.png' cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Warning - The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide (NOTFOUND)
 Generic: line 0, col 0, Warning - An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide (NOTFOUND)
 Generic: line 0, col 0, Warning - An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide (NOTFOUND)
 Generic: line 0, col 0, Warning - The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide (NOTFOUND)
-/home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/fsh-generated/resources/ImplementationGuide-ans.hl7v2.fr.trans.cda.mss.json: line 1, col 16747, Error - ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1) (STRUCTURE)
+/home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/fsh-generated/resources/ImplementationGuide-ans.hl7v2.fr.trans.cda.mss.json: line 1, col 16763, Error - ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1) (STRUCTURE)
 
 err = 1, warn = 4, info = 0
 IG Publisher Version: 1.6.15

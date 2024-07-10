@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "HL7v2_CDAr2"] ; # 
   fhir:title [ fhir:v "Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-07-08T13:31:20+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-07-10T10:41:58+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -681,14 +681,6 @@
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "ack-metier-zam.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "ack-metier-zam.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Table AckMetierZAM" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
            fhir:value [ fhir:v "exemples.html"^^xsd:anyURI ]
          ] ) ;
          fhir:name [ fhir:v "exemples.html"^^xsd:anyURI ] ;
@@ -701,6 +693,14 @@
          ] ) ;
          fhir:name [ fhir:v "error-codes.html"^^xsd:anyURI ] ;
          fhir:title [ fhir:v "Error codes" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "struct-msg-mdn.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "struct-msg-mdn.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Structure du message MDN (MSSanté)" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [

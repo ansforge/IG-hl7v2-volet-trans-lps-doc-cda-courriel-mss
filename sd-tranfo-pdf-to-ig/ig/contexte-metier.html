@@ -152,13 +152,13 @@
         <a href="meta-dmp-mss.html">Table MetaDMP/MSS</a>
       </li>
       <li>
-        <a href="ack-metier-zam.html">Table AckMetierZAM</a>
-      </li>
-      <li>
         <a href="exemples.html">Exemples de messages</a>
       </li>
       <li>
         <a href="error-codes.html">Error Codes</a>
+      </li>
+      <li>
+        <a href="struct-msg-mdn.html">Structure du message MDN (MSS)</a>
       </li>
       <li>
         <a href="glossaire.html">Glossaire</a>
@@ -237,7 +237,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h4 id="les-groupes-de-processus">Les groupes de processus</h4>
 
-<p>Réception par la plateforme d’intermédiation (PFI) d’une demande de traitement sur le(s) document(s) clinique(s) relatif(s) à un patient provenant d’un logiciel métier de l’établissement, pour publication ensuite vers le DMP et/ou envoi par MSSanté vers un ou plusieurs destinataire(s). Ce groupe de processus est divisé en quatre processus décrits dans les sections suivantes.</p>
+<p>Réception par la plateforme d’intermédiation (PFI) d’une demande de traitement sur le(s) document(s) clinique(s) relatif(s) à un patient provenant d’une Boîte aux Lettres (BAL) MSSanté, pour transmission et traitement de cette demande au niveau d’un logiciel consommateur au sein de l’établissement. Ce groupe de processus est divisé en quatre processus décrits dans les sections suivantes.</p>
 
 <h4 id="les-processus">Les processus</h4>
 
@@ -245,31 +245,41 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li>
-    <p>Une demande de transmission initiale de document(s) pour publication sur le DMP et/ou envoi par MSSanté,</p>
+    <p>Une demande de transmission initiale de document(s) pour intégration dans le LPS,</p>
   </li>
   <li>
-    <p>Une demande de remplacement de document(s) initialement publié(s) sur le DMP et/ou initialement envoyé(s) par MSSanté,</p>
+    <p>Une demande de remplacement de document(s) initialement envoyé(s) par MSSanté pour remplacement au niveau du LPS,</p>
   </li>
   <li>
-    <p>Une demande de mise à jour des métadonnées de document(s)^(*)^ initialement publié(s) sur le DMP et/ou initialement envoyé(s) par MSSanté,</p>
+    <p>Une demande de mise à jour des métadonnées de document(s)^(*)^ initialement envoyé(s) par MSSanté pour mise à jour au niveau du LPS,</p>
   </li>
   <li>
-    <p>Une demande de suppression de document(s) initialement publié(s) sur le DMP et/ou initialement envoyé(s) par MSSanté.</p>
+    <p>Une demande de suppression de document(s) initialement envoyé(s) par MSSanté pour suppression au niveau du LPS.</p>
   </li>
 </ul>
 
-<p>(*) : <em>dans le contexte français, conformément au volet *Partage de documents de santé* du CI_SIS, la mise à jour des métadonnées du document est limitée à la mise à jour des informations de masquage du document aux PS et de mise en visibilité du document au patient et à ses représentants légaux ainsi que le statut du document.</em></p>
+<p>(*) : <em>dans le contexte français, conformément au <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-partage-documents-sante_v1.15.pdf">volet Partage de
+documents de santé du CI_SIS</a>, la mise à jour des métadonnées du
+document est limitée à la mise à jour des informations de masquage du
+document aux PS et de mise en visibilité du document au patient et à ses
+représentants légaux ainsi que le statut du document.</em></p>
 
-<p>La PFI interagissant avec le DMP en mode d’authentification indirecte, il lui est impossible de mettre en œuvre la transaction TD3.3 (Gestion des attributs d’un document) du profil Alimentation du DMP, décrite dans le <em>Guide d’implémentation du DMP</em> (transaction équivalente à la
-transaction Update Document Set [<a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html">ITI-57</a>] du profil IHE Update Metadata), car celle-ci nécessite une authentification directe (cf la matrice des droits fonctionnels du DMP).</p>
+<p>Cette mise à jour est gérée comme un remplacement de document, ce qui
+implique la création d’une nouvelle version de document par le système
+créateur de documents. Cette nouvelle version vient remplacer la
+précédente au niveau du consommateur (logiciel métier destinataire du
+courriel).</p>
 
-<p>Dans ce contexte, la mise à jour des métadonnées de masquage/démasquage aux PS et de visibilité du document au patient sera gérée comme un remplacement de document, ce qui implique la création d’une nouvelle version de document par le système créateur de documents. Cette nouvelle version vient remplacer la précédente au niveau du consommateur (DMP ou logiciel métier destinataire du courriel).</p>
+<p>Le nombre de processus est ainsi réduit aux trois processus synthétisés
+sur la Figure suivante.</p>
 
-<p>Le nombre de processus est ainsi réduit aux trois processus synthétisés sur la Figure 6.</p>
+<p>Dans le contexte du SEGUR vague 2, les applications consommatrices de
+ces documents sont limitées au dossier patient informatisé (DPI) et au
+système de gestion de radiologie (RIS).</p>
 
 <div class="figure">
-    <img src="image11.png" alt="Figure 6" title="Figure 6 : Organisation du contexte métier du volet « Transmission de documents CDA en HL7v2 »" style="width:100%;" />
-    <figcaption>Figure 6 : Organisation du contexte métier du volet « Transmission de documents CDA en HL7v2 »</figcaption>
+    <img src="image13.png" alt="Figure 6" title="Figure 6 : Organisation du contexte métier du volet « Transmission au LPS d'un document provenant d'un courriel »" style="width:100%;" />
+    <figcaption>Figure 6 : Organisation du contexte métier du volet « Transmission au LPS d'un document provenant d'un courriel »</figcaption>
 </div>
 <p><br /></p>
 
@@ -315,7 +325,7 @@ transaction Update Document Set [<a href="https://profiles.ihe.net/ITI/TF/Volume
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans.cda.mss#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jul 8, 2024 13:31+0000">2024-07-08</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans.cda.mss#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 10, 2024 10:41+0000">2024-07-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
