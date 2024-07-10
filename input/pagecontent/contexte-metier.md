@@ -1,31 +1,41 @@
 #### Les groupes de processus
 
-Réception par la plateforme d'intermédiation (PFI) d'une demande de traitement sur le(s) document(s) clinique(s) relatif(s) à un patient provenant d'un logiciel métier de l'établissement, pour publication ensuite vers le DMP et/ou envoi par MSSanté vers un ou plusieurs destinataire(s). Ce groupe de processus est divisé en quatre processus décrits dans les sections suivantes.
+Réception par la plateforme d’intermédiation (PFI) d’une demande de traitement sur le(s) document(s) clinique(s) relatif(s) à un patient provenant d’une Boîte aux Lettres (BAL) MSSanté, pour transmission et traitement de cette demande au niveau d’un logiciel consommateur au sein de l’établissement. Ce groupe de processus est divisé en quatre processus décrits dans les sections suivantes.
 
 #### Les processus
 
 Le groupe de processus est divisé en quatre processus :
 
--   Une demande de transmission initiale de document(s) pour publication sur le DMP et/ou envoi par MSSanté,
+-   Une demande de transmission initiale de document(s) pour intégration dans le LPS,
 
--   Une demande de remplacement de document(s) initialement publié(s) sur le DMP et/ou initialement envoyé(s) par MSSanté,
+-   Une demande de remplacement de document(s) initialement envoyé(s) par MSSanté pour remplacement au niveau du LPS,
 
--   Une demande de mise à jour des métadonnées de document(s)^(\*)^ initialement publié(s) sur le DMP et/ou initialement envoyé(s) par MSSanté,
+-   Une demande de mise à jour des métadonnées de document(s)^(\*)^ initialement envoyé(s) par MSSanté pour mise à jour au niveau du LPS,
 
--   Une demande de suppression de document(s) initialement publié(s) sur le DMP et/ou initialement envoyé(s) par MSSanté.
+-   Une demande de suppression de document(s) initialement envoyé(s) par MSSanté pour suppression au niveau du LPS.
 
-(\*) : _dans le contexte français, conformément au volet *Partage de documents de santé* du CI_SIS, la mise à jour des métadonnées du document est limitée à la mise à jour des informations de masquage du document aux PS et de mise en visibilité du document au patient et à ses représentants légaux ainsi que le statut du document._
+(\*) : _dans le contexte français, conformément au [volet Partage de
+documents de santé du CI_SIS](https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-partage-documents-sante_v1.15.pdf), la mise à jour des métadonnées du
+document est limitée à la mise à jour des informations de masquage du
+document aux PS et de mise en visibilité du document au patient et à ses
+représentants légaux ainsi que le statut du document._
 
-La PFI interagissant avec le DMP en mode d'authentification indirecte, il lui est impossible de mettre en œuvre la transaction TD3.3 (Gestion des attributs d'un document) du profil Alimentation du DMP, décrite dans le *Guide d'implémentation du DMP* (transaction équivalente à la
-transaction Update Document Set \[[ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)\] du profil IHE Update Metadata), car celle-ci nécessite une authentification directe (cf la matrice des droits fonctionnels du DMP).
+Cette mise à jour est gérée comme un remplacement de document, ce qui
+implique la création d'une nouvelle version de document par le système
+créateur de documents. Cette nouvelle version vient remplacer la
+précédente au niveau du consommateur (logiciel métier destinataire du
+courriel).
 
-Dans ce contexte, la mise à jour des métadonnées de masquage/démasquage aux PS et de visibilité du document au patient sera gérée comme un remplacement de document, ce qui implique la création d'une nouvelle version de document par le système créateur de documents. Cette nouvelle version vient remplacer la précédente au niveau du consommateur (DMP ou logiciel métier destinataire du courriel).
+Le nombre de processus est ainsi réduit aux trois processus synthétisés
+sur la Figure suivante.
 
-Le nombre de processus est ainsi réduit aux trois processus synthétisés sur la Figure 6.
+Dans le contexte du SEGUR vague 2, les applications consommatrices de
+ces documents sont limitées au dossier patient informatisé (DPI) et au
+système de gestion de radiologie (RIS).
 
 <div class="figure">
-    <img src="image11.png" alt="Figure 6" title="Figure 6 : Organisation du contexte métier du volet « Transmission de documents CDA en HL7v2 »" style="width:100%;">
-    <figcaption>Figure 6 : Organisation du contexte métier du volet « Transmission de documents CDA en HL7v2 »</figcaption>
+    <img src="image13.png" alt="Figure 6" title="Figure 6 : Organisation du contexte métier du volet « Transmission au LPS d'un document provenant d'un courriel »" style="width:100%;">
+    <figcaption>Figure 6 : Organisation du contexte métier du volet « Transmission au LPS d'un document provenant d'un courriel »</figcaption>
 </div>    
 <br>
 

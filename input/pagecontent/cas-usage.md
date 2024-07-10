@@ -25,7 +25,7 @@ La structure du courriel MDN est décrite en annexe 4 [LIEN].
 
 <blockquote class="stu-note">
     <p>
-    <b>Point d'attention</b> dans le contexte du SEGUR vague 2, la PFI doit pouvoir générer un courriel MDN (Message Disposition Notification) à destination de la BAL du SGL contenant le statut de l'intégration.
+    <b>Point d'attention :</b> dans le contexte du SEGUR vague 2, la PFI doit pouvoir générer un courriel MDN (Message Disposition Notification) à destination de la BAL du SGL contenant le statut de l'intégration.
     </p>
 </blockquote>
 

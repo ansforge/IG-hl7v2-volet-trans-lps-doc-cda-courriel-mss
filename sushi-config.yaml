@@ -51,12 +51,12 @@ pages:
         title: "Issues"
     meta-dmp-mss.md:
         title: "Table MetaDMP/MSS"
-    ack-metier-zam.md:
-        title: "Table AckMetierZAM"
     exemples.md:
         title: "Exemples de messages"
     error-codes.md:
         title: "Error codes"
+    struct-msg-mdn.md:
+        title: "Structure du message MDN (MSSanté)"
     change-log.md:
         title: "Historique des versions"
     glossaire.md:
@@ -84,9 +84,9 @@ menu:
         "Règles de gestion MSSANTE": regles-gestion-mssante.html
     Volume 3:
         "Table MetaDMP/MSS": meta-dmp-mss.html
-        "Table AckMetierZAM": ack-metier-zam.html
         "Exemples de messages": exemples.html
         "Error Codes": error-codes.html
+        "Structure du message MDN (MSS)": struct-msg-mdn.html
         "Glossaire": glossaire.html
     Test Plan: testplan.html
     Historique des versions: change-log.html
