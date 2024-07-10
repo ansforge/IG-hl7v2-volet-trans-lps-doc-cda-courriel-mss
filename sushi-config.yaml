@@ -43,8 +43,8 @@ pages:
         title: "Interactions entre les Acteurs"
     profils-messages.md:
         title: "Profils de messages"
-    regles-gestion-mssante.md:
-        title: "Règles de gestion MSSANTE"
+    lien-entete-cda-meta-xds.md:
+        title: "LIEN ENTRE L’EN-TETE CDA ET LES METADONNEES XDS"
     testplan.md:
         title: "Test Plan"
     issues.md:
@@ -81,7 +81,7 @@ menu:
         "Evènements déclenchants": evenements-declenchants.html
         "Interactions entre les Acteurs": interactions-acteurs.html
         "Profils de messages": profils-messages.html
-        "Règles de gestion MSSANTE": regles-gestion-mssante.html
+        "LIEN ENTRE L’EN-TETE CDA ET LES METADONNEES XDS": lien-entete-cda-meta-xds.html
     Volume 3:
         "Table MetaDMP/MSS": meta-dmp-mss.html
         "Exemples de messages": exemples.html
