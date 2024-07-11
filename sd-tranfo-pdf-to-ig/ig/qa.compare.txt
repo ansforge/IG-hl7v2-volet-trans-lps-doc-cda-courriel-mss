@@ -1,4 +1,4 @@
-HL7v2_CDAr2 : Validation Results
+HL7v2_trans_CDA_MSS : Validation Results
 =========================================
 
 err = 1, warn = 4, info = 0

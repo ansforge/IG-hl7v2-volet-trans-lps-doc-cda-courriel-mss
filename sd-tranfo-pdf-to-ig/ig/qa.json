@@ -1,13 +1,13 @@
 {
   "url" : "https://interop.esante.gouv.fr/ig/hl7v2/ans.hl7v2.fr.trans.cda.mss/ImplementationGuide/ans.hl7v2.fr.trans.cda.mss",
-  "name" : "HL7v2_CDAr2",
+  "name" : "HL7v2_trans_CDA_MSS",
   "title" : "Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté",
   "description" : null,
   "status" : "draft",
   "package-id" : "ans.hl7v2.fr.trans.cda.mss",
   "ig-ver" : "1.1.0",
-  "date" : "Thu, 11 Jul, 2024 09:43:14 +0000",
-  "dateISO8601" : "2024-07-11T09:43:14+00:00",
+  "date" : "Thu, 11 Jul, 2024 09:48:46 +0000",
+  "dateISO8601" : "2024-07-11T09:48:46+00:00",
   "errs" : 1,
   "warnings" : 4,
   "hints" : 0,
@@ -15,5 +15,5 @@
   "suppressed-warnings" : 0,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 1523491192
+  "maxMemory" : 1624759296
 }

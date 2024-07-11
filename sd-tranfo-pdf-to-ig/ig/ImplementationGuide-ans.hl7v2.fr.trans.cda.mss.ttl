@@ -10,14 +10,14 @@
   fhir:id [ fhir:v "ans.hl7v2.fr.trans.cda.mss"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide ans.hl7v2.fr.trans.cda.mss</b></p><a name=\"ans.hl7v2.fr.trans.cda.mss\"> </a><a name=\"hcans.hl7v2.fr.trans.cda.mss\"> </a><a name=\"hcans.hl7v2.fr.trans.cda.mss-fr-FR\"> </a><h2>HL7v2_CDAr2</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/hl7v2/ans.hl7v2.fr.trans.cda.mss/ImplementationGuide/ans.hl7v2.fr.trans.cda.mss</pre></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide ans.hl7v2.fr.trans.cda.mss</b></p><a name=\"ans.hl7v2.fr.trans.cda.mss\"> </a><a name=\"hcans.hl7v2.fr.trans.cda.mss\"> </a><a name=\"hcans.hl7v2.fr.trans.cda.mss-fr-FR\"> </a><h2>HL7v2_trans_CDA_MSS</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/hl7v2/ans.hl7v2.fr.trans.cda.mss/ImplementationGuide/ans.hl7v2.fr.trans.cda.mss</pre></div>"
   ] ; # 
   fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/hl7v2/ans.hl7v2.fr.trans.cda.mss/ImplementationGuide/ans.hl7v2.fr.trans.cda.mss"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "1.1.0"] ; # 
-  fhir:name [ fhir:v "HL7v2_CDAr2"] ; # 
+  fhir:name [ fhir:v "HL7v2_trans_CDA_MSS"] ; # 
   fhir:title [ fhir:v "Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-07-11T09:43:14+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-07-11T09:48:46+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;

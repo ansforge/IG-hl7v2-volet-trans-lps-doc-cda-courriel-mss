@@ -4,6 +4,6 @@
     "type" : "ImplementationGuide",
     "url" : "https://interop.esante.gouv.fr/ig/hl7v2/ans.hl7v2.fr.trans.cda.mss/ImplementationGuide/ans.hl7v2.fr.trans.cda.mss",
     "version" : "1.1.0",
-    "name" : "HL7v2_CDAr2"
+    "name" : "HL7v2_trans_CDA_MSS"
   }
 ]
