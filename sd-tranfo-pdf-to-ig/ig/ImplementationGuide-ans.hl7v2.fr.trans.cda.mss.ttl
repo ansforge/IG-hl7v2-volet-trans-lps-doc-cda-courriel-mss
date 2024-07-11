@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "HL7v2_CDAr2"] ; # 
   fhir:title [ fhir:v "Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-07-10T10:41:58+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-07-11T07:59:41+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -649,10 +649,10 @@
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "regles-gestion-mssante.html"^^xsd:anyURI ]
+           fhir:value [ fhir:v "lien-entete-cda-meta-xds.html"^^xsd:anyURI ]
          ] ) ;
-         fhir:name [ fhir:v "regles-gestion-mssante.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Règles de gestion MSSANTE" ] ;
+         fhir:name [ fhir:v "lien-entete-cda-meta-xds.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "LIEN ENTRE L’EN-TETE CDA ET LES METADONNEES XDS" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [

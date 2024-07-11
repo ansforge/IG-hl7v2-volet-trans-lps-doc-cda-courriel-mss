@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Règles de gestion MSSANTE - Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté v1.1.0</title>
+    <title>LIEN ENTRE L’EN-TETE CDA ET LES METADONNEES XDS - Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté v1.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -139,7 +139,7 @@
         <a href="profils-messages.html">Profils de messages</a>
       </li>
       <li>
-        <a href="regles-gestion-mssante.html">Règles de gestion MSSANTE</a>
+        <a href="lien-entete-cda-meta-xds.html">LIEN ENTRE L’EN-TETE CDA ET LES METADONNEES XDS</a>
       </li>
     </ul>
   </li>
@@ -186,7 +186,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Règles de gestion MSSANTE</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>LIEN ENTRE L’EN-TETE CDA ET LES METADONNEES XDS</b></li>
 
           <span style="float:right;">
 
@@ -217,7 +217,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/hl7v2/ans.hl7v2.fr.trans.cda.mss/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
-  <h2>Règles de gestion MSSANTE</h2>
+  <h2>LIEN ENTRE L’EN-TETE CDA ET LES METADONNEES XDS</h2>
   
 
 
@@ -235,72 +235,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div>
 <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
-<p>Ci-dessous la matrice de gestion pour les échanges MSSanté suivant les OBX valorisés. Le tableau présente une liste exhaustive des combinaisons possibles des OBX pour l’échange MSSANTE. Les cas non représentés génèrent un message d’erreur.</p>
-
-<table>
-<tbody>
-<tr>
-<td width="245">
-<p><strong>Balises OBX&nbsp;: </strong></p>
-</td>
-<td width="404">
-<p><strong>Echange MSSANTE&nbsp;: </strong></p>
-</td>
-</tr>
-<tr>
-<td width="245">
-<p>MASQUE_PS&nbsp;: N</p>
-<p>INVISIBLE_PATIENT&nbsp;: N</p>
-<p>INVISIBLE_REP_LEGAUX : N</p>
-<p>CONNEXION_SECRETE&nbsp;: N</p>
-<p>MODIF_CONF_CODE&nbsp;: N ou Y</p>
-<p>DESTDMP&nbsp;: N ou Y</p>
-<p>DESTMSSANTEPS&nbsp;: Y<br /> DESTMSSANTEPAT&nbsp;: Y</p>
-<p>ACK_RECEPTION&nbsp;: N ou Y</p>
-<p>ACK_LECTURE_MSS&nbsp;: N ou Y</p>
-</td>
-<td width="404">
-<p>Envoi du document sur la boite MSSant&eacute; du PS/organisation/BAL applicative du destinataire et du Patient</p>
-</td>
-</tr>
-<tr>
-<td width="245">
-<p>MASQUE_PS&nbsp;: N</p>
-<p>INVISIBLE_PATIENT&nbsp;: Y</p>
-<p>INVISIBLE_REP_LEGAUX : N</p>
-<p>CONNEXION_SECRETE&nbsp;: N</p>
-<p>MODIF_CONF_CODE&nbsp;: N ou Y</p>
-<p>DESTDMP&nbsp;: N ou Y</p>
-<p>DESTMSSANTEPS&nbsp;: Y<br /> DESTMSSANTEPAT&nbsp;: N</p>
-<p>ACK_RECEPTION&nbsp;: N ou Y</p>
-<p>ACK_LECTURE_MSS&nbsp;: N ou Y</p>
-</td>
-<td width="404">
-<p>Envoi du document sur la boite MSSant&eacute; du PS/organisation/BAL applicative du destinataire</p>
-</td>
-</tr>
-<tr>
-<td width="245">
-<p>MASQUE_PS&nbsp;: Y ou N</p>
-<p>INVISIBLE_PATIENT&nbsp;: N</p>
-<p>INVISIBLE_REP_LEGAUX : N ou Y</p>
-<p>CONNEXION_SECRETE&nbsp;: N</p>
-<p>MODIF_CONF_CODE&nbsp;: N ou Y</p>
-<p>DESTDMP&nbsp;: N</p>
-<p>DESTMSSANTEPS&nbsp;: N<br /> DESTMSSANTEPAT&nbsp;: Y</p>
-<p>ACK_RECEPTION&nbsp;: N ou Y</p>
-<p>ACK_LECTURE_MSS&nbsp;: N ou Y</p>
-</td>
-<td width="404">
-<p>Envoi du document sur la boite MSSant&eacute; du patient</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-<p><strong>Lien entre l’EN-TETE CDA et les métadonnées XDS</strong></p>
-
-<p>Une annexe disponible sur le CI-SIS indique la correspondance entre les données d’en-tête d’un document CDA définies dans le volet structuration minimale des documents de Santé et les métadonnées XDS définies dans le <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-partage-documents-sante_v1.15.pdf">volet partage de documents de Santé</a>.</p>
+<p>Une annexe disponible sur le CI-SIS indique la correspondance entre les
+données d’en-tête d’un document CDA définies dans le volet structuration
+minimale des documents de Santé et les métadonnées XDS définies dans le
+volet partage de documents de Santé.</p>
 
 <ul>
   <li><strong><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/CI-SIS_ANX_LIENS-CDA-METADONNEES-XDS_V1.6.pdf">Annexe – Lien Entre l’en-tête CDA et les métadonnées XDS</a></strong></li>
@@ -346,7 +284,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans.cda.mss#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 10, 2024 10:41+0000">2024-07-10</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans.cda.mss#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 11, 2024 07:59+0000">2024-07-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
