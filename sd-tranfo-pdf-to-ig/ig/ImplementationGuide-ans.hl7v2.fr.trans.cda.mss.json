@@ -10,7 +10,7 @@
   "name" : "HL7v2_CDAr2",
   "title" : "Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté",
   "status" : "draft",
-  "date" : "2024-07-11T07:59:41+00:00",
+  "date" : "2024-07-11T09:43:14+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -757,7 +757,7 @@
           "valueUrl" : "lien-entete-cda-meta-xds.html"
         }],
         "nameUrl" : "lien-entete-cda-meta-xds.html",
-        "title" : "LIEN ENTRE L’EN-TETE CDA ET LES METADONNEES XDS",
+        "title" : "Lien entre l'en-tête CDA et les métadonnées XDS",
         "generation" : "markdown"
       },
       {
@@ -790,19 +790,19 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "exemples.html"
+          "valueUrl" : "error-codes.html"
         }],
-        "nameUrl" : "exemples.html",
-        "title" : "Exemples de messages",
+        "nameUrl" : "error-codes.html",
+        "title" : "Codes erreurs de traitement du message HL7 MDM",
         "generation" : "markdown"
       },
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "error-codes.html"
+          "valueUrl" : "exemples.html"
         }],
-        "nameUrl" : "error-codes.html",
-        "title" : "Error codes",
+        "nameUrl" : "exemples.html",
+        "title" : "Exemples de messages",
         "generation" : "markdown"
       },
       {

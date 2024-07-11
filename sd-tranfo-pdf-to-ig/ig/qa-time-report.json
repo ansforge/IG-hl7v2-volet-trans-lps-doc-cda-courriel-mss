@@ -1,54 +1,49 @@
 {
-  "date" : "Thu, 11 Jul, 2024 07:59:41 +0000",
+  "date" : "Thu, 11 Jul, 2024 09:43:14 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
       "name" : "/fsh-generated/resources/ImplementationGuide-ans.hl7v2.fr.trans.cda.mss.json",
-      "size" : 4688,
+      "size" : 4724,
       "processes" : [
         {
           "activity" : "load",
-          "start" : 23,
-          "length" : 34
+          "start" : 28,
+          "length" : 28
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 23,
-          "length" : 4
+          "start" : 28,
+          "length" : 6
         },
         {
           "activity" : "generateNarratives",
-          "start" : 23,
+          "start" : 28,
           "length" : 78
         },
         {
           "activity" : "validate",
-          "start" : 23,
-          "length" : 2943
+          "start" : 28,
+          "length" : 3258
         },
         {
           "activity" : "generate1",
-          "start" : 26,
-          "length" : 117
+          "start" : 31,
+          "length" : 98
         },
         {
           "activity" : "generate2",
-          "start" : 28,
-          "length" : 202
-        },
-        {
-          "activity" : "generateExampleZip",
           "start" : 35,
-          "length" : 1
+          "length" : 111
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 36,
+          "start" : 43,
           "length" : 3
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 38,
+          "start" : 46,
           "length" : 2
         }
       ]

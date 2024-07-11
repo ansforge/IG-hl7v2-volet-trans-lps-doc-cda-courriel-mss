@@ -139,7 +139,7 @@
         <a href="profils-messages.html">Profils de messages</a>
       </li>
       <li>
-        <a href="lien-entete-cda-meta-xds.html">LIEN ENTRE L’EN-TETE CDA ET LES METADONNEES XDS</a>
+        <a href="lien-entete-cda-meta-xds.html">Lien entre l&apos;en-tête CDA et les métadonnées XDS</a>
       </li>
     </ul>
   </li>
@@ -152,10 +152,10 @@
         <a href="meta-dmp-mss.html">Table MetaDMP/MSS</a>
       </li>
       <li>
-        <a href="exemples.html">Exemples de messages</a>
+        <a href="error-codes.html">Codes erreurs de traitement du message HL7 MDM</a>
       </li>
       <li>
-        <a href="error-codes.html">Error Codes</a>
+        <a href="exemples.html">Exemples de messages</a>
       </li>
       <li>
         <a href="struct-msg-mdn.html">Structure du message MDN (MSS)</a>
@@ -190,7 +190,7 @@
 
           <span style="float:right;">
 
-            <a href="error-codes.html">&lt;prev</a> | 
+            <a href="exemples.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
@@ -235,7 +235,202 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div>
 <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
+<p>La RFC 8098 définit le type de contenu
+« message/disposition-notification » propre au message MDN (Message
+Disposition Notification). Ce message MDN est utilisé pour notifier
+l’émetteur d’un courriel de tout traitement qui survient après la
+livraison de ce courriel au niveau du récepteur. Conformément à la RFC
+8098, ce message MDN doit :</p>
 
+<ul>
+  <li>
+    <p>Être lisible par un humain et par une machine,</p>
+  </li>
+  <li>
+    <p>Fournir suffisamment d’informations pour permettre à l’émetteur du
+message d’associer sans ambiguïté le message MDN au message
+initialement envoyé et à l’adresse du récepteur initial au nom
+duquel le message MDN a été produit,</p>
+  </li>
+  <li>
+    <p>Être structuré conformément à la RFC 2822 et la RFC 8098,</p>
+  </li>
+</ul>
+
+<p>L’envoi du message MDN à l’expéditeur du courriel initial est
+conditionné par la présence d’un entête Disposition-Notification-To au
+niveau du courriel expédié. D’autres informations peuvent également être
+fournies en utilisant les entêtes Original-Recipient et
+Disposition-Notification-Options.</p>
+
+<p>La RFC 8098 précise qu’un MDN ne devrait pas être renvoyé
+automatiquement par le récepteur du courriel dans le cas où l’entête
+Disposition-Notification-To diffère de l’adresse précisée dans l’entête
+returm-Path du courriel envoyé, ceci afin d’éviter une transmission de
+messages en boucle. Dans ce cas l’envoi du MDN nécessite une
+confirmation de l’utilisateur.</p>
+
+<p>Dans le cas d’un MDN en erreur, l’objet du message MDN doit être précisé
+de la façon suivante : [KO Intégration système ! ]
+XDM/1.0/DDM+&lt;libellé&gt; &lt;NOM&gt; &lt;prénom&gt; &lt;date de naissance&gt;.</p>
+
+<p>Dans le cas contraire, l’objet du message MDN est précisé par
+XDM/1.0/DDM+&lt;libellé&gt; &lt;NOM&gt; &lt;prénom&gt; &lt;date de naissance&gt;.</p>
+
+<p>Le message MDN est de type « multipart/report » :
+<code class="language-plaintext highlighter-rouge">Content-Type:multipart/report;report-type=disposition-notification; boundary="RAA14128.773615765/example.com"</code></p>
+
+<ul>
+  <li>
+    <p>La première partie contient du texte lisible par un être humain.
+Dans le contexte du présent volet, ce texte doit au moins contenir,
+en cas d’erreur, le code et le libellé de l’erreur retournés par le
+CONSOMMATEUR.</p>
+
+    <ul>
+      <li>Par exemple : « <code class="language-plaintext highlighter-rouge">Le message ci-dessous n'a pas pu être intégré automatiquement dans le DPI pour la raison suivante : &lt;libellé de l'erreur&gt;</code> ».</li>
+    </ul>
+  </li>
+  <li>
+    <p>La seconde partie est conforme au type de contenu message/disposition-notification constitué de différents champs d’entête formatés selon la RFC 2822. Parmi ces champs, « <code class="language-plaintext highlighter-rouge">Disposition:</code> » et <code class="language-plaintext highlighter-rouge">« Final-Recipient: » </code> sont obligatoires :</p>
+
+    <ul>
+      <li>
+        <p>Le champ <code class="language-plaintext highlighter-rouge">« Disposition: »</code> rend compte du résultat du traitement du courriel par le destinataire^(Note\ 1)^~ :~</p>
+
+        <ul>
+          <li>En cas de succès, le contenu du champ « <code class="language-plaintext highlighter-rouge">Disposition:</code> » prend la valeur : « <code class="language-plaintext highlighter-rouge">Disposition: automatic-action/MDN-sent-automatically; processed</code> »</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>En cas d’erreur, le contenu du champ « Disposition: » prend la valeur : « <code class="language-plaintext highlighter-rouge">Disposition:automatic-action/MDN-sent-automatically; processed/Error: code erreur\^libellé erreur</code> »</li>
+  <li>Le champ « <code class="language-plaintext highlighter-rouge">Final-Recipient:</code> » qui correspond à l’adresse du destinataire pour lequel le MDN est émis. La valeur de ce champ peut être différente de l’adresse initialement fournie par l’émetteur du courriel, notamment en cas de transfert du courriel initial par le destinataire.</li>
+</ul>
+
+<p>Dans le contexte de ce volet, de façon à permettre le traitement du message MDN par la PFI réceptrice, le message MDN devra également préciser les champs suivants :</p>
+
+<ul>
+  <li>
+    <p>Le champ identifiant du courriel d’origine « <code class="language-plaintext highlighter-rouge">Original-Message-ID</code> » qui indique l’identifiant du courriel initial pour lequel le message MDN est produit. Il est obtenu à partir de l’entête Message-ID du courriel initial.</p>
+  </li>
+  <li>Le champ « <code class="language-plaintext highlighter-rouge">Original-Recipient:</code> » qui indique l’adresse du destinataire du courriel d’origine, telle que spécifiée par l’expéditeur du courriel pour lequel le MDN est émis. Cette valeur est obtenue à partir de l’entête Original-Recipient du courriel pour lequel le message MDN est généré.</li>
+  <li>La troisième partie contient le corps du courriel d’origine.</li>
+</ul>
+
+<p>Les pièces jointes envoyées avec le courriel d’origine (IHE_XDM.zip et le pdf) doivent être remises en pièces jointes du courriel MDN.</p>
+
+<p><strong>(Note 1)</strong> : Détail du champ obligatoire « <code class="language-plaintext highlighter-rouge">Disposition:</code> » : ce champ
+permet de préciser :</p>
+
+<ul>
+  <li>
+    <p>Le mode de traitement effectué sur le courriel : traitement automatique ou manuel</p>
+
+    <ul>
+      <li>
+        <p>action-mode = "manual-action" / "automatic-action".</p>
+
+        <ul>
+          <li>
+            <p>La valeur « manual-action » indique que le traitement du courriel résulte d’une action explicite réalisée par l’utilisateur.</p>
+          </li>
+          <li>
+            <p>La valeur « automatic-action » indique que le traitement du courriel a été réalisée de façon automatique.</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Le mode d’envoi du message MDN</p>
+
+    <ul>
+      <li>
+        <p>sending mode="MDN-sent-manually" / "MDN-sent-automatically".</p>
+
+        <ul>
+          <li>
+            <p>La Valeur “MDN-sent-manually » est utilisée lorsque l’utilisateur a donné son autorisation explicite d’envoyer un MDN particulier.</p>
+          </li>
+          <li>
+            <p>La valeur MDN-sent-automatically » permet de configurer l’envoi automatique des MDN.</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Le type de traitement réalisé</p>
+
+    <ul>
+      <li>
+        <p>disposition-type="displayed" / "deleted" / "dispatched" /"processed"</p>
+
+        <ul>
+          <li>
+            <p>displayed : le courriel a été affiché dans la BAL du destinataire</p>
+          </li>
+          <li>
+            <p>dispatched : le courriel a été dispatché (transféré, imprimé, faxé) sans que celui-ci ait nécessairement été affiché au destinataire.</p>
+          </li>
+          <li>
+            <p>processed : le message a été traité sans être affiché au destinataire. Il est possible qu’il n’y ait pas d’utilisateur associé à la BAL.</p>
+          </li>
+          <li>
+            <p>deleted : le courriel a été supprimé. Le destinataire peut ne pas avoir visualiser le message ou peut l’avoir visualisé.</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Le cas échéant, l’erreur rencontrée</p>
+
+    <ul>
+      <li>disposition-modifier = "error"</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Exemple d’un message MDN :</p>
+
+<p>L’exemple suivant décrit le message MDN (accusé de lecture négatif) généré dans le contexte du cas d’usage « Transfert d’un patient d’un CH vers un autre CH -Gestion des erreurs » présenté au <a href="cas-usage.html#description-du-cas-en-erreur">paragraphe suivant</a> du présent volet.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Date: Wed, 20 Feb 2024 00:19:00 (EDT) -0400
+From: serviceY_auto@chb.mssante.fr
+Message-Id: &lt;199509200019.12345&gt;
+Subject: [Erreur d’intégration !] XDM/1.0/DDM+ECHOGRAPHIE ABDOMINOPELVIENNE CORSE FIGATELLIX 12/10/1988
+To: serviceY@chb.mssante.fr
+MIME-Version: 1.0
+Content-Type: multipart/report; report-type=disposition-notification; boundary="RAA14128.773615765"
+--RAA14128.773615765
+Le document n’a pas pu être intégré.
+Le système a retourné l'erreur 902^Identifiant de patient inconnu^messageErrorCondition| E^Error^errorSeverity
+--RAA14128.773615765
+Content-Type: message/disposition-notification
+Original-Recipient: rfc822;serviceY_auto@chb.mssante.fr 
+Final-Recipient: rfc822; serviceY_auto@chb.mssante.fr 
+Original-Message-ID: &lt;199509192301.23456 &gt;
+Disposition:automatic-action/MDN-sent-automatically; processed/Error: 902^Identifiant de patient inconnu^messageErrorCondition| E^Error^errorSeverity
+--RAA14128.773615765
+Content-Type: message/rfc822
+Ici apparaît le contenu du courriel MSSanté à l’origine du MDN et ses pièces jointes.
+--RAA14128.773615765—
+Content-Type: application/zip ; name="IHE_XDM.zip"
+Content-Transfert-Encoding: base64
+Content-Disposition: attachment;filename= "IHE_XDM.zip"
+
+Ici apparaît le fichier IHE_XDM.zip encode en base64.
+--RAA14128.773615765—
+Content-Type: application/pdf ; name="20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf"
+Content-Transfert-Encoding: base64
+Content-Disposition: attachment;filename= "20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf"
+
+Ici apparaît le fichier 20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf encodé en base64.
+--RAA14128.773615765--
+
+</code></pre></div></div>
 
 
 
@@ -259,7 +454,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="error-codes.html">&lt;prev</a>
+                <a href="exemples.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -277,7 +472,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans.cda.mss#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 11, 2024 07:59+0000">2024-07-11</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans.cda.mss#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 11, 2024 09:43+0000">2024-07-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
