@@ -28,11 +28,9 @@ messages en boucle. Dans ce cas l'envoi du MDN nécessite une
 confirmation de l'utilisateur.
 
 Dans le cas d'un MDN en erreur, l'objet du message MDN doit être précisé
-de la façon suivante : \[KO Intégration système ! \]
-XDM/1.0/DDM+\<libellé\> \<NOM\> \<prénom\> \<date de naissance\>.
+de la façon suivante : `[KO Intégration système ! ] XDM/1.0/DDM+<libellé> <NOM> <prénom> <date de naissance>`.
 
-Dans le cas contraire, l'objet du message MDN est précisé par
-XDM/1.0/DDM+\<libellé\> \<NOM\> \<prénom\> \<date de naissance\>.
+Dans le cas contraire, l'objet du message MDN est précisé par `XDM/1.0/DDM+<libellé> <NOM> <prénom> <date de naissance>`.
 
 Le message MDN est de type « multipart/report » :
 `Content-Type:multipart/report;report-type=disposition-notification; boundary="RAA14128.773615765/example.com"`
@@ -42,15 +40,15 @@ Le message MDN est de type « multipart/report » :
     en cas d'erreur, le code et le libellé de l'erreur retournés par le
     CONSOMMATEUR.
 
-    -   Par exemple : « `Le message ci-dessous n'a pas pu être intégré automatiquement dans le DPI pour la raison suivante : <libellé de l'erreur>` ».
+    -   Par exemple : « `Le message ci-dessous n’a pas pu être intégré automatiquement dans le DPI pour la raison suivante : <libellé de l’erreur>` ».
 
 -   La seconde partie est conforme au type de contenu message/disposition-notification constitué de différents champs d'entête formatés selon la RFC 2822. Parmi ces champs, « `Disposition:` » et `« Final-Recipient: » ` sont obligatoires :
 
-    -   Le champ `« Disposition: »` rend compte du résultat du traitement du courriel par le destinataire^(Note\ 1)^~ :~
+    -   Le champ `« Disposition: »` rend compte du résultat du traitement du courriel par le destinataire _(Note 1)_:
 
         -   En cas de succès, le contenu du champ « `Disposition:` » prend la valeur : « `Disposition: automatic-action/MDN-sent-automatically; processed` »
 
--   En cas d'erreur, le contenu du champ « Disposition: » prend la valeur : « `Disposition:automatic-action/MDN-sent-automatically; processed/Error: code erreur\^libellé erreur` »
+-   En cas d'erreur, le contenu du champ « Disposition: » prend la valeur : « `Disposition:automatic-action/MDN-sent-automatically; processed/Error: code erreur^libellé erreur` »
 -   Le champ « `Final-Recipient:` » qui correspond à l'adresse du destinataire pour lequel le MDN est émis. La valeur de ce champ peut être différente de l'adresse initialement fournie par l'émetteur du courriel, notamment en cas de transfert du courriel initial par le destinataire.
 
 Dans le contexte de ce volet, de façon à permettre le traitement du message MDN par la PFI réceptrice, le message MDN devra également préciser les champs suivants :
@@ -62,12 +60,10 @@ Dans le contexte de ce volet, de façon à permettre le traitement du message MD
 
 Les pièces jointes envoyées avec le courriel d'origine (IHE_XDM.zip et le pdf) doivent être remises en pièces jointes du courriel MDN.
 
-**(Note 1)** : Détail du champ obligatoire « `Disposition:` » : ce champ
-permet de préciser :
-
--   Le mode de traitement effectué sur le courriel : traitement automatique ou manuel
-
-    -   action-mode = \"manual-action\" / \"automatic-action\".
+------------------------------------------
+ **(Note 1)** : Détail du champ obligatoire « `Disposition:` » : ce champ permet de préciser :
+ -   Le mode de traitement effectué sur le courriel : traitement automatique ou manuel
+    -   `action-mode = "manual-action" / "automatic-action"`.
 
         -   La valeur « manual-action » indique que le traitement du courriel résulte d'une action explicite réalisée par l'utilisateur.
 
@@ -75,7 +71,7 @@ permet de préciser :
 
 -   Le mode d'envoi du message MDN
 
-    -   sending mode=\"MDN-sent-manually\" / \"MDN-sent-automatically\".
+    -   `sending mode="MDN-sent-manually" / "MDN-sent-automatically"`.
 
         -   La Valeur "MDN-sent-manually » est utilisée lorsque l'utilisateur a donné son autorisation explicite d'envoyer un MDN particulier.
 
@@ -83,7 +79,7 @@ permet de préciser :
 
 -   Le type de traitement réalisé
 
-    -   disposition-type=\"displayed\" / \"deleted\" / \"dispatched\" /\"processed\"
+    -   `disposition--type="displayed" / "deleted" / "dispatched" /"processed"`
 
         -   displayed : le courriel a été affiché dans la BAL du destinataire
 
@@ -95,7 +91,9 @@ permet de préciser :
 
 -   Le cas échéant, l'erreur rencontrée
 
-    -   disposition-modifier = \"error\"
+    -   `disposition-modifier = "error"`
+
+------------------------------------------
 
 Exemple d'un message MDN :
 
