@@ -388,9 +388,9 @@ Les contraintes apportées par ce volet sur les données du message MDM sont dé
 
 #### Description fonctionnelle du message MDM
 
-<div class="figure">
-    <img src="image20.png" alt="Figure 14" title="Figure 14 : Description fonctionnelle du message HL7 MDM" style="width:100%;">
-    <figcaption>Figure 14 : Description fonctionnelle du message HL7 MDM</figcaption>
+<div class="figure" style='text-align: center;'>
+    <img src="image20.png" alt="Figure 14" title="Figure 14 : Description fonctionnelle du message HL7 MDM" style="width:80%;">
+    <figcaption><b>Figure 14 : Description fonctionnelle du message HL7 MDM</b></figcaption>
 </div>    
 <br>
 Les groupes de segments en rouge sur le schéma représentent les éléments
@@ -1596,23 +1596,23 @@ la suivante :
 
 -   si ClinicalDocument/id@extension est renseigné :
 
-    -   TXA-12.1 \< = ClinicalDocument/id@extension
+    -   TXA-12.1 < = ClinicalDocument/id@extension
 
-    -   TXA-12.2 \< = Non renseigné
+    -   TXA-12.2 < = Non renseigné
 
-    -   TXA-12.3 \< = ClinicalDocument/id@root
+    -   TXA-12.3 < = ClinicalDocument/id@root
 
-    -   TXA-12.4 \< = ISO
+    -   TXA-12.4 < = ISO
 
 -   si ClinicalDocument/id@extension n'est pas renseigné :
 
-    -   TXA-12.1 \< = ClinicalDocument/id@root
+    -   TXA-12.1 < = ClinicalDocument/id@root
 
-    -   TXA-12.2 \< = Non renseigné
+    -   TXA-12.2 < = Non renseigné
 
-    -   TXA-12.3 \< = Non renseigné
+    -   TXA-12.3 < = Non renseigné
 
-    -   TXA-12.4 \< = Non renseigné
+    -   TXA-12.4 < = Non renseigné
 
 #### Les données concernant la demande de traitement sur le document
 ##### Le groupe de segments OBXNTE portant le document CDA
@@ -5137,10 +5137,10 @@ Le profil du message ACK est le suivant :
 
 #### Structure fonctionnelle du message
 Après réception du message MDM, le LPS (DPI ou RIS dans le contexte SEGUR vague 2) va acquitter le message. Ci-dessous la structure du message ACK :
-<div class="figure">
+<div class="figure" style='text-align: center;'>
     <img src="image21.png" alt="Figure 15" title="Figure 15 : Description fonctionnelle du message ACK
-" style="width:100%;">
-    <figcaption>Figure 15 : Description fonctionnelle du message ACK</figcaption>
+" style="width:80%;">
+    <figcaption><b>Figure 15 : Description fonctionnelle du message ACK</b></figcaption>
 </div>    
 <br>
 Ces segments doivent être conformes au standard HL7v2.6.

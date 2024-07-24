@@ -73,9 +73,9 @@ Le tableau suivant liste, pour chacun des acteurs, les syst√®mes du SIH concern√
 
 ### Diagramme des Acteurs/Transactions
 
-<div class="figure">
-    <img src="image14.png" alt="Figure 7" title="Figure 7 : Diagramme des Acteurs/transactions" style="width:100%;">
-    <figcaption>Figure 7 : Diagramme des Acteurs/transactions</figcaption>
+<div class="figure" style='text-align: center;'>
+    <img src="image14.png" alt="Figure 7" title="Figure 7 : Diagramme des Acteurs/transactions" style="width:80%;">
+    <figcaption><b>Figure 7 : Diagramme des Acteurs/transactions</b></figcaption>
 </div>    
 <br>
 

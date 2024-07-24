@@ -29,9 +29,9 @@ La structure du courriel MDN est décrite en annexe 4 [LIEN].
     </p>
 </blockquote>
 
-<div class="figure">
-    <img src="image8.png" alt="Figure 2" title="Figure 2 : Réception d’un CR de biologie médicale – Cas nominal" style="width:100%;">
-    <figcaption>Figure 2 : Réception d’un CR de biologie médicale – Cas nominal</figcaption>
+<div class="figure" style='text-align: center;'>
+    <img src="image8.png" alt="Figure 2" title="Figure 2 : Réception d’un CR de biologie médicale – Cas nominal" style="width:80%;">
+    <figcaption><b>Figure 2 : Réception d’un CR de biologie médicale – Cas nominal</b></figcaption>
 </div>
 <br>
 La Figure 2 illustre les échanges de bout en bout relatifs à une demande de transmission du compte rendu du SGL d’un laboratoire extérieur vers le DPI d’un établissement partenaire. 
@@ -44,9 +44,9 @@ Dans le contexte du SEGUR, la PFI doit pouvoir envoyer un accusé métier de lec
 Sur la figure suivante, seule la partie basse de la figure précédente est représentée. Les séquences relatives à l’accusé de réception MSSanté sont identiques.
 
 
-<div class="figure">
-    <img src="image9.png" alt="Figure 3" title="Figure 3 : Réception d’un CR de biologie médicale – Gestion des erreurs" style="width:100%;">
-    <figcaption>Figure 3 : Réception d’un CR de biologie médicale – Gestion des erreurs</figcaption>
+<div class="figure" style='text-align: center;'>
+    <img src="image9.png" alt="Figure 3" title="Figure 3 : Réception d’un CR de biologie médicale – Gestion des erreurs" style="width:80%;">
+    <figcaption><b>Figure 3 : Réception d’un CR de biologie médicale – Gestion des erreurs</b></figcaption>
 </div>
 <br>
 La Figure 3 illustre la gestion des erreurs par l’établissement destinataire dans le cas d’une demande de transmission du compte rendu du SGL vers le DPI. 
@@ -77,12 +77,12 @@ La structure du message MDN est précisée en annexe 4 [LIEN].
 Ce cas d’usage nécessite de définir une BAL organisationnelle ainsi qu’une BAL applicative associée pour chaque service clinique de l’établissement B. La PFI ou le DPI peuvent prévoir un paramétrage pour associer un service clinique de l’établissement à une BAL afin de classer les documents dans le bon service.
 
 
-<div class="figure">
-    <img src="image10.png" alt="Figure 4" title="Figure 4 : Transmission d’un document clinique d’un patient d’un CH vers un autre CH -Cas nominal" style="width:100%;">
+<div class="figure" style='text-align: center;'>
+    <img src="image10.png" alt="Figure 4" title="Figure 4 : Transmission d’un document clinique d’un patient d’un CH vers un autre CH -Cas nominal" style="width:80%;">
 </div>
-<div class="figure">
-    <img src="image11.png" alt="Figure 4" title="Figure 4 : Transmission d’un document clinique d’un patient d’un CH vers un autre CH -Cas nominal" style="width:100%;">
-    <figcaption>Figure 4 : Transmission d’un document clinique d’un patient d’un CH vers un autre CH -Cas nominal</figcaption>
+<div class="figure" style='text-align: center;'>
+    <img src="image11.png" alt="Figure 4" title="Figure 4 : Transmission d’un document clinique d’un patient d’un CH vers un autre CH -Cas nominal" style="width:80%;">
+    <figcaption><b>Figure 4 : Transmission d’un document clinique d’un patient d’un CH vers un autre CH -Cas nominal</b></figcaption>
 </div>    
 <br>
 
@@ -95,9 +95,9 @@ La cinématique des échanges est la même que précédemment mais le compte ren
 La figure ci-dessous représente uniquement la partie basse de la figure précédente, à partir de la lecture par la PFI de la BAL applicative de l’établissement-B.
 
 
-<div class="figure">
-    <img src="image12.png" alt="Figure 5" title="Figure 5 : Transmission d’un document clinique d’un patient d’un CH vers un autre CH -Gestion des erreurs" style="width:100%;">
-    <figcaption>Figure 5 : Transmission d’un document clinique d’un patient d’un CH vers un autre CH -Gestion des erreurs</figcaption>
+<div class="figure" style='text-align: center;'>
+    <img src="image12.png" alt="Figure 5" title="Figure 5 : Transmission d’un document clinique d’un patient d’un CH vers un autre CH -Gestion des erreurs" style="width:80%;">
+    <figcaption><b>Figure 5 : Transmission d’un document clinique d’un patient d’un CH vers un autre CH -Gestion des erreurs</b></figcaption>
 </div>    
 <br>
 

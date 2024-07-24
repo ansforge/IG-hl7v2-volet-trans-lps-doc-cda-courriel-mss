@@ -33,9 +33,9 @@ Dans le contexte du SEGUR vague 2, les applications consommatrices de
 ces documents sont limitées au dossier patient informatisé (DPI) et au
 système de gestion de radiologie (RIS).
 
-<div class="figure">
-    <img src="image13.png" alt="Figure 6" title="Figure 6 : Organisation du contexte métier du volet « Transmission au LPS d'un document provenant d'un courriel »" style="width:100%;">
-    <figcaption>Figure 6 : Organisation du contexte métier du volet « Transmission au LPS d'un document provenant d'un courriel »</figcaption>
+<div class="figure" style='text-align: center;'>
+    <img src="image13.png" alt="Figure 6" title="Figure 6 : Organisation du contexte métier du volet « Transmission au LPS d'un document provenant d'un courriel »" style="width:60%;">
+    <figcaption><b>Figure 6 : Organisation du contexte métier du volet « Transmission au LPS d'un document provenant d'un courriel »</b></figcaption>
 </div>    
 <br>
 

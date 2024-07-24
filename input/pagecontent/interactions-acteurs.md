@@ -1,6 +1,6 @@
-<div class="figure">
-    <img src="image19.png" alt="Figure 13" title="Figure 13 : Diagramme de séquence – Message MDM" style="width:100%;">
-    <figcaption>Figure 13 : Diagramme de séquence – Message MDM</figcaption>
+<div class="figure" style='text-align: center;'>
+    <img src="image19.png" alt="Figure 13" title="Figure 13 : Diagramme de séquence – Message MDM" style="width:80%;">
+    <figcaption><b>Figure 13 : Diagramme de séquence – Message MDM</b></figcaption>
 </div>    
 <br>
 La gestion de cet accusé de lecture MSSanté (MDN-Message Disposition Notification) va dépendre de l’organisation choisie par l’établissement pour traiter les courriels réceptionnés.

@@ -1,8 +1,8 @@
 ### Processus collaboratif « Demande de transmission initiale de document(s) »
 
-<div class="figure">
-    <img src="image15.png" alt="Figure 9" title="Figure 9 : Processus collaboratif « Demande de transmission initiale de document(s) » pour intégration au niveau du CONSOMMATEUR " style="width:100%;">
-    <figcaption>Figure 9 : Processus collaboratif « Demande de transmission initiale de document(s) » pour intégration au niveau du CONSOMMATEUR</figcaption>
+<div class="figure" style='text-align: center;'>
+    <img src="image15.png" alt="Figure 9" title="Figure 9 : Processus collaboratif « Demande de transmission initiale de document(s) » pour intégration au niveau du CONSOMMATEUR " style="width:60%;">
+    <figcaption><b>Figure 9 : Processus collaboratif « Demande de transmission initiale de document(s) » pour intégration au niveau du CONSOMMATEUR</></figcaption>
 </div>    
 <br>
 
@@ -57,9 +57,9 @@
 
 ### Processus collaboratif « Demande de remplacement de document(s) »
 
-<div class="figure">
-    <img src="image16.png" alt="Figure 10" title="Figure 10 : Processus collaboratif « Demande de remplacement de document(s) » au niveau du CONSOMMATEUR" style="width:100%;">
-    <figcaption>Figure 10 : Processus collaboratif « Demande de remplacement de document(s) » au niveau du CONSOMMATEUR</figcaption>
+<div class="figure" style='text-align: center;'>
+    <img src="image16.png" alt="Figure 10" title="Figure 10 : Processus collaboratif « Demande de remplacement de document(s) » au niveau du CONSOMMATEUR" style="width:60%;">
+    <figcaption><b>Figure 10 : Processus collaboratif « Demande de remplacement de document(s) » au niveau du CONSOMMATEUR</b></figcaption>
 </div>    
 <br>
 Le processus « Demande de remplacement de document(s) » permet également de gérer la mise à jour des métadonnées associées au(x) document(s). 
@@ -119,9 +119,9 @@ Ainsi, dans le cas d’une demande de mise à jour des métadonnées de masquage
 
 ### Processus collaboratif « Demande de suppression de document(s) »
 
-<div class="figure">
-    <img src="image17.png" alt="Figure 11" title="Figure 11 : Processus collaboratif « Demande de suppression de document(s) » au niveau du CONSOMMATEUR" style="width:100%;">
-    <figcaption>Figure 11 : Processus collaboratif « Demande de suppression de document(s) » au niveau du CONSOMMATEUR</figcaption>
+<div class="figure" style='text-align: center;'>
+    <img src="image17.png" alt="Figure 11" title="Figure 11 : Processus collaboratif « Demande de suppression de document(s) » au niveau du CONSOMMATEUR" style="width:60%;">
+    <figcaption><b>Figure 11 : Processus collaboratif « Demande de suppression de document(s) » au niveau du CONSOMMATEUR</b></figcaption>
 </div>    
 <br>
 
