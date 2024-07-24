@@ -1,8 +1,8 @@
--   *HL7 v2.6 : Chapitre 9,* message MDM (Medical Document Management) ^(1)^~,~
+-   HL7 v2.6 : Chapitre 9, message MDM (Medical Document Management) (1),
 
 -   [Extension française du profil IHE PAM : PAM.fr, version 2.11](https://old.interopsante.org/offres/doc_inline_src/412/Publication-IHE_FRANCE_PAM_National_Extension_v2.11.pdf)
 
--   Les types de données utilisés ^(2)^ doivent se conformer aux spécifications [« Contraintes sur les types de données HL7 v2.5 applicables aux profils d'intégration du cadre technique IT Infrastructure dans le périmètre d'IHE France » release 1.8](https://old.interopsante.org/offres/doc_inline_src/412/IHE_France_Constraints_on_HL7_data_types_for_ITI_V1.8.pdf)
+-   Les types de données utilisés (2) doivent se conformer aux spécifications [« Contraintes sur les types de données HL7 v2.5 applicables aux profils d'intégration du cadre technique IT Infrastructure dans le périmètre d'IHE France » release 1.8](https://old.interopsante.org/offres/doc_inline_src/412/IHE_France_Constraints_on_HL7_data_types_for_ITI_V1.8.pdf)
 
 -   Le choix du protocole de transport est libre. L'utilisation du protocole MLLP est à privilégier pour gérer au mieux les accusés de réception techniques (ACK).
 
