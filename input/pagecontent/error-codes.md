@@ -1,4 +1,6 @@
-La table HL7 messageErrorCondition est utilisée par l’acteur CONSOMMATEUR (DPI/RIS…) en cas d’erreur technique du message HL7 MDM. La nature de l’erreur est renseignée dans le champ ERR-3 de la structure du message ACK renvoyé par le CONSOMMATEUR au niveau du GESTIONNAIRE (PFI).
+La table HL7 messageErrorCondition est utilisée par l’acteur CONSOMMATEUR (DPI/RIS…) en cas d’erreur technique du message HL7 MDM.
+
+La nature de l’erreur est renseignée dans le champ ERR-3 de la structure du message ACK renvoyé par le CONSOMMATEUR au niveau du GESTIONNAIRE (PFI).
 <table class="MsoTable15Grid4Accent1" border="1" cellspacing="0" cellpadding="0" width="652" style="width:488.8pt;border-collapse:collapse;border:none;
  mso-border-alt:solid #9CC2E5 .5pt;mso-border-themecolor:accent1;mso-border-themetint:
  153;mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
@@ -591,7 +593,9 @@ La table HL7 messageErrorCondition est utilisée par l’acteur CONSOMMATEUR (DP
   
  </tr>
 </tbody></table>
-La table user-defined applicationErrorCondition est utilisée par l’acteur CONSOMMATEUR (DPI/RIS…) en cas d’erreur d’intégration/de remplacement ou de suppression du document CDA au niveau du CONSOMMATEUR. La nature de l’erreur applicative est renseignée dans le champ ERR-5 de la structure du message ACK renvoyé par le CONSOMMATEUR au niveau du GESTIONNAIRE. Cette table est décrite à titre indicatif et pourra être enrichie si besoin, en fonction des retours d’implémentation.
+La table user-defined applicationErrorCondition est utilisée par l’acteur CONSOMMATEUR (DPI/RIS…) en cas d’erreur d’intégration/de remplacement ou de suppression du document CDA au niveau du CONSOMMATEUR. La nature de l’erreur applicative est renseignée dans le champ ERR-5 de la structure du message ACK renvoyé par le CONSOMMATEUR au niveau du GESTIONNAIRE.
+
+Cette table est décrite à titre indicatif et pourra être enrichie si besoin, en fonction des retours d’implémentation.
 <table class="MsoTable15Grid4Accent1" border="1" cellspacing="0" cellpadding="0" width="652" style="width:488.8pt;border-collapse:collapse;border:none;
  mso-border-alt:solid #9CC2E5 .5pt;mso-border-themecolor:accent1;mso-border-themetint:
  153;mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
