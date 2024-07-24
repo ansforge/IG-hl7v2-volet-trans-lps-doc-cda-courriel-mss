@@ -629,7 +629,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </table>
 
 <p>Le message HL7 MDM ne peut transmettre qu’un seul document médical.
-Les contraintes apportées par ce volet sur les données du message MDM sont décrites à la section 12.2 [LIEN].</p>
+Les contraintes apportées par ce volet sur les données du message MDM sont décrites à la <a href="profils-messages.html#contraintes-appliquées-aux-messages-mdm-dans-le-contexte-de-ce-volet">section dédiée</a>.</p>
 
 <h4 id="description-fonctionnelle-du-message-mdm">Description fonctionnelle du message MDM</h4>
 
@@ -648,7 +648,7 @@ CDA-R2 codé en base64 suivi de segments PRT, pré-adoptés depuis la
 version 2.9 du standard, permettant ainsi de renseigner les
 informations de l’expéditeur (requis), le destinataire MSSanté
 (requis si connu) et, le cas échéant, l’adresse mail de réponse
-(contraintes décrites au paragraphe 12.2.6.1 [LIEN]).</p>
+(contraintes décrites au <a href="profils-messages.html#le-groupe-de-segments-obxnte-portant-le-document-cda">paragraphe dédié</a>).</p>
   </li>
   <li>
     <p>Le deuxième groupe véhicule, dans un segment OBX, les informations
@@ -5663,7 +5663,9 @@ Ces segments doivent être conformes au standard HL7v2.6.</p>
   </td>
  </tr>
 </tbody></table>
+
 <p>Le champ MSH.9 « Message type » prend la valeur : <code class="language-plaintext highlighter-rouge">ACK^T02^ACK</code> ou <code class="language-plaintext highlighter-rouge">ACK^T04^ACK</code> ou <code class="language-plaintext highlighter-rouge">ACK^T10^ACK</code> selon l’évènement du message initial.</p>
+
 <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;mso-table-layout-alt:fixed;border:none;
  mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:
  0cm 5.4pt 0cm 5.4pt">
@@ -6291,152 +6293,27 @@ Ces segments doivent être conformes au standard HL7v2.6.</p>
 
 <p>Entête MSH d’un message MDM émis par le GESTIONNAIRE vers le CONSOMMATEUR :</p>
 
-<p><code class="language-plaintext highlighter-rouge">MSH|^~\&amp;|PFI|CHU_X|DPI|CHU_X|202310030830||MDM^T02^MDM_T02|12345|P|2.6|||||FRA|8859/15|||1.2^ CISIS_CDA_HL7_LPS</code></p>
-
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MSH|^~\&amp;|PFI|CHU_X|DPI|CHU_X|202310030830||MDM^T02^MDM_T02|12345|P|2.6|||||FRA|8859/15|||1.2^ CISIS_CDA_HL7_LPS
+</code></pre></div></div>
 <p>Un acquittement positif retourné par le CONSOMMATEUR :</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>`MSH</td>
-      <td>^~\&amp;</td>
-      <td>DPI</td>
-      <td>CHU_X</td>
-      <td>PFI</td>
-      <td>CHU_X</td>
-      <td>202310030831</td>
-      <td> </td>
-      <td>ACK^T02^ACK</td>
-      <td>12346</td>
-      <td>P</td>
-      <td>2.6</td>
-      <td> </td>
-      <td> </td>
-      <td>AL</td>
-      <td>AL</td>
-      <td>FRA</td>
-      <td>8859/15</td>
-      <td> </td>
-      <td> </td>
-      <td>1.2^ CISIS_CDA_HL7_LPS</td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-      <td>MSA</td>
-      <td>AA</td>
-      <td>12345`</td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MSH|^~\&amp;|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12346|P|2.6|||AL|AL|FRA|8859/15|||1.2^ CISIS_CDA_HL7_LPS
+MSA|AA|12345
+</code></pre></div></div>
 
 <p>Un acquittement négatif retourné par le CONSOMMATEUR : version d’HL7 inconnue</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>`MSH</td>
-      <td>^~\&amp;</td>
-      <td>DPI</td>
-      <td>CHU_X</td>
-      <td>PFI</td>
-      <td>CHU_X</td>
-      <td>202310030831</td>
-      <td> </td>
-      <td>ACK^T02^ACK</td>
-      <td>12347</td>
-      <td>P</td>
-      <td>2.6</td>
-      <td> </td>
-      <td> </td>
-      <td>AL</td>
-      <td>AL</td>
-      <td>FRA</td>
-      <td>8859/15</td>
-      <td> </td>
-      <td> </td>
-      <td>1.2^ CISIS_CDA_HL7_LPS</td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-      <td>MSA</td>
-      <td>AE</td>
-      <td>12345</td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-      <td>ERR</td>
-      <td> </td>
-      <td>MSH^1^12</td>
-      <td>203^Unsupported version id^messageErrorCondition</td>
-      <td>E`</td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MSH|^~\&amp;|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12347|P|2.6|||AL|AL|FRA|8859/15|||1.2^ CISIS_CDA_HL7_LPS
+MSA|AE|12345
+ERR||MSH^1^12|203^Unsupported version id^messageErrorCondition|E
+</code></pre></div></div>
 
 <p>Un acquittement négatif retourné par le CONSOMMATEUR : patient inconnu du DPI (erreur applicative)</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>`MSH</td>
-      <td>^~\&amp;</td>
-      <td>DPI</td>
-      <td>CHU_X</td>
-      <td>PFI</td>
-      <td>CHU_X</td>
-      <td>202310030831</td>
-      <td> </td>
-      <td>ACK^T02^ACK</td>
-      <td>12347</td>
-      <td>P</td>
-      <td>2.6</td>
-      <td> </td>
-      <td> </td>
-      <td>AL</td>
-      <td>AL</td>
-      <td>FRA</td>
-      <td>8859/15</td>
-      <td> </td>
-      <td> </td>
-      <td>1.2^ CISIS_CDA_HL7_LPS</td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-      <td>MSA</td>
-      <td>AE</td>
-      <td>12345</td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-      <td>ERR</td>
-      <td> </td>
-      <td>PID^1^3</td>
-      <td>207^Application error^messageErrorCondition</td>
-      <td>E</td>
-      <td>902^Identifiant de patient inconnu^applicationErrorCode`</td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MSH|^~\&amp;|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12347|P|2.6|||AL|AL|FRA|8859/15|||1.2^ CISIS_CDA_HL7_LPS
+MSA|AE|12345
+ERR||PID^1^3|207^Application error^messageErrorCondition| E|902^Identifiant de patient inconnu^applicationErrorCode
+</code></pre></div></div>
 
 
 
@@ -6478,7 +6355,7 @@ Ces segments doivent être conformes au standard HL7v2.6.</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 24, 2024 12:39+0000">2024-07-24</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 24, 2024 13:09+0000">2024-07-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
