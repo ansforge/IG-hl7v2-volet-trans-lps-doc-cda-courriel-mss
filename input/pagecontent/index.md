@@ -30,13 +30,13 @@ Ce document fait partie de la couche Service du Cadre d'Interopérabilité des S
     </blockquote>
 </div>
 
-Ce présent volet décrit la possibilité pour un logiciel métier d’une organisation de déléguer à un acteur tiers, la plateforme d’intermédiation (PFI), la capacité de traiter un courriel entrant provenant d’une BAL MSSanté et de générer à partir de ce courriel une demande d’intégration ou de remplacement ou de suppression d’un document clinique en direction de l’application métier consommatrice. Ce volet est à considérer par le lecteur en association avec un autre volet du CI_SIS, le volet « Transmission de document(s) CDA en HL7v2 » de façon à avoir une vision de bout en bout des échanges au travers de la MSSanté (du CREATEUR de la demande de traitement sur un document vers le CONSOMMATEUR final de cette demande).
+Ce présent volet décrit la possibilité pour un logiciel métier d’une organisation de déléguer à un acteur tiers, la plateforme d’intermédiation (PFI), la capacité de traiter un courriel entrant provenant d’une BAL MSSanté et de générer à partir de ce courriel une demande d’intégration ou de remplacement ou de suppression d’un document clinique en direction de l’application métier consommatrice. Ce volet est à considérer par le lecteur en association avec un autre volet du CI_SIS, [le volet « Transmission de document(s) CDA en HL7v2 »](https://esante.gouv.fr/volet-de-transmission-dun-document-cda-r2-en-hl7v2) de façon à avoir une vision de bout en bout des échanges au travers de la MSSanté (du CREATEUR de la demande de traitement sur un document vers le CONSOMMATEUR final de cette demande).
 Les deux volets en question intègrent à la fois une partie fonctionnelle et une partie technique.
 La partie fonctionnelle décrit, à titre d’exemple et de façon non exhaustive, un ensemble de cas d’usage. Sur la base de ces cas d’usage, sont ensuite définis des acteurs du système d’information (au sens d’IHE) et des transactions qui interviennent entre ces acteurs pour répondre à ces cas d’usage. Les processus collaboratifs sont ensuite décrits et les flux entre les acteurs sont également identifiés.
 La partie technique décrit les standards retenus pour implémenter les flux identifiés par l’étude fonctionnelle et décrit dans le détail les règles d’implémentation de ces standards.
 Pour une meilleure compréhension du lecteur, les cas d’usage décrits dans la partie fonctionnelle de chacun des volets couvrent la totalité des échanges entre les acteurs définis dans les deux volets. Dans le contexte de ce présent document, seuls les échanges entre la PFI qui traite le courriel entrant et le logiciel métier consommateur font partie du périmètre du volet.
 
-Dans le cas d’usage où la demande provenant du CREATEUR est relayée par le GESTIONNAIRE de l’établissement vers une BAL personnelle ou organisationnelle d’un autre établissement, l’envoi de l’accusé de lecture MSSanté (Message Disposition Notification- MDN décrit dans la RFC 8098) est déclenché par le traitement du courriel déposé dans la BAL de l’utilisateur destinataire (lecture, suppression, traitement, etc.). Le message MDN est alors réceptionné par la PFI de l’établissement expéditeur qui construit le message métier HL7 ZAM^Z03^ZAM_Z01 et le transmet au logiciel métier de l’utilisateur expéditeur.
+Dans le cas d’usage où la demande provenant du CREATEUR est relayée par le GESTIONNAIRE de l’établissement vers une BAL personnelle ou organisationnelle d’un autre établissement, l’envoi de l’accusé de lecture MSSanté (Message Disposition Notification- MDN décrit dans la [RFC 8098](https://datatracker.ietf.org/doc/html/rfc8098)) est déclenché par le traitement du courriel déposé dans la BAL de l’utilisateur destinataire (lecture, suppression, traitement, etc.). Le message MDN est alors réceptionné par la PFI de l’établissement expéditeur qui construit le message métier HL7 `ZAM^Z03^ZAM_Z01` et le transmet au logiciel métier de l’utilisateur expéditeur.
 Une liste de cas d’usage, non exhaustive, est présentée à titre d’exemple dans le Volume 1 - Etude fonctionnelle, pour susciter les retours des industriels et des utilisateurs lors des prochains projectathons.
 
 
@@ -156,8 +156,8 @@ La PFI extrait les documents médicaux de l’archive du courriel MSSanté reçu
 
 #### Dépendances documentaires
 
-Cette spécification n’est pas autonome. 
-Le lecteur pourra également consulter le volet « Transmission de document(s) CDA en HL7v2 » du CI_SIS pour avoir une vision complète et transversale des échanges représentée de façon synthétique sur la figure suivante et décrits de façon détaillée dans la section 2 du présent document :
+Cette spécification n’est pas autonome.
+Le lecteur pourra également consulter le volet « [Transmission de document(s) CDA en HL7v2](https://esante.gouv.fr/volet-de-transmission-dun-document-cda-r2-en-hl7v2) » du CI_SIS pour avoir une vision complète et transversale des échanges représentée de façon synthétique sur la figure suivante et décrits de façon détaillée dans le volume 2 du présent document :
 
 
 <div class="figure" style='text-align: center;'>
