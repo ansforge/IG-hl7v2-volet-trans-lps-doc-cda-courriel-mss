@@ -10,7 +10,7 @@
   <name value="HL7v2_trans_CDA_MSS"/>
   <title value="Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté"/>
   <status value="draft"/>
-  <date value="2024-07-24T08:05:06+00:00"/>
+  <date value="2024-07-24T08:51:17+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -594,14 +594,6 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="issues.html"/>
-        </extension>
-        <nameUrl value="issues.html"/>
-        <title value="Issues"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="meta-dmp-mss.html"/>
         </extension>
         <nameUrl value="meta-dmp-mss.html"/>
@@ -646,6 +638,14 @@
         </extension>
         <nameUrl value="glossaire.html"/>
         <title value="Glossaire"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="doc-ref.html"/>
+        </extension>
+        <nameUrl value="doc-ref.html"/>
+        <title value="Documents de référence"/>
         <generation value="markdown"/>
       </page>
       <page>

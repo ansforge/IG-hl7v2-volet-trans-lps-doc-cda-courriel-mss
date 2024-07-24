@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "HL7v2_trans_CDA_MSS"] ; # 
   fhir:title [ fhir:v "Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-07-24T08:05:06+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-07-24T08:51:17+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -665,14 +665,6 @@
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "issues.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "issues.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Issues" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
            fhir:value [ fhir:v "meta-dmp-mss.html"^^xsd:anyURI ]
          ] ) ;
          fhir:name [ fhir:v "meta-dmp-mss.html"^^xsd:anyURI ] ;
@@ -717,6 +709,14 @@
          ] ) ;
          fhir:name [ fhir:v "glossaire.html"^^xsd:anyURI ] ;
          fhir:title [ fhir:v "Glossaire" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "doc-ref.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "doc-ref.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Documents de référence" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
