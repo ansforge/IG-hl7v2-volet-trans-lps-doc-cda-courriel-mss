@@ -89,7 +89,7 @@ La structure du message MDN est précisée [ici](struct-msg-mdn.html).
 <blockquote class="stu-note">
     <p>
     <b>Point d'attention :</b> ce cas d’usage décrit un mécanisme de traitement d’un courriel réceptionné sur une BAL organisationnelle. Ce mécanisme pourrait être identique pour un courriel réceptionné sur une BAL personnelle, sous réserve de s’assurer et de respecter les exigences réglementaires relatives au transfert d’un courriel personnel dans un contexte professionnel.
-    <br>
+    <br><br>
     Ce cas d’usage nécessite de définir une BAL organisationnelle ainsi qu’une BAL applicative associée pour chaque service clinique de l’établissement B. La PFI ou le DPI peuvent prévoir un paramétrage pour associer un service clinique de l’établissement à une BAL afin de classer les documents dans le bon service.
     </p>
 </blockquote>

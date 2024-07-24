@@ -10,7 +10,7 @@ Le groupe de processus est divisé en quatre processus :
 
 -   Une demande de remplacement de document(s) initialement envoyé(s) par MSSanté pour remplacement au niveau du LPS,
 
--   Une demande de mise à jour des métadonnées de document(s)^(\*)^ initialement envoyé(s) par MSSanté pour mise à jour au niveau du LPS,
+-   Une demande de mise à jour des métadonnées de document(s)(\*) initialement envoyé(s) par MSSanté pour mise à jour au niveau du LPS,
 
 -   Une demande de suppression de document(s) initialement envoyé(s) par MSSanté pour suppression au niveau du LPS.
 

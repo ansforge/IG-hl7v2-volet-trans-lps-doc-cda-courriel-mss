@@ -2,7 +2,7 @@
 
 <div class="figure" style='text-align: center;'>
     <img src="image15.png" alt="Figure 9" title="Figure 9 : Processus collaboratif « Demande de transmission initiale de document(s) » pour intégration au niveau du CONSOMMATEUR " style="width:60%;">
-    <figcaption><b>Figure 9 : Processus collaboratif « Demande de transmission initiale de document(s) » pour intégration au niveau du CONSOMMATEUR</></figcaption>
+    <figcaption><b>Figure 9 : Processus collaboratif « Demande de transmission initiale de document(s) » pour intégration au niveau du CONSOMMATEUR</b></figcaption>
 </div>    
 <br>
 

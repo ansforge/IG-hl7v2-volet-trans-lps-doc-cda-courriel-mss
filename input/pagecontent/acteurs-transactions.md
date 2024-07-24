@@ -45,14 +45,6 @@ Le tableau suivant liste, pour chacun des acteurs, les systèmes du SIH concern�
 </tr>
 <tr>
 <td width="141">
-<p><strong>&nbsp;</strong></p>
-</td>
-<td width="508">
-<p><strong>&nbsp;</strong></p>
-</td>
-</tr>
-<tr>
-<td width="141">
 <p>GESTIONNAIRE</p>
 </td>
 <td width="508">
@@ -166,8 +158,8 @@ Cette section décrit les exigences en termes de regroupement d’acteurs pour c
 
 L'acteur GESTIONNAIRE est groupé avec :
 
--   L'acteur Système cible du volet *d'Echange de documents de santé*, pour permettre à la PFI de réceptionner l'archive IHE_XDM inclue dans le courriel reçu de l'extérieur,
+-   L'acteur Système cible du [volet d'Echange de documents de santé](https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-echange-documents-sante_v1.8.pdf), pour permettre à la PFI de réceptionner l'archive IHE_XDM inclue dans le courriel reçu de l'extérieur,
 
 L'acteur CONSOMMATEUR est groupé avec :
 
--   L'acteur Content Consumer définit dans le Technical Framework PCC d'IHE, permettant au CONSOMMATEUR de visualiser et d'importer tout ou parties du document CDA.
+-   L'acteur Content Consumer définit dans le [Technical Framework PCC d'IHE](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_TF_Vol1.pdf), permettant au CONSOMMATEUR de visualiser et d'importer tout ou parties du document CDA.
