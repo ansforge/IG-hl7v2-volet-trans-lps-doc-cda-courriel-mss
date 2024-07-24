@@ -122,14 +122,7 @@ Rappel des conventions utilisées par IHE et HL7 :
 <p>Champ r&eacute;p&eacute;table</p>
 </td>
 </tr>
-<tr>
-<td width="113">
-<p>&nbsp;</p>
-</td>
-<td width="510">
-<p>&nbsp;</p>
-</td>
-</tr>
+
 <tr>
 <td width="113">
 <p>[{ }]</p>
