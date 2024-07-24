@@ -62,7 +62,8 @@
     <figcaption><b>Figure 10 : Processus collaboratif « Demande de remplacement de document(s) » au niveau du CONSOMMATEUR</b></figcaption>
 </div>    
 <br>
-Le processus « Demande de remplacement de document(s) » permet également de gérer la mise à jour des métadonnées associées au(x) document(s). 
+Le processus « Demande de remplacement de document(s) » permet également de gérer la mise à jour des métadonnées associées au(x) document(s).
+
 Ainsi, dans le cas d’une demande de mise à jour des métadonnées de masquage/démasquage aux PS et de visibilité du document au patient, une nouvelle version de document est générée par l’initiateur du courriel. Cette nouvelle version vient remplacer la précédente au niveau du CONSOMMATEUR (application métier destinatrice).
 
 <table>

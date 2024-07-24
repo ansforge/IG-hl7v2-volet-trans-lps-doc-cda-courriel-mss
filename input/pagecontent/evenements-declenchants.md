@@ -1,6 +1,7 @@
 Après réception d’un courriel détecté dans une BAL applicative MSSanté, la PFI ouvre l’archive IHE_XDM contenant des documents médicaux et les transmets individuellement au LPS consommateur en utilisant un message HL7v2.6 de type MDM.
 
-Ensuite, le LPS accuse réception de cette demande de traitement sur le document avec un message HL7v2.6 de type ACK. 
+Ensuite, le LPS accuse réception de cette demande de traitement sur le document avec un message HL7v2.6 de type ACK.
+
 <table width="680">
 <tbody>
 <tr>

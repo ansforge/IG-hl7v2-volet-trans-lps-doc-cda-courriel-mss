@@ -72,6 +72,7 @@ Le tableau suivant liste, pour chacun des acteurs, les systèmes du SIH concern�
 <br>
 
 Le tableau ci-dessous représente l’ensemble des acteurs directement impliqués dans ce volet ainsi que les transactions entre ces acteurs.
+
 Pour être en conformité avec ce volet, chaque acteur doit supporter les transactions obligatoires (R-Required) et peut supporter les transactions optionnelles (O-Optional).
 
 <table>

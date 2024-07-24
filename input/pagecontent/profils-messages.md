@@ -384,6 +384,7 @@ Le profil du message MDM est le suivant :
 </table>
 
 Le message HL7 MDM ne peut transmettre qu’un seul document médical.
+
 Les contraintes apportées par ce volet sur les données du message MDM sont décrites à la [section dédiée](profils-messages.html#contraintes-appliquées-aux-messages-mdm-dans-le-contexte-de-ce-volet).
 
 #### Description fonctionnelle du message MDM
