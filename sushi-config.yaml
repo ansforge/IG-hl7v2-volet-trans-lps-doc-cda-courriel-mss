@@ -47,8 +47,6 @@ pages:
         title: "Lien entre l'en-tête CDA et les métadonnées XDS"
     testplan.md:
         title: "Test Plan"
-    issues.md:
-        title: "Issues"
     meta-dmp-mss.md:
         title: "Table MetaDMP/MSS"
     error-codes.md:
@@ -61,6 +59,8 @@ pages:
         title: "Historique des versions"
     glossaire.md:
         title: "Glossaire"
+    doc-ref.md:
+        title: "Documents de référence"
     download.md:
         title: "Téléchargements"
         generation: markdown
@@ -82,12 +82,13 @@ menu:
         "Interactions entre les Acteurs": interactions-acteurs.html
         "Profils de messages": profils-messages.html
         "Lien entre l'en-tête CDA et les métadonnées XDS": lien-entete-cda-meta-xds.html
-    Volume 3:
+    Volume 3 - Annexes:
         "Table MetaDMP/MSS": meta-dmp-mss.html
         "Codes erreurs de traitement du message HL7 MDM": error-codes.html
         "Exemples de messages": exemples.html
         "Structure du message MDN (MSS)": struct-msg-mdn.html
         "Glossaire": glossaire.html
+        "Documents de référence": doc-ref.html
     Test Plan: testplan.html
     Historique des versions: change-log.html
     Téléchargements: download.html
