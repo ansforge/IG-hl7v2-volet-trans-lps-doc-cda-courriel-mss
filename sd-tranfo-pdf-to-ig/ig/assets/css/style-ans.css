@@ -14,7 +14,7 @@
     --primary-dark: #155891;
     --primary-darker: #0f3f68;
     --brand-2: #d20050;
-    --body-color: #697097;
+    --body-color: ##333333;
     --body-color-darker: var(--black, $black);
     --body-bg: #f8f9fb;
     --input-placeholder-color: var(--body-color, #697097);

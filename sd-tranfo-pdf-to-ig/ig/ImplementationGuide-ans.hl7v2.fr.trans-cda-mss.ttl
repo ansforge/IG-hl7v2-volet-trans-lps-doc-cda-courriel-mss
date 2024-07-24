@@ -5,19 +5,19 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://interop.esante.gouv.fr/ig/hl7v2/ans.hl7v2.fr.trans.cda.mss/ImplementationGuide/ans.hl7v2.fr.trans.cda.mss> a fhir:ImplementationGuide ;
+<https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/ImplementationGuide/ans.hl7v2.fr.trans-cda-mss> a fhir:ImplementationGuide ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "ans.hl7v2.fr.trans.cda.mss"] ; # 
+  fhir:id [ fhir:v "ans.hl7v2.fr.trans-cda-mss"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide ans.hl7v2.fr.trans.cda.mss</b></p><a name=\"ans.hl7v2.fr.trans.cda.mss\"> </a><a name=\"hcans.hl7v2.fr.trans.cda.mss\"> </a><a name=\"hcans.hl7v2.fr.trans.cda.mss-fr-FR\"> </a><h2>HL7v2_trans_CDA_MSS</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/hl7v2/ans.hl7v2.fr.trans.cda.mss/ImplementationGuide/ans.hl7v2.fr.trans.cda.mss</pre></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide ans.hl7v2.fr.trans-cda-mss</b></p><a name=\"ans.hl7v2.fr.trans-cda-mss\"> </a><a name=\"hcans.hl7v2.fr.trans-cda-mss\"> </a><a name=\"ans.hl7v2.fr.trans-cda-mss-fr-FR\"> </a><h2>HL7v2_trans_CDA_MSS</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/ImplementationGuide/ans.hl7v2.fr.trans-cda-mss</pre></div>"
   ] ; # 
-  fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/hl7v2/ans.hl7v2.fr.trans.cda.mss/ImplementationGuide/ans.hl7v2.fr.trans.cda.mss"^^xsd:anyURI] ; # 
+  fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/ImplementationGuide/ans.hl7v2.fr.trans-cda-mss"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "1.1.0"] ; # 
   fhir:name [ fhir:v "HL7v2_trans_CDA_MSS"] ; # 
   fhir:title [ fhir:v "Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-07-11T11:49:24+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-07-24T08:05:06+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -33,7 +33,7 @@
        fhir:display [ fhir:v "FRANCE" ]
      ] )
   ] ) ; # 
-  fhir:packageId [ fhir:v "ans.hl7v2.fr.trans.cda.mss"] ; # 
+  fhir:packageId [ fhir:v "ans.hl7v2.fr.trans-cda-mss"] ; # 
   fhir:license [ fhir:v "CC0-1.0"] ; # 
   fhir:fhirVersion ( [ fhir:v "4.0.1"] ) ; # 
   fhir:dependsOn ( [
@@ -47,7 +47,7 @@
        fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
-     fhir:version [ fhir:v "5.5.0" ]
+     fhir:version [ fhir:v "6.0.2" ]
   ] [
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
@@ -158,7 +158,7 @@
          fhir:value [ fhir:v "path-history" ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "https://interop.esante.gouv.fr/ig/hl7v2/ans.hl7v2.fr.trans.cda.mss/history.html" ]
+         fhir:value [ fhir:v "https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/history.html" ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
@@ -395,7 +395,7 @@
          fhir:value [ fhir:v "path-history" ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "https://interop.esante.gouv.fr/ig/hl7v2/ans.hl7v2.fr.trans.cda.mss/history.html" ]
+         fhir:value [ fhir:v "https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/history.html" ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [

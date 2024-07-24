@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="ans.hl7v2.fr.trans.cda.mss"/>
+  <id value="ans.hl7v2.fr.trans-cda-mss"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide ans.hl7v2.fr.trans.cda.mss</b></p><a name="ans.hl7v2.fr.trans.cda.mss"> </a><a name="hcans.hl7v2.fr.trans.cda.mss"> </a><a name="hcans.hl7v2.fr.trans.cda.mss-fr-FR"> </a><h2>HL7v2_trans_CDA_MSS</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/hl7v2/ans.hl7v2.fr.trans.cda.mss/ImplementationGuide/ans.hl7v2.fr.trans.cda.mss</pre></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide ans.hl7v2.fr.trans-cda-mss</b></p><a name="ans.hl7v2.fr.trans-cda-mss"> </a><a name="hcans.hl7v2.fr.trans-cda-mss"> </a><a name="ans.hl7v2.fr.trans-cda-mss-fr-FR"> </a><h2>HL7v2_trans_CDA_MSS</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/ImplementationGuide/ans.hl7v2.fr.trans-cda-mss</pre></div>
   </text>
-  <url value="https://interop.esante.gouv.fr/ig/hl7v2/ans.hl7v2.fr.trans.cda.mss/ImplementationGuide/ans.hl7v2.fr.trans.cda.mss"/>
+  <url value="https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/ImplementationGuide/ans.hl7v2.fr.trans-cda-mss"/>
   <version value="1.1.0"/>
   <name value="HL7v2_trans_CDA_MSS"/>
   <title value="Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté"/>
   <status value="draft"/>
-  <date value="2024-07-11T11:49:24+00:00"/>
+  <date value="2024-07-24T08:05:06+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -26,7 +26,7 @@
       <display value="FRANCE"/>
     </coding>
   </jurisdiction>
-  <packageId value="ans.hl7v2.fr.trans.cda.mss"/>
+  <packageId value="ans.hl7v2.fr.trans-cda-mss"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
   <dependsOn id="hl7tx">
@@ -35,7 +35,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="5.5.0"/>
+    <version value="6.0.2"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -131,7 +131,7 @@
         <valueString value="path-history"/>
       </extension>
       <extension url="value">
-        <valueString value="https://interop.esante.gouv.fr/ig/hl7v2/ans.hl7v2.fr.trans.cda.mss/history.html"/>
+        <valueString value="https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/history.html"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -342,7 +342,7 @@
         <valueCode value="path-history"/>
       </extension>
       <extension url="value">
-        <valueString value="https://interop.esante.gouv.fr/ig/hl7v2/ans.hl7v2.fr.trans.cda.mss/history.html"/>
+        <valueString value="https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/history.html"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
