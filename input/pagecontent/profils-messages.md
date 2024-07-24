@@ -384,7 +384,7 @@ Le profil du message MDM est le suivant :
 </table>
 
 Le message HL7 MDM ne peut transmettre qu’un seul document médical.
-Les contraintes apportées par ce volet sur les données du message MDM sont décrites à la section 12.2 [LIEN].
+Les contraintes apportées par ce volet sur les données du message MDM sont décrites à la [section dédiée](profils-messages.html#contraintes-appliquées-aux-messages-mdm-dans-le-contexte-de-ce-volet).
 
 #### Description fonctionnelle du message MDM
 
@@ -401,7 +401,7 @@ spécifiques à ce volet :
     version 2.9 du standard, permettant ainsi de renseigner les
     informations de l'expéditeur (requis), le destinataire MSSanté
     (requis si connu) et, le cas échéant, l'adresse mail de réponse
-    (contraintes décrites au paragraphe 12.2.6.1 [LIEN]).
+    (contraintes décrites au [paragraphe dédié](profils-messages.html#le-groupe-de-segments-obxnte-portant-le-document-cda)).
 
 -   Le deuxième groupe véhicule, dans un segment OBX, les informations
     du courriel MSSanté dont a été extrait le document.
@@ -5386,7 +5386,9 @@ Le segment MSH reprend une partie des informations du message initial :
   </td>
  </tr>
 </tbody></table>
+
 Le champ MSH.9 « Message type » prend la valeur : `ACK^T02^ACK` ou `ACK^T04^ACK` ou `ACK^T10^ACK` selon l’évènement du message initial.
+
 <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;mso-table-layout-alt:fixed;border:none;
  mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:
  0cm 5.4pt 0cm 5.4pt">
@@ -6014,26 +6016,28 @@ _**Note (2) :** dans le cas où le rejet du message HL7 MDM est dû à un probl�
 
 Entête MSH d’un message MDM émis par le GESTIONNAIRE vers le CONSOMMATEUR :
 
-`MSH|^~\&|PFI|CHU_X|DPI|CHU_X|202310030830||MDM^T02^MDM_T02|12345|P|2.6|||||FRA|8859/15|||1.2^ CISIS_CDA_HL7_LPS`
-
+```
+MSH|^~\&|PFI|CHU_X|DPI|CHU_X|202310030830||MDM^T02^MDM_T02|12345|P|2.6|||||FRA|8859/15|||1.2^ CISIS_CDA_HL7_LPS
+```
 Un acquittement positif retourné par le CONSOMMATEUR :
 
-`MSH|^~\&|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12346|P|2.6|||AL|AL|FRA|8859/15|||1.2^ CISIS_CDA_HL7_LPS
-
-MSA|AA|12345`
+```
+MSH|^~\&|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12346|P|2.6|||AL|AL|FRA|8859/15|||1.2^ CISIS_CDA_HL7_LPS
+MSA|AA|12345
+```
 
 Un acquittement négatif retourné par le CONSOMMATEUR : version d’HL7 inconnue
 
-`MSH|^~\&|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12347|P|2.6|||AL|AL|FRA|8859/15|||1.2^ CISIS_CDA_HL7_LPS
-
+```
+MSH|^~\&|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12347|P|2.6|||AL|AL|FRA|8859/15|||1.2^ CISIS_CDA_HL7_LPS
 MSA|AE|12345
-
-ERR||MSH^1^12|203^Unsupported version id^messageErrorCondition|E`
+ERR||MSH^1^12|203^Unsupported version id^messageErrorCondition|E
+```
 
 Un acquittement négatif retourné par le CONSOMMATEUR : patient inconnu du DPI (erreur applicative)
 
-`MSH|^~\&|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12347|P|2.6|||AL|AL|FRA|8859/15|||1.2^ CISIS_CDA_HL7_LPS
-
+```
+MSH|^~\&|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12347|P|2.6|||AL|AL|FRA|8859/15|||1.2^ CISIS_CDA_HL7_LPS
 MSA|AE|12345
-
-ERR||PID^1^3|207^Application error^messageErrorCondition| E|902^Identifiant de patient inconnu^applicationErrorCode`
+ERR||PID^1^3|207^Application error^messageErrorCondition| E|902^Identifiant de patient inconnu^applicationErrorCode
+```
