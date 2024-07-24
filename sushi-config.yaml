@@ -55,14 +55,14 @@ pages:
         title: "Exemples de messages"
     struct-msg-mdn.md:
         title: "Structure du message MDN (MSSanté)"
-    change-log.md:
-        title: "Historique des versions"
     glossaire.md:
         title: "Glossaire"
     doc-ref.md:
         title: "Documents de référence"
     download.md:
         title: "Téléchargements"
+    change-log.md:
+        title: "Historique des versions"
         generation: markdown
 
 menu:
