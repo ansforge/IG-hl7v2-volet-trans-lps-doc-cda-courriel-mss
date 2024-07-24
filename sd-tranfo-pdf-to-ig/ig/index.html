@@ -312,13 +312,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </blockquote>
 </div>
 
-<p>Ce présent volet décrit la possibilité pour un logiciel métier d’une organisation de déléguer à un acteur tiers, la plateforme d’intermédiation (PFI), la capacité de traiter un courriel entrant provenant d’une BAL MSSanté et de générer à partir de ce courriel une demande d’intégration ou de remplacement ou de suppression d’un document clinique en direction de l’application métier consommatrice. Ce volet est à considérer par le lecteur en association avec un autre volet du CI_SIS, le volet « Transmission de document(s) CDA en HL7v2 » de façon à avoir une vision de bout en bout des échanges au travers de la MSSanté (du CREATEUR de la demande de traitement sur un document vers le CONSOMMATEUR final de cette demande).
+<p>Ce présent volet décrit la possibilité pour un logiciel métier d’une organisation de déléguer à un acteur tiers, la plateforme d’intermédiation (PFI), la capacité de traiter un courriel entrant provenant d’une BAL MSSanté et de générer à partir de ce courriel une demande d’intégration ou de remplacement ou de suppression d’un document clinique en direction de l’application métier consommatrice. Ce volet est à considérer par le lecteur en association avec un autre volet du CI_SIS, <a href="https://esante.gouv.fr/volet-de-transmission-dun-document-cda-r2-en-hl7v2">le volet « Transmission de document(s) CDA en HL7v2 »</a> de façon à avoir une vision de bout en bout des échanges au travers de la MSSanté (du CREATEUR de la demande de traitement sur un document vers le CONSOMMATEUR final de cette demande).
 Les deux volets en question intègrent à la fois une partie fonctionnelle et une partie technique.
 La partie fonctionnelle décrit, à titre d’exemple et de façon non exhaustive, un ensemble de cas d’usage. Sur la base de ces cas d’usage, sont ensuite définis des acteurs du système d’information (au sens d’IHE) et des transactions qui interviennent entre ces acteurs pour répondre à ces cas d’usage. Les processus collaboratifs sont ensuite décrits et les flux entre les acteurs sont également identifiés.
 La partie technique décrit les standards retenus pour implémenter les flux identifiés par l’étude fonctionnelle et décrit dans le détail les règles d’implémentation de ces standards.
 Pour une meilleure compréhension du lecteur, les cas d’usage décrits dans la partie fonctionnelle de chacun des volets couvrent la totalité des échanges entre les acteurs définis dans les deux volets. Dans le contexte de ce présent document, seuls les échanges entre la PFI qui traite le courriel entrant et le logiciel métier consommateur font partie du périmètre du volet.</p>
 
-<p>Dans le cas d’usage où la demande provenant du CREATEUR est relayée par le GESTIONNAIRE de l’établissement vers une BAL personnelle ou organisationnelle d’un autre établissement, l’envoi de l’accusé de lecture MSSanté (Message Disposition Notification- MDN décrit dans la RFC 8098) est déclenché par le traitement du courriel déposé dans la BAL de l’utilisateur destinataire (lecture, suppression, traitement, etc.). Le message MDN est alors réceptionné par la PFI de l’établissement expéditeur qui construit le message métier HL7 ZAM^Z03^ZAM_Z01 et le transmet au logiciel métier de l’utilisateur expéditeur.
+<p>Dans le cas d’usage où la demande provenant du CREATEUR est relayée par le GESTIONNAIRE de l’établissement vers une BAL personnelle ou organisationnelle d’un autre établissement, l’envoi de l’accusé de lecture MSSanté (Message Disposition Notification- MDN décrit dans la <a href="https://datatracker.ietf.org/doc/html/rfc8098">RFC 8098</a>) est déclenché par le traitement du courriel déposé dans la BAL de l’utilisateur destinataire (lecture, suppression, traitement, etc.). Le message MDN est alors réceptionné par la PFI de l’établissement expéditeur qui construit le message métier HL7 <code class="language-plaintext highlighter-rouge">ZAM^Z03^ZAM_Z01</code> et le transmet au logiciel métier de l’utilisateur expéditeur.
 Une liste de cas d’usage, non exhaustive, est présentée à titre d’exemple dans le Volume 1 - Etude fonctionnelle, pour susciter les retours des industriels et des utilisateurs lors des prochains projectathons.</p>
 
 <p>Rappel des conventions utilisées par IHE et HL7 :</p>
@@ -437,8 +437,8 @@ La PFI extrait les documents médicaux de l’archive du courriel MSSanté reçu
 
 <h4 id="dépendances-documentaires">Dépendances documentaires</h4>
 
-<p>Cette spécification n’est pas autonome. 
-Le lecteur pourra également consulter le volet « Transmission de document(s) CDA en HL7v2 » du CI_SIS pour avoir une vision complète et transversale des échanges représentée de façon synthétique sur la figure suivante et décrits de façon détaillée dans la section 2 du présent document :</p>
+<p>Cette spécification n’est pas autonome.
+Le lecteur pourra également consulter le volet « <a href="https://esante.gouv.fr/volet-de-transmission-dun-document-cda-r2-en-hl7v2">Transmission de document(s) CDA en HL7v2</a> » du CI_SIS pour avoir une vision complète et transversale des échanges représentée de façon synthétique sur la figure suivante et décrits de façon détaillée dans le volume 2 du présent document :</p>
 
 <div class="figure" style="text-align: center;">
     <img src="image7.png" alt="Figure 1" title="Figure 1 : Représentation synthétique des échanges et articulation entre les deux volets du CI_SIS" style="width:80%;" />
@@ -515,7 +515,7 @@ Ce volet du CI_SIS n’a pas vocation à décrire le cadre juridique applicable.
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 24, 2024 09:44+0000">2024-07-24</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 24, 2024 09:57+0000">2024-07-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
