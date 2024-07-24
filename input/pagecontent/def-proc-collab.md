@@ -47,7 +47,7 @@
 <p><strong>Sc&eacute;nario Nominal</strong></p>
 </td>
 <td width="423">
-<p><span style="text-decoration: line-through;">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Suite &agrave; la r&eacute;ception d&rsquo;un courriel sur la BAL destinatrice, le GESTIONNAIRE transmet le document de sant&eacute; de la pi&egrave;ce jointe au CONSOMMATEUR.</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Suite &agrave; la r&eacute;ception d&rsquo;un courriel sur la BAL destinatrice, le GESTIONNAIRE transmet le document de sant&eacute; de la pi&egrave;ce jointe au CONSOMMATEUR.</p>
 <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le CONSOMMATEUR traite la demande d&rsquo;int&eacute;gration du document.</p>
 <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le CONSOMMATEUR retourne au GESTIONNAIRE un accus&eacute; de r&eacute;ception de la demande de traitement sur le(s) document(s).</p>
 </td>
@@ -108,7 +108,7 @@ Ainsi, dans le cas d’une demande de mise à jour des métadonnées de masquage
 <p><strong>Sc&eacute;nario Nominal</strong></p>
 </td>
 <td width="423">
-<p><span style="text-decoration: line-through;">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Suite &agrave; la r&eacute;ception du courriel sur la BAL destinatrice, le GESTIONNAIRE transmet la demande de remplacement de documents de sant&eacute; de la pi&egrave;ce jointe au CONSOMMATEUR</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Suite &agrave; la r&eacute;ception du courriel sur la BAL destinatrice, le GESTIONNAIRE transmet la demande de remplacement de documents de sant&eacute; de la pi&egrave;ce jointe au CONSOMMATEUR</p>
 <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le CONSOMMATEUR traite la demande de remplacement du document.</p>
 <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le CONSOMMATEUR retourne au GESTIONNAIRE un accus&eacute; de r&eacute;ception de la demande de remplacement du document.</p>
 <p>&nbsp;</p>
@@ -171,7 +171,6 @@ Ainsi, dans le cas d’une demande de mise à jour des métadonnées de masquage
 <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Suite &agrave; la r&eacute;ception d&rsquo;un courriel sur la BAL destinatrice, le GESTIONNAIRE transmet la demande de suppression du document de sant&eacute; de la pi&egrave;ce jointe au CONSOMMATEUR</p>
 <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le CONSOMMATEUR traite la demande de suppression du document.</p>
 <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le CONSOMMATEUR retourne au GESTIONNAIRE un accus&eacute; de r&eacute;ception de la demande de suppression de(s) document(s).</p>
-<p><span style="text-decoration: line-through;">&nbsp;</span></p>
 </td>
 </tr>
 </tbody>
