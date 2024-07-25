@@ -10,7 +10,6 @@
 
 -   Les documents transmis par le message HL7 doivent être validés par le professionnel de santé dans l'application métier qui les a générés via un statut de validation géré en interne.
 
--   Les échanges MSSanté doivent prendre en compte les restrictions positionnées sur le message. (Exemple : Un document avec un masquage Médecin ne doit pas être envoyé sur le mail MSSanté du médecin).
 
 <blockquote class="stu-note">
     <p>
