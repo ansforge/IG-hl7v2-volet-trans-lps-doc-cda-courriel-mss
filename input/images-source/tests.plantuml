@@ -19,10 +19,10 @@
 
 **[#430C05] Projectathon
 ***[#FFBF66] [[https://industriels.esante.gouv.fr/produits-et-services/ci-sis-cadre-d-interoperabilite-des-systemes-d-information-de-sante/projectathon-interoperabilite Présentation]] <<black>>
-***[#FFBF66] [[https://interop.esante.gouv.fr/gazelle/testing/testsDefinition/testsList.seam?testType=2&testStatus=1 Consulter les Tests]] <<black>>
+***[#FFBF66] [[https://interop.esante.gouv.fr/gazelle/testing/testsDefinition/testsList.seam?testType=2&testStatus=1&integrationProfile=292 Consulter les Tests]] <<black>>
 
 **[#430C05] Verification de conformité
-***[#08C5D1] [[https://interop.esante.gouv.fr/gazelle/testing/testsDefinition/testsList.seam?testType=5&testStatus=1 Consulter les Tests]] <<black>>
+***[#08C5D1] [[https://interop.esante.gouv.fr/gazelle/testing/testsDefinition/testsList.seam?testType=6&testStatus=1&integrationProfile=292 Consulter les Tests]] <<black>>
 ***[#08C5D1] [[https://industriels.esante.gouv.fr/segur-du-numerique-en-sante/toutes-les-ressources-du-segur Programme Ségur]] <<black>>
 @endmindmap 
 

@@ -46,7 +46,7 @@ pages:
     lien-entete-cda-meta-xds.md:
         title: "Lien entre l'en-tête CDA et les métadonnées XDS"
     testplan.md:
-        title: "Test Plan"
+        title: "Test"
     meta-dmp-mss.md:
         title: "Table MetaDMP/MSS"
     error-codes.md:
@@ -89,7 +89,7 @@ menu:
         "Structure du message MDN (MSS)": struct-msg-mdn.html
         "Glossaire": glossaire.html
         "Documents de référence": doc-ref.html
-    Test Plan: testplan.html
+    Test: testplan.html
     Historique des versions: change-log.html
     Téléchargements: download.html
  #   Documentation: new-tab https://interop.esante.gouv.fr/ig/documentation/
