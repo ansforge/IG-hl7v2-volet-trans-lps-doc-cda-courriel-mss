@@ -15,16 +15,15 @@ Le groupe de processus est divisé en quatre processus :
 -   Une demande de suppression de document(s) initialement envoyé(s) par MSSanté pour suppression au niveau du LPS.
 
 (\*) : _dans le contexte français, conformément au [volet Partage de
-documents de santé du CI_SIS](https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-partage-documents-sante_v1.15.pdf), la mise à jour des métadonnées du
-document est limitée à la mise à jour des informations de masquage du
-document aux PS et de mise en visibilité du document au patient et à ses
-représentants légaux ainsi que le statut du document._
+documents de santé du CI_SIS](https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-partage-documents-sante_v1.15.pdf), la mise à jour des métadonnées du document est limitée à la mise à jour des informations de masquage du document aux PS et de mise en visibilité du document au patient et à ses représentants légaux ainsi que le statut du document._
 
-Cette mise à jour est gérée comme un remplacement de document, ce qui
+_Cette mise à jour est gérée comme un remplacement de document, ce qui
 implique la création d'une nouvelle version de document par le système
 créateur de documents. Cette nouvelle version vient remplacer la
 précédente au niveau du consommateur (logiciel métier destinataire du
-courriel).
+courriel)._
+
+
 
 Le nombre de processus est ainsi réduit aux trois processus synthétisés
 sur la Figure suivante.
