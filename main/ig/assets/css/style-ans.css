@@ -4325,11 +4325,11 @@ textarea.form-control {
 }
 ::-moz-selection {
     background-color: var(--body-color);
-    color: var(--white);
+    color: var(--red);
 }
 ::selection {
-    background-color: var(--body-color);
-    color: var(--white);
+	background-color: yellow;
+	color: red;
 }
 html {
     font-size: 62.5%;
