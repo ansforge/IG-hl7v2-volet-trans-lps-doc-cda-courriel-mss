@@ -1,20 +1,20 @@
 La RFC 8098 définit le type de contenu
-« message/disposition-notification » propre au message MDN (Message
-Disposition Notification). Ce message MDN est utilisé pour notifier
+« message/disposition-notification » propre au MDN (Message
+Disposition Notification). Ce MDN est utilisé pour notifier
 l'émetteur d'un courriel de tout traitement qui survient après la
 livraison de ce courriel au niveau du récepteur. Conformément à la RFC
-8098, ce message MDN doit :
+8098, ce MDN doit :
 
 -   Être lisible par un humain et par une machine,
 
 -   Fournir suffisamment d'informations pour permettre à l'émetteur du
-    message d'associer sans ambiguïté le message MDN au message
+    message d'associer sans ambiguïté le MDN au message
     initialement envoyé et à l'adresse du récepteur initial au nom
-    duquel le message MDN a été produit,
+    duquel le MDN a été produit,
 
 -   Être structuré conformément à la RFC 2822 et la RFC 8098,
 
-L'envoi du message MDN à l'expéditeur du courriel initial est
+L'envoi du MDN à l'expéditeur du courriel initial est
 conditionné par la présence d'un entête Disposition-Notification-To au
 niveau du courriel expédié. D'autres informations peuvent également être
 fournies en utilisant les entêtes Original-Recipient et
@@ -27,12 +27,12 @@ returm-Path du courriel envoyé, ceci afin d'éviter une transmission de
 messages en boucle. Dans ce cas l'envoi du MDN nécessite une
 confirmation de l'utilisateur.
 
-Dans le cas d'un MDN en erreur, l'objet du message MDN doit être précisé
+Dans le cas d'un MDN en erreur, l'objet du MDN doit être précisé
 de la façon suivante : `[KO Intégration système ! ] XDM/1.0/DDM+<libellé> <NOM> <prénom> <date de naissance>`.
 
-Dans le cas contraire, l'objet du message MDN est précisé par `XDM/1.0/DDM+<libellé> <NOM> <prénom> <date de naissance>`.
+Dans le cas contraire, l'objet du MDN est précisé par `XDM/1.0/DDM+<libellé> <NOM> <prénom> <date de naissance>`.
 
-Le message MDN est de type « multipart/report » :
+Le MDN est de type « multipart/report » :
 `Content-Type:multipart/report;report-type=disposition-notification; boundary="RAA14128.773615765/example.com"`
 
 -   La première partie contient du texte lisible par un être humain.
@@ -51,11 +51,11 @@ Le message MDN est de type « multipart/report » :
 -   En cas d'erreur, le contenu du champ « Disposition: » prend la valeur : « `Disposition:automatic-action/MDN-sent-automatically; processed/Error: code erreur^libellé erreur` »
 -   Le champ « `Final-Recipient:` » qui correspond à l'adresse du destinataire pour lequel le MDN est émis. La valeur de ce champ peut être différente de l'adresse initialement fournie par l'émetteur du courriel, notamment en cas de transfert du courriel initial par le destinataire.
 
-Dans le contexte de ce volet, de façon à permettre le traitement du message MDN par la PFI réceptrice, le message MDN devra également préciser les champs suivants :
+Dans le contexte de ce volet, de façon à permettre le traitement du MDN par la PFI réceptrice, le MDN devra également préciser les champs suivants :
 
--   Le champ identifiant du courriel d'origine « `Original-Message-ID` » qui indique l'identifiant du courriel initial pour lequel le message MDN est produit. Il est obtenu à partir de l'entête Message-ID du courriel initial.
+-   Le champ identifiant du courriel d'origine « `Original-Message-ID` » qui indique l'identifiant du courriel initial pour lequel le MDN est produit. Il est obtenu à partir de l'entête Message-ID du courriel initial.
 
--   Le champ « `Original-Recipient:` » qui indique l'adresse du destinataire du courriel d'origine, telle que spécifiée par l'expéditeur du courriel pour lequel le MDN est émis. Cette valeur est obtenue à partir de l'entête Original-Recipient du courriel pour lequel le message MDN est généré.
+-   Le champ « `Original-Recipient:` » qui indique l'adresse du destinataire du courriel d'origine, telle que spécifiée par l'expéditeur du courriel pour lequel le MDN est émis. Cette valeur est obtenue à partir de l'entête Original-Recipient du courriel pour lequel le MDN est généré.
 -   La troisième partie contient le corps du courriel d'origine.
 
 Les pièces jointes envoyées avec le courriel d'origine (IHE_XDM.zip et le pdf) doivent être remises en pièces jointes du courriel MDN.
@@ -69,7 +69,7 @@ Les pièces jointes envoyées avec le courriel d'origine (IHE_XDM.zip et le pdf)
 
         -   La valeur « automatic-action » indique que le traitement du courriel a été réalisée de façon automatique.
 
--   Le mode d'envoi du message MDN
+-   Le mode d'envoi du MDN
 
     -   `sending mode="MDN-sent-manually" / "MDN-sent-automatically"`.
 
@@ -95,9 +95,9 @@ Les pièces jointes envoyées avec le courriel d'origine (IHE_XDM.zip et le pdf)
 
 ------------------------------------------
 
-Exemple d'un message MDN :
+Exemple d'un MDN :
 
-L'exemple suivant décrit le message MDN (accusé de lecture négatif) généré dans le contexte du cas d'usage « Transfert d'un patient d'un CH vers un autre CH -Gestion des erreurs » présenté au [paragraphe suivant](cas-usage.html#description-du-cas-en-erreur) du présent volet.
+L'exemple suivant décrit le MDN (accusé de lecture négatif) généré dans le contexte du cas d'usage « Transfert d'un patient d'un CH vers un autre CH -Gestion des erreurs » présenté au [paragraphe suivant](cas-usage.html#description-du-cas-en-erreur) du présent volet.
 
 ```
 Date: Wed, 20 Feb 2024 00:19:00 (EDT) -0400

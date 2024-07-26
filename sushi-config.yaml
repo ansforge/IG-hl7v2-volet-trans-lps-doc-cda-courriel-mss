@@ -54,7 +54,7 @@ pages:
     exemples.md:
         title: "Exemples de messages"
     struct-msg-mdn.md:
-        title: "Structure du message MDN (MSSanté)"
+        title: "Structure du MDN (MSSanté)"
     glossaire.md:
         title: "Glossaire"
     doc-ref.md:
@@ -86,7 +86,7 @@ menu:
         "Table MetaDMP/MSS": meta-dmp-mss.html
         "Codes erreurs de traitement du message HL7 MDM": error-codes.html
         "Exemples de messages": exemples.html
-        "Structure du message MDN (MSS)": struct-msg-mdn.html
+        "Structure du MDN (MSS)": struct-msg-mdn.html
         "Glossaire": glossaire.html
         "Documents de référence": doc-ref.html
     Test: testplan.html
