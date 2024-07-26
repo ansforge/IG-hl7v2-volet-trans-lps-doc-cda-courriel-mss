@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Structure du message MDN (MSSanté) - Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté v1.1.0</title>
+    <title>Structure du MDN (MSSanté) - Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté v1.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -158,7 +158,7 @@
         <a href="exemples.html">Exemples de messages</a>
       </li>
       <li>
-        <a href="struct-msg-mdn.html">Structure du message MDN (MSS)</a>
+        <a href="struct-msg-mdn.html">Structure du MDN (MSS)</a>
       </li>
       <li>
         <a href="glossaire.html">Glossaire</a>
@@ -189,7 +189,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Structure du message MDN (MSSanté)</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Structure du MDN (MSSanté)</b></li>
 
           <span style="float:right;">
 
@@ -220,7 +220,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
-  <h2>Structure du message MDN (MSSanté)</h2>
+  <h2>Structure du MDN (MSSanté)</h2>
   
 
 
@@ -239,11 +239,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
 <p>La RFC 8098 définit le type de contenu
-« message/disposition-notification » propre au message MDN (Message
-Disposition Notification). Ce message MDN est utilisé pour notifier
+« message/disposition-notification » propre au MDN (Message
+Disposition Notification). Ce MDN est utilisé pour notifier
 l’émetteur d’un courriel de tout traitement qui survient après la
 livraison de ce courriel au niveau du récepteur. Conformément à la RFC
-8098, ce message MDN doit :</p>
+8098, ce MDN doit :</p>
 
 <ul>
   <li>
@@ -251,16 +251,16 @@ livraison de ce courriel au niveau du récepteur. Conformément à la RFC
   </li>
   <li>
     <p>Fournir suffisamment d’informations pour permettre à l’émetteur du
-message d’associer sans ambiguïté le message MDN au message
+message d’associer sans ambiguïté le MDN au message
 initialement envoyé et à l’adresse du récepteur initial au nom
-duquel le message MDN a été produit,</p>
+duquel le MDN a été produit,</p>
   </li>
   <li>
     <p>Être structuré conformément à la RFC 2822 et la RFC 8098,</p>
   </li>
 </ul>
 
-<p>L’envoi du message MDN à l’expéditeur du courriel initial est
+<p>L’envoi du MDN à l’expéditeur du courriel initial est
 conditionné par la présence d’un entête Disposition-Notification-To au
 niveau du courriel expédié. D’autres informations peuvent également être
 fournies en utilisant les entêtes Original-Recipient et
@@ -273,12 +273,12 @@ returm-Path du courriel envoyé, ceci afin d’éviter une transmission de
 messages en boucle. Dans ce cas l’envoi du MDN nécessite une
 confirmation de l’utilisateur.</p>
 
-<p>Dans le cas d’un MDN en erreur, l’objet du message MDN doit être précisé
+<p>Dans le cas d’un MDN en erreur, l’objet du MDN doit être précisé
 de la façon suivante : <code class="language-plaintext highlighter-rouge">[KO Intégration système ! ] XDM/1.0/DDM+&lt;libellé&gt; &lt;NOM&gt; &lt;prénom&gt; &lt;date de naissance&gt;</code>.</p>
 
-<p>Dans le cas contraire, l’objet du message MDN est précisé par <code class="language-plaintext highlighter-rouge">XDM/1.0/DDM+&lt;libellé&gt; &lt;NOM&gt; &lt;prénom&gt; &lt;date de naissance&gt;</code>.</p>
+<p>Dans le cas contraire, l’objet du MDN est précisé par <code class="language-plaintext highlighter-rouge">XDM/1.0/DDM+&lt;libellé&gt; &lt;NOM&gt; &lt;prénom&gt; &lt;date de naissance&gt;</code>.</p>
 
-<p>Le message MDN est de type « multipart/report » :
+<p>Le MDN est de type « multipart/report » :
 <code class="language-plaintext highlighter-rouge">Content-Type:multipart/report;report-type=disposition-notification; boundary="RAA14128.773615765/example.com"</code></p>
 
 <ul>
@@ -309,13 +309,13 @@ CONSOMMATEUR.</p>
   <li>Le champ « <code class="language-plaintext highlighter-rouge">Final-Recipient:</code> » qui correspond à l’adresse du destinataire pour lequel le MDN est émis. La valeur de ce champ peut être différente de l’adresse initialement fournie par l’émetteur du courriel, notamment en cas de transfert du courriel initial par le destinataire.</li>
 </ul>
 
-<p>Dans le contexte de ce volet, de façon à permettre le traitement du message MDN par la PFI réceptrice, le message MDN devra également préciser les champs suivants :</p>
+<p>Dans le contexte de ce volet, de façon à permettre le traitement du MDN par la PFI réceptrice, le MDN devra également préciser les champs suivants :</p>
 
 <ul>
   <li>
-    <p>Le champ identifiant du courriel d’origine « <code class="language-plaintext highlighter-rouge">Original-Message-ID</code> » qui indique l’identifiant du courriel initial pour lequel le message MDN est produit. Il est obtenu à partir de l’entête Message-ID du courriel initial.</p>
+    <p>Le champ identifiant du courriel d’origine « <code class="language-plaintext highlighter-rouge">Original-Message-ID</code> » qui indique l’identifiant du courriel initial pour lequel le MDN est produit. Il est obtenu à partir de l’entête Message-ID du courriel initial.</p>
   </li>
-  <li>Le champ « <code class="language-plaintext highlighter-rouge">Original-Recipient:</code> » qui indique l’adresse du destinataire du courriel d’origine, telle que spécifiée par l’expéditeur du courriel pour lequel le MDN est émis. Cette valeur est obtenue à partir de l’entête Original-Recipient du courriel pour lequel le message MDN est généré.</li>
+  <li>Le champ « <code class="language-plaintext highlighter-rouge">Original-Recipient:</code> » qui indique l’adresse du destinataire du courriel d’origine, telle que spécifiée par l’expéditeur du courriel pour lequel le MDN est émis. Cette valeur est obtenue à partir de l’entête Original-Recipient du courriel pour lequel le MDN est généré.</li>
   <li>La troisième partie contient le corps du courriel d’origine.</li>
 </ul>
 
@@ -338,7 +338,7 @@ CONSOMMATEUR.</p>
     </ul>
   </li>
   <li>
-    <p>Le mode d’envoi du message MDN</p>
+    <p>Le mode d’envoi du MDN</p>
 
     <ul>
       <li>
@@ -390,9 +390,9 @@ CONSOMMATEUR.</p>
 
 <hr />
 
-<p>Exemple d’un message MDN :</p>
+<p>Exemple d’un MDN :</p>
 
-<p>L’exemple suivant décrit le message MDN (accusé de lecture négatif) généré dans le contexte du cas d’usage « Transfert d’un patient d’un CH vers un autre CH -Gestion des erreurs » présenté au <a href="cas-usage.html#description-du-cas-en-erreur">paragraphe suivant</a> du présent volet.</p>
+<p>L’exemple suivant décrit le MDN (accusé de lecture négatif) généré dans le contexte du cas d’usage « Transfert d’un patient d’un CH vers un autre CH -Gestion des erreurs » présenté au <a href="cas-usage.html#description-du-cas-en-erreur">paragraphe suivant</a> du présent volet.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Date: Wed, 20 Feb 2024 00:19:00 (EDT) -0400
 From: serviceY_auto@chb.mssante.fr
@@ -469,7 +469,7 @@ Ici apparaît le fichier 20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf e
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 25, 2024 13:29+0000">2024-07-25</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jul 26, 2024 09:44+0000">2024-07-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
