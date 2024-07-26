@@ -1,0 +1,13 @@
+{
+    "package-id" : "ans.hl7v2.fr.trans-cda-mss",
+    "version" : "2.1.0",
+    "path" : "https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/1.1.0",
+    "mode" : "working",
+    "status" : "draft",
+    "sequence" : "trial-use",
+    "first": true,
+    "title" : "",
+    "desc" : "",
+    "ci-build" : "https://ansforge.github.io/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/main/ig/",
+    "introduction" : ""
+  }
