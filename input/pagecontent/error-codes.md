@@ -338,8 +338,7 @@ La nature de l’erreur est renseignée dans le champ ERR-3 de la structure du m
   mso-background-themetint:51;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal" style="mso-yfti-cnfc:64"><span style="mso-bookmark:_Toc121410245"><span style="mso-bookmark:_Toc151045512"><span style="mso-bidi-font-size:10.0pt;
   line-height:115%;mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;
-  mso-bidi-font-family:Arial;color:black;mso-color-alt:windowtext">Autre erreur
-  de syntaxe HL7</span></span></span><span style="mso-bookmark:_Toc121410245"><span style="mso-bookmark:_Toc151045512"></span></span><span style="mso-bookmark:
+  mso-bidi-font-family:Arial;color:black;mso-color-alt:windowtext">Other HL7 Error</span></span></span><span style="mso-bookmark:_Toc121410245"><span style="mso-bookmark:_Toc151045512"></span></span><span style="mso-bookmark:
   _Toc121410245"><span style="mso-bookmark:_Toc151045512"><span style="mso-bidi-font-size:10.0pt;line-height:115%;mso-fareast-font-family:
   Calibri;mso-fareast-theme-font:minor-latin;mso-bidi-font-family:Arial;
   mso-fareast-language:FR"><o:p></o:p></span></span></span></p>

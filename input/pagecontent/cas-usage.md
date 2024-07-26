@@ -26,7 +26,7 @@ Le DPI intègre le document à partir des informations disponibles dans la deman
 
 Dans le contexte SEGUR vague 2, la PFI doit pouvoir générer un courriel MDN (Message Disposition Notification) à destination de la BAL du SGL contenant le statut de l’intégration.
 
-La structure du courriel MDN est décrite [ici](struct-msg-mdn.html).
+La structure du MDN est décrite [ici](struct-msg-mdn.html).
 
 
 <blockquote class="stu-note">
