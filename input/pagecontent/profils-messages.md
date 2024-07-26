@@ -6018,19 +6018,19 @@ _**Note (2) :** dans le cas où le rejet du message HL7 MDM est dû à un probl�
 Entête MSH d’un message MDM émis par le GESTIONNAIRE vers le CONSOMMATEUR :
 
 ```
-MSH|^~\&|PFI|CHU_X|DPI|CHU_X|202310030830||MDM^T02^MDM_T02|12345|P|2.6|||||FRA|8859/15|||1.2^ CISIS_CDA_HL7_LPS
+MSH|^~\&|PFI|CHU_X|DPI|CHU_X|202310030830||MDM^T02^MDM_T02|12345|P|2.6|||||FRA|8859/15|||1.1^ CISIS_CDA_HL7_LPS
 ```
 Un acquittement positif retourné par le CONSOMMATEUR :
 
 ```
-MSH|^~\&|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12346|P|2.6|||AL|AL|FRA|8859/15|||1.2^ CISIS_CDA_HL7_LPS
+MSH|^~\&|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12346|P|2.6|||AL|AL|FRA|8859/15
 MSA|AA|12345
 ```
 
 Un acquittement négatif retourné par le CONSOMMATEUR : version d’HL7 inconnue
 
 ```
-MSH|^~\&|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12347|P|2.6|||AL|AL|FRA|8859/15|||1.2^ CISIS_CDA_HL7_LPS
+MSH|^~\&|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12347|P|2.6|||AL|AL|FRA|8859/15
 MSA|AE|12345
 ERR||MSH^1^12|203^Unsupported version id^messageErrorCondition|E
 ```
@@ -6038,7 +6038,7 @@ ERR||MSH^1^12|203^Unsupported version id^messageErrorCondition|E
 Un acquittement négatif retourné par le CONSOMMATEUR : patient inconnu du DPI (erreur applicative)
 
 ```
-MSH|^~\&|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12347|P|2.6|||AL|AL|FRA|8859/15|||1.2^ CISIS_CDA_HL7_LPS
+MSH|^~\&|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12347|P|2.6|||AL|AL|FRA|8859/15
 MSA|AE|12345
 ERR||PID^1^3|207^Application error^messageErrorCondition| E|902^Identifiant de patient inconnu^applicationErrorCode
 ```
