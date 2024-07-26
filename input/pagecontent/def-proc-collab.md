@@ -49,7 +49,7 @@
 <td width="423">
 <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Suite &agrave; la r&eacute;ception d&rsquo;un courriel sur la BAL destinatrice, le GESTIONNAIRE transmet le document de sant&eacute; de la pi&egrave;ce jointe au CONSOMMATEUR.</p>
 <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le CONSOMMATEUR traite la demande d&rsquo;int&eacute;gration du document.</p>
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le CONSOMMATEUR retourne au GESTIONNAIRE un accus&eacute; de r&eacute;ception de la demande de traitement sur le(s) document(s).</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le CONSOMMATEUR retourne au GESTIONNAIRE un accusé de réception de la demande d'intégration du document.</p>
 </td>
 </tr>
 </tbody>
@@ -171,7 +171,7 @@ Ainsi, dans le cas d’une demande de mise à jour des métadonnées de masquage
 <td width="423">
 <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Suite &agrave; la r&eacute;ception d&rsquo;un courriel sur la BAL destinatrice, le GESTIONNAIRE transmet la demande de suppression du document de sant&eacute; de la pi&egrave;ce jointe au CONSOMMATEUR</p>
 <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le CONSOMMATEUR traite la demande de suppression du document.</p>
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le CONSOMMATEUR retourne au GESTIONNAIRE un accus&eacute; de r&eacute;ception de la demande de suppression de(s) document(s).</p>
+<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le CONSOMMATEUR retourne au GESTIONNAIRE un accusé de réception de suppression du document.</p>
 </td>
 </tr>
 </tbody>
