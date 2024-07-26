@@ -4039,6 +4039,17 @@ Cet OBX permet au Consommateur de vérifier que le document n’est pas masqué 
   Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
   color:black">à</span><span style="font-size:9.0pt;mso-bidi-font-family:Arial;
   color:black"> MASQUE_PS non Actif<o:p></o:p></span></p>
+    <p class="MsoListParagraph" style="margin-top:0cm;margin-right:0cm;margin-bottom:
+  0cm;margin-left:18.0pt;mso-add-space:auto;text-indent:-18.0pt;line-height:
+  normal;mso-list:l1 level1 lfo15"><!--[if !supportLists]--><span style="font-size:
+  9.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol;color:black"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><!--[endif]--><span style="font-size:9.0pt;mso-bidi-font-family:
+  Arial;color:#0070C0">Y </span><span style="font-size:9.0pt;mso-bidi-font-family:
+  Arial;color:black">(Yes)&nbsp;</span><span style="font-size:9.0pt;font-family:
+  Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:Wingdings;
+  color:black">à</span><span style="font-size:9.0pt;mso-bidi-font-family:Arial;
+  color:black"> MASQUE_PS Actif<o:p></o:p></span></p>
   </td>
  </tr>
  <tr style="mso-yfti-irow:11">
@@ -4090,7 +4101,6 @@ Cet OBX permet au Consommateur de vérifier que le document n’est pas masqué 
   </td>
  </tr>
 </tbody></table>
-Cette métadonnée doit obligatoirement prendre la valeur « N » dans le cas où la demande de traitement sur le document est transmise par MSSanté. Dans le cas contraire, la PFI ne doit pas traiter le courriel et doit renvoyer un accusé de lecture MDN (Message Disposition Notification) négatif en direction de l’émetteur.
 
 ###### Document Non visible par le patient
 Cet OBX permet d’informer le Consommateur que le document est masqué ou non au patient.
