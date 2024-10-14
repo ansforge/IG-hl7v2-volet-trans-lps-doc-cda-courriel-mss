@@ -679,8 +679,8 @@ Dans la suite de cette section, les valeurs indiquées en bleu dans les tableaux
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
   <p class="MsoNormal"><span style="mso-bookmark:_Toc23346647"><span style="color:black">Type du message<br>
   </span><span style="color:#4472C4;mso-themecolor:accent5">MDM^T02^MDM_T02<br>
-  MDM^T10^MDM_T10<br>
-  MDM^T04^MDM_T04</span><span style="color:black"><o:p></o:p></span></span></p>
+  MDM^T10^MDM_T02<br>
+  MDM^T04^MDM_T02</span><span style="color:black"><o:p></o:p></span></span></p>
   </td>
   
   <td width="104" valign="top" style="width:77.95pt;border-top:none;border-left:
