@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "HL7v2_trans_CDA_MSS"] ; # 
   fhir:title [ fhir:v "Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-08-02T14:29:29+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-10-14T09:40:10+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -298,7 +298,7 @@
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "hl7.fhir.uv.tools#0.1.0" ]
+       fhir:value [ fhir:v "hl7.fhir.uv.tools#0.2.0" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
