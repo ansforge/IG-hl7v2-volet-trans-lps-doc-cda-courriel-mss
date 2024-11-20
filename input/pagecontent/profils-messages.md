@@ -1627,12 +1627,10 @@ Le message HL7 MDM contient un premier groupe OBXNTE composé :
 -   d'un segment PRT requis, pré-adopté de HL7v2.9, véhiculant les
     informations sur l'expéditeur du courriel MSSanté,
 
--   d'un segment PRT requis si connu, pré-adopté de HL7v2.9, véhiculant
-    les informations sur le destinataire du courriel MSSanté,
+-   d'un segment PRT requis si connu et répétable, pré-adopté de HL7v2.9, véhiculant
+    les informations sur  le(s) destinataire(s) du courriel MSSanté,
 
--   d'un segment PRT optionnel, pré-adopté de HL7v2.9, permettant de
-    renseigner l'adresse mail sur laquelle le destinataire peut
-    répondre.
+-   d'un segment PRT optionnel et répétable, pré-adopté de HL7v2.9, l’(es) adresse(s) mail sur la(les)quelle(s) le(s) destinataire(s) peut ou peuvent répondre.
 
 Les champs des segments PRT doivent être renseignés conformément aux
 spécifications [« Contraintes sur les types de données HL7 v2.5
