@@ -81,8 +81,9 @@ menu:
         "Evènements déclenchants": evenements-declenchants.html
         "Interactions entre les Acteurs": interactions-acteurs.html
         "Profils de messages": profils-messages.html
-        "Lien entre l'en-tête CDA et les métadonnées XDS": lien-entete-cda-meta-xds.html
+
     Volume 3 - Annexes:
+        "Lien entre l'en-tête CDA et les métadonnées XDS": lien-entete-cda-meta-xds.html
         "Table MetaDMP/MSS": meta-dmp-mss.html
         "Codes erreurs de traitement du message HL7 MDM": error-codes.html
         "Exemples de messages": exemples.html
