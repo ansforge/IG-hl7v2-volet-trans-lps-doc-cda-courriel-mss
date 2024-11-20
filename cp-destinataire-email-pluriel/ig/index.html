@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Accueil - Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté v1.1.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style-ans.css"/>
+    <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"1"}
+    h3,h4,h5,h6{--heading-prefix:"1"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+<div id="family-nav">
+    <img height="50" alt="HL7 v2" src="assets/images/hl7v2-logo.png"/>
+  </div>
+  <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
+    <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+  </div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Volet Transmission au LPS de documents CDA provenant d&#39;un courriel MSSanté</span>
+            <br/>
+            <span style="display:inline-block;">1.1.1 - ci-build
+
+
+
+  <img alt="France flag" src="assets/images/fra.svg" height="16" title="France"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 1 - Etude fonctionnelle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="cas-usage.html">Cas d&apos;usage</a>
+      </li>
+      <li>
+        <a href="contexte-metier.html">Organisation métier</a>
+      </li>
+      <li>
+        <a href="acteurs-transactions.html">Acteurs et transactions</a>
+      </li>
+      <li>
+        <a href="def-proc-collab.html">Définition des processus collaboratifs</a>
+      </li>
+      <li>
+        <a href="identification-flux.html">identification des flux</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2 – Détail des Transactions
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="volume2.html">Volume 2 : Introduction</a>
+      </li>
+      <li>
+        <a href="perimetre-transaction.html">Périmètre de la transaction</a>
+      </li>
+      <li>
+        <a href="role.html">Rôle des acteurs pour cette transaction</a>
+      </li>
+      <li>
+        <a href="standards.html">Choix des standards</a>
+      </li>
+      <li>
+        <a href="evenements-declenchants.html">Evènements déclenchants</a>
+      </li>
+      <li>
+        <a href="interactions-acteurs.html">Interactions entre les Acteurs</a>
+      </li>
+      <li>
+        <a href="profils-messages.html">Profils de messages</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 3 - Annexes
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="lien-entete-cda-meta-xds.html">Lien entre l&apos;en-tête CDA et les métadonnées XDS</a>
+      </li>
+      <li>
+        <a href="meta-dmp-mss.html">Table MetaDMP/MSS</a>
+      </li>
+      <li>
+        <a href="error-codes.html">Codes erreurs de traitement du message HL7 MDM</a>
+      </li>
+      <li>
+        <a href="exemples.html">Exemples de messages</a>
+      </li>
+      <li>
+        <a href="struct-msg-mdn.html">Structure du MDN (MSS)</a>
+      </li>
+      <li>
+        <a href="glossaire.html">Glossaire</a>
+      </li>
+      <li>
+        <a href="doc-ref.html">Documents de référence</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="testplan.html">Test</a>
+  </li>
+  <li>
+    <a href="change-log.html">Historique des versions</a>
+  </li>
+  <li>
+    <a href="download.html">Téléchargements</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Accueil</b></li>
+
+          <span style="float:right;">
+
+            <a href="toc.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="cas-usage.html">next&gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté - Local Development build (v1.1.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Accueil</h2>
+  
+
+
+
+
+
+
+  <table class="colsd">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/ImplementationGuide/ans.hl7v2.fr.trans-cda-mss<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/ImplementationGuide/ans.hl7v2.fr.trans-cda-mss"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">1.1.1<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/ImplementationGuide/ans.hl7v2.fr.trans-cda-mss|1.1.1"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Draft
+          
+            as of 2024-11-20
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">HL7v2_trans_CDA_MSS</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#avant-propos" id="markdown-toc-avant-propos">Avant-propos</a></li>
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+</ul>
+
+</div>
+<p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; width: 65%">
+<b>Brief description of this Implementation Guide</b><br />
+[Add a brief description of this IG in English]
+</p>
+
+<!--  A décommenter lors de la publication -->
+
+<div style="width: 65%">
+    <blockquote class="stu-note">
+    <p>
+    <b>Attention !</b> Cet Implementation Guide n'est pas en version courante. La version officielle est ici :  <a href="https://esante.gouv.fr/volet-de-transmission-dun-document-cda-r2-en-hl7v2">https://esante.gouv.fr/volet-de-transmission-dun-document-cda-r2-en-hl7v2</a>
+    </p>
+    </blockquote>
+</div>
+
+<div class="figure">
+    <img src="ci-sis-logo.png" alt="CI-SIS" title="Logo du CI-SIS" style="width:100%;" />
+</div>
+
+<h3 id="avant-propos">Avant-propos</h3>
+
+<p>Ce document fait partie de la couche Service du Cadre d’Interopérabilité des Systèmes d’Information de santé (CI_SIS).</p>
+
+<div style="width: 65%">
+    <blockquote class="stu-note">
+    <p>
+    Cette version, au statut Trial Implementation, intègre le traitement des commentaires reçus par l’ANS pendant la phase de commentaires publics qui s’est déroulée du 27/11/2023 au 08/12/2023 ainsi que des corrections ou des améliorations apportées à la suite du projectathon organisé par l’ANS en septembre 2023. Cette version du volet intègre également le résultat de l’étude conduite en janvier 2024 par la DNS avec des industriels et leurs représentants sur les cas d’usage de la MSSanté présentés dans la section Volume 1 – Etude fonctionnelle.  
+    </p>
+    </blockquote>
+</div>
+
+<p>Ce présent volet décrit la possibilité pour un logiciel métier d’une organisation de déléguer à un acteur tiers, la plateforme d’intermédiation (PFI), la capacité de traiter un courriel entrant provenant d’une BAL MSSanté et de générer à partir de ce courriel une demande d’intégration ou de remplacement ou de suppression d’un document clinique en direction de l’application métier consommatrice. Ce volet est à considérer par le lecteur en association avec un autre volet du CI_SIS, <a href="https://esante.gouv.fr/volet-de-transmission-dun-document-cda-r2-en-hl7v2">le volet « Transmission de document(s) CDA en HL7v2 »</a> de façon à avoir une vision de bout en bout des échanges au travers de la MSSanté (du CREATEUR de la demande de traitement sur un document vers le CONSOMMATEUR final de cette demande).</p>
+
+<p>Les deux volets en question intègrent à la fois une partie fonctionnelle et une partie technique.</p>
+
+<p>La partie fonctionnelle décrit, à titre d’exemple et de façon non exhaustive, un ensemble de cas d’usage. Sur la base de ces cas d’usage, sont ensuite définis des acteurs du système d’information (au sens d’IHE) et des transactions qui interviennent entre ces acteurs pour répondre à ces cas d’usage. Les processus collaboratifs sont ensuite décrits et les flux entre les acteurs sont également identifiés.</p>
+
+<p>La partie technique décrit les standards retenus pour implémenter les flux identifiés par l’étude fonctionnelle et décrit dans le détail les règles d’implémentation de ces standards.</p>
+
+<p>Pour une meilleure compréhension du lecteur, les cas d’usage décrits dans la partie fonctionnelle de chacun des volets couvrent la totalité des échanges entre les acteurs définis dans les deux volets. Dans le contexte de ce présent document, seuls les échanges entre la PFI qui traite le courriel entrant et le logiciel métier consommateur font partie du périmètre du volet.</p>
+
+<p>Dans le cas d’usage où la demande provenant du CREATEUR est relayée par le GESTIONNAIRE de l’établissement vers une BAL personnelle ou organisationnelle d’un autre établissement, l’envoi de l’accusé de lecture MSSanté (Message Disposition Notification- MDN décrit dans la <a href="https://datatracker.ietf.org/doc/html/rfc8098">RFC 8098</a>) est déclenché par le traitement du courriel déposé dans la BAL de l’utilisateur destinataire (lecture, suppression, traitement, etc.). Le courriel MDN est alors réceptionné par la PFI de l’établissement expéditeur qui construit le message métier HL7 <code class="language-plaintext highlighter-rouge">ZAM^Z03^ZAM_Z01</code> et le transmet au logiciel métier de l’utilisateur expéditeur.</p>
+
+<p>Une liste de cas d’usage, non exhaustive, est présentée à titre d’exemple dans le Volume 1 - Etude fonctionnelle, pour susciter les retours des industriels et des utilisateurs lors des prochains projectathons.</p>
+
+<p>Rappel des conventions utilisées par IHE et HL7 :</p>
+
+<table>
+<tbody>
+<tr>
+<td width="113">
+<p><strong>Code d&rsquo;usage</strong></p>
+</td>
+<td width="510">
+<p><strong>Signification</strong></p>
+</td>
+</tr>
+<tr>
+<td width="113">
+<p>R</p>
+</td>
+<td width="510">
+<p>Requis&nbsp;: l&rsquo;&eacute;l&eacute;ment de donn&eacute;e doit obligatoirement &ecirc;tre renseign&eacute; par l&rsquo;&eacute;metteur et int&eacute;gr&eacute; par le r&eacute;cepteur</p>
+</td>
+</tr>
+<tr>
+<td width="113">
+<p>RE</p>
+</td>
+<td width="510">
+<p>Requis si connu&nbsp;: le syst&egrave;me doit d&eacute;montrer sa capacit&eacute; &agrave; renseigner l&rsquo;&eacute;l&eacute;ment en &eacute;mission et/ou &agrave; l&rsquo;exploiter en r&eacute;ception.</p>
+<p>Sur le terrain il peut exister des situations o&ugrave; l&rsquo;&eacute;l&eacute;ment est non renseign&eacute;.</p>
+</td>
+</tr>
+<tr>
+<td width="113">
+<p>O</p>
+</td>
+<td width="510">
+<p>Optionnel</p>
+</td>
+</tr>
+<tr>
+<td width="113">
+<p>X</p>
+</td>
+<td width="510">
+<p>Non support&eacute;</p>
+</td>
+</tr>
+<tr>
+<td width="113">
+<p>C</p>
+</td>
+<td width="510">
+<p>Conditionnel&nbsp;: La condition de remplissage de l&rsquo;&eacute;l&eacute;ment de donn&eacute;e est sp&eacute;cifi&eacute;e dans le tableau de description du profil de message ou dans une note en dessous du tableau.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<tbody>
+<tr>
+<td width="113">
+<p><strong>Code d&rsquo;usage</strong></p>
+</td>
+<td width="510">
+<p><strong>Signification</strong></p>
+</td>
+</tr>
+<tr>
+<td width="113">
+<p>[ ]</p>
+</td>
+<td width="510">
+<p>Champ optionnel</p>
+</td>
+</tr>
+<tr>
+<td width="113">
+<p>{ }</p>
+</td>
+<td width="510">
+<p>Champ r&eacute;p&eacute;table</p>
+</td>
+</tr>
+
+<tr>
+<td width="113">
+<p>[{ }]</p>
+</td>
+<td width="510">
+<p>Champ optionnel et r&eacute;p&eacute;table</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<div class="draft-content">
+<p>
+<b>QUESTIONS OUVERTES :</b><br />
+<a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/discussions/3">LPS_MSS_Q1 :</a> demande de fusionner les deux spécifications : Transmission d’un document CDA en HL7v2 et Transmission au LPS d’un document CDA provenant d’un courriel. La fusion des deux spécifications est sans doute possible. Cependant, utiliser la même transaction entre les acteurs CREATEUR/GESTIONNAIRE et GESTIONNAIRE/CONSOMMATEUR nécessite d’effectuer une étude plus approfondie de façon à déterminer comment harmoniser ces transactions. La mise en place d'une transaction unique indépendamment du contexte créerait de l'ambiguïté avec notamment des informations non pertinentes véhiculées entre le GESTIONNAIRE et le CONSOMMATEUR (alimentation DMP, échange MSSanté…).
+<br /><br />
+<a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/discussions/4">LPS_MSS_Q2 :</a> demande d’un éditeur de permettre également d’utiliser le message ORU (HL7v2.5) de la même façon que le message MDM pour transférer la demande portée par le courriel reçu par le GESTIONNAIRE vers l’acteur CONSOMMATEUR. Un sondage a été proposé aux éditeurs sur ce sujet. Ce sondage n’a pas permis de dégager un consensus clair sur ce point (50% de non et 50% de oui et d’autre part l’éditeur à l’origine de la demande n’a pas confirmé ce besoin au niveau du sondage.
+<br /><br />
+<a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/discussions/5">LPS_MSS_Q3 :</a> faut-il gérer la cohérence entre les métadonnées DMPMSS du document stocké dans le DMP et les métadonnées de ce même document géré dans les logiciels métier ? et si oui, comment gérer cette cohérence.<br />
+Par exemple, dans le cas où le PS a alimenté le DMP du patient avec un document clinique et que le patient a exprimé le souhait de ne pas donner accès à ce document aux PS, alors est-il permis d’échanger ce même document au travers de la MSSanté ?<br />
+Le cas d’usage qui nous a été soumis est le suivant :
+<ul>
+  <li>Le médecin de l’établissement alimente le DMP en positionnant le masquage aux PS à vrai à l’instant T (CR opératoire du patient) ;</li>
+  <li>Le médecin souhaite solliciter l’avis d’un collègue ;</li>
+  <li>La secrétaire médicale ou le médecin envoie par MSSanté ce même document à un collègue pour avis à T+1 jour.</li>
+</ul>
+</p>
+</div>
+
+<h3 id="introduction">Introduction</h3>
+<p>Ce document présente les spécifications techniques du volet « Transmission au LPS d’un document CDA provenant d’un courriel MSSanté ». Ces spécifications permettent la transmission d’une demande de traitement concernant un document clinique au format CDA-R2 (Clinical Document Architecture) (demande d’intégration/de remplacement/de suppression d’un document)) entre la Plateforme d’Intermédiation (PFI) de l’établissement et le logiciel du professionnel de santé (LPS) destinataire après détection d’un courriel dans une Boîte Aux Lettres (BAL) applicative MSSanté accessible par la PFI.</p>
+
+<p>La PFI extrait les documents médicaux de l’archive du courriel MSSanté reçue puis les transmet unitairement au logiciel de professionnel de santé (LPS) consommateur. Le LPS acquitte ensuite la réception des informations portées par la transaction.</p>
+
+<h4 id="dépendances-documentaires">Dépendances documentaires</h4>
+
+<p>Cette spécification n’est pas autonome.
+Le lecteur pourra également consulter le volet « <a href="https://esante.gouv.fr/volet-de-transmission-dun-document-cda-r2-en-hl7v2">Transmission de document(s) CDA en HL7v2</a> » du CI_SIS pour avoir une vision complète et transversale des échanges représentée de façon synthétique sur la figure suivante et décrits de façon détaillée dans le volume 2 du présent document :</p>
+
+<div class="figure" style="text-align: center;">
+    <img src="image7.png" alt="Figure 1" title="Figure 1 : Représentation synthétique des échanges et articulation entre les deux volets du CI_SIS" style="width:80%;" />
+    <figcaption><b>Figure 1 : Représentation synthétique des échanges et articulation entre les deux volets du CI_SIS</b></figcaption>
+</div>
+<p><br /></p>
+
+<h5 id="dépendances-avec-la-documentation-segur">Dépendances avec la documentation SEGUR</h5>
+
+<p>Ce document doit être utilisé dans le cadre du référencement SEGUR vague 2. Il s’applique, entre autres, à la vague 2 du Ségur Numérique mais pas uniquement. Il peut également être utilisé hors SEGUR.</p>
+
+<h5 id="positionnement-dans-le-cadre-dinteropérabilité">Positionnement dans le cadre d’interopérabilité</h5>
+
+<p>Cette spécification n’est pas autonome. Les développeurs doivent également connaître et maîtriser d’autres volets du CI_SIS publiés par l’ANS :</p>
+
+<ul>
+  <li><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-echange-documents-sante_v1.8.pdf">Le volet Echange de documents de santé</a>,</li>
+</ul>
+
+<p>Ainsi que le <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2/actual">Référentiel Socle MSSanté #2, Clients messagerie de sécurité de santé version 1.0.1</a>, publié par l’ANS.</p>
+
+<h4 id="ce-dont-ne-traite-pas-ce-volet-du-ci_sis">Ce dont ne traite pas ce volet du CI_SIS</h4>
+
+<p>Les contraintes de sécurité concernant les flux échangés ne sont pas traitées dans ce document. En effet, les aspects relatifs à la sécurité sont du ressort du système d’information les implémentant.
+Ce volet du CI_SIS n’a pas vocation à décrire le cadre juridique applicable. Il appartient à chaque acteur concerné par ce volet de veiller à ce que les fonctionnalités fournies et/ou mises en œuvre respectent ce cadre légal, notamment en termes de confidentialité et de sécurité des données par application des règles de la <a href="https://esante.gouv.fr/produits-services/pgssi-s">PGSSI_S</a>.</p>
+
+<h4 id="lectorat-cible">Lectorat cible</h4>
+
+<p>Ce document s’adresse aux développeurs des interfaces interopérables des systèmes implémentant le volet « Transmission au LPS d’un document CDA provenant d’un courriel MSSanté » ou à toute autre personne intervenant dans le processus de mise en place de ces interfaces.</p>
+
+<!-- ### Auteurs et contributeurs
+
+| Role  | Nom | Organisation | Contact |
+| --- | --- | --- | --- |
+| **Primary Editor** | Prenom Nom | Agence du Numérique en Santé | prenom.nom@address.email | -->
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&#xA0;
+
+                <a href="toc.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&#xA0;
+
+                <a href="cas-usage.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Nov 20, 2024 13:01+0000">2024-11-20</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)"></span>
+            Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/history.html">Historique des versions </a>
+ | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ansforge/IG-hl7v2-volet-transmission-document-cda-r2/issues/new/choose">New Issue</a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+
+  <!-- Ajout ANS -->
+  <script src="assets/js/app.js" type="text/javascript"> </script>
+  <script src="assets/js/vendor.js" type="text/javascript"> </script>
+  <!-- Fin ajout ANS -->
+
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+
+  <!-- Analytics Below
+  ================================================== -->
+
+
+  <!-- AJOUT ANS -->
+
+<footer class="footer footer-principal" role="contentinfo">
+  <div class="footer__region1">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4 text-center text-md-left">
+          <div class="logos">        
+            <div class="logo logo--0">
+              <a href="https://solidarites-sante.gouv.fr" title="Ministère des Solidarités et de la Santé (nouvelle fenêtre)" target="_blank" rel="nofollow">
+                
+                <img src="assets/images/logo-ministere.svg" alt="Ministère des Solidarités et de la Santé" width="133" height="77" loading="lazy" />
+                
+              </a>
+            </div>
+        
+            <div class="logo logo--1">
+              <a href="https://esante.gouv.fr/" title="Agence du numérique en santé (nouvelle fenêtre)" target="_blank" rel="nofollow">
+                
+                <img src="assets/images/logo-ANS-footer.svg" alt="Agence du numérique en santé" width="106" height="74" loading="lazy" />
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 text-center text-md-left">
+          <p class="footer__title">Agence du Numérique en Santé</p>
+          <p>2-10 Rue d'Oradour-sur-Glane 75015 Paris</p>
+
+          <!-- <div class="m-social">
+            <ul class="m-social__list">        
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://www.linkedin.com/company/agence-du-numerique-en-sante/" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-linkedin" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#linkedin"></use></svg>
+                  </div>
+                  <span class="sr-only">linkedin</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://twitter.com/esante_gouv_fr" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-twitter" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#twitter"></use></svg>
+                  </div>
+                  <span class="sr-only">twitter</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://www.youtube.com/channel/UCd1zuSaU5cE1lRCpwv_HSMA" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-youtube" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#youtube"></use></svg>
+                  </div>
+                  <span class="sr-only">youtube</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://esante.gouv.fr/rss.xml" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-rss" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#rss"></use></svg>
+                  </div>
+                  <span class="sr-only">rss</span>
+                </a>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+        
+        <div class="col-6 col-lg-4">
+          <ul class="footer-list">
+            <li class="footer-list__item footer-list__item--hasIcon">
+              <a href="mailto:ci-sis@esante.gouv.fr" class="mailto-link">
+                <svg class="svg-icon svg-angle-right" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#angle-right"></use></svg>Contact</a>
+              </li>
+              <!-- <li class="footer-list__item">
+                <a href="https://interop-pprod.esante.gouv.fr/ci-sis-specifications/wp-content/uploads/CGU_espace_de_tests_v1.1.pdf" class="file-link">Mentions légales</a>
+              </li>
+               -->
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    <!-- <div class="footer__region2">
+      <div class="container">
+        <div class="footer-contentinfo">
+          <ul class="footer-list footer-list--inline">
+
+          </ul>
+        </div>
+      </div>
+    </div> -->
+  </footer>
+  </body>
+</html>
+
