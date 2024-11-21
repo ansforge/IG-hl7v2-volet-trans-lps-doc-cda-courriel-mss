@@ -18,7 +18,6 @@
   * correction typos/cohérence pour le type message en MSH-9.3 dans les [profils des messages](profils-messages.html#eléments-de-contrôle-du-message-mdm) ([6](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/6))
   * [Document Masqué aux professionnels de Santé](profils-messages.html#document-masqué-aux-professionnels-de-santé) : métadonnée de masquage aux PS : Ajout de la valeur manquante Y (YES) ([2](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2))
   * Correction description des segments PRT pour 'destinataire' et 'adresse mail de réponse' dans les [profils des messages](profils-messages.html#le-groupe-de-segments-obxnte-portant-le-document-cda) [(9)](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/9)
-  * 
   * Déplacement de la section LIEN ENTRE L’EN-TETE CDA ET LES METADONNEES XDS dans Volume 3 Annexes ([8](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/8))
 * Volume 3 Annexes
   * [Structure du MDN (MSSanté)](struct-msg-mdn.html) (Annexe 4) modification du titre : Structure du MDN (Message Disposition Notification) - MSSanté ([2](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2))
