@@ -146,14 +146,6 @@ Rappel des conventions utilisées par IHE et HL7 :
 <br><br>
 <a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/discussions/4">LPS_MSS_Q2 :</a> demande d’un éditeur de permettre également d’utiliser le message ORU (HL7v2.5) de la même façon que le message MDM pour transférer la demande portée par le courriel reçu par le GESTIONNAIRE vers l’acteur CONSOMMATEUR. Un sondage a été proposé aux éditeurs sur ce sujet. Ce sondage n’a pas permis de dégager un consensus clair sur ce point (50% de non et 50% de oui et d’autre part l’éditeur à l’origine de la demande n’a pas confirmé ce besoin au niveau du sondage.
 <br><br>
-<a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/discussions/5">LPS_MSS_Q3 :</a> faut-il gérer la cohérence entre les métadonnées DMPMSS du document stocké dans le DMP et les métadonnées de ce même document géré dans les logiciels métier ? et si oui, comment gérer cette cohérence.<br>
-Par exemple, dans le cas où le PS a alimenté le DMP du patient avec un document clinique et que le patient a exprimé le souhait de ne pas donner accès à ce document aux PS, alors est-il permis d’échanger ce même document au travers de la MSSanté ?<br>
-Le cas d’usage qui nous a été soumis est le suivant :
-<ul>
-  <li>Le médecin de l’établissement alimente le DMP en positionnant le masquage aux PS à vrai à l’instant T (CR opératoire du patient) ;</li>
-  <li>Le médecin souhaite solliciter l’avis d’un collègue ;</li>
-  <li>La secrétaire médicale ou le médecin envoie par MSSanté ce même document à un collègue pour avis à T+1 jour.</li>
-</ul>
 </p>
 </div>
 
