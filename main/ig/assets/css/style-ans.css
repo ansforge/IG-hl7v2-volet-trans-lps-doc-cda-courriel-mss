@@ -125,7 +125,7 @@ video {
     -webkit-padding-before: 0;
     -webkit-padding-after: 0;
     border: 0;
-    font: inherit;
+   /* font: inherit;*/
     margin: 0;
    /* padding: 0;*/
     vertical-align: baseline;
@@ -233,7 +233,7 @@ h6 {
     margin-top: 0;
 }
 p {
-    margin:  0 0 10px;
+    margin:  0 0 4px;
 }
 abbr[data-original-title],
 abbr[title] {
@@ -298,11 +298,11 @@ sup {
 }
 a {
     background-color: transparent;
-    color: var(--body-color, #697097);
+    color: blue;
 }
 a,
 a:hover {
-    text-decoration: underline;
+   /* text-decoration: underline;*/
 }
 a:hover {
     color: var(--primary, #1d71b8);
@@ -5464,12 +5464,12 @@ a.btn--style1.btn--white {
     border-left-width: 0;
 }
 .table th {
-    background-color: #f8f9fb;
+    background-color: #f0f3f9;
     color: #343852;
 }
 .table thead td,
 .table thead th {
-    background-color: #f8f9fb;
+    background-color: #c2c6cd;
     border-bottom-width: 0;
 }
 .table caption + tbody tr:first-child td,
