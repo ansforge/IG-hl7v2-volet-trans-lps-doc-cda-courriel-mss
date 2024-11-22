@@ -1,3 +1,35 @@
+
+### Historique du volet au format guide d'implémentation
+
+#### version 1.1.1
+
+**Version mineure sans impact sur le développement (changement de format, corrections de typo, précisions ou ajout d'informations)**
+
+* Modification du format du volet : passage du format PDF au format guide d'implémentation ([2](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2))
+* Avant-propos : suppression d’une ligne vide du tableau des conventions HL7, IHE ([2](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2))
+* Ensemble du document :
+  * remplacement de message MDN par MDN (qui signifie d’emblée Message Disposition Notification) ([2](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2))
+* Volume 1 Etude fonctionnelle
+  * remplacement du terme « section » par « volume 2 » ([2](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2))
+  * [processus de transmission initiale de document(s)](def-proc-collab.html#processus-collaboratif-demande-de-transmission-initiale-de-documents) : scénario nominal, remplacement « demande de traitement de(s) document(s) » par « demande d’intégration du document » ([2](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2))
+  * [processus de suppression de document(s)](def-proc-collab.html#processus-collaboratif-demande-de-suppression-de-documents) : scénario nominal, remplacement « demande de suppression de(s) document(s) » par « demande de suppression du document » ([2](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2))
+* Volume 2 Etude technique
+  * [Choix des standards](volume2.html#choix-des-standards) : suppression de la phrase « Les échanges MSSanté doivent prendre en compte les restrictions positionnées sur le message. (Exemple : un document avec un masquage Médecin ne doit pas être envoyé sur le mail MSSanté du médecin). » qui n’a pas de rapport avec le choix des standards. ([2](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2))
+  * correction typos/cohérence pour le type message en MSH-9.3 dans les [profils des messages](profils-messages.html#eléments-de-contrôle-du-message-mdm) ([6](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/6))
+  * [Document Masqué aux professionnels de Santé](profils-messages.html#document-masqué-aux-professionnels-de-santé) : métadonnée de masquage aux PS : Ajout de la valeur manquante Y (YES) ([2](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2))
+  * Correction description des segments PRT pour 'destinataire' et 'adresse mail de réponse' dans les [profils des messages](profils-messages.html#le-groupe-de-segments-obxnte-portant-le-document-cda) [(9)](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/9)
+  * Déplacement de la section LIEN ENTRE L’EN-TETE CDA ET LES METADONNEES XDS dans Volume 3 Annexes ([8](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/8))
+* Volume 3 Annexes
+  * [Structure du MDN (MSSanté)](struct-msg-mdn.html) (Annexe 4) modification du titre : Structure du MDN (Message Disposition Notification) - MSSanté ([2](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2))
+  * [exemples de messages d’acquittement](profils-messages.html#exemple)
+    * Correction de MSH-21 (version de l’interface 1.1 au lieu de 1.2) sur le segment MSH du message initial MDM
+    * Suppression du champ MSH-21 (le message d’acquittement n’a pas de contraintes particulières par rapport au message spécifié dans le standard international)
+
+### Rappel de l'historique du volet des anciennes versions au format PDF (avant novembre 2024)
+
+Ici nous rappelons l'historique des précédentes versions.
+Cet historique est également disponible dans la dernière version du volet au format pdf : [ANNEXE 7 CI_SIS_TRANS_LPS_DOC_CDA_COURRIEL_MSSANTE_V1.1_Post_PAT_2023_CONCERTATION_FINAL.pdf](https://esante.gouv.fr/sites/default/files/media_entity/documents/CI_SIS_TRANS_LPS_DOC_CDA_COURRIEL_MSSANTE_V1.1_Post_PAT_2023_CONCERTATION_FINAL.pdf)
+
 <table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.66%;margin-left:-3.1pt;border-collapse:collapse;border:none">
  <tbody><tr style="height:15.9pt">
   <td style="border:none;padding:0cm 0cm 0cm 0cm" width="0%"><p class="MsoNormal">&nbsp;</p></td>
@@ -526,155 +558,6 @@
   </span></span><span style="font-size:10.0pt;line-height:115%">Annexe 3&nbsp;:
   la table initiale est scindée en deux tables&nbsp;: messageErrorCondition et
   applicationErrorCondition</span></p>
-  </td>
- </tr>
- <tr>
-  <td style="border:none;padding:0cm 0cm 0cm 0cm" width="0%"><p class="MsoNormal">&nbsp;</p></td>
-  <td width="9%" rowspan="2" style="width:9.62%;border:solid gray 1.0pt;
-  border-top:none;padding:2.85pt 2.85pt 2.85pt 2.85pt">
-  <p class="TBLContenu" align="center" style="margin-bottom:0cm;text-align:center">1.1.1</p>
-  </td>
-  <td width="13%" colspan="2" style="width:13.1%;border-top:none;border-left:
-  none;border-bottom:solid gray 1.0pt;border-right:solid gray 1.0pt;padding:
-  2.85pt 2.85pt 2.85pt 2.85pt">
-  <p class="MsoNormal">ANS</p>
-  </td>
-  <td width="13%" colspan="2" style="width:13.86%;border-top:none;border-left:
-  none;border-bottom:solid gray 1.0pt;border-right:solid gray 1.0pt;padding:
-  2.85pt 2.85pt 2.85pt 2.85pt">
-  <p class="MsoNormal">Le 24/07/2024</p>
-  </td>
-  <td width="13%" colspan="2" style="width:13.92%;border-top:none;border-left:
-  none;border-bottom:solid gray 1.0pt;border-right:solid gray 1.0pt;padding:
-  2.85pt 2.85pt 2.85pt 2.85pt">
-  <p class="MsoNormal">ANS</p>
-  </td>
-  <td width="13%" colspan="2" style="width:13.94%;border-top:none;border-left:
-  none;border-bottom:solid gray 1.0pt;border-right:solid gray 1.0pt;padding:
-  2.85pt 2.85pt 2.85pt 2.85pt">
-  <p class="MsoNormal">Le </p>
-  </td>
-  <td width="13%" colspan="2" style="width:13.7%;border-top:none;border-left:
-  none;border-bottom:solid gray 1.0pt;border-right:solid gray 1.0pt;padding:
-  2.85pt 2.85pt 2.85pt 2.85pt">
-  <p class="MsoNormal">DNS</p>
-  </td>
-  <td width="21%" colspan="2" style="width:21.28%;border-top:none;border-left:
-  none;border-bottom:solid gray 1.0pt;border-right:solid gray 1.0pt;padding:
-  2.85pt 2.85pt 2.85pt 2.85pt">
-  <p class="MsoNormal">Le </p>
-  </td>
- </tr>
- <tr>
-  <td style="border:none;padding:0cm 0cm 0cm 0cm" width="0%"><p class="MsoNormal">&nbsp;</p></td>
-  <td width="89%" colspan="12" style="width:89.78%;border-top:none;border-left:
-  none;border-bottom:solid gray 1.0pt;border-right:solid gray 1.0pt;padding:
-  2.85pt 2.85pt 2.85pt 2.85pt">
-  <p class="MsoListParagraphCxSpFirst" style="margin-bottom:8.0pt;text-indent:
-  -18.0pt;line-height:107%"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>Version
-  mineure sans impact sur le développement. Modifications typo</p>
-  <p class="MsoListParagraphCxSpMiddle" style="margin-bottom:8.0pt;text-indent:
-  -18.0pt;line-height:107%"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>Avant-propos&nbsp;:
-  suppression d’une ligne vide du tableau des conventions HL7, IHE</p>
-  <p class="MsoListParagraphCxSpMiddle" style="margin-bottom:8.0pt;text-indent:
-  -18.0pt;line-height:107%"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>Etude
-  fonctionnelle</p>
-  <p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:0cm;
-  margin-bottom:8.0pt;margin-left:72.0pt;text-indent:-18.0pt;line-height:107%"><span style="font-family:&quot;Courier New&quot;">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;
-  </span></span>&amp; 1.1&nbsp;: remplacement du terme «&nbsp;section&nbsp;»
-  par «&nbsp;volume 2&nbsp;»</p>
-  <p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:0cm;
-  margin-bottom:8.0pt;margin-left:72.0pt;text-indent:-18.0pt;line-height:107%"><span style="font-family:&quot;Courier New&quot;">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;
-  </span></span>&amp; 2.2.1 et 2.3.1&nbsp;: remplacement des termes «&nbsp;message
-  MDN&nbsp;» par «&nbsp;MDN&nbsp;»</p>
-  <p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:0cm;
-  margin-bottom:8.0pt;margin-left:72.0pt;text-indent:-18.0pt;line-height:107%"><span style="font-family:&quot;Courier New&quot;">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;
-  </span></span>&amp;5.1&nbsp;: processus de transmission initiale de
-  document(s)&nbsp;: scénario nominal, remplacement «&nbsp;demande de
-  traitement de(s) document(s)&nbsp;» par «&nbsp;demande d’intégration du
-  document&nbsp;»</p>
-  <p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:0cm;
-  margin-bottom:8.0pt;margin-left:72.0pt;text-indent:-18.0pt;line-height:107%"><span style="font-family:&quot;Courier New&quot;">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;
-  </span></span>&amp;5.3&nbsp;: processus de suppression de document(s)&nbsp;:
-  scénario nominal, remplacement «&nbsp;demande de suppression de(s)
-  document(s)&nbsp;» par «&nbsp;demande de suppression du document&nbsp;»</p>
-  <p class="MsoListParagraphCxSpMiddle" style="margin-bottom:8.0pt;text-indent:
-  -18.0pt;line-height:107%"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>Etude
-  technique</p>
-  <p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:0cm;
-  margin-bottom:8.0pt;margin-left:53.4pt;text-indent:-18.0pt;line-height:107%"><span style="font-family:Wingdings">Ø<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
-  </span></span>&amp;9&nbsp;: Choix des standards&nbsp;: suppression de la
-  phrase «&nbsp;<span style="font-size:8.0pt;line-height:107%">Les échanges
-  MSSanté doivent prendre en compte les restrictions positionnées sur le
-  message. (Exemple&nbsp;: un document avec un masquage Médecin ne doit pas
-  être envoyé sur le mail MSSanté du médecin)</span><span style="line-height:
-  107%">.&nbsp;» qui n’a pas de rapport avec le choix des standards.</span></p>
-  <p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:0cm;
-  margin-bottom:8.0pt;margin-left:72.0pt;text-indent:-18.0pt;line-height:107%"><span style="font-family:&quot;Courier New&quot;">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;
-  </span></span>Remplacement de la référence [9] par [10] (Extension française
-  PAM)</p>
-  <p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:0cm;
-  margin-bottom:8.0pt;margin-left:72.0pt;text-indent:-18.0pt;line-height:107%"><span style="font-family:&quot;Courier New&quot;">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;
-  </span></span>Remplacement de la référence [10] par [11] (types de données
-  HL7v2 en France)</p>
-  <p class="MsoListParagraphCxSpMiddle" align="left" style="margin-top:0cm;
-  margin-right:0cm;margin-bottom:8.0pt;margin-left:53.4pt;text-align:left;
-  text-indent:-18.0pt;line-height:107%"><span style="font-family:Wingdings">Ø<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span>&amp;11&nbsp;:
-  Interactions entre les acteurs</p>
-  <p class="MsoListParagraphCxSpMiddle" align="left" style="margin-top:0cm;
-  margin-right:0cm;margin-bottom:8.0pt;margin-left:72.0pt;text-align:left;
-  text-indent:-18.0pt;line-height:107%"><span style="font-family:&quot;Courier New&quot;">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span>Remplacement
-  du terme message MDN par MDN</p>
-  <p class="MsoListParagraphCxSpMiddle" align="left" style="margin-top:0cm;
-  margin-right:0cm;margin-bottom:8.0pt;margin-left:53.4pt;text-align:left;
-  text-indent:-18.0pt;line-height:107%"><span style="font-family:Wingdings">Ø<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span>&amp; 12.2.1&nbsp;:
-  description fonctionnelle du message MDM</p>
-  <p class="MsoListParagraphCxSpMiddle" align="left" style="margin-top:0cm;
-  margin-right:0cm;margin-bottom:8.0pt;margin-left:72.0pt;text-align:left;
-  text-indent:-18.0pt;line-height:107%"><span style="font-family:&quot;Courier New&quot;">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span>Remplacement
-  de la cardinalité [5..*] par [4..*] de l’OBX portant les métadonnées DMP/MSS</p>
-  <p class="MsoListParagraphCxSpMiddle" align="left" style="margin-top:0cm;
-  margin-right:0cm;margin-bottom:8.0pt;margin-left:53.4pt;text-align:left;
-  text-indent:-18.0pt;line-height:107%"><span style="font-family:Wingdings">Ø<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span>&amp; 12.2.2&nbsp;:
-  données concernant le patient et la venue</p>
-  <p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:0cm;
-  margin-bottom:8.0pt;margin-left:72.0pt;text-indent:-18.0pt;line-height:107%"><span style="font-family:&quot;Courier New&quot;">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;
-  </span></span>Remplacement de la référence [9] par [10] (Extension française
-  PAM)</p>
-  <p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:0cm;
-  margin-bottom:8.0pt;margin-left:72.0pt;text-indent:-18.0pt;line-height:107%"><span style="font-family:&quot;Courier New&quot;">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;
-  </span></span>Remplacement de la référence [7] par [5] (corpus documentaire
-  INS)</p>
-  <p class="MsoListParagraphCxSpMiddle" align="left" style="margin-top:0cm;
-  margin-right:0cm;margin-bottom:8.0pt;margin-left:53.4pt;text-align:left;
-  text-indent:-18.0pt;line-height:107%"><span style="font-family:Wingdings">Ø<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span>&amp; 12.2.6.1&nbsp;:
-  groupe OBXNTE portant le document CDA</p>
-  <p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:0cm;
-  margin-bottom:8.0pt;margin-left:72.0pt;text-indent:-18.0pt;line-height:107%"><span style="font-family:&quot;Courier New&quot;">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;
-  </span></span>Remplacement de la référence [10] par [11] (types de données
-  HL7v2 en France)</p>
-  <p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:0cm;
-  margin-bottom:8.0pt;margin-left:53.4pt;text-indent:-18.0pt;line-height:107%"><span style="font-family:Wingdings">Ø<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
-  </span></span>&amp; 12.2.6.3.1&nbsp;: métadonnée de masquage aux PS</p>
-  <p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:0cm;
-  margin-bottom:8.0pt;margin-left:89.4pt;text-indent:-18.0pt;line-height:107%"><span style="font-family:&quot;Courier New&quot;">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;
-  </span></span>Ajout de la valeur Y</p>
-  <p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:0cm;
-  margin-bottom:8.0pt;margin-left:53.4pt;text-indent:-18.0pt;line-height:107%"><span style="font-family:Wingdings">Ø<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;
-  </span></span>&amp; 12.3.3.4&nbsp;: exemples de messages d’acquittement</p>
-  <p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:0cm;
-  margin-bottom:8.0pt;margin-left:89.4pt;text-indent:-18.0pt;line-height:107%"><span style="font-family:&quot;Courier New&quot;">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;
-  </span></span>Correction de MSH-21 (version de l’interface 1.1 au lieu de
-  2.1) sur le segment MSH du message initial MDM</p>
-  <p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:0cm;
-  margin-bottom:8.0pt;margin-left:89.4pt;text-indent:-18.0pt;line-height:107%"><span style="font-family:&quot;Courier New&quot;">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;
-  </span></span>Suppression du champ MSH-21 (le message d’acquittement n’a pas
-  de contraintes particulières par rapport au message spécifié dans le standard
-  international)</p>
-  <p class="MsoListParagraphCxSpLast" style="margin-bottom:8.0pt;text-indent:
-  -18.0pt;line-height:107%"><span style="font-family:Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>Annexe
-  4&nbsp;: modification du titre&nbsp;: Structure du MDN (Message Disposition
-  Notification) - MSSanté</p>
   </td>
  </tr>
  <tr height="0">
