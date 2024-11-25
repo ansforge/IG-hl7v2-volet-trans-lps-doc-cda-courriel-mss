@@ -1,7 +1,4 @@
-
-### Historique du volet au format guide d'implémentation
-
-#### version 1.1.1
+### version 1.1.1
 
 **Version mineure sans impact sur le développement (changement de format, corrections de typo, précisions ou ajout d'informations)**
 
@@ -25,7 +22,7 @@
     * Correction de MSH-21 (version de l’interface 1.1 au lieu de 1.2) sur le segment MSH du message initial MDM
     * Suppression du champ MSH-21 (le message d’acquittement n’a pas de contraintes particulières par rapport au message spécifié dans le standard international)
 
-### Rappel de l'historique du volet des anciennes versions au format PDF (avant novembre 2024)
+### Rappel de l'historique des anciennes versions au format PDF (avant novembre 2024)
 
 Ici nous rappelons l'historique des précédentes versions.
 Cet historique est également disponible dans la dernière version du volet au format pdf : [ANNEXE 7 CI_SIS_TRANS_LPS_DOC_CDA_COURRIEL_MSSANTE_V1.1_Post_PAT_2023_CONCERTATION_FINAL.pdf](https://esante.gouv.fr/sites/default/files/media_entity/documents/CI_SIS_TRANS_LPS_DOC_CDA_COURRIEL_MSSANTE_V1.1_Post_PAT_2023_CONCERTATION_FINAL.pdf)
