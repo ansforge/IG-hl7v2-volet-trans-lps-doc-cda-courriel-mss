@@ -1,0 +1,97 @@
+#segment-header {
+    background-color: white;
+}
+
+#segment-footer > .container {
+    background-color: #464c6d;
+}
+
+
+#stripe {
+
+    background: none;
+}
+
+#segment-footer {
+     background: none;
+}
+
+
+#hl7-search-lnk >img {
+    height: 50px;
+}
+
+
+.breadcrumb,
+.breadcrumb-item {
+
+     display: unset;
+}
+
+.navbar-nav {
+    flex-direction: unset;
+}
+
+.navbar {
+	background-color : #464c6d;
+}
+.navbar,
+.navbar .container,
+.navbar .container-fluid,
+.navbar .container-xs {
+
+    /*display: table;*/
+
+}
+
+body {
+    font-size: 14px;
+}
+
+
+
+
+ol,
+ul {
+    list-style: unset;
+}
+
+
+.dropdown-toggle:after{
+    content:  none;
+
+}
+/*
+a, article, aside, audio, body, div, em, fieldset, figcaption, figure, footer, h1, h2, h3, h4, h5, h6, header, html, img, label, li, menu, nav, ol, output, p, section, span, table, tbody, td, tfoot, th, thead, tr, ul, video {
+    -webkit-padding-start : unset;
+    padding : unset;
+}*/
+
+#content > .inner-wrapper, .container > .row > .inner-wrapper {
+margin : 10px;
+}
+
+.table-hl7v2 {
+    /*border-collapse: collapse;*/
+}
+
+.table-hl7v2  th {
+    font-weight: 600;
+    text-align: inherit;
+    text-align: -webkit-match-parent;
+}
+
+.hl7-color{
+	color :#0070C0;
+}
+
+.table-hl7v2 tbody > tr > td {
+  padding: 4px;
+}
+
+.table-hl7v2 tbody > tr.segment > td {
+  padding: 4px;
+  background-color : #a0a4ac;
+}
+
+
