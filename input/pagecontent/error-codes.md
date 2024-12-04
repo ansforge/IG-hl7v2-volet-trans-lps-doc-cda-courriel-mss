@@ -882,6 +882,54 @@ Cette table est décrite à titre indicatif et pourra être enrichie si besoin, 
   Calibri;mso-fareast-theme-font:minor-latin;mso-bidi-font-family:Arial;
   mso-bidi-theme-font:minor-bidi;mso-fareast-language:FR"><o:p></o:p></span></span></span></p>
   </td>
+ </tr>
+ <tr style="mso-yfti-irow:4;mso-yfti-lastrow:yes">
+  <td width="75" valign="top" style="width:56.45pt;border:solid #9CC2E5 1.0pt;
+  mso-border-themecolor:accent1;mso-border-themetint:153;border-top:none;
+  mso-border-top-alt:solid #9CC2E5 .5pt;mso-border-top-themecolor:accent1;
+  mso-border-top-themetint:153;mso-border-alt:solid #9CC2E5 .5pt;mso-border-themecolor:
+  accent1;mso-border-themetint:153;background:#DEEAF6;mso-background-themecolor:
+  accent1;mso-background-themetint:51;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="mso-yfti-cnfc:68"><span style="mso-bookmark:_Toc121410245"><span style="mso-bookmark:_Toc151045512"><span style="mso-bidi-font-size:10.0pt;
+  line-height:115%;mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;
+  mso-bidi-font-family:Arial;mso-bidi-theme-font:minor-bidi;color:black;
+  mso-color-alt:windowtext;mso-fareast-language:FR">905</span></span></span><span style="mso-bookmark:_Toc121410245"><span style="mso-bookmark:_Toc151045512"><span style="mso-bidi-font-size:10.0pt;line-height:115%;mso-fareast-font-family:
+  Calibri;mso-fareast-theme-font:minor-latin;mso-bidi-font-family:Arial;
+  mso-bidi-theme-font:minor-bidi;mso-fareast-language:FR"><o:p></o:p></span></span></span></p>
+  </td>
   
+  <td width="198" valign="top" style="width:148.85pt;border-top:none;border-left:
+  none;border-bottom:solid #9CC2E5 1.0pt;mso-border-bottom-themecolor:accent1;
+  mso-border-bottom-themetint:153;border-right:solid #9CC2E5 1.0pt;mso-border-right-themecolor:
+  accent1;mso-border-right-themetint:153;mso-border-top-alt:solid #9CC2E5 .5pt;
+  mso-border-top-themecolor:accent1;mso-border-top-themetint:153;mso-border-left-alt:
+  solid #9CC2E5 .5pt;mso-border-left-themecolor:accent1;mso-border-left-themetint:
+  153;mso-border-alt:solid #9CC2E5 .5pt;mso-border-themecolor:accent1;
+  mso-border-themetint:153;background:#DEEAF6;mso-background-themecolor:accent1;
+  mso-background-themetint:51;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="mso-yfti-cnfc:64"><span style="mso-bookmark:_Toc121410245"><span style="mso-bookmark:_Toc151045512"><span style="mso-bidi-font-size:10.0pt;
+  line-height:115%;mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;
+  mso-bidi-font-family:Arial;mso-bidi-theme-font:minor-bidi;color:black;
+  mso-color-alt:windowtext;mso-fareast-language:FR">L’INS transmis n’est pas complet</span></span></span><span style="mso-bookmark:_Toc121410245"><span style="mso-bookmark:_Toc151045512"><span style="mso-bidi-font-size:10.0pt;line-height:115%;mso-fareast-font-family:
+  Calibri;mso-fareast-theme-font:minor-latin;mso-bidi-font-family:Arial;
+  mso-bidi-theme-font:minor-bidi;mso-fareast-language:FR"><o:p></o:p></span></span></span></p>
+  </td>
+  
+  <td width="378" valign="top" style="width:10.0cm;border-top:none;border-left:
+  none;border-bottom:solid #9CC2E5 1.0pt;mso-border-bottom-themecolor:accent1;
+  mso-border-bottom-themetint:153;border-right:solid #9CC2E5 1.0pt;mso-border-right-themecolor:
+  accent1;mso-border-right-themetint:153;mso-border-top-alt:solid #9CC2E5 .5pt;
+  mso-border-top-themecolor:accent1;mso-border-top-themetint:153;mso-border-left-alt:
+  solid #9CC2E5 .5pt;mso-border-left-themecolor:accent1;mso-border-left-themetint:
+  153;mso-border-alt:solid #9CC2E5 .5pt;mso-border-themecolor:accent1;
+  mso-border-themetint:153;background:#DEEAF6;mso-background-themecolor:accent1;
+  mso-background-themetint:51;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoNormal" style="mso-yfti-cnfc:64"><span style="mso-bookmark:_Toc121410245"><span style="mso-bookmark:_Toc151045512"><span style="mso-bidi-font-size:10.0pt;
+  line-height:115%;mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;
+  mso-bidi-font-family:Arial;mso-bidi-theme-font:minor-bidi;color:black;
+  mso-color-alt:windowtext;mso-fareast-language:FR">L'INS du patient est présent dans le document CDA contenu dans le message HL7 mais L’INS transmis n’est pas complet. Dans ce cas, la demande de traitement sur le document (intégration/remplacement/suppression) ne peut pas être réalisée de façon automatique par le système consommateur.</span></span></span><span style="mso-bookmark:_Toc121410245"><span style="mso-bookmark:_Toc151045512"><span style="mso-bidi-font-size:10.0pt;line-height:115%;mso-fareast-font-family:
+  Calibri;mso-fareast-theme-font:minor-latin;mso-bidi-font-family:Arial;
+  mso-bidi-theme-font:minor-bidi;mso-fareast-language:FR"><o:p></o:p></span></span></span></p>
+  </td>
  </tr>
 </tbody></table>
