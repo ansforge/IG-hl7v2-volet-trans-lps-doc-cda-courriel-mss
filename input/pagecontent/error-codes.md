@@ -927,7 +927,7 @@ Cette table est décrite à titre indicatif et pourra être enrichie si besoin, 
   <p class="MsoNormal" style="mso-yfti-cnfc:64"><span style="mso-bookmark:_Toc121410245"><span style="mso-bookmark:_Toc151045512"><span style="mso-bidi-font-size:10.0pt;
   line-height:115%;mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;
   mso-bidi-font-family:Arial;mso-bidi-theme-font:minor-bidi;color:black;
-  mso-color-alt:windowtext;mso-fareast-language:FR">L'INS du patient est présent dans le document CDA contenu dans le message HL7 mais L’INS transmis n’est pas complet. Dans ce cas, la demande de traitement sur le document (intégration/remplacement/suppression) ne peut pas être réalisée de façon automatique par le système consommateur.</span></span></span><span style="mso-bookmark:_Toc121410245"><span style="mso-bookmark:_Toc151045512"><span style="mso-bidi-font-size:10.0pt;line-height:115%;mso-fareast-font-family:
+  mso-color-alt:windowtext;mso-fareast-language:FR">L'INS du patient est présent dans le document CDA contenu dans le message HL7, mais l'ensemble des traits complémentaires ne sont pas présents. Dans ce cas, la demande de traitement sur le document (intégration/remplacement/suppression) ne peut pas être réalisée de façon automatique par le système consommateur.</span></span></span><span style="mso-bookmark:_Toc121410245"><span style="mso-bookmark:_Toc151045512"><span style="mso-bidi-font-size:10.0pt;line-height:115%;mso-fareast-font-family:
   Calibri;mso-fareast-theme-font:minor-latin;mso-bidi-font-family:Arial;
   mso-bidi-theme-font:minor-bidi;mso-fareast-language:FR"><o:p></o:p></span></span></span></p>
   </td>
