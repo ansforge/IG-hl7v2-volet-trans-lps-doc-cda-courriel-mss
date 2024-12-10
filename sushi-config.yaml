@@ -20,33 +20,12 @@ parameters:
 pages:
     index.md:
         title: "Accueil"
-    cas-usage.md:
-        title: "Cas d'usage"
-    contexte-metier.md:
-        title: "Organisation métier"
-    acteurs-transactions.md:
-        title: "Acteurs et transactions"
-    def-proc-collab.md:
-        title: "Définition des processus collaboratifs"
-    identification-flux.md:
-        title: "identification des flux"
+    volume1.md:
+        title: "Volume 1 : Etude fonctionnelle"
     volume2.md:
-    perimetre-transaction.md:
-        title: "Périmètre de la transaction"
-    role.md:
-        title: "Rôle des acteurs pour cette transaction"
-    standards.md:
-        title: "Choix des standards"
-    evenements-declenchants.md:
-        title: "Evènements déclenchants"
-    interactions-acteurs.md:
-        title: "Interactions entre les Acteurs"
-    profils-messages.md:
-        title: "Profils de messages"
+        title: "Volume 2 : Détail des transactions" 
     lien-entete-cda-meta-xds.md:
         title: "Lien entre l'en-tête CDA et les métadonnées XDS"
-    testplan.md:
-        title: "Test"
     meta-dmp-mss.md:
         title: "Table MetaDMP/MSS"
     error-codes.md:
@@ -59,28 +38,30 @@ pages:
         title: "Glossaire"
     doc-ref.md:
         title: "Documents de référence"
-    download.md:
-        title: "Téléchargements"
+    testplan.md:
+        title: "Test"
     change-log.md:
         title: "Historique des versions"
+    download.md:
+        title: "Téléchargements"    
         generation: markdown
 
 menu:
     Accueil: index.html
     Volume 1 - Etude fonctionnelle: 
-        "Cas d'usage": cas-usage.html
-        "Organisation métier": contexte-metier.html
-        "Acteurs et transactions": acteurs-transactions.html
-        "Définition des processus collaboratifs": def-proc-collab.html
-        "identification des flux": identification-flux.html
+        "Cas d'usage": volume1.html#cas-dusage
+        "Organisation métier": volume1.html#organisation-du-contexte-métier
+        "Acteurs et transactions": volume1.html#acteurs-et-transactions
+        "Définition des processus collaboratifs": volume1.html#définition-des-processus-collaboratifs
+        "identification des flux": volume1.html#identification-des-flux
     Volume 2 – Détail des Transactions: 
-        "Volume 2 : Introduction": volume2.html
-        "Périmètre de la transaction": perimetre-transaction.html
-        "Rôle des acteurs pour cette transaction": role.html
-        "Choix des standards": standards.html
-        "Evènements déclenchants": evenements-declenchants.html
-        "Interactions entre les Acteurs": interactions-acteurs.html
-        "Profils de messages": profils-messages.html
+        "Introduction": volume2.html#introduction
+        "Périmètre de la transaction": volume2.html#périmetre-de-la-transaction
+        "Rôle des acteurs pour cette transaction": volume2.html#rôle-des-acteurs-pour-cette-transaction
+        "Choix des standards": volume2.html#choix-des-standards
+        "Evènements déclenchants": volume2.html#evènements-déclenchants
+        "Interactions entre les Acteurs": volume2.html#interactions-entre-les-acteurs
+        "Profils de messages": volume2.html#profils-de-messages
 
     Volume 3 - Annexes:
         "Lien entre l'en-tête CDA et les métadonnées XDS": lien-entete-cda-meta-xds.html
