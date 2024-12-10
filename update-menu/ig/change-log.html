@@ -41,8 +41,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"23"}
-    h3,h4,h5,h6{--heading-prefix:"23"}</style>
+    <style type="text/css">h2{--heading-prefix:"12"}
+    h3,h4,h5,h6{--heading-prefix:"12"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
           <!-- Placeholder for child template header declarations -->
@@ -96,19 +96,19 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="cas-usage.html">Cas d'usage</a>
+        <a href="volume1.html#cas-dusage">Cas d'usage</a>
       </li>
       <li>
-        <a href="contexte-metier.html">Organisation métier</a>
+        <a href="volume1.html#organisation-du-contexte-métier">Organisation métier</a>
       </li>
       <li>
-        <a href="acteurs-transactions.html">Acteurs et transactions</a>
+        <a href="volume1.html#acteurs-et-transactions">Acteurs et transactions</a>
       </li>
       <li>
-        <a href="def-proc-collab.html">Définition des processus collaboratifs</a>
+        <a href="volume1.html#définition-des-processus-collaboratifs">Définition des processus collaboratifs</a>
       </li>
       <li>
-        <a href="identification-flux.html">identification des flux</a>
+        <a href="volume1.html#identification-des-flux">identification des flux</a>
       </li>
     </ul>
   </li>
@@ -118,25 +118,25 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="volume2.html">Volume 2 : Introduction</a>
+        <a href="volume2.html#introduction">Introduction</a>
       </li>
       <li>
-        <a href="perimetre-transaction.html">Périmètre de la transaction</a>
+        <a href="volume2.html#périmetre-de-la-transaction">Périmètre de la transaction</a>
       </li>
       <li>
-        <a href="role.html">Rôle des acteurs pour cette transaction</a>
+        <a href="volume2.html#rôle-des-acteurs-pour-cette-transaction">Rôle des acteurs pour cette transaction</a>
       </li>
       <li>
-        <a href="standards.html">Choix des standards</a>
+        <a href="volume2.html#choix-des-standards">Choix des standards</a>
       </li>
       <li>
-        <a href="evenements-declenchants.html">Evènements déclenchants</a>
+        <a href="volume2.html#evènements-déclenchants">Evènements déclenchants</a>
       </li>
       <li>
-        <a href="interactions-acteurs.html">Interactions entre les Acteurs</a>
+        <a href="volume2.html#interactions-entre-les-acteurs">Interactions entre les Acteurs</a>
       </li>
       <li>
-        <a href="profils-messages.html">Profils de messages</a>
+        <a href="volume2.html#profils-de-messages">Profils de messages</a>
       </li>
     </ul>
   </li>
@@ -193,11 +193,11 @@
 
           <span style="float:right;">
 
-            <a href="download.html">&lt;prev</a> | 
+            <a href="testplan.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
-          | <a href="artifacts.html">next&gt;</a>
+          | <a href="download.html">next&gt;</a>
 
           </span>
 
@@ -257,23 +257,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Volume 1 Etude fonctionnelle
     <ul>
       <li>remplacement du terme « section » par « volume 2 » (<a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2">2</a>)</li>
-      <li><a href="def-proc-collab.html#processus-collaboratif-demande-de-transmission-initiale-de-documents">processus de transmission initiale de document(s)</a> : scénario nominal, remplacement « demande de traitement de(s) document(s) » par « demande d’intégration du document » (<a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2">2</a>)</li>
-      <li><a href="def-proc-collab.html#processus-collaboratif-demande-de-suppression-de-documents">processus de suppression de document(s)</a> : scénario nominal, remplacement « demande de suppression de(s) document(s) » par « demande de suppression du document » (<a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2">2</a>)</li>
+      <li><a name="l466">​</a><a href="def-proc-collab.html#processus-collaboratif-demande-de-transmission-initiale-de-documents">processus de transmission initiale de document(s)</a> : scénario nominal, remplacement « demande de traitement de(s) document(s) » par « demande d’intégration du document » (<a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2">2</a>)</li>
+      <li><a name="l474">​</a><a href="def-proc-collab.html#processus-collaboratif-demande-de-suppression-de-documents">processus de suppression de document(s)</a> : scénario nominal, remplacement « demande de suppression de(s) document(s) » par « demande de suppression du document » (<a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2">2</a>)</li>
     </ul>
   </li>
   <li>Volume 2 Etude technique
     <ul>
-      <li><a name="l488">​</a><a href="volume2.html#choix-des-standards">Choix des standards</a> : suppression de la phrase « Les échanges MSSanté doivent prendre en compte les restrictions positionnées sur le message. (Exemple : un document avec un masquage Médecin ne doit pas être envoyé sur le mail MSSanté du médecin). » qui n’a pas de rapport avec le choix des standards. (<a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2">2</a>)</li>
-      <li>correction typos/cohérence pour le type message en MSH-9.3 dans les <a href="profils-messages.html#eléments-de-contrôle-du-message-mdm">profils des messages</a> (<a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/6">6</a>)</li>
-      <li><a href="profils-messages.html#document-masqué-aux-professionnels-de-santé">Document Masqué aux professionnels de Santé</a> : métadonnée de masquage aux PS : Ajout de la valeur manquante Y (YES) (<a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2">2</a>)</li>
-      <li>Correction description des segments PRT pour ‘destinataire’ et ‘adresse mail de réponse’ dans les <a href="profils-messages.html#le-groupe-de-segments-obxnte-portant-le-document-cda">profils des messages</a> <a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/9">(9)</a></li>
+      <li><a href="volume2.html#choix-des-standards">Choix des standards</a> : suppression de la phrase « Les échanges MSSanté doivent prendre en compte les restrictions positionnées sur le message. (Exemple : un document avec un masquage Médecin ne doit pas être envoyé sur le mail MSSanté du médecin). » qui n’a pas de rapport avec le choix des standards. (<a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2">2</a>)</li>
+      <li><a name="l496">​</a>correction typos/cohérence pour le type message en MSH-9.3 dans les <a href="profils-messages.html#eléments-de-contrôle-du-message-mdm">profils des messages</a> (<a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/6">6</a>)</li>
+      <li><a name="l505">​</a><a href="profils-messages.html#document-masqué-aux-professionnels-de-santé">Document Masqué aux professionnels de Santé</a> : métadonnée de masquage aux PS : Ajout de la valeur manquante Y (YES) (<a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2">2</a>)</li>
+      <li><a name="l513">​</a>Correction description des segments PRT pour ‘destinataire’ et ‘adresse mail de réponse’ dans les <a href="profils-messages.html#le-groupe-de-segments-obxnte-portant-le-document-cda">profils des messages</a> <a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/9">(9)</a></li>
       <li>Déplacement de la section LIEN ENTRE L’EN-TETE CDA ET LES METADONNEES XDS dans Volume 3 Annexes (<a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/8">8</a>)</li>
     </ul>
   </li>
   <li>Volume 3 Annexes
     <ul>
       <li><a href="struct-msg-mdn.html">Structure du MDN (MSSanté)</a> (Annexe 4) modification du titre : Structure du MDN (Message Disposition Notification) - MSSanté (<a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2">2</a>)</li>
-      <li><a href="profils-messages.html#exemple">exemples de messages d’acquittement</a>
+      <li><a name="l541">​</a><a href="profils-messages.html#exemple">exemples de messages d’acquittement</a>
         <ul>
           <li>Correction de MSH-21 (version de l’interface 1.1 au lieu de 1.2) sur le segment MSH du message initial MDM</li>
           <li>Suppression du champ MSH-21 (le message d’acquittement n’a pas de contraintes particulières par rapport au message spécifié dans le standard international)</li>
@@ -859,7 +859,7 @@ Cet historique est également disponible dans la dernière version du volet au f
             <tr>
               <td style="text-align:left">&nbsp;
 
-                <a href="download.html">&lt;prev</a>
+                <a href="testplan.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -867,7 +867,7 @@ Cet historique est également disponible dans la dernière version du volet au f
               </td>
               <td style="text-align:right">&nbsp;
 
-                <a href="artifacts.html">next&gt;</a>
+                <a href="download.html">next&gt;</a>
 
               </td>
             </tr>
@@ -877,7 +877,7 @@ Cet historique est également disponible dans la dernière version du volet au f
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 10, 2024 10:40+0000">2024-12-10</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 10, 2024 15:40+0000">2024-12-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
