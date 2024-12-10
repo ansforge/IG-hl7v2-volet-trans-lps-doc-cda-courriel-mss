@@ -262,42 +262,42 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>L’accusé de réception du message HL7 MDM rend compte de la bonne ou mauvaise intégration du message et des informations portées par le message au niveau de l’acteur CONSOMMATEUR.</p>
 
 <h3 id="rôle-des-acteurs-pour-cette-transaction">Rôle des acteurs pour cette transaction</h3>
-<table width="638">
-<tbody>
-<tr>
-<td width="92">
-<p><strong>Acteur :</strong></p>
-</td>
-<td width="547">
-<p>GESTIONNAIRE</p>
-</td>
-</tr>
-<tr>
-<td width="92">
-<p><strong>Rôle :</strong></p>
-</td>
-<td width="547">
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le GESTIONNAIRE extrait les informations de l’archive IHE_XDM (pièce jointe du mail), analyse ces informations et construit le message HL7 MDM correspondant pour l’envoyer au CONSOMMATEUR.</p>
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le GESTIONNAIRE réceptionne l’accusé de réception et d’intégration du message HL7 MDM, gère cet accusé et construit un accusé de lecture MSSanté (MDN-Message Disposition Notification) en fonction du statut retourné par l’acquittement du message HL7 MDM.</p>
-</td>
-</tr>
-<tr>
-<td width="92">
-<p><strong>Acteur :</strong></p>
-</td>
-<td width="547">
-<p>CONSOMMATEUR</p>
-</td>
-</tr>
-<tr>
-<td width="92">
-<p><strong>Rôle :</strong></p>
-</td>
-<td width="547">
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le CONSOMMATEUR reçoit la demande du GESTIONNAIRE (transmission initiale/remplacement/suppression d’un document) sous la forme d’un message HL7 MDM, intègre si possible dans sa base de données les informations portées par le message HL7 MDM et renvoie vers le GESTIONNAIRE l’accusé de réception du message HL7 MDM.</p>
-</td>
-</tr>
-</tbody>
+<table>
+  <tbody>
+    <tr>
+      <th>
+        <p>Acteur</p>
+      </th>
+      <td>
+        <p>GESTIONNAIRE</p>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <p>Rôle</p>
+      </th>
+      <td>
+        <p>- Le GESTIONNAIRE extrait les informations de l'archive IHE_XDM (pièce jointe du mail), analyse ces informations et construit le message HL7 MDM correspondant pour l'envoyer au CONSOMMATEUR.</p>
+        <p>- Le GESTIONNAIRE réceptionne l'accusé de réception et d'intégration du message HL7 MDM, gère cet accusé et construit un accusé de lecture MSSanté (MDN-Message Disposition Notification) en fonction du statut retourné par l'acquittement du message HL7 MDM.</p>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <p>Acteur</p>
+      </th>
+      <td>
+        <p>CONSOMMATEUR</p>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <p>Rôle</p>
+      </th>
+      <td>
+        <p>- Le CONSOMMATEUR reçoit la demande du GESTIONNAIRE (transmission initiale/remplacement/suppression d'un document) sous la forme d'un message HL7 MDM, intègre si possible dans sa base de données les informations portées par le message HL7 MDM et renvoie vers le GESTIONNAIRE l'accusé de réception du message HL7 MDM.</p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 <h3 id="choix-des-standards">Choix des standards</h3>
@@ -788,7 +788,7 @@ La gestion de l’accusé de lecture MSSanté (MDN-Message Disposition Notificat
 
 <p>Le message HL7 MDM ne peut transmettre qu’un seul document médical.</p>
 
-<p><a name="l1495">​</a>Les contraintes apportées par ce volet sur les données du message MDM sont décrites à la <a href="profils-messages.html#contraintes-appliquées-aux-messages-mdm-dans-le-contexte-de-ce-volet">section dédiée</a>.</p>
+<p><a name="l1491">​</a>Les contraintes apportées par ce volet sur les données du message MDM sont décrites à la <a href="profils-messages.html#contraintes-appliquées-aux-messages-mdm-dans-le-contexte-de-ce-volet">section dédiée</a>.</p>
 
 <h4 id="description-fonctionnelle-du-message-mdm">Description fonctionnelle du message MDM</h4>
 
@@ -802,7 +802,7 @@ spécifiques à ce volet&nbsp;:</p>
 
 <ul>
   <li>
-    <p><a name="l1521">​</a>Un groupe OBXNTE, requis, contenant le document médical au format
+    <p><a name="l1517">​</a>Un groupe OBXNTE, requis, contenant le document médical au format
 CDA-R2 codé en base64 suivi de segments PRT, pré-adoptés depuis la
 version 2.9 du standard, permettant ainsi de renseigner les
 informations de l’expéditeur (requis), le destinataire MSSanté
@@ -6523,7 +6523,7 @@ ERR||PID^1^3|207^Application error^messageErrorCondition| E|902^Identifiant de p
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 10, 2024 17:53+0000">2024-12-10</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 10, 2024 17:57+0000">2024-12-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
