@@ -3,64 +3,64 @@
 Le présent volet met en œuvre les Acteurs IHE suivants, représentant le rôle joué par un ou plusieurs composants du système d’information :
 
 <table>
-<tbody>
-<tr>
-<td width="217">
-<p><strong>Acteur&nbsp;:</strong></p>
-</td>
-<td width="432">
-<p><strong>Description&nbsp;:</strong></p>
-</td>
-</tr>
-<tr>
-<td width="217">
-<p>GESTIONNAIRE</p>
-</td>
-<td width="432">
-<p>Le GESTIONNAIRE r&eacute;ceptionne et transmet au syst&egrave;me CONSOMMATEUR les demandes de transmission initiale/remplacement/suppression de document(s) provenant d&rsquo;un courriel.</p>
-</td>
-</tr>
-<tr>
-<td width="217">
-<p>CONSOMMATEUR</p>
-</td>
-<td width="432">
-<p>Le CONSOMMATEUR r&eacute;ceptionne et g&egrave;re les demandes de transmission initiale/remplacement/suppression de document(s) issues d&rsquo;un courriel, provenant du syst&egrave;me GESTIONNAIRE et renvoie l&rsquo;accus&eacute; de traitement de la demande vers le GESTIONNAIRE.</p>
-</td>
-</tr>
-</tbody>
+  <tbody>
+    <tr>
+      <th>
+        <p>Acteur</p>
+      </th>
+      <th>
+        <p>Description</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p>GESTIONNAIRE</p>
+      </td>
+      <td>
+        <p>Le GESTIONNAIRE réceptionne et transmet au système CONSOMMATEUR les demandes de transmission initiale/remplacement/suppression de document(s) provenant d'un courriel.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>CONSOMMATEUR</p>
+      </td>
+      <td>
+        <p>Le CONSOMMATEUR réceptionne et gère les demandes de transmission initiale/remplacement/suppression de document(s) issues d'un courriel, provenant du système GESTIONNAIRE et renvoie l'accusé de traitement de la demande vers le GESTIONNAIRE.</p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 Le tableau suivant liste, pour chacun des acteurs, les systèmes du SIH concernés :
 
 <table>
-<tbody>
-<tr>
-<td width="141">
-<p><strong>Acteur&nbsp;:</strong></p>
-</td>
-<td width="508">
-<p><strong>Syst&egrave;mes concern&eacute;s&nbsp;:</strong></p>
-</td>
-</tr>
-<tr>
-<td width="141">
-<p>GESTIONNAIRE</p>
-</td>
-<td width="508">
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Les Plateformes d&rsquo;Interm&eacute;diation (PFI) qui assurent la transmission de document(s) cliniques provenant d&rsquo;un courriel MSSant&eacute; vers un CONSOMMATEUR (le LPS destinataire).</p>
-</td>
-</tr>
-<tr>
-<td width="141">
-<p>CONSOMMATEUR</p>
-</td>
-<td width="508">
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tout logiciel m&eacute;tier (LPS) du SIH qui r&eacute;cup&egrave;re et g&egrave;re la demande de traitement du document transmis par le GESTIONNAIRE.</p>
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dans le contexte du SEGUR vague 2, les applications consommatrices de ces documents sont limit&eacute;es au dossier patient informatis&eacute; (DPI) et au syst&egrave;me de gestion de radiologie (RIS).</p>
-</td>
-</tr>
-</tbody>
+  <tbody>
+    <tr>
+      <th>
+        <p>Acteur</p>
+      </th>
+      <th>
+        <p>Systèmes concernés</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p>GESTIONNAIRE</p>
+      </td>
+      <td>
+        <p>-        Les Plateformes d'Intermédiation (PFI) qui assurent la transmission de document(s) cliniques provenant d'un courriel MSSanté vers un CONSOMMATEUR (le LPS destinataire).</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>CONSOMMATEUR</p>
+      </td>
+      <td>
+        <p>-          Tout logiciel métier (LPS) du SIH qui récupère et gère la demande de traitement du document transmis par le GESTIONNAIRE.</p>
+        <p>-          Dans le contexte du SEGUR vague 2, les applications consommatrices de ces documents sont limitées au dossier patient informatisé (DPI) et au système de gestion de radiologie (RIS).</p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 ### Diagramme des Acteurs/Transactions
@@ -76,41 +76,41 @@ Le tableau ci-dessous représente l’ensemble des acteurs directement impliqué
 Pour être en conformité avec ce volet, chaque acteur doit supporter les transactions obligatoires (R-Required) et peut supporter les transactions optionnelles (O-Optional).
 
 <table>
-<tbody>
-<tr>
-<td width="131">
-<p><strong>Acteur</strong></p>
-</td>
-<td width="323">
-<p><strong>Transaction</strong></p>
-</td>
-<td width="189">
-<p><strong>Caract&egrave;re requis/optionnel</strong></p>
-</td>
-</tr>
-<tr>
-<td width="131">
-<p>GESTIONNAIRE</p>
-</td>
-<td width="323">
-<p>Flux6 HL7-MDM en &eacute;mission : Demande de transmission/remplacement/suppression d&rsquo;un document CDA</p>
-</td>
-<td width="189">
-<p>R</p>
-</td>
-</tr>
-<tr>
-<td width="131">
-<p>CONSOMMATEUR</p>
-</td>
-<td width="323">
-<p>Flux6 HL7-MDM en r&eacute;ception : Demande de transmission/remplacement/suppression d&rsquo;un document CDA</p>
-</td>
-<td width="189">
-<p>R</p>
-</td>
-</tr>
-</tbody>
+  <tbody>
+    <tr>
+      <th>
+        <p>Acteur</p>
+      </th>
+      <th>
+        <p>Transaction</p>
+      </th>
+      <th>
+        <p><strong>Caractère requis/optionnel</strong></p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p>GESTIONNAIRE</p>
+      </td>
+      <td>
+        <p>Flux6 HL7-MDM en émission : Demande de transmission/remplacement/suppression d'un document CDA</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>CONSOMMATEUR</p>
+      </td>
+      <td>
+        <p>Flux6 HL7-MDM en réception : Demande de transmission/remplacement/suppression d'un document CDA</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 ### Regroupement requis des Acteurs
@@ -118,48 +118,47 @@ Pour être en conformité avec ce volet, chaque acteur doit supporter les transa
 Cette section décrit les exigences en termes de regroupement d’acteurs pour chacun des acteurs identifiés précédemment.
 
 <table>
-<tbody>
-<tr>
-<td width="216">
-<p><strong>Acteur de ce volet</strong></p>
-</td>
-<td width="216">
-<p><strong>Group&eacute; avec un autre acteur</strong></p>
-</td>
-<td width="217">
-<p><strong>R&eacute;f&eacute;rence</strong></p>
-</td>
-</tr>
-<tr>
-<td width="216">
-<p>GESTIONNAIRE</p>
-</td>
-<td width="216">
-<p>Syst&egrave;me cible (Portable Media Importer) XDM</p>
-</td>
-<td width="217">
-<p><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-echange-documents-sante_v1.8.pdf">Volet Echange de documents de sant&eacute;</a></p>
-</td>
-</tr>
-<tr>
-<td width="216">
-<p>CONSOMMATEUR</p>
-</td>
-<td width="216">
-<p>Content Consumer (TF PCC<a href="#_ftn1" name="_ftnref1">[1]</a>)</p>
-</td>
-<td width="217">
-<p>TF Patient Care Coordination &ndash; Appendix A: Actors definition</p>
-</td>
-</tr>
-</tbody>
+  <tbody>
+    <tr>
+      <th>
+        <p>Acteur de ce volet</p>
+      </th>
+      <th>
+        <p>Groupé avec un autre acteur</p>
+      </th>
+      <th>
+        <p>Référence</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p>GESTIONNAIRE</p>
+      </td>
+      <td>
+        <p>Système cible (Portable Media Importer) XDM</p>
+      </td>
+      <td>
+        <p><a href="https://esante.gouv.fr/volet-echange-de-documents-de-sante">Volet Echange de documents de santé</a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>CONSOMMATEUR</p>
+      </td>
+      <td>
+        <p>Content Consumer (<a href="https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_TF_Vol1.pdf">TF PCC</a>)</p>
+      </td>
+      <td>
+        <p>TF Patient Care Coordination - Appendix A: Actors definition</p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 <p>&nbsp;</p>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> PCC&nbsp;: <a href="https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_TF_Vol1.pdf">Patient Care Coordination &ndash; Appendix A&nbsp;: Actors definition</a></p>
 
 L'acteur GESTIONNAIRE est groupé avec :
 
--   L'acteur Système cible du [volet d'Echange de documents de santé](https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-echange-documents-sante_v1.8.pdf), pour permettre à la PFI de réceptionner l'archive IHE_XDM inclue dans le courriel reçu de l'extérieur,
+-   L'acteur Système cible du [volet d'Echange de documents de santé](https://esante.gouv.fr/volet-echange-de-documents-de-sante), pour permettre à la PFI de réceptionner l'archive IHE_XDM inclue dans le courriel reçu de l'extérieur,
 
 L'acteur CONSOMMATEUR est groupé avec :
 
