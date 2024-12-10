@@ -48,95 +48,94 @@ Une liste de cas d’usage, non exhaustive, est présentée à titre d’exemple
 Rappel des conventions utilisées par IHE et HL7 :
 
 <table>
-<tbody>
-<tr>
-<td width="113">
-<p><strong>Code d&rsquo;usage</strong></p>
-</td>
-<td width="510">
-<p><strong>Signification</strong></p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p>R</p>
-</td>
-<td width="510">
-<p>Requis&nbsp;: l&rsquo;&eacute;l&eacute;ment de donn&eacute;e doit obligatoirement &ecirc;tre renseign&eacute; par l&rsquo;&eacute;metteur et int&eacute;gr&eacute; par le r&eacute;cepteur</p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p>RE</p>
-</td>
-<td width="510">
-<p>Requis si connu&nbsp;: le syst&egrave;me doit d&eacute;montrer sa capacit&eacute; &agrave; renseigner l&rsquo;&eacute;l&eacute;ment en &eacute;mission et/ou &agrave; l&rsquo;exploiter en r&eacute;ception.</p>
-<p>Sur le terrain il peut exister des situations o&ugrave; l&rsquo;&eacute;l&eacute;ment est non renseign&eacute;.</p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p>O</p>
-</td>
-<td width="510">
-<p>Optionnel</p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p>X</p>
-</td>
-<td width="510">
-<p>Non support&eacute;</p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p>C</p>
-</td>
-<td width="510">
-<p>Conditionnel&nbsp;: La condition de remplissage de l&rsquo;&eacute;l&eacute;ment de donn&eacute;e est sp&eacute;cifi&eacute;e dans le tableau de description du profil de message ou dans une note en dessous du tableau.</p>
-</td>
-</tr>
-</tbody>
+  <tbody>
+    <tr>
+      <th>
+        <p>Code d'usage</p>
+      </th>
+      <th>
+        <p>Signification</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p>R</p>
+      </td>
+      <td>
+        <p>Requis : l'élément de donnée doit obligatoirement être renseigné par l'émetteur et intégré par le récepteur</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>RE</p>
+      </td>
+      <td>
+        <p>Requis si connu : le système doit démontrer sa capacité à renseigner l'élément en émission et/ou à l'exploiter en réception.</p>
+        <p>Sur le terrain il peut exister des situations où l'élément est non renseigné.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>O</p>
+      </td>
+      <td>
+        <p>Optionnel</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>X</p>
+      </td>
+      <td>
+        <p>Non supporté</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>C</p>
+      </td>
+      <td>
+        <p>Conditionnel : La condition de remplissage de l'élément de donnée est spécifiée dans le tableau de description du profil de message ou dans une note en dessous du tableau.</p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 <table>
-<tbody>
-<tr>
-<td width="113">
-<p><strong>Code d&rsquo;usage</strong></p>
-</td>
-<td width="510">
-<p><strong>Signification</strong></p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p>[ ]</p>
-</td>
-<td width="510">
-<p>Champ optionnel</p>
-</td>
-</tr>
-<tr>
-<td width="113">
-<p>{ }</p>
-</td>
-<td width="510">
-<p>Champ r&eacute;p&eacute;table</p>
-</td>
-</tr>
-
-<tr>
-<td width="113">
-<p>[{ }]</p>
-</td>
-<td width="510">
-<p>Champ optionnel et r&eacute;p&eacute;table</p>
-</td>
-</tr>
-</tbody>
+  <tbody>
+    <tr>
+      <th>
+        <p>Code d'usage</p>
+      </th>
+      <th>
+        <p>Signification</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p>[ ]</p>
+      </td>
+      <td>
+        <p>Champ optionnel</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>{ }</p>
+      </td>
+      <td>
+        <p>Champ répétable</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>[{ }]</p>
+      </td>
+      <td>
+        <p>Champ optionnel et répétable</p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 <div class="draft-content">
@@ -175,9 +174,9 @@ Ce document doit être utilisé dans le cadre du référencement SEGUR vague 2. 
 
 Cette spécification n’est pas autonome. Les développeurs doivent également connaître et maîtriser d’autres volets du CI_SIS publiés par l’ANS :
 
--   [Le volet Echange de documents de santé](https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-echange-documents-sante_v1.8.pdf),
+-   [Le volet Echange de documents de santé](https://esante.gouv.fr/volet-echange-de-documents-de-sante),
 
-Ainsi que le [Référentiel Socle MSSanté #2, Clients messagerie de sécurité de santé version 1.0.1](https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2/actual), publié par l’ANS.
+Ainsi que le [Référentiel socle MSSanté #2](https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2), publié par l’ANS.
 
 #### Ce dont ne traite pas ce volet du CI_SIS
 

@@ -1,37 +1,37 @@
-<table width="638">
-<tbody>
-<tr>
-<td width="92">
-<p><strong>Acteur :</strong></p>
-</td>
-<td width="547">
-<p>GESTIONNAIRE</p>
-</td>
-</tr>
-<tr>
-<td width="92">
-<p><strong>R&ocirc;le :</strong></p>
-</td>
-<td width="547">
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le GESTIONNAIRE extrait les informations de l&rsquo;archive IHE_XDM (pi&egrave;ce jointe du mail), analyse ces informations et construit le message HL7 MDM correspondant pour l&rsquo;envoyer au CONSOMMATEUR.</p>
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le GESTIONNAIRE r&eacute;ceptionne l&rsquo;accus&eacute; de r&eacute;ception et d&rsquo;int&eacute;gration du message HL7 MDM, g&egrave;re cet accus&eacute; et construit un accus&eacute; de lecture MSSant&eacute; (MDN-Message Disposition Notification) en fonction du statut retourn&eacute; par l&rsquo;acquittement du message HL7 MDM.</p>
-</td>
-</tr>
-<tr>
-<td width="92">
-<p><strong>Acteur :</strong></p>
-</td>
-<td width="547">
-<p>CONSOMMATEUR</p>
-</td>
-</tr>
-<tr>
-<td width="92">
-<p><strong>R&ocirc;le :</strong></p>
-</td>
-<td width="547">
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le CONSOMMATEUR re&ccedil;oit la demande du GESTIONNAIRE (transmission initiale/remplacement/suppression d&rsquo;un document) sous la forme d&rsquo;un message HL7 MDM, int&egrave;gre si possible dans sa base de donn&eacute;es les informations port&eacute;es par le message HL7 MDM et renvoie vers le GESTIONNAIRE l&rsquo;accus&eacute; de r&eacute;ception du message HL7 MDM.</p>
-</td>
-</tr>
-</tbody>
+<table>
+  <tbody>
+    <tr>
+      <th>
+        <p>Acteur</p>
+      </th>
+      <td>
+        <p>GESTIONNAIRE</p>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <p>Rôle</p>
+      </th>
+      <td>
+        <p>- Le GESTIONNAIRE extrait les informations de l'archive IHE_XDM (pièce jointe du mail), analyse ces informations et construit le message HL7 MDM correspondant pour l'envoyer au CONSOMMATEUR.</p>
+        <p>- Le GESTIONNAIRE réceptionne l'accusé de réception et d'intégration du message HL7 MDM, gère cet accusé et construit un accusé de lecture MSSanté (MDN-Message Disposition Notification) en fonction du statut retourné par l'acquittement du message HL7 MDM.</p>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <p>Acteur</p>
+      </th>
+      <td>
+        <p>CONSOMMATEUR</p>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <p>Rôle</p>
+      </th>
+      <td>
+        <p>- Le CONSOMMATEUR reçoit la demande du GESTIONNAIRE (transmission initiale/remplacement/suppression d'un document) sous la forme d'un message HL7 MDM, intègre si possible dans sa base de données les informations portées par le message HL7 MDM et renvoie vers le GESTIONNAIRE l'accusé de réception du message HL7 MDM.</p>
+      </td>
+    </tr>
+  </tbody>
 </table>
