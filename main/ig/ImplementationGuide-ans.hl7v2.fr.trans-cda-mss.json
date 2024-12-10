@@ -10,7 +10,7 @@
   "name" : "HL7v2_trans_CDA_MSS",
   "title" : "Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté",
   "status" : "draft",
-  "date" : "2024-11-25T14:00:52+00:00",
+  "date" : "2024-12-10T16:22:52+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -646,46 +646,10 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "cas-usage.html"
+          "valueUrl" : "volume1.html"
         }],
-        "nameUrl" : "cas-usage.html",
-        "title" : "Cas d'usage",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "contexte-metier.html"
-        }],
-        "nameUrl" : "contexte-metier.html",
-        "title" : "Organisation métier",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "acteurs-transactions.html"
-        }],
-        "nameUrl" : "acteurs-transactions.html",
-        "title" : "Acteurs et transactions",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "def-proc-collab.html"
-        }],
-        "nameUrl" : "def-proc-collab.html",
-        "title" : "Définition des processus collaboratifs",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "identification-flux.html"
-        }],
-        "nameUrl" : "identification-flux.html",
-        "title" : "identification des flux",
+        "nameUrl" : "volume1.html",
+        "title" : "Volume 1 : Etude fonctionnelle",
         "generation" : "markdown"
       },
       {
@@ -694,61 +658,7 @@
           "valueUrl" : "volume2.html"
         }],
         "nameUrl" : "volume2.html",
-        "title" : "Volume 2",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "perimetre-transaction.html"
-        }],
-        "nameUrl" : "perimetre-transaction.html",
-        "title" : "Périmètre de la transaction",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "role.html"
-        }],
-        "nameUrl" : "role.html",
-        "title" : "Rôle des acteurs pour cette transaction",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "standards.html"
-        }],
-        "nameUrl" : "standards.html",
-        "title" : "Choix des standards",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "evenements-declenchants.html"
-        }],
-        "nameUrl" : "evenements-declenchants.html",
-        "title" : "Evènements déclenchants",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "interactions-acteurs.html"
-        }],
-        "nameUrl" : "interactions-acteurs.html",
-        "title" : "Interactions entre les Acteurs",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "profils-messages.html"
-        }],
-        "nameUrl" : "profils-messages.html",
-        "title" : "Profils de messages",
+        "title" : "Volume 2 : Détail des transactions",
         "generation" : "markdown"
       },
       {
@@ -758,15 +668,6 @@
         }],
         "nameUrl" : "lien-entete-cda-meta-xds.html",
         "title" : "Lien entre l'en-tête CDA et les métadonnées XDS",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "testplan.html"
-        }],
-        "nameUrl" : "testplan.html",
-        "title" : "Test",
         "generation" : "markdown"
       },
       {
@@ -826,10 +727,10 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "download.html"
+          "valueUrl" : "testplan.html"
         }],
-        "nameUrl" : "download.html",
-        "title" : "Téléchargements",
+        "nameUrl" : "testplan.html",
+        "title" : "Test",
         "generation" : "markdown"
       },
       {
@@ -839,6 +740,15 @@
         }],
         "nameUrl" : "change-log.html",
         "title" : "Historique des versions",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "download.html"
+        }],
+        "nameUrl" : "download.html",
+        "title" : "Téléchargements",
         "generation" : "markdown"
       }]
     },

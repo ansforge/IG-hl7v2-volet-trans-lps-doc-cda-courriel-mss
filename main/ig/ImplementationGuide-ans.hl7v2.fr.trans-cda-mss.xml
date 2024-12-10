@@ -10,7 +10,7 @@
   <name value="HL7v2_trans_CDA_MSS"/>
   <title value="Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté"/>
   <status value="draft"/>
-  <date value="2024-11-25T14:00:52+00:00"/>
+  <date value="2024-12-10T16:22:52+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -482,42 +482,10 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="cas-usage.html"/>
+          <valueUrl value="volume1.html"/>
         </extension>
-        <nameUrl value="cas-usage.html"/>
-        <title value="Cas d'usage"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="contexte-metier.html"/>
-        </extension>
-        <nameUrl value="contexte-metier.html"/>
-        <title value="Organisation métier"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="acteurs-transactions.html"/>
-        </extension>
-        <nameUrl value="acteurs-transactions.html"/>
-        <title value="Acteurs et transactions"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="def-proc-collab.html"/>
-        </extension>
-        <nameUrl value="def-proc-collab.html"/>
-        <title value="Définition des processus collaboratifs"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="identification-flux.html"/>
-        </extension>
-        <nameUrl value="identification-flux.html"/>
-        <title value="identification des flux"/>
+        <nameUrl value="volume1.html"/>
+        <title value="Volume 1 : Etude fonctionnelle"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -525,55 +493,7 @@
           <valueUrl value="volume2.html"/>
         </extension>
         <nameUrl value="volume2.html"/>
-        <title value="Volume 2"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="perimetre-transaction.html"/>
-        </extension>
-        <nameUrl value="perimetre-transaction.html"/>
-        <title value="Périmètre de la transaction"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="role.html"/>
-        </extension>
-        <nameUrl value="role.html"/>
-        <title value="Rôle des acteurs pour cette transaction"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="standards.html"/>
-        </extension>
-        <nameUrl value="standards.html"/>
-        <title value="Choix des standards"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="evenements-declenchants.html"/>
-        </extension>
-        <nameUrl value="evenements-declenchants.html"/>
-        <title value="Evènements déclenchants"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="interactions-acteurs.html"/>
-        </extension>
-        <nameUrl value="interactions-acteurs.html"/>
-        <title value="Interactions entre les Acteurs"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="profils-messages.html"/>
-        </extension>
-        <nameUrl value="profils-messages.html"/>
-        <title value="Profils de messages"/>
+        <title value="Volume 2 : Détail des transactions"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -582,14 +502,6 @@
         </extension>
         <nameUrl value="lien-entete-cda-meta-xds.html"/>
         <title value="Lien entre l'en-tête CDA et les métadonnées XDS"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="testplan.html"/>
-        </extension>
-        <nameUrl value="testplan.html"/>
-        <title value="Test"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -642,10 +554,10 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="download.html"/>
+          <valueUrl value="testplan.html"/>
         </extension>
-        <nameUrl value="download.html"/>
-        <title value="Téléchargements"/>
+        <nameUrl value="testplan.html"/>
+        <title value="Test"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -654,6 +566,14 @@
         </extension>
         <nameUrl value="change-log.html"/>
         <title value="Historique des versions"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="download.html"/>
+        </extension>
+        <nameUrl value="download.html"/>
+        <title value="Téléchargements"/>
         <generation value="markdown"/>
       </page>
     </page>

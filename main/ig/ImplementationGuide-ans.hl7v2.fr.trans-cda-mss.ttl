@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "HL7v2_trans_CDA_MSS"] ; # 
   fhir:title [ fhir:v "Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-11-25T14:00:52+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-10T16:22:52+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -553,42 +553,10 @@
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "cas-usage.html"^^xsd:anyURI ]
+           fhir:value [ fhir:v "volume1.html"^^xsd:anyURI ]
          ] ) ;
-         fhir:name [ fhir:v "cas-usage.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Cas d'usage" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "contexte-metier.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "contexte-metier.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Organisation métier" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "acteurs-transactions.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "acteurs-transactions.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Acteurs et transactions" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "def-proc-collab.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "def-proc-collab.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Définition des processus collaboratifs" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "identification-flux.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "identification-flux.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "identification des flux" ] ;
+         fhir:name [ fhir:v "volume1.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Volume 1 : Etude fonctionnelle" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
@@ -596,55 +564,7 @@
            fhir:value [ fhir:v "volume2.html"^^xsd:anyURI ]
          ] ) ;
          fhir:name [ fhir:v "volume2.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Volume 2" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "perimetre-transaction.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "perimetre-transaction.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Périmètre de la transaction" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "role.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "role.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Rôle des acteurs pour cette transaction" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "standards.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "standards.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Choix des standards" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "evenements-declenchants.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "evenements-declenchants.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Evènements déclenchants" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "interactions-acteurs.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "interactions-acteurs.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Interactions entre les Acteurs" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "profils-messages.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "profils-messages.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Profils de messages" ] ;
+         fhir:title [ fhir:v "Volume 2 : Détail des transactions" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
@@ -653,14 +573,6 @@
          ] ) ;
          fhir:name [ fhir:v "lien-entete-cda-meta-xds.html"^^xsd:anyURI ] ;
          fhir:title [ fhir:v "Lien entre l'en-tête CDA et les métadonnées XDS" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "testplan.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "testplan.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Test" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
@@ -713,10 +625,10 @@
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "download.html"^^xsd:anyURI ]
+           fhir:value [ fhir:v "testplan.html"^^xsd:anyURI ]
          ] ) ;
-         fhir:name [ fhir:v "download.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Téléchargements" ] ;
+         fhir:name [ fhir:v "testplan.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Test" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
@@ -725,6 +637,14 @@
          ] ) ;
          fhir:name [ fhir:v "change-log.html"^^xsd:anyURI ] ;
          fhir:title [ fhir:v "Historique des versions" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "download.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "download.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Téléchargements" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] )
      ] ;
