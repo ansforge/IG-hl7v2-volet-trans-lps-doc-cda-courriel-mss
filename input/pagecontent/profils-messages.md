@@ -2639,866 +2639,433 @@ Ces segments doivent être conformes au standard HL7v2.6.
 #### Description des contraintes à appliquer sur le message ACK
 ##### Segment MSH
 Le segment MSH reprend une partie des informations du message initial :
-<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="652" style="width:488.8pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
- mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
- <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
-  <td width="326" colspan="2" valign="top" style="width:244.4pt;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;background:#D9D9D9;mso-background-themecolor:
-  background1;mso-background-themeshade:217;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><b><span style="color:black">Message initial<o:p></o:p></span></b></p>
-  </td>
-  <td width="326" colspan="2" valign="top" style="width:244.4pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;background:#D9D9D9;mso-background-themecolor:background1;
-  mso-background-themeshade:217;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><b><span style="color:black">Message d’acquittement<o:p></o:p></span></b></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:1">
-  <td width="163" valign="top" style="width:122.2pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  background:#D9D9D9;mso-background-themecolor:background1;mso-background-themeshade:
-  217;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><b><span style="color:black">Champ<o:p></o:p></span></b></p>
-  </td>
-  <td width="163" valign="top" style="width:122.2pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;background:#D9D9D9;mso-background-themecolor:
-  background1;mso-background-themeshade:217;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><b><span style="color:black">Description</span><o:p></o:p></b></p>
-  </td>
-  <td width="163" valign="top" style="width:122.2pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;background:#D9D9D9;mso-background-themecolor:
-  background1;mso-background-themeshade:217;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><b><span style="color:black">Champ</span><o:p></o:p></b></p>
-  </td>
-  <td width="163" valign="top" style="width:122.2pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;background:#D9D9D9;mso-background-themecolor:
-  background1;mso-background-themeshade:217;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><b><span style="color:black">Description<o:p></o:p></span></b></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:2">
-  <td width="163" valign="top" style="width:122.2pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black"><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.3" target="_blank"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
-  mso-bidi-font-family:Arial;color:#0563C1;position:relative;top:.5pt;
-  mso-text-raise:-.5pt;mso-fareast-language:FR">MSH.3</span></a></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;
-  color:black;position:relative;top:.5pt;mso-text-raise:-.5pt;mso-fareast-language:
-  FR"><span style="mso-spacerun:yes">&nbsp;</span>- <span class="SpellE">Sending</span>
-  Application</span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
-  mso-bidi-font-family:Arial;color:black;mso-fareast-language:FR">&ZeroWidthSpace;</span><span style="color:black"><o:p></o:p></span></p>
-  </td>
-  <td width="163" valign="top" style="width:122.2pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">Application source du message à
-  acquitter <o:p></o:p></span></p>
-  </td>
-  <td width="163" valign="top" style="width:122.2pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black"><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.5" target="_blank"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
-  mso-bidi-font-family:Arial;color:#0563C1;position:relative;top:.5pt;
-  mso-text-raise:-.5pt;mso-fareast-language:FR">MSH.5</span></a></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;
-  color:black;position:relative;top:.5pt;mso-text-raise:-.5pt;mso-fareast-language:
-  FR"><span style="mso-spacerun:yes">&nbsp;</span>- <span class="SpellE">Receiving</span>
-  Application</span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
-  mso-bidi-font-family:Arial;color:black;mso-fareast-language:FR">&ZeroWidthSpace;</span><span style="color:black"><o:p></o:p></span></p>
-  </td>
-  <td width="163" valign="top" style="width:122.2pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">Application destinatrice de
-  l’acquittement<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:3">
-  <td width="163" valign="top" style="width:122.2pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black"><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.4" target="_blank"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
-  mso-bidi-font-family:Arial;color:#0563C1;position:relative;top:.5pt;
-  mso-text-raise:-.5pt;mso-fareast-language:FR">MSH.4</span></a></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;
-  color:black;position:relative;top:.5pt;mso-text-raise:-.5pt;mso-fareast-language:
-  FR"><span style="mso-spacerun:yes">&nbsp;</span>- <span class="SpellE">Sending</span>
-  Facility</span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
-  mso-bidi-font-family:Arial;color:black;mso-fareast-language:FR">&ZeroWidthSpace;</span><span style="color:black"><o:p></o:p></span></p>
-  </td>
-  <td width="163" valign="top" style="width:122.2pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">Facility source du message à
-  acquitter<o:p></o:p></span></p>
-  </td>
-  <td width="163" valign="top" style="width:122.2pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black"><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.6" target="_blank"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
-  mso-bidi-font-family:Arial;color:#0563C1;position:relative;top:.5pt;
-  mso-text-raise:-.5pt;mso-fareast-language:FR">MSH.6</span></a></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;
-  color:black;position:relative;top:.5pt;mso-text-raise:-.5pt;mso-fareast-language:
-  FR"><span style="mso-spacerun:yes">&nbsp;</span>- <span class="SpellE">Receiving</span>
-  Facility</span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
-  mso-bidi-font-family:Arial;color:black;mso-fareast-language:FR">&ZeroWidthSpace;</span><span style="color:black"><o:p></o:p></span></p>
-  </td>
-  <td width="163" valign="top" style="width:122.2pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">Etablissement destinataire de
-  l’acquittement<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:4">
-  <td width="163" valign="top" style="width:122.2pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black"><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.5" target="_blank"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
-  mso-bidi-font-family:Arial;color:#0563C1;position:relative;top:.5pt;
-  mso-text-raise:-.5pt;mso-fareast-language:FR">MSH.5</span></a></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;
-  color:black;position:relative;top:.5pt;mso-text-raise:-.5pt;mso-fareast-language:
-  FR"><span style="mso-spacerun:yes">&nbsp;</span>- <span class="SpellE">Receiving</span>
-  Application</span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
-  mso-bidi-font-family:Arial;color:black;mso-fareast-language:FR">&ZeroWidthSpace;</span><span style="color:black"><o:p></o:p></span></p>
-  </td>
-  <td width="163" valign="top" style="width:122.2pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">Application destinatrice du
-  message à acquitter<o:p></o:p></span></p>
-  </td>
-  <td width="163" valign="top" style="width:122.2pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black"><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.3" target="_blank"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
-  mso-bidi-font-family:Arial;color:#0563C1;position:relative;top:.5pt;
-  mso-text-raise:-.5pt;mso-fareast-language:FR">MSH.3</span></a></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;
-  color:black;position:relative;top:.5pt;mso-text-raise:-.5pt;mso-fareast-language:
-  FR"><span style="mso-spacerun:yes">&nbsp;</span>- <span class="SpellE">Sending</span>
-  Application</span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
-  mso-bidi-font-family:Arial;color:black;mso-fareast-language:FR">&ZeroWidthSpace;</span><span style="color:black"><o:p></o:p></span></p>
-  </td>
-  <td width="163" valign="top" style="width:122.2pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">Application source de
-  l’acquittement<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:5">
-  <td width="163" valign="top" style="width:122.2pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black"><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.6" target="_blank"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
-  mso-bidi-font-family:Arial;color:#0563C1;position:relative;top:.5pt;
-  mso-text-raise:-.5pt;mso-fareast-language:FR">MSH.6</span></a></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;
-  color:black;position:relative;top:.5pt;mso-text-raise:-.5pt;mso-fareast-language:
-  FR"><span style="mso-spacerun:yes">&nbsp;</span>- <span class="SpellE">Receiving</span>
-  Facility</span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
-  mso-bidi-font-family:Arial;color:black;mso-fareast-language:FR">&ZeroWidthSpace;</span><span style="color:black"><o:p></o:p></span></p>
-  </td>
-  <td width="163" valign="top" style="width:122.2pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">Facility destinatrice du message
-  à acquitter<o:p></o:p></span></p>
-  </td>
-  <td width="163" valign="top" style="width:122.2pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black"><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.4" target="_blank"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
-  mso-bidi-font-family:Arial;color:#0563C1;position:relative;top:.5pt;
-  mso-text-raise:-.5pt;mso-fareast-language:FR">MSH.4</span></a></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;
-  color:black;position:relative;top:.5pt;mso-text-raise:-.5pt;mso-fareast-language:
-  FR"><span style="mso-spacerun:yes">&nbsp;</span>- <span class="SpellE">Sending</span>
-  Facility</span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
-  mso-bidi-font-family:Arial;color:black;mso-fareast-language:FR">&ZeroWidthSpace;</span><span style="color:black"><o:p></o:p></span></p>
-  </td>
-  <td width="163" valign="top" style="width:122.2pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">Etablissement source de
-  l’acquittement<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:6;mso-yfti-lastrow:yes">
-  <td width="163" valign="top" style="width:122.2pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black"><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.11" target="_blank"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
-  mso-bidi-font-family:Arial;color:#0563C1;position:relative;top:.5pt;
-  mso-text-raise:-.5pt;mso-fareast-language:FR">MSH.11</span></a></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;
-  color:black;position:relative;top:.5pt;mso-text-raise:-.5pt;mso-fareast-language:
-  FR"><span style="mso-spacerun:yes">&nbsp;</span>- <span class="SpellE">Processing</span>
-  Id</span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
-  Arial;color:black;mso-fareast-language:FR">&ZeroWidthSpace;</span><span style="color:black"><o:p></o:p></span></p>
-  </td>
-  <td width="163" valign="top" style="width:122.2pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">Identifiant de traitement <o:p></o:p></span></p>
-  </td>
-  <td width="163" valign="top" style="width:122.2pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black"><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.11" target="_blank"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
-  mso-bidi-font-family:Arial;color:#0563C1;position:relative;top:.5pt;
-  mso-text-raise:-.5pt;mso-fareast-language:FR">MSH.11</span></a></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:Arial;
-  color:black;position:relative;top:.5pt;mso-text-raise:-.5pt;mso-fareast-language:
-  FR"><span style="mso-spacerun:yes">&nbsp;</span>- <span class="SpellE">Processing</span>
-  Id</span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
-  Arial;color:black;mso-fareast-language:FR">&ZeroWidthSpace;</span><span style="color:black"><o:p></o:p></span></p>
-  </td>
-  <td width="163" valign="top" style="width:122.2pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">Identifiant de traitement<o:p></o:p></span></p>
-  </td>
- </tr>
-</tbody></table>
+
+<table class="table-hl7v2">
+  <tbody>
+    <tr>
+      <th colspan="2">
+        <p>Message initial</p>
+      </th>
+      <th colspan="2">
+        <p>Message d'acquittement</p>
+      </th>
+    </tr>
+    <tr>
+      <th>
+        <p>Champ</p>
+      </th>
+      <th>
+        <p>Description</p>
+      </th>
+      <th>
+        <p>Champ</p>
+      </th>
+      <th>
+        <p>Description</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.3">MSH.3</a> - Sending Application​</p>
+      </td>
+      <td>
+        <p>Application source du message à acquitter</p>
+      </td>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.5">MSH.5</a> - Receiving Application​</p>
+      </td>
+      <td>
+        <p>Application destinatrice de l'acquittement</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.4">MSH.4</a> - Sending Facility​</p>
+      </td>
+      <td>
+        <p>Facility source du message à acquitter</p>
+      </td>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.6">MSH.6</a> - Receiving Facility​</p>
+      </td>
+      <td>
+        <p>Etablissement destinataire de l'acquittement</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.5">MSH.5</a> - Receiving Application​</p>
+      </td>
+      <td>
+        <p>Application destinatrice du message à acquitter</p>
+      </td>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.3">MSH.3</a> - Sending Application​</p>
+      </td>
+      <td>
+        <p>Application source de l'acquittement</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.6">MSH.6</a> - Receiving Facility​</p>
+      </td>
+      <td>
+        <p>Facility destinatrice du message à acquitter</p>
+      </td>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.4">MSH.4</a> - Sending Facility​</p>
+      </td>
+      <td>
+        <p>Etablissement source de l'acquittement</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.11">MSH.11</a> - Processing Id​</p>
+      </td>
+      <td>
+        <p>Identifiant de traitement</p>
+      </td>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.11">MSH.11</a> - Processing Id​</p>
+      </td>
+      <td>
+        <p>Identifiant de traitement</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 Le champ MSH.9 « Message type » prend la valeur : `ACK^T02^ACK` ou `ACK^T04^ACK` ou `ACK^T10^ACK` selon l’évènement du message initial.
 
-<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;mso-table-layout-alt:fixed;border:none;
- mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:
- 0cm 5.4pt 0cm 5.4pt">
- <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes;height:46.5pt">
-  <td width="94" valign="top" style="width:70.65pt;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;background:#D9D9D9;mso-background-themecolor:
-  background1;mso-background-themeshade:217;padding:0cm 5.4pt 0cm 5.4pt;
-  height:46.5pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span style="color:black">Champ<o:p></o:p></span></p>
-  </td>
-  <td width="196" valign="top" style="width:147.15pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;background:#D9D9D9;mso-background-themecolor:background1;
-  mso-background-themeshade:217;padding:0cm 5.4pt 0cm 5.4pt;height:46.5pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span style="color:black">Contenu<o:p></o:p></span></p>
-  </td>
-  <td width="87" valign="top" style="width:65.45pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;background:#D9D9D9;mso-background-themecolor:background1;
-  mso-background-themeshade:217;padding:0cm 5.4pt 0cm 5.4pt;height:46.5pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span style="color:black">Type donnée<o:p></o:p></span></p>
-  </td>
-  <td width="161" valign="top" style="width:120.5pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;background:#D9D9D9;mso-background-themecolor:background1;
-  mso-background-themeshade:217;padding:0cm 5.4pt 0cm 5.4pt;height:46.5pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span style="color:black">Caractère optionnel/obligatoire<o:p></o:p></span></p>
-  <p class="MsoNormal"><span style="color:black"><o:p>&nbsp;</o:p></span></p>
-  <p class="MsoNormal"><span style="color:black"><o:p>&nbsp;</o:p></span></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:1">
-  <td width="94" valign="top" style="width:70.65pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">MSH-1<o:p></o:p></span></p>
-  </td>
-  <td width="196" valign="top" style="width:147.15pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:#4472C4;mso-themecolor:accent5">|</span><span style="color:black"> séparateur de champ<o:p></o:p></span></p>
-  </td>
-  <td width="87" valign="top" style="width:65.45pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">ST<o:p></o:p></span></p>
-  </td>
-  <td width="161" valign="top" style="width:120.5pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">R<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:2">
-  <td width="94" valign="top" style="width:70.65pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">MSH-2<o:p></o:p></span></p>
-  </td>
-  <td width="196" valign="top" style="width:147.15pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:#4472C4;mso-themecolor:accent5">^~\&amp;</span><span style="color:black">&nbsp;: séparateur de composant, répétition, caractère
-  d’échappement, séparateur de sous-composants<o:p></o:p></span></p>
-  </td>
-  <td width="87" valign="top" style="width:65.45pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">ST<o:p></o:p></span></p>
-  </td>
-  <td width="161" valign="top" style="width:120.5pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">R<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:3">
-  <td width="94" valign="top" style="width:70.65pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">MSH-3<o:p></o:p></span></p>
-  </td>
-  <td width="196" valign="top" style="width:147.15pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">Application émettrice<o:p></o:p></span></p>
-  </td>
-  <td width="87" valign="top" style="width:65.45pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">HD<o:p></o:p></span></p>
-  </td>
-  <td width="161" valign="top" style="width:120.5pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">R<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:4">
-  <td width="94" valign="top" style="width:70.65pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">MSH-4<o:p></o:p></span></p>
-  </td>
-  <td width="196" valign="top" style="width:147.15pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">Organisation émettrice<o:p></o:p></span></p>
-  </td>
-  <td width="87" valign="top" style="width:65.45pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">HD<o:p></o:p></span></p>
-  </td>
-  <td width="161" valign="top" style="width:120.5pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">R<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:5">
-  <td width="94" valign="top" style="width:70.65pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">MSH-5<o:p></o:p></span></p>
-  </td>
-  <td width="196" valign="top" style="width:147.15pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">Application réceptrice<o:p></o:p></span></p>
-  </td>
-  <td width="87" valign="top" style="width:65.45pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">HD<o:p></o:p></span></p>
-  </td>
-  <td width="161" valign="top" style="width:120.5pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">R<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:6">
-  <td width="94" valign="top" style="width:70.65pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">MSH-6<o:p></o:p></span></p>
-  </td>
-  <td width="196" valign="top" style="width:147.15pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">Organisation réceptrice<o:p></o:p></span></p>
-  </td>
-  <td width="87" valign="top" style="width:65.45pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">HD<o:p></o:p></span></p>
-  </td>
-  <td width="161" valign="top" style="width:120.5pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">R<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:7">
-  <td width="94" valign="top" style="width:70.65pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">MSH-7<o:p></o:p></span></p>
-  </td>
-  <td width="196" valign="top" style="width:147.15pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">Date/time du message<o:p></o:p></span></p>
-  </td>
-  <td width="87" valign="top" style="width:65.45pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">TS<o:p></o:p></span></p>
-  </td>
-  <td width="161" valign="top" style="width:120.5pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">R<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:8">
-  <td width="94" valign="top" style="width:70.65pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">MSH-9<o:p></o:p></span></p>
-  </td>
-  <td width="196" valign="top" style="width:147.15pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">Type du message, selon
-  l’évènement du message initial&nbsp;:</span><span style="color:#0070C0"><o:p></o:p></span></p>
-  <p class="MsoNormal"><span lang="EN-US" style="color:#0070C0;mso-ansi-language:
-  EN-US">ACK^T02^ACK ACK^T04^ACK ACK^T10^ACK.<o:p></o:p></span></p>
-  <p class="MsoNormal"><span lang="EN-US" style="color:black;mso-ansi-language:
-  EN-US"><o:p>&nbsp;</o:p></span></p>
-  </td>
-  <td width="87" valign="top" style="width:65.45pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">MSG<o:p></o:p></span></p>
-  </td>
-  <td width="161" valign="top" style="width:120.5pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">R<o:p></o:p></span></p>
-  <p class="MsoNormal"><span style="color:black"><o:p>&nbsp;</o:p></span></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:9">
-  <td width="94" valign="top" style="width:70.65pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">MSH-10<o:p></o:p></span></p>
-  </td>
-  <td width="196" valign="top" style="width:147.15pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">Identifiant du message<o:p></o:p></span></p>
-  </td>
-  <td width="87" valign="top" style="width:65.45pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">ST<o:p></o:p></span></p>
-  </td>
-  <td width="161" valign="top" style="width:120.5pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">R<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:10">
-  <td width="94" valign="top" style="width:70.65pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">MSH-11<o:p></o:p></span></p>
-  </td>
-  <td width="196" valign="top" style="width:147.15pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span class="SpellE"><span style="color:black">Processing</span></span><span style="color:black"> Id<br>
-  </span><span style="color:#0070C0">P&nbsp;</span>: en production<span style="color:#4472C4;mso-themecolor:accent5"><br>
-  </span><span style="color:#0070C0">T&nbsp;</span>: message de test<span style="color:#4472C4;mso-themecolor:accent5"><br>
-  </span><span style="color:#0070C0">D&nbsp;</span>: environnement de <span class="SpellE">debug</span><span style="color:black"><o:p></o:p></span></p>
-  </td>
-  <td width="87" valign="top" style="width:65.45pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">PT<o:p></o:p></span></p>
-  </td>
-  <td width="161" valign="top" style="width:120.5pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">R<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:11">
-  <td width="94" valign="top" style="width:70.65pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">MSH-12<o:p></o:p></span></p>
-  </td>
-  <td width="196" valign="top" style="width:147.15pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">Version du standard</span><span style="color:#4472C4;mso-themecolor:accent5"><br>
-  </span><span style="color:#0070C0">2.6 </span>pour MDM<span style="color:
-  #4472C4;mso-themecolor:accent5"><o:p></o:p></span></p>
-  </td>
-  <td width="87" valign="top" style="width:65.45pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">VID<o:p></o:p></span></p>
-  </td>
-  <td width="161" valign="top" style="width:120.5pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">R<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:12">
-  <td width="94" valign="top" style="width:70.65pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">MSH-17<o:p></o:p></span></p>
-  </td>
-  <td width="196" valign="top" style="width:147.15pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:#0070C0">FRA</span><span style="color:black"><o:p></o:p></span></p>
-  </td>
-  <td width="87" valign="top" style="width:65.45pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">ID<o:p></o:p></span></p>
-  </td>
-  <td width="161" valign="top" style="width:120.5pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">R<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:13;mso-yfti-lastrow:yes">
-  <td width="94" valign="top" style="width:70.65pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">MSH-18<o:p></o:p></span></p>
-  </td>
-  <td width="196" valign="top" style="width:147.15pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">Jeux de caractères, valeurs
-  possibles&nbsp;:<o:p></o:p></span></p>
-  <p class="MsoNormal"><span style="color:#0070C0">UNICODE UTF-8 </span>ou <span style="color:#0070C0">8859/15 </span><span style="color:#4472C4;mso-themecolor:
-  accent5"><br style="mso-special-character:line-break">
-  <!--[if !supportLineBreakNewLine]--><br style="mso-special-character:line-break">
-  <!--[endif]--></span><span style="color:black"><o:p></o:p></span></p>
-  </td>
-  <td width="87" valign="top" style="width:65.45pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">ID<o:p></o:p></span></p>
-  </td>
-  <td width="161" valign="top" style="width:120.5pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">R<o:p></o:p></span></p>
-  </td>
- </tr>
-</tbody></table>
+<table class="table-hl7v2">
+  <tbody>
+    <tr>
+      <th>
+        <p>Champ</p>
+      </th>
+      <th>
+        <p>Contenu</p>
+      </th>
+      <th>
+        <h>Type donnée</p>
+      </th>
+      <th>
+        <p>Caractère optionnel/obligatoire</p>
+        <p> </p>
+        <p> </p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-1</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">|</span> séparateur de champ</p>
+      </td>
+      <td>
+        <p>ST</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-2</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">^~\&</span> : séparateur de composant, répétition, caractère d'échappement, séparateur de sous-composants</p>
+      </td>
+      <td>
+        <p>ST</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-3</p>
+      </td>
+      <td>
+        <p>Application émettrice</p>
+      </td>
+      <td>
+        <p>HD</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-4</p>
+      </td>
+      <td>
+        <p>Organisation émettrice</p>
+      </td>
+      <td>
+        <p>HD</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-5</p>
+      </td>
+      <td>
+        <p>Application réceptrice</p>
+      </td>
+      <td>
+        <p>HD</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-6</p>
+      </td>
+      <td>
+        <p>Organisation réceptrice</p>
+      </td>
+      <td>
+        <p>HD</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-7</p>
+      </td>
+      <td>
+        <p>Date/time du message</p>
+      </td>
+      <td>
+        <p>TS</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-9</p>
+      </td>
+      <td>
+        <p>Type du message, selon l'évènement du message initial :</p>
+        <p><span class="hl7-color">ACK^T02^ACK</span></p>
+        <p><span class="hl7-color">ACK^T04^ACK</span></p> 
+        <p><span class="hl7-color">ACK^T10^ACK</span></p>
+        <p> </p>
+      </td>
+      <td>
+        <p>MSG</p>
+      </td>
+      <td>
+        <p>R</p>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-10</p>
+      </td>
+      <td>
+        <p>Identifiant du message</p>
+      </td>
+      <td>
+        <p>ST</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-11</p>
+      </td>
+      <td>
+        <p>Processing Id</p>
+        <p><span class="hl7-color">P</span> : en production</p>
+        <p><span class="hl7-color">T</span> : message de test</p>
+        <p><span class="hl7-color">D</span> : environnement de debug</p>
+      </td>
+      <td>
+        <p>PT</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-12</p>
+      </td>
+      <td>
+        <p>Version du standard <span class="hl7-color">2.6</span> pour MDM</p>
+      </td>
+      <td>
+        <p>VID</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-17</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">FRA</span></p>
+      </td>
+      <td>
+        <p>ID</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-18</p>
+      </td>
+      <td>
+        <p>Jeux de caractères, valeurs possibles :</p>
+        <p><span class="hl7-color">UNICODE UTF-8</span> ou <span class="hl7-color">8859/15</span</p>
+      </td>
+      <td>
+        <p>ID</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ##### Segment MSA
 Le segment MSA contient à minima les champs suivants : 
-<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
- mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
- <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
-  <td width="189" valign="top" style="width:141.5pt;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;background:#D9D9D9;mso-background-themecolor:
-  background1;mso-background-themeshade:217;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><b><span style="font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%;color:black">Champ
-  requis</span></b><b><span style="font-size:9.0pt;mso-bidi-font-size:10.0pt;
-  line-height:115%"><o:p></o:p></span></b></p>
-  </td>
-  <td width="461" valign="top" style="width:345.6pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;background:#D9D9D9;mso-background-themecolor:background1;
-  mso-background-themeshade:217;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><b><span style="font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%;color:black">Contenu</span></b><b><span style="font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%"><o:p></o:p></span></b></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:1">
-  <td width="189" valign="top" style="width:141.5pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black"><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.6"><span style="font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%">MSA.1</span></a></span><span class="cx-body"><span style="font-size:9.0pt;mso-bidi-font-size:10.0pt;
-  line-height:115%;color:black"> - <span class="SpellE">Acknowledgment</span>
-  Code</span></span><b><span style="font-size:9.0pt;mso-bidi-font-size:10.0pt;
-  line-height:115%;color:black"><o:p></o:p></span></b></p>
-  </td>
-  <td width="461" valign="top" style="width:345.6pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="font-size:9.0pt;mso-bidi-font-size:10.0pt;
-  line-height:115%;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
-  Arial;color:black;mso-fareast-language:FR">Code d’acquittement du
-  message&nbsp;: <o:p></o:p></span></p>
-  <p class="MsoListParagraphCxSpFirst" style="margin-top:0cm;margin-right:0cm;
-  margin-bottom:0cm;margin-left:18.0pt;mso-add-space:auto;text-indent:-18.0pt;
-  line-height:normal;mso-list:l1 level1 lfo15"><!--[if !supportLists]--><span style="font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:Symbol;
-  mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span></span><!--[endif]--><span style="font-size:9.0pt;mso-bidi-font-size:
-  10.0pt;mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;
-  mso-bidi-font-family:Arial;color:black">AA (</span><span style="font-size:
-  9.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;
-  mso-bidi-font-family:Arial;color:black;mso-fareast-language:FR">Original <span class="GramE">mode:</span> Application <span class="SpellE">Accept</span> – (<span class="SpellE">Enhanced</span> mode: Application <span class="SpellE">acknowledgment</span>:
-  <span class="SpellE">Accept</span>) </span><span style="font-size:9.0pt;
-  mso-bidi-font-size:10.0pt;mso-fareast-font-family:Calibri;mso-fareast-theme-font:
-  minor-latin;mso-bidi-font-family:Arial;color:black">: le message a été
-  compris et intégré par&nbsp;l’application</span><span style="font-size:9.0pt;
-  mso-bidi-font-size:10.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;
-  mso-bidi-font-family:Arial;color:black;mso-fareast-language:FR"> destinatrice
-  qui prend la responsabilité du message et libère ainsi l’application
-  productrice de toute obligation de le renvoyer.</span><span style="font-size:
-  9.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:Calibri;mso-fareast-theme-font:
-  minor-latin;mso-bidi-font-family:Arial;color:black"><o:p></o:p></span></p>
-  <p class="MsoListParagraphCxSpMiddle" style="margin-top:0cm;margin-right:0cm;
-  margin-bottom:0cm;margin-left:18.0pt;mso-add-space:auto;text-indent:-18.0pt;
-  line-height:normal;mso-list:l1 level1 lfo15"><!--[if !supportLists]--><span style="font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:Symbol;
-  mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span></span><!--[endif]--><span style="font-size:9.0pt;mso-bidi-font-size:
-  10.0pt;mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;
-  mso-bidi-font-family:Arial;color:black">AE </span><span style="font-size:
-  9.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;
-  mso-bidi-font-family:Arial;color:black;mso-fareast-language:FR">(Original <span class="GramE">mode:</span> Application <span class="SpellE">Error</span> - <span class="SpellE">Enhanced</span> mode: Application <span class="SpellE">acknowledgment</span>:
-  <span class="SpellE">Error</span>) </span><span style="font-size:9.0pt;
-  mso-bidi-font-size:10.0pt;mso-fareast-font-family:Calibri;mso-fareast-theme-font:
-  minor-latin;mso-bidi-font-family:Arial;color:black">: le message contient des
-  erreurs de syntaxe.&nbsp;&nbsp;</span><span style="font-size:9.0pt;
-  mso-bidi-font-size:10.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;
-  mso-bidi-font-family:Arial;color:black">&nbsp;</span><span style="font-size:
-  9.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:Calibri;mso-fareast-theme-font:
-  minor-latin;mso-bidi-font-family:Arial;color:black"><o:p></o:p></span></p>
-  <p class="MsoListParagraphCxSpLast" style="margin-top:0cm;margin-right:0cm;
-  margin-bottom:0cm;margin-left:18.0pt;mso-add-space:auto;text-indent:-18.0pt;
-  line-height:normal;mso-list:l1 level1 lfo15"><!--[if !supportLists]--><span style="font-size:9.0pt;mso-bidi-font-size:10.0pt;font-family:Symbol;
-  mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black;
-  mso-fareast-language:FR"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size:9.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:
-  &quot;Times New Roman&quot;;mso-bidi-font-family:Arial;color:black;mso-fareast-language:
-  FR">AR (Original <span class="GramE">mode:</span> Application <span class="SpellE">Reject</span> - <span class="SpellE">Enhanced</span> mode:
-  Application <span class="SpellE">acknowledgment</span>: <span class="SpellE">Reject</span>)
-   : le message est rejeté pour une raison circonstancielle. Il peut être
-  réémis plus tard.&nbsp;<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:2;mso-yfti-lastrow:yes">
-  <td width="189" valign="top" style="width:141.5pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black"><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.6"><span style="font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%">MSA.2</span></a></span><span class="cx-body"><span style="font-size:9.0pt;mso-bidi-font-size:10.0pt;
-  line-height:115%;color:black"> - Message Control Id</span></span><b><span style="font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%;color:black"><o:p></o:p></span></b></p>
-  </td>
-  <td width="461" valign="top" style="width:345.6pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="font-size:9.0pt;mso-bidi-font-size:10.0pt;
-  line-height:115%;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
-  Arial;color:black;mso-fareast-language:FR">Rappel l’identifiant du message
-  acquitté correspondant au champ MSH.10 du message initial.</span><span style="font-size:9.0pt;mso-bidi-font-size:10.0pt;line-height:115%;color:black">
-  <o:p></o:p></span></p>
-  </td>
- </tr>
-</tbody></table>
+
+<table class="table-hl7v2">
+  <tbody>
+    <tr>
+      <th>
+        <p>Champ requis</p>
+      </th>
+      <th>
+        <p>Contenu</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.6">MSA.1</a> - Acknowledgment Code</p>
+      </td>
+      <td>
+        <p>Code d'acquittement du message :</p>
+        <p>·       AA (Original mode: Application Accept - (Enhanced mode: Application acknowledgment: Accept) : le message a été compris et intégré par l'application destinatrice qui prend la responsabilité du message et libère ainsi l'application productrice de toute obligation de le renvoyer.</p>
+        <p>·       AE (Original mode: Application Error - Enhanced mode: Application acknowledgment: Error) : le message contient des erreurs de syntaxe.   </p>
+        <p>·       AR (Original mode: Application Reject - Enhanced mode: Application acknowledgment: Reject)  : le message est rejeté pour une raison circonstancielle. Il peut être réémis plus tard. </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.6">MSA.2</a> - Message Control Id</p>
+      </td>
+      <td>
+        <p>Rappel l'identifiant du message acquitté correspondant au champ MSH.10 du message initial.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ##### Segment ERR
 Ce segment est utilisé au niveau des messages d’acquittement HL7 dans le cas où le champ MSA-1 prend la valeur AE (Application error).
 
 Le tableau ci-dessous liste les champs à renseigner pour le segment ERR :
-<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="699" style="border-collapse:collapse;mso-table-layout-alt:fixed;border:none;
- mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:
- 0cm 5.4pt 0cm 5.4pt">
- <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes;height:23.5pt">
-  <td width="94" valign="top" style="width:70.65pt;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;background:#D9D9D9;mso-background-themecolor:
-  background1;mso-background-themeshade:217;padding:0cm 5.4pt 0cm 5.4pt;
-  height:23.5pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span style="color:black">Champ<o:p></o:p></span></p>
-  </td>
-  <td width="283" valign="top" style="width:212.6pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;background:#D9D9D9;mso-background-themecolor:background1;
-  mso-background-themeshade:217;padding:0cm 5.4pt 0cm 5.4pt;height:23.5pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span style="color:black">Contenu<o:p></o:p></span></p>
-  </td>
-  <td width="76" valign="top" style="width:2.0cm;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;background:#D9D9D9;mso-background-themecolor:background1;
-  mso-background-themeshade:217;padding:0cm 5.4pt 0cm 5.4pt;height:23.5pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span style="color:black">Type donnée<o:p></o:p></span></p>
-  </td>
-  <td width="246" valign="top" style="width:184.3pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;background:#D9D9D9;mso-background-themecolor:background1;
-  mso-background-themeshade:217;padding:0cm 5.4pt 0cm 5.4pt;height:23.5pt">
-  <p class="MsoNormal" align="center" style="text-align:center"><span style="color:black">Caractère optionnel/obligatoire<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:1">
-  <td width="94" valign="top" style="width:70.65pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">ERR-2<o:p></o:p></span></p>
-  </td>
-  <td width="283" valign="top" style="width:212.6pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="mso-bidi-font-family:Arial;color:black">Localisation
-  de l’erreur dans le cas d’une erreur de syntaxe du message initial.<o:p></o:p></span></p>
-  </td>
-  <td width="76" valign="top" style="width:2.0cm;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">ERL<o:p></o:p></span></p>
-  </td>
-  <td width="246" valign="top" style="width:184.3pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">O<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:2">
-  <td width="94" valign="top" style="width:70.65pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">ERR-3<o:p></o:p></span></p>
-  </td>
-  <td width="283" valign="top" style="width:212.6pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal">Code erreur HL7 dont les valeurs sont à prendre dans la table
-  HL7 0357 (nom symbolique&nbsp;: <span class="SpellE">messageErrorCondition</span>)<sup>
-  <o:p></o:p></sup></p>
-  </td>
-  <td width="76" valign="top" style="width:2.0cm;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">CWE<o:p></o:p></span></p>
-  </td>
-  <td width="246" valign="top" style="width:184.3pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span class="GramE"><span style="color:black">R<sup>(</sup></span></span><sup><span style="color:black">Note 1) (Note 2)<o:p></o:p></span></sup></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:3">
-  <td width="94" valign="top" style="width:70.65pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">ERR-4<o:p></o:p></span></p>
-  </td>
-  <td width="283" valign="top" style="width:212.6pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal">Sévérité de l’erreur dont les valeurs sont à prendre dans
-  la table HL7 0516 (nom symbolique&nbsp;: <span class="SpellE">errorSeverity</span>)</p>
-  </td>
-  <td width="76" valign="top" style="width:2.0cm;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">ID<o:p></o:p></span></p>
-  </td>
-  <td width="246" valign="top" style="width:184.3pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">R<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:4;mso-yfti-lastrow:yes">
-  <td width="94" valign="top" style="width:70.65pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">ERR-5<o:p></o:p></span></p>
-  </td>
-  <td width="283" valign="top" style="width:212.6pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal">Code erreur du traitement applicatif du message HL7 dont
-  les valeurs sont à prendre dans la table user-<span class="SpellE">defined</span>
-  0533 (nom symbolique&nbsp;: <span class="SpellE">applicationErrorCode</span>)<sup><o:p></o:p></sup></p>
-  </td>
-  <td width="76" valign="top" style="width:2.0cm;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span style="color:black">CWE<o:p></o:p></span></p>
-  </td>
-  <td width="246" valign="top" style="width:184.3pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoNormal"><span class="GramE"><span style="color:black">C<sup>(</sup></span></span><sup><span style="color:black">Note 1) (Note 2)<o:p></o:p></span></sup></p>
-  </td>
- </tr>
-</tbody></table>
+
+<table class="table-hl7v2">
+  <tbody>
+    <tr>
+      <th>
+        <p>Champ</p>
+      </th>
+      <th>
+        <p>Contenu</p>
+      </th>
+      <th>
+        <p>Type donnée</p>
+      </th>
+      <th>
+        <p>Caractère optionnel/obligatoire</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p>ERR-2</p>
+      </td>
+      <td>
+        <p>Localisation de l'erreur dans le cas d'une erreur de syntaxe du message initial.</p>
+      </td>
+      <td>
+        <p>ERL</p>
+      </td>
+      <td>
+        <p>O</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>ERR-3</p>
+      </td>
+      <td>
+        <p>Code erreur HL7 dont les valeurs sont à prendre dans la table HL7 0357 (nom symbolique : messageErrorCondition)</p>
+      </td>
+      <td>
+        <p>CWE</p>
+      </td>
+      <td>
+        <p>R(Note 1) (Note 2)</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>ERR-4</p>
+      </td>
+      <td>
+        <p>Sévérité de l'erreur dont les valeurs sont à prendre dans la table HL7 0516 (nom symbolique : errorSeverity)</p>
+      </td>
+      <td>
+        <p>ID</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>ERR-5</p>
+      </td>
+      <td>
+        <p>Code erreur du traitement applicatif du message HL7 dont les valeurs sont à prendre dans la table user-defined 0533 (nom symbolique : applicationErrorCode)</p>
+      </td>
+      <td>
+        <p>CWE</p>
+      </td>
+      <td>
+        <p>C(Note 1) (Note 2)</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 _**(Note 1) :** les valeurs possibles pour les champs ERR-3 et ERR-5 sont listées dans les tables messageErrorCondition et applicationErrorCondition précisées [ici](error-codes.html)._
 
 _**Note (2) :** dans le cas où le rejet du message HL7 MDM est dû à un problème applicatif au niveau du CONSOMMATEUR, le champ ERR-3 sera renseigné avec la valeur « 207 » (Application error) et le champ ERR-5 sera renseigné avec une valeur comprise dans la table applicationErrorCode. Dans le cas où le message MDM est rejeté par le système CONSOMMATEUR pour une raison technique, le champ ERR-3 sera renseigné avec une valeur comprise dans la table messageErrorCondition et le champ ERR-5 ne sera pas renseigné._
