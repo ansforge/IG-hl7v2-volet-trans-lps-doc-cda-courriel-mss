@@ -2069,6 +2069,7 @@ Cet OBX permet au Consommateur de vérifier que le document n'est pas masqué au
 </table>
 
 ###### Document Non visible par le patient
+
 Cet OBX permet d’informer le Consommateur que le document est masqué ou non au patient.
 
 <table class="table-hl7v2">
