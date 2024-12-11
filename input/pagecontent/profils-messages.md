@@ -383,7 +383,7 @@ Le profil du message MDM est le suivant :
 
 Le message HL7 MDM ne peut transmettre qu’un seul document médical.
 
-Les contraintes apportées par ce volet sur les données du message MDM sont décrites à la [section dédiée](profils-messages.html#contraintes-appliquées-aux-messages-mdm-dans-le-contexte-de-ce-volet).
+Les contraintes apportées par ce volet sur les données du message MDM sont décrites à la [section dédiée](volume2.html#contraintes-appliquées-aux-messages-mdm-dans-le-contexte-de-ce-volet).
 
 #### Description fonctionnelle du message MDM
 
@@ -400,7 +400,7 @@ spécifiques à ce volet :
     version 2.9 du standard, permettant ainsi de renseigner les
     informations de l'expéditeur (requis), le destinataire MSSanté
     (requis si connu) et, le cas échéant, l'adresse mail de réponse
-    (contraintes décrites au [paragraphe dédié](profils-messages.html#le-groupe-de-segments-obxnte-portant-le-document-cda)).
+    (contraintes décrites au [paragraphe dédié](volume2.html#le-groupe-de-segments-obxnte-portant-le-document-cda)).
 
 -   Le deuxième groupe véhicule, dans un segment OBX, les informations
     du courriel MSSanté dont a été extrait le document.

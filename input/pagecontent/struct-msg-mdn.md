@@ -97,7 +97,7 @@ Les pièces jointes envoyées avec le courriel d'origine (IHE_XDM.zip et le pdf)
 
 Exemple d'un MDN :
 
-L'exemple suivant décrit le MDN (accusé de lecture négatif) généré dans le contexte du cas d'usage « Transfert d'un patient d'un CH vers un autre CH -Gestion des erreurs » présenté au [paragraphe suivant](cas-usage.html#description-du-cas-en-erreur) du présent volet.
+L'exemple suivant décrit le MDN (accusé de lecture négatif) généré dans le contexte du cas d'usage « Transfert d'un patient d'un CH vers un autre CH -Gestion des erreurs » présenté au [paragraphe suivant](volume1.html#description-du-cas-en-erreur) du présent volet.
 
 ```
 Date: Wed, 20 Feb 2024 00:19:00 (EDT) -0400

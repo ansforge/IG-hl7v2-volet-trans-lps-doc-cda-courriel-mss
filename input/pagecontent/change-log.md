@@ -8,17 +8,17 @@
   * remplacement de message MDN par MDN (qui signifie d’emblée Message Disposition Notification) ([2](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2))
 * Volume 1 Etude fonctionnelle
   * remplacement du terme « section » par « volume 2 » ([2](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2))
-  * [processus de transmission initiale de document(s)](def-proc-collab.html#processus-collaboratif-demande-de-transmission-initiale-de-documents) : scénario nominal, remplacement « demande de traitement de(s) document(s) » par « demande d’intégration du document » ([2](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2))
-  * [processus de suppression de document(s)](def-proc-collab.html#processus-collaboratif-demande-de-suppression-de-documents) : scénario nominal, remplacement « demande de suppression de(s) document(s) » par « demande de suppression du document » ([2](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2))
+  * [processus de transmission initiale de document(s)](volume1.html#processus-collaboratif-demande-de-transmission-initiale-de-documents) : scénario nominal, remplacement « demande de traitement de(s) document(s) » par « demande d’intégration du document » ([2](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2))
+  * [processus de suppression de document(s)](volume1.html#processus-collaboratif-demande-de-suppression-de-documents) : scénario nominal, remplacement « demande de suppression de(s) document(s) » par « demande de suppression du document » ([2](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2))
 * Volume 2 Etude technique
   * [Choix des standards](volume2.html#choix-des-standards) : suppression de la phrase « Les échanges MSSanté doivent prendre en compte les restrictions positionnées sur le message. (Exemple : un document avec un masquage Médecin ne doit pas être envoyé sur le mail MSSanté du médecin). » qui n’a pas de rapport avec le choix des standards. ([2](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2))
-  * correction typos/cohérence pour le type message en MSH-9.3 dans les [profils des messages](profils-messages.html#eléments-de-contrôle-du-message-mdm) ([6](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/6))
-  * [Document Masqué aux professionnels de Santé](profils-messages.html#document-masqué-aux-professionnels-de-santé) : métadonnée de masquage aux PS : Ajout de la valeur manquante Y (YES) ([2](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2))
-  * Correction description des segments PRT pour 'destinataire' et 'adresse mail de réponse' dans les [profils des messages](profils-messages.html#le-groupe-de-segments-obxnte-portant-le-document-cda) [(9)](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/9)
+  * correction typos/cohérence pour le type message en MSH-9.3 dans les [profils des messages](volume2.html#eléments-de-contrôle-du-message-mdm) ([6](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/6))
+  * [Document Masqué aux professionnels de Santé](volume2.html#document-masqué-aux-professionnels-de-santé) : métadonnée de masquage aux PS : Ajout de la valeur manquante Y (YES) ([2](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2))
+  * Correction description des segments PRT pour 'destinataire' et 'adresse mail de réponse' dans les [profils des messages](volume2.html#le-groupe-de-segments-obxnte-portant-le-document-cda) [(9)](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/9)
   * Déplacement de la section LIEN ENTRE L’EN-TETE CDA ET LES METADONNEES XDS dans Volume 3 Annexes ([8](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/8))
 * Volume 3 Annexes
   * [Structure du MDN (MSSanté)](struct-msg-mdn.html) (Annexe 4) modification du titre : Structure du MDN (Message Disposition Notification) - MSSanté ([2](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2))
-  * [exemples de messages d’acquittement](profils-messages.html#exemple)
+  * [exemples de messages d’acquittement](volume2.html#exemple)
     * Correction de MSH-21 (version de l’interface 1.1 au lieu de 1.2) sur le segment MSH du message initial MDM
     * Suppression du champ MSH-21 (le message d’acquittement n’a pas de contraintes particulières par rapport au message spécifié dans le standard international)
 
