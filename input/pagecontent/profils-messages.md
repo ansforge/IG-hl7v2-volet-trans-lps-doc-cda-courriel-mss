@@ -2070,7 +2070,7 @@ Cet OBX permet au Consommateur de vérifier que le document n'est pas masqué au
 
 ###### Document Non visible par le patient
 
-Cet OBX permet d’informer le Consommateur que le document est masqué ou non au patient.
+Cet OBX permet d'informer le Consommateur que le document est masqué ou non au patient.
 
 <table class="table-hl7v2">
   <tbody>
@@ -2218,7 +2218,8 @@ Cet OBX permet d’informer le Consommateur que le document est masqué ou non a
 </table>
 
 ###### Document Non visible par les représentants légaux du patient
-Cet OBX permet d’informer le Consommateur que le document est masqué ou non aux représentants légaux du patient.
+
+Cet OBX permet d'informer le Consommateur que le document est masqué ou non aux représentants légaux du patient.
 
 <table class="table-hl7v2">
   <tbody>
@@ -2366,7 +2367,8 @@ Cet OBX permet d’informer le Consommateur que le document est masqué ou non a
 </table>
 
 ###### Modification Confidentiality Code
-Cet OBX permet d’informer le Consommateur que la transaction porte une modification du CONFIDENTIALITY CODE indiquant une mise à jour de la métadonnée de mise en visibilité du document au patients et/ou aux représentants légaux.
+
+Cet OBX permet d'informer le Consommateur que la transaction porte une modification du CONFIDENTIALITY CODE indiquant une mise à jour de la métadonnée de mise en visibilité du document au patients et/ou aux représentants légaux.
 
 <table class="table-hl7v2">
   <tbody>
@@ -2515,9 +2517,10 @@ Cet OBX permet d’informer le Consommateur que la transaction porte une modific
 
 Un exemple est disponible [ici](exemples.html).
 
-### Le message d’acquittement HL7v2
+### Le message d'acquittement HL7v2
 
 #### Profil du message ACK
+
 Le profil du message ACK est le suivant :
 
 <table class="table-hl7v2">
@@ -2628,6 +2631,7 @@ Le profil du message ACK est le suivant :
 </table>
 
 #### Structure fonctionnelle du message
+
 Après réception du message MDM, le LPS (DPI ou RIS dans le contexte SEGUR vague 2) va acquitter le message. Ci-dessous la structure du message ACK :
 <div class="figure" style='text-align: center;'>
     <img src="image21.png" alt="Figure 15" title="Figure 15 : Description fonctionnelle du message ACK
@@ -2638,7 +2642,9 @@ Après réception du message MDM, le LPS (DPI ou RIS dans le contexte SEGUR vagu
 Ces segments doivent être conformes au standard HL7v2.6.
 
 #### Description des contraintes à appliquer sur le message ACK
+
 ##### Segment MSH
+
 Le segment MSH reprend une partie des informations du message initial :
 
 <table class="table-hl7v2">
@@ -2953,6 +2959,7 @@ Le champ MSH.9 « Message type » prend la valeur : `ACK^T02^ACK` ou `ACK^T04^AC
 </table>
 
 ##### Segment MSA
+
 Le segment MSA contient à minima les champs suivants : 
 
 <table class="table-hl7v2">
@@ -2971,9 +2978,9 @@ Le segment MSA contient à minima les champs suivants :
       </td>
       <td>
         <p>Code d'acquittement du message :</p>
-        <p>·       AA (Original mode: Application Accept - (Enhanced mode: Application acknowledgment: Accept) : le message a été compris et intégré par l'application destinatrice qui prend la responsabilité du message et libère ainsi l'application productrice de toute obligation de le renvoyer.</p>
+        <p>·       AA (Original mode: Application Accept - Enhanced mode: Application acknowledgment: Accept) : le message a été compris et intégré par l'application destinatrice qui prend la responsabilité du message et libère ainsi l'application productrice de toute obligation de le renvoyer.</p>
         <p>·       AE (Original mode: Application Error - Enhanced mode: Application acknowledgment: Error) : le message contient des erreurs de syntaxe.   </p>
-        <p>·       AR (Original mode: Application Reject - Enhanced mode: Application acknowledgment: Reject)  : le message est rejeté pour une raison circonstancielle. Il peut être réémis plus tard. </p>
+        <p>·       AR (Original mode: Application Reject - Enhanced mode: Application acknowledgment: Reject) : le message est rejeté pour une raison circonstancielle. Il peut être réémis plus tard. </p>
       </td>
     </tr>
     <tr>
@@ -2988,7 +2995,8 @@ Le segment MSA contient à minima les champs suivants :
 </table>
 
 ##### Segment ERR
-Ce segment est utilisé au niveau des messages d’acquittement HL7 dans le cas où le champ MSA-1 prend la valeur AE (Application error).
+
+Ce segment est utilisé au niveau des messages d'acquittement HL7 dans le cas où le champ MSA-1 prend la valeur AE (Application error).
 
 Le tableau ci-dessous liste les champs à renseigner pour le segment ERR :
 
@@ -3073,7 +3081,7 @@ _**Note (2) :** dans le cas où le rejet du message HL7 MDM est dû à un probl�
 
 ##### Exemple
 
-Entête MSH d’un message MDM émis par le GESTIONNAIRE vers le CONSOMMATEUR :
+Entête MSH d'un message MDM émis par le GESTIONNAIRE vers le CONSOMMATEUR :
 
 ```
 MSH|^~\&|PFI|CHU_X|DPI|CHU_X|202310030830||MDM^T02^MDM_T02|12345|P|2.6|||||FRA|8859/15|||1.1^ CISIS_CDA_HL7_LPS
@@ -3085,7 +3093,7 @@ MSH|^~\&|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12346|P|2.6|||AL|AL|FRA|8
 MSA|AA|12345
 ```
 
-Un acquittement négatif retourné par le CONSOMMATEUR : version d’HL7 inconnue
+Un acquittement négatif retourné par le CONSOMMATEUR : version d'HL7 inconnue
 
 ```
 MSH|^~\&|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12347|P|2.6|||AL|AL|FRA|8859/15
