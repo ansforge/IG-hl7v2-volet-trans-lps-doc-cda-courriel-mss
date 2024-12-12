@@ -2154,7 +2154,7 @@ Cet OBX permet d'informer le Consommateur que le document est masqué ou non au 
         <p>Libellé :</p>
       </td>
       <td>
-        <p><span class="hl7-color">Document Non Visible par le patient<span></p>
+        <p><span class="hl7-color">Document Non Visible par le patient</span></p>
       </td>
     </tr>
     <tr>
