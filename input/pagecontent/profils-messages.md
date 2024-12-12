@@ -1921,7 +1921,7 @@ Ces métadonnées sont requises et doivent apparaître dans le message MDM dans 
 
 Pour l’ensemble des OBX listés dans cette section, le champ OBX-3 prend ses valeurs dans la [table « MetaDMP/MSS »](meta-dmp-mss.html). Le champ OBX-11 étant requis par le standard HL7v2, la valeur de ce champ est arbitrairement fixée à « F ».
 
-####### Document Masqué aux professionnels de Santé
+**Document Masqué aux professionnels de Santé**
 
 Cet OBX permet au Consommateur de vérifier que le document n'est pas masqué aux professionnels de santé.
 <table class="table-hl7v2">
@@ -2069,7 +2069,7 @@ Cet OBX permet au Consommateur de vérifier que le document n'est pas masqué au
   </tbody>
 </table>
 
-####### Document Non visible par le patient
+**Document Non visible par le patient**
 
 Cet OBX permet d'informer le Consommateur que le document est masqué ou non au patient.
 
@@ -2218,7 +2218,7 @@ Cet OBX permet d'informer le Consommateur que le document est masqué ou non au 
   </tbody>
 </table>
 
-####### Document Non visible par les représentants légaux du patient
+**Document Non visible par les représentants légaux du patient**
 
 Cet OBX permet d'informer le Consommateur que le document est masqué ou non aux représentants légaux du patient.
 
@@ -2367,7 +2367,7 @@ Cet OBX permet d'informer le Consommateur que le document est masqué ou non aux
   </tbody>
 </table>
 
-####### Modification Confidentiality Code
+**Modification Confidentiality Code**
 
 Cet OBX permet d'informer le Consommateur que la transaction porte une modification du CONFIDENTIALITY CODE indiquant une mise à jour de la métadonnée de mise en visibilité du document au patients et/ou aux représentants légaux.
 
