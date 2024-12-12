@@ -2756,7 +2756,7 @@ Le champ MSH.9 « Message type » prend la valeur : `ACK^T02^ACK` ou `ACK^T04^AC
         <p>Contenu</p>
       </th>
       <th>
-        <h>Type donnée</p>
+        <p>Type donnée</p>
       </th>
       <th>
         <p>Caractère optionnel/obligatoire</p>
