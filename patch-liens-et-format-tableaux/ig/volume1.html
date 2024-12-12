@@ -239,17 +239,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#cas-dusage" id="markdown-toc-cas-dusage">Cas d’usage</a></li>
   <li><a href="#réception-et-traitement-par-la-pfi-de-létablissement-hospitalier-dun-document-clinique-provenant-dun-médecin-traitant" id="markdown-toc-réception-et-traitement-par-la-pfi-de-létablissement-hospitalier-dun-document-clinique-provenant-dun-médecin-traitant">Réception et traitement par la PFI de l’établissement hospitalier d’un document clinique provenant d’un médecin traitant</a></li>
-  <li><a href="#réception-dun-compte-rendu-de-biologie-par-un-établissement-hospitalier" id="markdown-toc-réception-dun-compte-rendu-de-biologie-par-un-établissement-hospitalier">Réception d’un compte rendu de biologie par un établissement hospitalier</a></li>
-  <li><a href="#transmission-dun-document-clinique-dun-patient-dun-établissement-hospitalier-vers-un-autre-établissement-hospitalier" id="markdown-toc-transmission-dun-document-clinique-dun-patient-dun-établissement-hospitalier-vers-un-autre-établissement-hospitalier">Transmission d’un document clinique d’un patient d’un établissement hospitalier vers un autre établissement hospitalier</a></li>
   <li><a href="#organisation-du-contexte-métier" id="markdown-toc-organisation-du-contexte-métier">Organisation du contexte métier</a></li>
   <li><a href="#acteurs-et-transactions" id="markdown-toc-acteurs-et-transactions">Acteurs et transactions</a></li>
-  <li><a href="#liste-des-acteurs-et-systèmes-concernés" id="markdown-toc-liste-des-acteurs-et-systèmes-concernés">Liste des Acteurs et systèmes concernés</a></li>
-  <li><a href="#diagramme-des-acteurstransactions" id="markdown-toc-diagramme-des-acteurstransactions">Diagramme des Acteurs/Transactions</a></li>
-  <li><a href="#regroupement-requis-des-acteurs" id="markdown-toc-regroupement-requis-des-acteurs">Regroupement requis des Acteurs</a></li>
   <li><a href="#définition-des-processus-collaboratifs" id="markdown-toc-définition-des-processus-collaboratifs">Définition des processus collaboratifs</a></li>
-  <li><a href="#processus-collaboratif-demande-de-transmission-initiale-de-documents" id="markdown-toc-processus-collaboratif-demande-de-transmission-initiale-de-documents">Processus collaboratif « Demande de transmission initiale de document(s) »</a></li>
-  <li><a href="#processus-collaboratif-demande-de-remplacement-de-documents" id="markdown-toc-processus-collaboratif-demande-de-remplacement-de-documents">Processus collaboratif « Demande de remplacement de document(s) »</a></li>
-  <li><a href="#processus-collaboratif-demande-de-suppression-de-documents" id="markdown-toc-processus-collaboratif-demande-de-suppression-de-documents">Processus collaboratif « Demande de suppression de document(s) »</a></li>
   <li><a href="#identification-des-flux" id="markdown-toc-identification-des-flux">Identification des flux</a></li>
 </ul>
 
@@ -266,11 +258,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>La demande du Dr Adam est détectée et interprétée par la PFI de l’établissement hospitalier. La PFI analyse le contenu du courriel et transmet au destinataire la demande de traitement à réaliser sur le document contenu dans ce courriel.
 Si demandé initialement, l’accusé de réception du courriel est renvoyé vers la BAL du Dr Adam Hoda suite à la réception du mail sur le serveur de messagerie de l’établissement hospitalier.</p>
 
-<h3 id="réception-dun-compte-rendu-de-biologie-par-un-établissement-hospitalier">Réception d’un compte rendu de biologie par un établissement hospitalier</h3>
+<h4 id="réception-dun-compte-rendu-de-biologie-par-un-établissement-hospitalier">Réception d’un compte rendu de biologie par un établissement hospitalier</h4>
 
 <p><strong>Cas d’usage :</strong> un établissement hospitalier (le CH Martin) réceptionne, via MSSanté, un compte rendu de laboratoire concernant un patient pris en charge dans l’établissement, provenant d’un laboratoire d’analyses externe au CH Martin. Le laboratoire d’analyse ainsi que le CH Martin sont dotés d’une PFI. Ce cas d’usage nécessite un accord de partenariat entre les deux structures permettant de rendre possible l’échange MSSanté au travers des BAL applicatives.</p>
 
-<h4 id="description-du-cas-nominal">Description du cas nominal</h4>
+<h5 id="description-du-cas-nominal">Description du cas nominal</h5>
 
 <p>Le médecin biologiste du laboratoire d’analyses valide le compte rendu de biologie via son système de gestion de laboratoire (SGL) et précise les métadonnées de masquage du document aux PS et de visibilité au patient et à ses représentants légaux. Ces métadonnées peuvent également, selon les organisations mises en place, être paramétrées en fonction du type d’analyse réalisé. Le SGL est également paramétré pour prendre en compte les souhaits du médecin biologiste concernant la réception des accusés métier de réception DMP, de réception MSSanté par le serveur de messagerie de l’établissement CH Martin, et l’accusé métier de lecture/traitement du courriel MSSanté et du(des) document(s) CDA contenu(s) dans la pièce jointe IHE_XDM.zip.</p>
 
@@ -299,7 +291,7 @@ La Figure 2 illustre les échanges de bout en bout relatifs à une demande de tr
 
 <p>Le diagramme serait identique dans le cas d’une demande de remplacement ou de suppression du compte rendu.</p>
 
-<h4 id="description-du-cas-en-erreur">Description du cas en erreur</h4>
+<h5 id="description-du-cas-en-erreur">Description du cas en erreur</h5>
 
 <p>Le CR de biologie n’est pas intégré dans le logiciel métier du destinataire pour une raison technique (par exemple, non-conformité de la transaction de demande d’intégration du document) ou pour une raison fonctionnelle (par exemple, le patient n’est pas connu du logiciel destinataire).</p>
 
@@ -316,13 +308,13 @@ La Figure 3 illustre la gestion des erreurs par l’établissement destinataire 
 
 <p>Le diagramme serait identique dans le cas d’une demande de remplacement ou de suppression du compte rendu.</p>
 
-<h3 id="transmission-dun-document-clinique-dun-patient-dun-établissement-hospitalier-vers-un-autre-établissement-hospitalier">Transmission d’un document clinique d’un patient d’un établissement hospitalier vers un autre établissement hospitalier</h3>
+<h4 id="transmission-dun-document-clinique-dun-patient-dun-établissement-hospitalier-vers-un-autre-établissement-hospitalier">Transmission d’un document clinique d’un patient d’un établissement hospitalier vers un autre établissement hospitalier</h4>
 
 <p><strong>Cas d’usage :</strong> Le Dr Jean Dupont exerce dans le service X de l’établissement-A. Il souhaite transférer un de ses patients dans le service Y de l’établissement B. Il demande à la secrétaire médicale du service X d’envoyer le compte rendu d’hospitalisation de son patient à l’équipe de soins du service Y de l’établissement-B.</p>
 
 <p>La secrétaire médicale du service X de l’établissement-A envoie un courriel à la BAL du service Y de l’établissement-B. Les deux établissements sont dotés d’une PFI.</p>
 
-<h4 id="description-du-cas-nominal-1">Description du cas nominal</h4>
+<h5 id="description-du-cas-nominal-1">Description du cas nominal</h5>
 
 <p>Dans ce cas d’usage, le compte rendu d’hospitalisation est envoyé par MSSanté sur la BAL organisationnelle du service Y. La secrétaire de l’établissement-B consulte sa BAL organisationnelle. Si la secrétaire souhaite intégrer automatiquement les documents de la pièce jointe IHE_XDM.zip dans le DPI, elle transfère manuellement les courriels vers la BAL applicative du service Y. Ces courriels sont ensuite détectés par la BAL applicative de la PFI de l’établissement-B qui les traitent, construit pour chaque courriel la demande d’intégration/remplacement/suppression du document et envoie cette demande au DPI du service Y. le document est intégré/remplacé/supprimé dans le DPI du service Y.</p>
 
@@ -360,7 +352,7 @@ La Figure 3 illustre la gestion des erreurs par l’établissement destinataire 
 <p>La Figure 4 illustre les échanges de bout en bout relatifs à une demande de transmission du compte rendu du SGL vers le DPI.
 Le diagramme serait identique dans le cas d’une demande de remplacement ou de suppression du compte rendu.</p>
 
-<h4 id="description-du-cas-dusage-en-erreur">Description du cas d’usage en erreur</h4>
+<h5 id="description-du-cas-dusage-en-erreur">Description du cas d’usage en erreur</h5>
 
 <p>La cinématique des échanges est la même que précédemment mais le compte rendu d’hospitalisation n’est pas intégré dans le DPI du service Y en raison de l’inexistence du patient dans le DPI.</p>
 
@@ -377,11 +369,11 @@ Le diagramme serait identique dans le cas d’une demande de remplacement ou de 
 <p>Le diagramme serait identique dans le cas d’une demande de remplacement ou de suppression du compte rendu.</p>
 
 <h3 id="organisation-du-contexte-métier">Organisation du contexte métier</h3>
-<h4 id="les-groupes-de-processus">Les groupes de processus</h4>
+<h5 id="les-groupes-de-processus">Les groupes de processus</h5>
 
 <p>Réception par la plateforme d’intermédiation (PFI) d’une demande de traitement sur le(s) document(s) clinique(s) relatif(s) à un patient provenant d’une Boîte aux Lettres (BAL) MSSanté, pour transmission et traitement de cette demande au niveau d’un logiciel consommateur au sein de l’établissement. Ce groupe de processus est divisé en quatre processus décrits dans les sections suivantes.</p>
 
-<h4 id="les-processus">Les processus</h4>
+<h5 id="les-processus">Les processus</h5>
 
 <p>Le groupe de processus est divisé en quatre processus :</p>
 
@@ -418,7 +410,7 @@ documents de santé du CI_SIS</a>, la mise à jour des métadonnées du document
 <p>Le périmètre de l’étude englobe les processus en bleu sur le diagramme de paquetage.</p>
 
 <h3 id="acteurs-et-transactions">Acteurs et transactions</h3>
-<h3 id="liste-des-acteurs-et-systèmes-concernés">Liste des Acteurs et systèmes concernés</h3>
+<h4 id="liste-des-acteurs-et-systèmes-concernés">Liste des Acteurs et systèmes concernés</h4>
 
 <p>Le présent volet met en œuvre les Acteurs IHE suivants, représentant le rôle joué par un ou plusieurs composants du système d’information :</p>
 
@@ -483,7 +475,7 @@ documents de santé du CI_SIS</a>, la mise à jour des métadonnées du document
   </tbody>
 </table>
 
-<h3 id="diagramme-des-acteurstransactions">Diagramme des Acteurs/Transactions</h3>
+<h4 id="diagramme-des-acteurstransactions">Diagramme des Acteurs/Transactions</h4>
 
 <div class="figure" style="text-align: center;">
     <img src="image14.png" alt="Figure 7" title="Figure 7 : Diagramme des Acteurs/transactions" style="width:80%;" />
@@ -533,7 +525,7 @@ documents de santé du CI_SIS</a>, la mise à jour des métadonnées du document
   </tbody>
 </table>
 
-<h3 id="regroupement-requis-des-acteurs">Regroupement requis des Acteurs</h3>
+<h4 id="regroupement-requis-des-acteurs">Regroupement requis des Acteurs</h4>
 
 <p>Cette section décrit les exigences en termes de regroupement d’acteurs pour chacun des acteurs identifiés précédemment.</p>
 
@@ -589,7 +581,7 @@ documents de santé du CI_SIS</a>, la mise à jour des métadonnées du document
 </ul>
 
 <h3 id="définition-des-processus-collaboratifs">Définition des processus collaboratifs</h3>
-<h3 id="processus-collaboratif-demande-de-transmission-initiale-de-documents">Processus collaboratif « Demande de transmission initiale de document(s) »</h3>
+<h4 id="processus-collaboratif-demande-de-transmission-initiale-de-documents">Processus collaboratif « Demande de transmission initiale de document(s) »</h4>
 
 <div class="figure" style="text-align: center;">
     <img src="image15.png" alt="Figure 9" title="Figure 9 : Processus collaboratif « Demande de transmission initiale de document(s) » pour intégration au niveau du CONSOMMATEUR " style="width:60%;" />
@@ -646,7 +638,7 @@ documents de santé du CI_SIS</a>, la mise à jour des métadonnées du document
   </tbody>
 </table>
 
-<h3 id="processus-collaboratif-demande-de-remplacement-de-documents">Processus collaboratif « Demande de remplacement de document(s) »</h3>
+<h4 id="processus-collaboratif-demande-de-remplacement-de-documents">Processus collaboratif « Demande de remplacement de document(s) »</h4>
 
 <div class="figure" style="text-align: center;">
     <img src="image16.png" alt="Figure 10" title="Figure 10 : Processus collaboratif « Demande de remplacement de document(s) » au niveau du CONSOMMATEUR" style="width:60%;" />
@@ -709,7 +701,7 @@ Le processus « Demande de remplacement de document(s) » permet également de g
   </tbody>
 </table>
 
-<h3 id="processus-collaboratif-demande-de-suppression-de-documents">Processus collaboratif « Demande de suppression de document(s) »</h3>
+<h4 id="processus-collaboratif-demande-de-suppression-de-documents">Processus collaboratif « Demande de suppression de document(s) »</h4>
 
 <div class="figure" style="text-align: center;">
     <img src="image17.png" alt="Figure 11" title="Figure 11 : Processus collaboratif « Demande de suppression de document(s) » au niveau du CONSOMMATEUR" style="width:60%;" />
@@ -816,7 +808,7 @@ Le processus « Demande de remplacement de document(s) » permet également de g
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 12, 2024 11:18+0000">2024-12-12</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 12, 2024 13:30+0000">2024-12-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
