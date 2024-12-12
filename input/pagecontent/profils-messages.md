@@ -1,6 +1,6 @@
-### Le message MDM en HL7 v2.6
+#### Le message MDM en HL7 v2.6
 
-#### Description du profil du message MDM
+##### Description du profil du message MDM
 Le profil du message MDM est le suivant :
 <table class="table-hl7v2">
   <tr>
@@ -385,7 +385,7 @@ Le message HL7 MDM ne peut transmettre qu’un seul document médical.
 
 Les contraintes apportées par ce volet sur les données du message MDM sont décrites à la [section dédiée](volume2.html#contraintes-appliquées-aux-messages-mdm-dans-le-contexte-de-ce-volet).
 
-#### Description fonctionnelle du message MDM
+##### Description fonctionnelle du message MDM
 
 <div class="figure" style='text-align: center;'>
     <img src="image20.png" alt="Figure 14" title="Figure 14 : Description fonctionnelle du message HL7 MDM" style="width:80%;">
@@ -415,12 +415,12 @@ l'identifiant unique du document (TXA-12), de l'identifiant unique du
 document remplacé (TXA-13) lorsque l'évènement est à T10 et du statut
 indiquant la complétude du document (TXA-17).
 
-### Contraintes appliquées aux messages MDM dans le contexte de ce volet
+#### Contraintes appliquées aux messages MDM dans le contexte de ce volet
 Dans la suite de cette section, les valeurs indiquées en bleu dans les tableaux indiquent les valeurs fixes à insérer dans le champ du message.
 
-#### Eléments de contrôle du message MDM
+##### Eléments de contrôle du message MDM
 
-##### Le segment MSH – Header du message
+###### Le segment MSH – Header du message
 
 <table class="table-hl7v2">
   <tbody>
@@ -650,13 +650,13 @@ Dans la suite de cette section, les valeurs indiquées en bleu dans les tableaux
   </tbody>
 </table>
 
-#####  Exemples
+###### Exemples
 
 Entête MSH d’un message MDM émis par le GESTIONNAIRE :
 
 `MSH|^~\&|PFI|CHU_X|DPI|CHU_X|202310030830||MDM^T02^MDM^T02^MDM_T02|12345|P|2.6|||||FRA|8859/15|||1.1^ CISIS_CDA_HL7_LPS`
 
-#### Les données concernant le patient et la venue du patient
+##### Les données concernant le patient et la venue du patient
 
 Le message HL7 MDM est centré sur un seul patient. Les informations concernant le patient sont décrites par le segment requis PID. Le segment PV1, requis dans le standard, représente la venue courante du patient.
 
@@ -745,7 +745,8 @@ Pour le segment PV1, ce volet ajoute les contraintes suivantes :
   </tbody>
 </table>
 
-#### Le segment ORC
+##### Le segment ORC
+
 <table class="table-hl7v2">
   <tbody>
     <tr>
@@ -791,7 +792,7 @@ Pour le segment PV1, ce volet ajoute les contraintes suivantes :
   </tbody>
 </table>
 
-#### Le segment OBR
+##### Le segment OBR
 
 <table class="table-hl7v2">
   <tbody>
@@ -867,7 +868,7 @@ Pour le segment PV1, ce volet ajoute les contraintes suivantes :
   </tbody>
 </table>
 
-#### Les données d’entête du document – Segment TXA
+##### Les données d’entête du document – Segment TXA
 
 Le message MDM requiert l’utilisation du segment TXA qui porte les métadonnées associées au document contenu dans le message. Les contraintes apportées par ce volet sur le segment TXA sont les suivantes :
 <table class="table-hl7v2">
@@ -1015,8 +1016,8 @@ la suivante :
 
     -   TXA-12.4 < = Non renseigné
 
-#### Les données concernant la demande de traitement sur le document
-##### Le groupe de segments OBXNTE portant le document CDA
+##### Les données concernant la demande de traitement sur le document
+###### Le groupe de segments OBXNTE portant le document CDA
 
 Le message HL7 MDM contient un premier groupe OBXNTE composé :
 
@@ -1786,7 +1787,7 @@ _**Note 2 :** en cas de transfert du courriel original au niveau de l’établis
 
 _**Note 3 :** dans la configuration où le GESTIONNAIRE est en capacité de maintenir une table de correspondance entre une BAL et une organisation correspondante (service clinique, UF, pôle…), le champ PRT-8 permet de préciser l’organisation de l’établissement concerné par la demande de traitement sur le document au niveau du CONSOMMATEUR. Dans le cas où le GESTIONNAIRE n’est pas en capacité de maintenir cette table de correspondance, le système CONSOMMATEUR peut prévoir un paramétrage pour associer une organisation de l’établissement (service clinique, UF, pôle…) à une BAL afin de réaliser le traitement sur le document dans la bonne organisation._
 
-##### Le groupe de segments portant les informations du courriel MSSanté
+###### Le groupe de segments portant les informations du courriel MSSanté
 
 <table class="table-hl7v2">
   <tbody>
@@ -1910,7 +1911,7 @@ _**Note 3 :** dans la configuration où le GESTIONNAIRE est en capacité de main
   </tbody>
 </table>
 
-##### Groupes OBXNTE portant les métadonnées MSSanté
+###### Groupes OBXNTE portant les métadonnées MSSanté
 
 Cette section présente uniquement les métadonnées de restriction indispensables aux échanges avec la MSSanté. Ces groupes sont conformes à ceux définis dans le volet « Transmission de documents CDA en HL7v2 » version 2.1
 
@@ -1920,7 +1921,7 @@ Ces métadonnées sont requises et doivent apparaître dans le message MDM dans 
 
 Pour l’ensemble des OBX listés dans cette section, le champ OBX-3 prend ses valeurs dans la [table « MetaDMP/MSS »](meta-dmp-mss.html). Le champ OBX-11 étant requis par le standard HL7v2, la valeur de ce champ est arbitrairement fixée à « F ».
 
-###### Document Masqué aux professionnels de Santé
+####### Document Masqué aux professionnels de Santé
 
 Cet OBX permet au Consommateur de vérifier que le document n'est pas masqué aux professionnels de santé.
 <table class="table-hl7v2">
@@ -2068,7 +2069,7 @@ Cet OBX permet au Consommateur de vérifier que le document n'est pas masqué au
   </tbody>
 </table>
 
-###### Document Non visible par le patient
+####### Document Non visible par le patient
 
 Cet OBX permet d'informer le Consommateur que le document est masqué ou non au patient.
 
@@ -2217,7 +2218,7 @@ Cet OBX permet d'informer le Consommateur que le document est masqué ou non au 
   </tbody>
 </table>
 
-###### Document Non visible par les représentants légaux du patient
+####### Document Non visible par les représentants légaux du patient
 
 Cet OBX permet d'informer le Consommateur que le document est masqué ou non aux représentants légaux du patient.
 
@@ -2366,7 +2367,7 @@ Cet OBX permet d'informer le Consommateur que le document est masqué ou non aux
   </tbody>
 </table>
 
-###### Modification Confidentiality Code
+####### Modification Confidentiality Code
 
 Cet OBX permet d'informer le Consommateur que la transaction porte une modification du CONFIDENTIALITY CODE indiquant une mise à jour de la métadonnée de mise en visibilité du document au patients et/ou aux représentants légaux.
 
@@ -2517,9 +2518,9 @@ Cet OBX permet d'informer le Consommateur que la transaction porte une modificat
 
 Un exemple est disponible [ici](exemples.html).
 
-### Le message d'acquittement HL7v2
+#### Le message d'acquittement HL7v2
 
-#### Profil du message ACK
+##### Profil du message ACK
 
 Le profil du message ACK est le suivant :
 
@@ -2630,7 +2631,7 @@ Le profil du message ACK est le suivant :
   </tbody>
 </table>
 
-#### Structure fonctionnelle du message
+##### Structure fonctionnelle du message
 
 Après réception du message MDM, le LPS (DPI ou RIS dans le contexte SEGUR vague 2) va acquitter le message. Ci-dessous la structure du message ACK :
 <div class="figure" style='text-align: center;'>
@@ -2641,9 +2642,9 @@ Après réception du message MDM, le LPS (DPI ou RIS dans le contexte SEGUR vagu
 <br>
 Ces segments doivent être conformes au standard HL7v2.6.
 
-#### Description des contraintes à appliquer sur le message ACK
+##### Description des contraintes à appliquer sur le message ACK
 
-##### Segment MSH
+###### Segment MSH
 
 Le segment MSH reprend une partie des informations du message initial :
 
@@ -2958,7 +2959,7 @@ Le champ MSH.9 « Message type » prend la valeur : `ACK^T02^ACK` ou `ACK^T04^AC
   </tbody>
 </table>
 
-##### Segment MSA
+###### Segment MSA
 
 Le segment MSA contient à minima les champs suivants : 
 
@@ -2994,7 +2995,7 @@ Le segment MSA contient à minima les champs suivants :
   </tbody>
 </table>
 
-##### Segment ERR
+###### Segment ERR
 
 Ce segment est utilisé au niveau des messages d'acquittement HL7 dans le cas où le champ MSA-1 prend la valeur AE (Application error).
 
@@ -3079,7 +3080,7 @@ _**(Note 1) :** les valeurs possibles pour les champs ERR-3 et ERR-5 sont listé
 
 _**Note (2) :** dans le cas où le rejet du message HL7 MDM est dû à un problème applicatif au niveau du CONSOMMATEUR, le champ ERR-3 sera renseigné avec la valeur « 207 » (Application error) et le champ ERR-5 sera renseigné avec une valeur comprise dans la table applicationErrorCode. Dans le cas où le message MDM est rejeté par le système CONSOMMATEUR pour une raison technique, le champ ERR-3 sera renseigné avec une valeur comprise dans la table messageErrorCondition et le champ ERR-5 ne sera pas renseigné._
 
-##### Exemple
+###### Exemple
 
 Entête MSH d'un message MDM émis par le GESTIONNAIRE vers le CONSOMMATEUR :
 
