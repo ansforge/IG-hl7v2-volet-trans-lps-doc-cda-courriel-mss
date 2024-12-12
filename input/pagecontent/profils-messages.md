@@ -3,6 +3,7 @@
 ##### Description du profil du message MDM
 Le profil du message MDM est le suivant :
 <table class="table-hl7v2">
+<tbody>
   <tr>
     <th>
       <p>Segment</p>
@@ -20,8 +21,7 @@ Le profil du message MDM est le suivant :
       <p>§ HL7</p>
     </th>
   </tr>
-  <tbody>
-    <tr>
+  <tr>
       <td>
         <p>MSH</p>
       </td>
