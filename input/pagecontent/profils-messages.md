@@ -2946,7 +2946,7 @@ Le champ MSH.9 « Message type » prend la valeur : `ACK^T02^ACK` ou `ACK^T04^AC
       </td>
       <td>
         <p>Jeux de caractères, valeurs possibles :</p>
-        <p><span class="hl7-color">UNICODE UTF-8</span> ou <span class="hl7-color">8859/15</span</p>
+        <p><span class="hl7-color">UNICODE UTF-8</span> ou <span class="hl7-color">8859/15</span></p>
       </td>
       <td>
         <p>ID</p>
