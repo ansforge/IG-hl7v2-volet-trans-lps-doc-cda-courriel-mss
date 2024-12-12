@@ -3381,21 +3381,21 @@ Ces segments doivent être conformes au standard HL7v2.6.</p>
       </td>
       <td>
         <p>Jeux de caractères, valeurs possibles :</p>
-        <p><span class="hl7-color">UNICODE UTF-8</span> ou <span class="hl7-color">8859/15&lt;/span&lt;/p&gt;
-      &lt;/td&gt;
+        <p><span class="hl7-color">UNICODE UTF-8</span> ou <span class="hl7-color">8859/15</span></p>
+      </td>
       <td>
         <p>ID</p>
       </td>
       <td>
         <p>R</p>
       </td>
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+    </tr>
+  </tbody>
+</table>
 
-##### Segment MSA
+<h5 id="segment-msa">Segment MSA</h5>
 
-Le segment MSA contient à minima les champs suivants : 
+<p>Le segment MSA contient à minima les champs suivants :</p>
 
 <table class="table-hl7v2">
   <tbody>
@@ -3429,11 +3429,11 @@ Le segment MSA contient à minima les champs suivants :
   </tbody>
 </table>
 
-##### Segment ERR
+<h5 id="segment-err">Segment ERR</h5>
 
-Ce segment est utilisé au niveau des messages d'acquittement HL7 dans le cas où le champ MSA-1 prend la valeur AE (Application error).
+<p>Ce segment est utilisé au niveau des messages d’acquittement HL7 dans le cas où le champ MSA-1 prend la valeur AE (Application error).</p>
 
-Le tableau ci-dessous liste les champs à renseigner pour le segment ERR :
+<p>Le tableau ci-dessous liste les champs à renseigner pour le segment ERR :</p>
 
 <table class="table-hl7v2">
   <tbody>
@@ -3510,41 +3510,36 @@ Le tableau ci-dessous liste les champs à renseigner pour le segment ERR :
   </tbody>
 </table>
 
-_**(Note 1) :** les valeurs possibles pour les champs ERR-3 et ERR-5 sont listées dans les tables messageErrorCondition et applicationErrorCondition précisées [ici](error-codes.html)._
+<p><em><strong>(Note 1) :</strong> les valeurs possibles pour les champs ERR-3 et ERR-5 sont listées dans les tables messageErrorCondition et applicationErrorCondition précisées <a href="error-codes.html">ici</a>.</em></p>
 
-_**Note (2) :** dans le cas où le rejet du message HL7 MDM est dû à un problème applicatif au niveau du CONSOMMATEUR, le champ ERR-3 sera renseigné avec la valeur « 207 » (Application error) et le champ ERR-5 sera renseigné avec une valeur comprise dans la table applicationErrorCode. Dans le cas où le message MDM est rejeté par le système CONSOMMATEUR pour une raison technique, le champ ERR-3 sera renseigné avec une valeur comprise dans la table messageErrorCondition et le champ ERR-5 ne sera pas renseigné._
+<p><em><strong>Note (2) :</strong> dans le cas où le rejet du message HL7 MDM est dû à un problème applicatif au niveau du CONSOMMATEUR, le champ ERR-3 sera renseigné avec la valeur « 207 » (Application error) et le champ ERR-5 sera renseigné avec une valeur comprise dans la table applicationErrorCode. Dans le cas où le message MDM est rejeté par le système CONSOMMATEUR pour une raison technique, le champ ERR-3 sera renseigné avec une valeur comprise dans la table messageErrorCondition et le champ ERR-5 ne sera pas renseigné.</em></p>
 
-##### Exemple
+<h5 id="exemple">Exemple</h5>
 
-Entête MSH d'un message MDM émis par le GESTIONNAIRE vers le CONSOMMATEUR :
+<p>Entête MSH d’un message MDM émis par le GESTIONNAIRE vers le CONSOMMATEUR :</p>
 
-```
-MSH|^~\&amp;|PFI|CHU_X|DPI|CHU_X|202310030830||MDM^T02^MDM_T02|12345|P|2.6|||||FRA|8859/15|||1.1^ CISIS_CDA_HL7_LPS
-```
-Un acquittement positif retourné par le CONSOMMATEUR :
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MSH|^~\&amp;|PFI|CHU_X|DPI|CHU_X|202310030830||MDM^T02^MDM_T02|12345|P|2.6|||||FRA|8859/15|||1.1^ CISIS_CDA_HL7_LPS
+</code></pre></div></div>
+<p>Un acquittement positif retourné par le CONSOMMATEUR :</p>
 
-```
-MSH|^~\&amp;|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12346|P|2.6|||AL|AL|FRA|8859/15
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MSH|^~\&amp;|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12346|P|2.6|||AL|AL|FRA|8859/15
 MSA|AA|12345
-```
+</code></pre></div></div>
 
-Un acquittement négatif retourné par le CONSOMMATEUR : version d'HL7 inconnue
+<p>Un acquittement négatif retourné par le CONSOMMATEUR : version d’HL7 inconnue</p>
 
-```
-MSH|^~\&amp;|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12347|P|2.6|||AL|AL|FRA|8859/15
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MSH|^~\&amp;|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12347|P|2.6|||AL|AL|FRA|8859/15
 MSA|AE|12345
 ERR||MSH^1^12|203^Unsupported version id^messageErrorCondition|E
-```
+</code></pre></div></div>
 
-Un acquittement négatif retourné par le CONSOMMATEUR : patient inconnu du DPI (erreur applicative)
+<p>Un acquittement négatif retourné par le CONSOMMATEUR : patient inconnu du DPI (erreur applicative)</p>
 
-```
-MSH|^~\&amp;|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12347|P|2.6|||AL|AL|FRA|8859/15
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MSH|^~\&amp;|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12347|P|2.6|||AL|AL|FRA|8859/15
 MSA|AE|12345
 ERR||PID^1^3|207^Application error^messageErrorCondition| E|902^Identifiant de patient inconnu^applicationErrorCode
-```
+</code></pre></div></div>
 
-</span></p></td></tr></tbody></table>
 
 
 
@@ -3586,7 +3581,7 @@ ERR||PID^1^3|207^Application error^messageErrorCondition| E|902^Identifiant de p
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 12, 2024 11:09+0000">2024-12-12</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 12, 2024 11:18+0000">2024-12-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
