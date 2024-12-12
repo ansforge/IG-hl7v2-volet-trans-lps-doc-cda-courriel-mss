@@ -246,6 +246,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#profils-de-messages" id="markdown-toc-profils-de-messages">Profils de messages</a></li>
   <li><a href="#le-message-mdm-en-hl7-v26" id="markdown-toc-le-message-mdm-en-hl7-v26">Le message MDM en HL7 v2.6</a></li>
   <li><a href="#contraintes-appliquées-aux-messages-mdm-dans-le-contexte-de-ce-volet" id="markdown-toc-contraintes-appliquées-aux-messages-mdm-dans-le-contexte-de-ce-volet">Contraintes appliquées aux messages MDM dans le contexte de ce volet</a></li>
+  <li><a href="#le-message-dacquittement-hl7v2" id="markdown-toc-le-message-dacquittement-hl7v2">Le message d’acquittement HL7v2</a></li>
 </ul>
 
 </div>
@@ -2588,9 +2589,9 @@ tableaux suivants sont à renseigner dans le message MDM :</p>
         <p>Libellé :</p>
       </td>
       <td>
-        <p><span class="hl7-color">Document Non Visible par le patient<span>&lt;/p&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
+        <p><span class="hl7-color">Document Non Visible par le patient</span></p>
+      </td>
+    </tr>
     <tr>
       <td>
         <p>&gt; OBX-3.3 :</p>
@@ -2648,12 +2649,12 @@ tableaux suivants sont à renseigner dans le message MDM :</p>
         <p>Valeur fixée à « <span class="hl7-color">F</span> » </p>
       </td>
     </tr>
-  &lt;/tbody&gt;
-&lt;/table&gt;
+  </tbody>
+</table>
 
-###### Document Non visible par les représentants légaux du patient
+<h6 id="document-non-visible-par-les-représentants-légaux-du-patient">Document Non visible par les représentants légaux du patient</h6>
 
-Cet OBX permet d'informer le Consommateur que le document est masqué ou non aux représentants légaux du patient.
+<p>Cet OBX permet d’informer le Consommateur que le document est masqué ou non aux représentants légaux du patient.</p>
 
 <table class="table-hl7v2">
   <tbody>
@@ -2800,9 +2801,9 @@ Cet OBX permet d'informer le Consommateur que le document est masqué ou non aux
   </tbody>
 </table>
 
-###### Modification Confidentiality Code
+<h6 id="modification-confidentiality-code">Modification Confidentiality Code</h6>
 
-Cet OBX permet d'informer le Consommateur que la transaction porte une modification du CONFIDENTIALITY CODE indiquant une mise à jour de la métadonnée de mise en visibilité du document au patients et/ou aux représentants légaux.
+<p>Cet OBX permet d’informer le Consommateur que la transaction porte une modification du CONFIDENTIALITY CODE indiquant une mise à jour de la métadonnée de mise en visibilité du document au patients et/ou aux représentants légaux.</p>
 
 <table class="table-hl7v2">
   <tbody>
@@ -2949,13 +2950,13 @@ Cet OBX permet d'informer le Consommateur que la transaction porte une modificat
   </tbody>
 </table>
 
-Un exemple est disponible [ici](exemples.html).
+<p>Un exemple est disponible <a href="exemples.html">ici</a>.</p>
 
-### Le message d'acquittement HL7v2
+<h3 id="le-message-dacquittement-hl7v2">Le message d’acquittement HL7v2</h3>
 
-#### Profil du message ACK
+<h4 id="profil-du-message-ack">Profil du message ACK</h4>
 
-Le profil du message ACK est le suivant :
+<p>Le profil du message ACK est le suivant :</p>
 
 <table class="table-hl7v2">
   <tr>
@@ -3064,22 +3065,22 @@ Le profil du message ACK est le suivant :
   </tbody>
 </table>
 
-#### Structure fonctionnelle du message
+<h4 id="structure-fonctionnelle-du-message">Structure fonctionnelle du message</h4>
 
-Après réception du message MDM, le LPS (DPI ou RIS dans le contexte SEGUR vague 2) va acquitter le message. Ci-dessous la structure du message ACK :
+<p>Après réception du message MDM, le LPS (DPI ou RIS dans le contexte SEGUR vague 2) va acquitter le message. Ci-dessous la structure du message ACK :</p>
 <div class="figure" style="text-align: center;">
     <img src="image21.png" alt="Figure 15" title="Figure 15 : Description fonctionnelle du message ACK
 " style="width:80%;" />
     <figcaption><b>Figure 15 : Description fonctionnelle du message ACK</b></figcaption>
-</div>    
-<br />
-Ces segments doivent être conformes au standard HL7v2.6.
+</div>
+<p><br />
+Ces segments doivent être conformes au standard HL7v2.6.</p>
 
-#### Description des contraintes à appliquer sur le message ACK
+<h4 id="description-des-contraintes-à-appliquer-sur-le-message-ack">Description des contraintes à appliquer sur le message ACK</h4>
 
-##### Segment MSH
+<h5 id="segment-msh">Segment MSH</h5>
 
-Le segment MSH reprend une partie des informations du message initial :
+<p>Le segment MSH reprend une partie des informations du message initial :</p>
 
 <table class="table-hl7v2">
   <tbody>
@@ -3178,7 +3179,7 @@ Le segment MSH reprend une partie des informations du message initial :
   </tbody>
 </table>
 
-Le champ MSH.9 « Message type » prend la valeur : `ACK^T02^ACK` ou `ACK^T04^ACK` ou `ACK^T10^ACK` selon l’évènement du message initial.
+<p>Le champ MSH.9 « Message type » prend la valeur : <code class="language-plaintext highlighter-rouge">ACK^T02^ACK</code> ou <code class="language-plaintext highlighter-rouge">ACK^T04^ACK</code> ou <code class="language-plaintext highlighter-rouge">ACK^T10^ACK</code> selon l’évènement du message initial.</p>
 
 <table class="table-hl7v2">
   <tbody>
@@ -3543,7 +3544,7 @@ MSA|AE|12345
 ERR||PID^1^3|207^Application error^messageErrorCondition| E|902^Identifiant de patient inconnu^applicationErrorCode
 ```
 
-</span></p></td></tr></h></th></tr></tbody></table></span></span></p></td></tr></tbody></table>
+</span></p></td></tr></h></th></tr></tbody></table>
 
 
 
@@ -3585,7 +3586,7 @@ ERR||PID^1^3|207^Application error^messageErrorCondition| E|902^Identifiant de p
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 12, 2024 09:42+0000">2024-12-12</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 12, 2024 10:49+0000">2024-12-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
