@@ -1,8 +1,8 @@
-#### Les groupes de processus
+##### Les groupes de processus
 
 Réception par la plateforme d’intermédiation (PFI) d’une demande de traitement sur le(s) document(s) clinique(s) relatif(s) à un patient provenant d’une Boîte aux Lettres (BAL) MSSanté, pour transmission et traitement de cette demande au niveau d’un logiciel consommateur au sein de l’établissement. Ce groupe de processus est divisé en quatre processus décrits dans les sections suivantes.
 
-#### Les processus
+##### Les processus
 
 Le groupe de processus est divisé en quatre processus :
 

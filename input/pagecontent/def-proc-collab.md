@@ -1,4 +1,4 @@
-### Processus collaboratif « Demande de transmission initiale de document(s) »
+#### Processus collaboratif « Demande de transmission initiale de document(s) »
 
 <div class="figure" style='text-align: center;'>
     <img src="image15.png" alt="Figure 9" title="Figure 9 : Processus collaboratif « Demande de transmission initiale de document(s) » pour intégration au niveau du CONSOMMATEUR " style="width:60%;">
@@ -55,7 +55,7 @@
   </tbody>
 </table>
 
-### Processus collaboratif « Demande de remplacement de document(s) »
+#### Processus collaboratif « Demande de remplacement de document(s) »
 
 <div class="figure" style='text-align: center;'>
     <img src="image16.png" alt="Figure 10" title="Figure 10 : Processus collaboratif « Demande de remplacement de document(s) » au niveau du CONSOMMATEUR" style="width:60%;">
@@ -118,7 +118,7 @@ Ainsi, dans le cas d’une demande de mise à jour des métadonnées de masquage
   </tbody>
 </table>
 
-### Processus collaboratif « Demande de suppression de document(s) »
+#### Processus collaboratif « Demande de suppression de document(s) »
 
 <div class="figure" style='text-align: center;'>
     <img src="image17.png" alt="Figure 11" title="Figure 11 : Processus collaboratif « Demande de suppression de document(s) » au niveau du CONSOMMATEUR" style="width:60%;">
