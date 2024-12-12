@@ -1,6 +1,6 @@
 Cette section décrit, **à titre d’exemple et de façon non exhaustive**, un ensemble de cas d’usage. Pour une meilleure compréhension du lecteur, ces cas d’usage couvrent les échanges entre la PFI et le logiciel métier consommateur, mais également les échanges en amont de la PFI de l’établissement destinataire (et donc au-delà du périmètre du présent volet).
 
-### Réception et traitement par la PFI de l’établissement hospitalier d’un document clinique provenant d’un médecin traitant
+#### Réception et traitement par la PFI de l’établissement hospitalier d’un document clinique provenant d’un médecin traitant
 
 **Cas d’usage :** le médecin traitant du patient, le Dr Adam Hoda, envoi un compte rendu au médecin hospitalier qui prend en charge son patient.
 
