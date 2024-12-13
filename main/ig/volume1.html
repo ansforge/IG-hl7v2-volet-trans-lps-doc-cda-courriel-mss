@@ -238,18 +238,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#cas-dusage" id="markdown-toc-cas-dusage">Cas d’usage</a></li>
-  <li><a href="#réception-et-traitement-par-la-pfi-de-létablissement-hospitalier-dun-document-clinique-provenant-dun-médecin-traitant" id="markdown-toc-réception-et-traitement-par-la-pfi-de-létablissement-hospitalier-dun-document-clinique-provenant-dun-médecin-traitant">Réception et traitement par la PFI de l’établissement hospitalier d’un document clinique provenant d’un médecin traitant</a></li>
-  <li><a href="#réception-dun-compte-rendu-de-biologie-par-un-établissement-hospitalier" id="markdown-toc-réception-dun-compte-rendu-de-biologie-par-un-établissement-hospitalier">Réception d’un compte rendu de biologie par un établissement hospitalier</a></li>
-  <li><a href="#transmission-dun-document-clinique-dun-patient-dun-établissement-hospitalier-vers-un-autre-établissement-hospitalier" id="markdown-toc-transmission-dun-document-clinique-dun-patient-dun-établissement-hospitalier-vers-un-autre-établissement-hospitalier">Transmission d’un document clinique d’un patient d’un établissement hospitalier vers un autre établissement hospitalier</a></li>
   <li><a href="#organisation-du-contexte-métier" id="markdown-toc-organisation-du-contexte-métier">Organisation du contexte métier</a></li>
   <li><a href="#acteurs-et-transactions" id="markdown-toc-acteurs-et-transactions">Acteurs et transactions</a></li>
-  <li><a href="#liste-des-acteurs-et-systèmes-concernés" id="markdown-toc-liste-des-acteurs-et-systèmes-concernés">Liste des Acteurs et systèmes concernés</a></li>
-  <li><a href="#diagramme-des-acteurstransactions" id="markdown-toc-diagramme-des-acteurstransactions">Diagramme des Acteurs/Transactions</a></li>
-  <li><a href="#regroupement-requis-des-acteurs" id="markdown-toc-regroupement-requis-des-acteurs">Regroupement requis des Acteurs</a></li>
   <li><a href="#définition-des-processus-collaboratifs" id="markdown-toc-définition-des-processus-collaboratifs">Définition des processus collaboratifs</a></li>
-  <li><a href="#processus-collaboratif-demande-de-transmission-initiale-de-documents" id="markdown-toc-processus-collaboratif-demande-de-transmission-initiale-de-documents">Processus collaboratif « Demande de transmission initiale de document(s) »</a></li>
-  <li><a href="#processus-collaboratif-demande-de-remplacement-de-documents" id="markdown-toc-processus-collaboratif-demande-de-remplacement-de-documents">Processus collaboratif « Demande de remplacement de document(s) »</a></li>
-  <li><a href="#processus-collaboratif-demande-de-suppression-de-documents" id="markdown-toc-processus-collaboratif-demande-de-suppression-de-documents">Processus collaboratif « Demande de suppression de document(s) »</a></li>
   <li><a href="#identification-des-flux" id="markdown-toc-identification-des-flux">Identification des flux</a></li>
 </ul>
 
@@ -257,7 +248,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="cas-dusage">Cas d’usage</h3>
 <p>Cette section décrit, <strong>à titre d’exemple et de façon non exhaustive</strong>, un ensemble de cas d’usage. Pour une meilleure compréhension du lecteur, ces cas d’usage couvrent les échanges entre la PFI et le logiciel métier consommateur, mais également les échanges en amont de la PFI de l’établissement destinataire (et donc au-delà du périmètre du présent volet).</p>
 
-<h3 id="réception-et-traitement-par-la-pfi-de-létablissement-hospitalier-dun-document-clinique-provenant-dun-médecin-traitant">Réception et traitement par la PFI de l’établissement hospitalier d’un document clinique provenant d’un médecin traitant</h3>
+<h4 id="réception-et-traitement-par-la-pfi-de-létablissement-hospitalier-dun-document-clinique-provenant-dun-médecin-traitant">Réception et traitement par la PFI de l’établissement hospitalier d’un document clinique provenant d’un médecin traitant</h4>
 
 <p><strong>Cas d’usage :</strong> le médecin traitant du patient, le Dr Adam Hoda, envoi un compte rendu au médecin hospitalier qui prend en charge son patient.</p>
 
@@ -266,11 +257,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>La demande du Dr Adam est détectée et interprétée par la PFI de l’établissement hospitalier. La PFI analyse le contenu du courriel et transmet au destinataire la demande de traitement à réaliser sur le document contenu dans ce courriel.
 Si demandé initialement, l’accusé de réception du courriel est renvoyé vers la BAL du Dr Adam Hoda suite à la réception du mail sur le serveur de messagerie de l’établissement hospitalier.</p>
 
-<h3 id="réception-dun-compte-rendu-de-biologie-par-un-établissement-hospitalier">Réception d’un compte rendu de biologie par un établissement hospitalier</h3>
+<h4 id="réception-dun-compte-rendu-de-biologie-par-un-établissement-hospitalier">Réception d’un compte rendu de biologie par un établissement hospitalier</h4>
 
 <p><strong>Cas d’usage :</strong> un établissement hospitalier (le CH Martin) réceptionne, via MSSanté, un compte rendu de laboratoire concernant un patient pris en charge dans l’établissement, provenant d’un laboratoire d’analyses externe au CH Martin. Le laboratoire d’analyse ainsi que le CH Martin sont dotés d’une PFI. Ce cas d’usage nécessite un accord de partenariat entre les deux structures permettant de rendre possible l’échange MSSanté au travers des BAL applicatives.</p>
 
-<h4 id="description-du-cas-nominal">Description du cas nominal</h4>
+<h5 id="description-du-cas-nominal">Description du cas nominal</h5>
 
 <p>Le médecin biologiste du laboratoire d’analyses valide le compte rendu de biologie via son système de gestion de laboratoire (SGL) et précise les métadonnées de masquage du document aux PS et de visibilité au patient et à ses représentants légaux. Ces métadonnées peuvent également, selon les organisations mises en place, être paramétrées en fonction du type d’analyse réalisé. Le SGL est également paramétré pour prendre en compte les souhaits du médecin biologiste concernant la réception des accusés métier de réception DMP, de réception MSSanté par le serveur de messagerie de l’établissement CH Martin, et l’accusé métier de lecture/traitement du courriel MSSanté et du(des) document(s) CDA contenu(s) dans la pièce jointe IHE_XDM.zip.</p>
 
@@ -299,7 +290,7 @@ La Figure 2 illustre les échanges de bout en bout relatifs à une demande de tr
 
 <p>Le diagramme serait identique dans le cas d’une demande de remplacement ou de suppression du compte rendu.</p>
 
-<h4 id="description-du-cas-en-erreur">Description du cas en erreur</h4>
+<h5 id="description-du-cas-en-erreur">Description du cas en erreur</h5>
 
 <p>Le CR de biologie n’est pas intégré dans le logiciel métier du destinataire pour une raison technique (par exemple, non-conformité de la transaction de demande d’intégration du document) ou pour une raison fonctionnelle (par exemple, le patient n’est pas connu du logiciel destinataire).</p>
 
@@ -316,13 +307,13 @@ La Figure 3 illustre la gestion des erreurs par l’établissement destinataire 
 
 <p>Le diagramme serait identique dans le cas d’une demande de remplacement ou de suppression du compte rendu.</p>
 
-<h3 id="transmission-dun-document-clinique-dun-patient-dun-établissement-hospitalier-vers-un-autre-établissement-hospitalier">Transmission d’un document clinique d’un patient d’un établissement hospitalier vers un autre établissement hospitalier</h3>
+<h4 id="transmission-dun-document-clinique-dun-patient-dun-établissement-hospitalier-vers-un-autre-établissement-hospitalier">Transmission d’un document clinique d’un patient d’un établissement hospitalier vers un autre établissement hospitalier</h4>
 
 <p><strong>Cas d’usage :</strong> Le Dr Jean Dupont exerce dans le service X de l’établissement-A. Il souhaite transférer un de ses patients dans le service Y de l’établissement B. Il demande à la secrétaire médicale du service X d’envoyer le compte rendu d’hospitalisation de son patient à l’équipe de soins du service Y de l’établissement-B.</p>
 
 <p>La secrétaire médicale du service X de l’établissement-A envoie un courriel à la BAL du service Y de l’établissement-B. Les deux établissements sont dotés d’une PFI.</p>
 
-<h4 id="description-du-cas-nominal-1">Description du cas nominal</h4>
+<h5 id="description-du-cas-nominal-1">Description du cas nominal</h5>
 
 <p>Dans ce cas d’usage, le compte rendu d’hospitalisation est envoyé par MSSanté sur la BAL organisationnelle du service Y. La secrétaire de l’établissement-B consulte sa BAL organisationnelle. Si la secrétaire souhaite intégrer automatiquement les documents de la pièce jointe IHE_XDM.zip dans le DPI, elle transfère manuellement les courriels vers la BAL applicative du service Y. Ces courriels sont ensuite détectés par la BAL applicative de la PFI de l’établissement-B qui les traitent, construit pour chaque courriel la demande d’intégration/remplacement/suppression du document et envoie cette demande au DPI du service Y. le document est intégré/remplacé/supprimé dans le DPI du service Y.</p>
 
@@ -360,7 +351,7 @@ La Figure 3 illustre la gestion des erreurs par l’établissement destinataire 
 <p>La Figure 4 illustre les échanges de bout en bout relatifs à une demande de transmission du compte rendu du SGL vers le DPI.
 Le diagramme serait identique dans le cas d’une demande de remplacement ou de suppression du compte rendu.</p>
 
-<h4 id="description-du-cas-dusage-en-erreur">Description du cas d’usage en erreur</h4>
+<h5 id="description-du-cas-dusage-en-erreur">Description du cas d’usage en erreur</h5>
 
 <p>La cinématique des échanges est la même que précédemment mais le compte rendu d’hospitalisation n’est pas intégré dans le DPI du service Y en raison de l’inexistence du patient dans le DPI.</p>
 
@@ -377,11 +368,11 @@ Le diagramme serait identique dans le cas d’une demande de remplacement ou de 
 <p>Le diagramme serait identique dans le cas d’une demande de remplacement ou de suppression du compte rendu.</p>
 
 <h3 id="organisation-du-contexte-métier">Organisation du contexte métier</h3>
-<h4 id="les-groupes-de-processus">Les groupes de processus</h4>
+<h5 id="les-groupes-de-processus">Les groupes de processus</h5>
 
 <p>Réception par la plateforme d’intermédiation (PFI) d’une demande de traitement sur le(s) document(s) clinique(s) relatif(s) à un patient provenant d’une Boîte aux Lettres (BAL) MSSanté, pour transmission et traitement de cette demande au niveau d’un logiciel consommateur au sein de l’établissement. Ce groupe de processus est divisé en quatre processus décrits dans les sections suivantes.</p>
 
-<h4 id="les-processus">Les processus</h4>
+<h5 id="les-processus">Les processus</h5>
 
 <p>Le groupe de processus est divisé en quatre processus :</p>
 
@@ -400,21 +391,14 @@ Le diagramme serait identique dans le cas d’une demande de remplacement ou de 
   </li>
 </ul>
 
-<p>(*) : <em>dans le contexte français, conformément au <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-partage-documents-sante_v1.15.pdf">volet Partage de
+<p>(*) : <em>dans le contexte français, conformément au <a href="https://esante.gouv.fr/volet-partage-de-documents-de-sante">volet Partage de
 documents de santé du CI_SIS</a>, la mise à jour des métadonnées du document est limitée à la mise à jour des informations de masquage du document aux PS et de mise en visibilité du document au patient et à ses représentants légaux ainsi que le statut du document.</em></p>
 
-<p><em>Cette mise à jour est gérée comme un remplacement de document, ce qui
-implique la création d’une nouvelle version de document par le système
-créateur de documents. Cette nouvelle version vient remplacer la
-précédente au niveau du consommateur (logiciel métier destinataire du
-courriel).</em></p>
+<p><em>Cette mise à jour est gérée comme un remplacement de document, ce qui implique la création d’une nouvelle version de document par le système créateur de documents. Cette nouvelle version vient remplacer la précédente au niveau du consommateur (logiciel métier destinataire du courriel).</em></p>
 
-<p>Le nombre de processus est ainsi réduit aux trois processus synthétisés
-sur la Figure suivante.</p>
+<p>Le nombre de processus est ainsi réduit aux trois processus synthétisés sur la Figure suivante.</p>
 
-<p>Dans le contexte du SEGUR vague 2, les applications consommatrices de
-ces documents sont limitées au dossier patient informatisé (DPI) et au
-système de gestion de radiologie (RIS).</p>
+<p>Dans le contexte du SEGUR vague 2, les applications consommatrices de ces documents sont limitées au dossier patient informatisé (DPI) et au système de gestion de radiologie (RIS).</p>
 
 <div class="figure" style="text-align: center;">
     <img src="image13.png" alt="Figure 6" title="Figure 6 : Organisation du contexte métier du volet « Transmission au LPS d'un document provenant d'un courriel »" style="width:60%;" />
@@ -425,72 +409,72 @@ système de gestion de radiologie (RIS).</p>
 <p>Le périmètre de l’étude englobe les processus en bleu sur le diagramme de paquetage.</p>
 
 <h3 id="acteurs-et-transactions">Acteurs et transactions</h3>
-<h3 id="liste-des-acteurs-et-systèmes-concernés">Liste des Acteurs et systèmes concernés</h3>
+<h4 id="liste-des-acteurs-et-systèmes-concernés">Liste des Acteurs et systèmes concernés</h4>
 
 <p>Le présent volet met en œuvre les Acteurs IHE suivants, représentant le rôle joué par un ou plusieurs composants du système d’information :</p>
 
 <table>
-<tbody>
-<tr>
-<td width="217">
-<p><strong>Acteur&nbsp;:</strong></p>
-</td>
-<td width="432">
-<p><strong>Description&nbsp;:</strong></p>
-</td>
-</tr>
-<tr>
-<td width="217">
-<p>GESTIONNAIRE</p>
-</td>
-<td width="432">
-<p>Le GESTIONNAIRE r&eacute;ceptionne et transmet au syst&egrave;me CONSOMMATEUR les demandes de transmission initiale/remplacement/suppression de document(s) provenant d&rsquo;un courriel.</p>
-</td>
-</tr>
-<tr>
-<td width="217">
-<p>CONSOMMATEUR</p>
-</td>
-<td width="432">
-<p>Le CONSOMMATEUR r&eacute;ceptionne et g&egrave;re les demandes de transmission initiale/remplacement/suppression de document(s) issues d&rsquo;un courriel, provenant du syst&egrave;me GESTIONNAIRE et renvoie l&rsquo;accus&eacute; de traitement de la demande vers le GESTIONNAIRE.</p>
-</td>
-</tr>
-</tbody>
+  <tbody>
+    <tr>
+      <th>
+        <p>Acteur</p>
+      </th>
+      <th>
+        <p>Description</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p>GESTIONNAIRE</p>
+      </td>
+      <td>
+        <p>Le GESTIONNAIRE réceptionne et transmet au système CONSOMMATEUR les demandes de transmission initiale/remplacement/suppression de document(s) provenant d'un courriel.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>CONSOMMATEUR</p>
+      </td>
+      <td>
+        <p>Le CONSOMMATEUR réceptionne et gère les demandes de transmission initiale/remplacement/suppression de document(s) issues d'un courriel, provenant du système GESTIONNAIRE et renvoie l'accusé de traitement de la demande vers le GESTIONNAIRE.</p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 <p>Le tableau suivant liste, pour chacun des acteurs, les systèmes du SIH concernés :</p>
 
 <table>
-<tbody>
-<tr>
-<td width="141">
-<p><strong>Acteur&nbsp;:</strong></p>
-</td>
-<td width="508">
-<p><strong>Syst&egrave;mes concern&eacute;s&nbsp;:</strong></p>
-</td>
-</tr>
-<tr>
-<td width="141">
-<p>GESTIONNAIRE</p>
-</td>
-<td width="508">
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Les Plateformes d&rsquo;Interm&eacute;diation (PFI) qui assurent la transmission de document(s) cliniques provenant d&rsquo;un courriel MSSant&eacute; vers un CONSOMMATEUR (le LPS destinataire).</p>
-</td>
-</tr>
-<tr>
-<td width="141">
-<p>CONSOMMATEUR</p>
-</td>
-<td width="508">
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tout logiciel m&eacute;tier (LPS) du SIH qui r&eacute;cup&egrave;re et g&egrave;re la demande de traitement du document transmis par le GESTIONNAIRE.</p>
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dans le contexte du SEGUR vague 2, les applications consommatrices de ces documents sont limit&eacute;es au dossier patient informatis&eacute; (DPI) et au syst&egrave;me de gestion de radiologie (RIS).</p>
-</td>
-</tr>
-</tbody>
+  <tbody>
+    <tr>
+      <th>
+        <p>Acteur</p>
+      </th>
+      <th>
+        <p>Systèmes concernés</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p>GESTIONNAIRE</p>
+      </td>
+      <td>
+        <p>-        Les Plateformes d'Intermédiation (PFI) qui assurent la transmission de document(s) cliniques provenant d'un courriel MSSanté vers un CONSOMMATEUR (le LPS destinataire).</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>CONSOMMATEUR</p>
+      </td>
+      <td>
+        <p>-          Tout logiciel métier (LPS) du SIH qui récupère et gère la demande de traitement du document transmis par le GESTIONNAIRE.</p>
+        <p>-          Dans le contexte du SEGUR vague 2, les applications consommatrices de ces documents sont limitées au dossier patient informatisé (DPI) et au système de gestion de radiologie (RIS).</p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="diagramme-des-acteurstransactions">Diagramme des Acteurs/Transactions</h3>
+<h4 id="diagramme-des-acteurstransactions">Diagramme des Acteurs/Transactions</h4>
 
 <div class="figure" style="text-align: center;">
     <img src="image14.png" alt="Figure 7" title="Figure 7 : Diagramme des Acteurs/transactions" style="width:80%;" />
@@ -503,91 +487,90 @@ système de gestion de radiologie (RIS).</p>
 <p>Pour être en conformité avec ce volet, chaque acteur doit supporter les transactions obligatoires (R-Required) et peut supporter les transactions optionnelles (O-Optional).</p>
 
 <table>
-<tbody>
-<tr>
-<td width="131">
-<p><strong>Acteur</strong></p>
-</td>
-<td width="323">
-<p><strong>Transaction</strong></p>
-</td>
-<td width="189">
-<p><strong>Caract&egrave;re requis/optionnel</strong></p>
-</td>
-</tr>
-<tr>
-<td width="131">
-<p>GESTIONNAIRE</p>
-</td>
-<td width="323">
-<p>Flux6 HL7-MDM en &eacute;mission : Demande de transmission/remplacement/suppression d&rsquo;un document CDA</p>
-</td>
-<td width="189">
-<p>R</p>
-</td>
-</tr>
-<tr>
-<td width="131">
-<p>CONSOMMATEUR</p>
-</td>
-<td width="323">
-<p>Flux6 HL7-MDM en r&eacute;ception : Demande de transmission/remplacement/suppression d&rsquo;un document CDA</p>
-</td>
-<td width="189">
-<p>R</p>
-</td>
-</tr>
-</tbody>
+  <tbody>
+    <tr>
+      <th>
+        <p>Acteur</p>
+      </th>
+      <th>
+        <p>Transaction</p>
+      </th>
+      <th>
+        <p><strong>Caractère requis/optionnel</strong></p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p>GESTIONNAIRE</p>
+      </td>
+      <td>
+        <p>Flux6 HL7-MDM en émission : Demande de transmission/remplacement/suppression d'un document CDA</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>CONSOMMATEUR</p>
+      </td>
+      <td>
+        <p>Flux6 HL7-MDM en réception : Demande de transmission/remplacement/suppression d'un document CDA</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="regroupement-requis-des-acteurs">Regroupement requis des Acteurs</h3>
+<h4 id="regroupement-requis-des-acteurs">Regroupement requis des Acteurs</h4>
 
 <p>Cette section décrit les exigences en termes de regroupement d’acteurs pour chacun des acteurs identifiés précédemment.</p>
 
 <table>
-<tbody>
-<tr>
-<td width="216">
-<p><strong>Acteur de ce volet</strong></p>
-</td>
-<td width="216">
-<p><strong>Group&eacute; avec un autre acteur</strong></p>
-</td>
-<td width="217">
-<p><strong>R&eacute;f&eacute;rence</strong></p>
-</td>
-</tr>
-<tr>
-<td width="216">
-<p>GESTIONNAIRE</p>
-</td>
-<td width="216">
-<p>Syst&egrave;me cible (Portable Media Importer) XDM</p>
-</td>
-<td width="217">
-<p><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-echange-documents-sante_v1.8.pdf">Volet Echange de documents de sant&eacute;</a></p>
-</td>
-</tr>
-<tr>
-<td width="216">
-<p>CONSOMMATEUR</p>
-</td>
-<td width="216">
-<p>Content Consumer (TF PCC<a href="#_ftn1" name="_ftnref1">[1]</a>)</p>
-</td>
-<td width="217">
-<p>TF Patient Care Coordination &ndash; Appendix A: Actors definition</p>
-</td>
-</tr>
-</tbody>
+  <tbody>
+    <tr>
+      <th>
+        <p>Acteur de ce volet</p>
+      </th>
+      <th>
+        <p>Groupé avec un autre acteur</p>
+      </th>
+      <th>
+        <p>Référence</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p>GESTIONNAIRE</p>
+      </td>
+      <td>
+        <p>Système cible (Portable Media Importer) XDM</p>
+      </td>
+      <td>
+        <p><a href="https://esante.gouv.fr/volet-echange-de-documents-de-sante">Volet Echange de documents de santé</a></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>CONSOMMATEUR</p>
+      </td>
+      <td>
+        <p>Content Consumer (<a href="https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_TF_Vol1.pdf">TF PCC</a>)</p>
+      </td>
+      <td>
+        <p>TF Patient Care Coordination - Appendix A: Actors definition</p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 <p>&nbsp;</p>
-<p><a href="#_ftnref1" name="_ftn1">[1]</a> PCC&nbsp;: <a href="https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_TF_Vol1.pdf">Patient Care Coordination &ndash; Appendix A&nbsp;: Actors definition</a></p>
 
 <p>L’acteur GESTIONNAIRE est groupé avec :</p>
 
 <ul>
-  <li>L’acteur Système cible du <a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_service_volet-echange-documents-sante_v1.8.pdf">volet d’Echange de documents de santé</a>, pour permettre à la PFI de réceptionner l’archive IHE_XDM inclue dans le courriel reçu de l’extérieur,</li>
+  <li>L’acteur Système cible du <a href="https://esante.gouv.fr/volet-echange-de-documents-de-sante">volet d’Echange de documents de santé</a>, pour permettre à la PFI de réceptionner l’archive IHE_XDM inclue dans le courriel reçu de l’extérieur,</li>
 </ul>
 
 <p>L’acteur CONSOMMATEUR est groupé avec :</p>
@@ -597,7 +580,7 @@ système de gestion de radiologie (RIS).</p>
 </ul>
 
 <h3 id="définition-des-processus-collaboratifs">Définition des processus collaboratifs</h3>
-<h3 id="processus-collaboratif-demande-de-transmission-initiale-de-documents">Processus collaboratif « Demande de transmission initiale de document(s) »</h3>
+<h4 id="processus-collaboratif-demande-de-transmission-initiale-de-documents">Processus collaboratif « Demande de transmission initiale de document(s) »</h4>
 
 <div class="figure" style="text-align: center;">
     <img src="image15.png" alt="Figure 9" title="Figure 9 : Processus collaboratif « Demande de transmission initiale de document(s) » pour intégration au niveau du CONSOMMATEUR " style="width:60%;" />
@@ -606,55 +589,55 @@ système de gestion de radiologie (RIS).</p>
 <p><br /></p>
 
 <table>
-<tbody>
-<tr>
-<td width="226">
-<p><strong>Service Attendu</strong></p>
-</td>
-<td width="423">
-<p>Le GESTIONNAIRE transmet au CONSOMMATEUR la demande d&rsquo;int&eacute;gration de(s) document(s) de sant&eacute; d'un patient re&ccedil;ue sur la BAL MSSant&eacute; destinatrice.</p>
-</td>
-</tr>
-<tr>
-<td width="226">
-<p><strong>Pr&eacute;-Conditions</strong></p>
-</td>
-<td width="423">
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le patient est connu du CONSOMMATEUR.</p>
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le GESTIONNAIRE d&eacute;tecte qu'un courriel a &eacute;t&eacute; re&ccedil;u sur la BAL avec en pi&egrave;ce jointe une archive XDM.</p>
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le GESTIONNAIRE d&eacute;zippe l&rsquo;archive XDM. Il v&eacute;rifie qu&rsquo;elle contient des documents de sant&eacute; d&rsquo;un patient au format CDA ainsi qu&rsquo;un fichier de m&eacute;tadonn&eacute;es.</p>
-</td>
-</tr>
-<tr>
-<td width="226">
-<p><strong>Post-Conditions</strong></p>
-</td>
-<td width="423">
-<p>Le GESTIONNAIRE trace les transmissions de document(s)</p>
-</td>
-</tr>
-<tr>
-<td width="226">
-<p><strong>Contraintes fonctionnelles</strong></p>
-</td>
-<td width="423">
-<p>La BAL du GESTIONNAIRE doit &ecirc;tre en capacit&eacute; de d&eacute;tecter les courriels entrants avec demande de traitement sur le(s) document(s)</p>
-</td>
-</tr>
-<tr>
-<td width="226">
-<p><strong>Sc&eacute;nario Nominal</strong></p>
-</td>
-<td width="423">
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Suite &agrave; la r&eacute;ception d&rsquo;un courriel sur la BAL destinatrice, le GESTIONNAIRE transmet le document de sant&eacute; de la pi&egrave;ce jointe au CONSOMMATEUR.</p>
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le CONSOMMATEUR traite la demande d&rsquo;int&eacute;gration du document.</p>
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le CONSOMMATEUR retourne au GESTIONNAIRE un accusé de réception de la demande d'intégration du document.</p>
-</td>
-</tr>
-</tbody>
+  <tbody>
+    <tr>
+      <th>
+        <p>Service Attendu</p>
+      </th>
+      <td>
+        <p>Le GESTIONNAIRE transmet au CONSOMMATEUR la demande d'intégration de(s) document(s) de santé d'un patient reçue sur la BAL MSSanté destinatrice.</p>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <p>Pré-Conditions</p>
+      </th>
+      <td>
+        <p>- Le patient est connu du CONSOMMATEUR.</p>
+        <p>- Le GESTIONNAIRE détecte qu'un courriel a été reçu sur la BAL avec en pièce jointe une archive XDM.</p>
+        <p>- Le GESTIONNAIRE dézippe l'archive XDM. Il vérifie qu'elle contient des documents de santé d'un patient au format CDA ainsi qu'un fichier de métadonnées.</p>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <p>Post-Conditions</p>
+      </th>
+      <td>
+        <p>Le GESTIONNAIRE trace les transmissions de document(s)</p>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <p>Contraintes fonctionnelles</p>
+      </th>
+      <td>
+        <p>La BAL du GESTIONNAIRE doit être en capacité de détecter les courriels entrants avec demande de traitement sur le(s) document(s)</p>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <p>Scénario Nominal</p>
+      </th>
+      <td>
+        <p>- Suite à la réception d'un courriel sur la BAL destinatrice, le GESTIONNAIRE transmet le document de santé de la pièce jointe au CONSOMMATEUR.</p>
+        <p>- Le CONSOMMATEUR traite la demande d'intégration du document.</p>
+        <p>- Le CONSOMMATEUR retourne au GESTIONNAIRE un accusé de réception de la demande d'intégration du document.</p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="processus-collaboratif-demande-de-remplacement-de-documents">Processus collaboratif « Demande de remplacement de document(s) »</h3>
+<h4 id="processus-collaboratif-demande-de-remplacement-de-documents">Processus collaboratif « Demande de remplacement de document(s) »</h4>
 
 <div class="figure" style="text-align: center;">
     <img src="image16.png" alt="Figure 10" title="Figure 10 : Processus collaboratif « Demande de remplacement de document(s) » au niveau du CONSOMMATEUR" style="width:60%;" />
@@ -666,58 +649,58 @@ Le processus « Demande de remplacement de document(s) » permet également de g
 <p>Ainsi, dans le cas d’une demande de mise à jour des métadonnées de masquage/démasquage aux PS et de visibilité du document au patient, une nouvelle version de document est générée par l’initiateur du courriel. Cette nouvelle version vient remplacer la précédente au niveau du CONSOMMATEUR (application métier destinatrice).</p>
 
 <table>
-<tbody>
-<tr>
-<td width="226">
-<p><strong>Service Attendu</strong></p>
-</td>
-<td width="423">
-<p>Le GESTIONNAIRE transmet au CONSOMMATEUR la demande de remplacement de(s) document(s) de sant&eacute; d'un patient re&ccedil;ue sur la BAL MSSant&eacute; destinatrice.</p>
-</td>
-</tr>
-<tr>
-<td width="226">
-<p><strong>Pr&eacute;-Conditions</strong></p>
-</td>
-<td width="423">
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le patient est connu du CONSOMMATEUR.</p>
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le document doit &ecirc;tre valid&eacute; et identifi&eacute; comme rempla&ccedil;ant un document pr&eacute;c&eacute;demment envoy&eacute; par MSSant&eacute;.</p>
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le CONSOMMATEUR dispose de la derni&egrave;re version du document original dans sa base de donn&eacute;es.</p>
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le GESTIONNAIRE d&eacute;tecte qu'un courriel a &eacute;t&eacute; re&ccedil;u sur la BAL avec en pi&egrave;ce jointe une archive IHE_XDM.</p>
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le GESTIONNAIRE d&eacute;zippe l&rsquo;archive XDM. Il v&eacute;rifie qu&rsquo;elle contient des documents de sant&eacute; d&rsquo;un patient au format CDA ainsi qu&rsquo;un fichier de m&eacute;tadonn&eacute;es et prend connaissance du traitement &agrave; effectuer sur le(s) document(s)</p>
-</td>
-</tr>
-<tr>
-<td width="226">
-<p><strong>Post-Conditions</strong></p>
-</td>
-<td width="423">
-<p>Le GESTIONNAIRE trace les transmissions de document(s)</p>
-</td>
-</tr>
-<tr>
-<td width="226">
-<p><strong>Contraintes fonctionnelles</strong></p>
-</td>
-<td width="423">
-<p>La BAL du GESTIONNAIRE doit &ecirc;tre en capacit&eacute; de d&eacute;tecter les courriels entrants avec demande de traitement sur le(s) document(s)</p>
-</td>
-</tr>
-<tr>
-<td width="226">
-<p><strong>Sc&eacute;nario Nominal</strong></p>
-</td>
-<td width="423">
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Suite &agrave; la r&eacute;ception du courriel sur la BAL destinatrice, le GESTIONNAIRE transmet la demande de remplacement de documents de sant&eacute; de la pi&egrave;ce jointe au CONSOMMATEUR</p>
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le CONSOMMATEUR traite la demande de remplacement du document.</p>
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le CONSOMMATEUR retourne au GESTIONNAIRE un accus&eacute; de r&eacute;ception de la demande de remplacement du document.</p>
-<p>&nbsp;</p>
-</td>
-</tr>
-</tbody>
+  <tbody>
+    <tr>
+      <th>
+        <p>Service Attendu</p>
+      </th>
+      <td>
+        <p>Le GESTIONNAIRE transmet au CONSOMMATEUR la demande de remplacement de(s) document(s) de santé d'un patient reçue sur la BAL MSSanté destinatrice.</p>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <p>Pré-Conditions</p>
+      </th>
+      <td>
+        <p>- Le patient est connu du CONSOMMATEUR.</p>
+        <p>- Le document doit être validé et identifié comme remplaçant un document précédemment envoyé par MSSanté.</p>
+        <p>- Le CONSOMMATEUR dispose de la dernière version du document original dans sa base de données.</p>
+        <p>- Le GESTIONNAIRE détecte qu'un courriel a été reçu sur la BAL avec en pièce jointe une archive IHE_XDM.</p>
+        <p>- Le GESTIONNAIRE dézippe l'archive XDM. Il vérifie qu'elle contient des documents de santé d'un patient au format CDA ainsi qu'un fichier de métadonnées et prend connaissance du traitement à effectuer sur le(s) document(s)</p>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <p>Post-Conditions</p>
+      </th>
+      <td>
+        <p>Le GESTIONNAIRE trace les transmissions de document(s)</p>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <p>Contraintes fonctionnelles</p>
+      </th>
+      <td>
+        <p>La BAL du GESTIONNAIRE doit être en capacité de détecter les courriels entrants avec demande de traitement sur le(s) document(s)</p>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <p>Scénario Nominal</p>
+      </th>
+      <td>
+        <p>- Suite à la réception du courriel sur la BAL destinatrice, le GESTIONNAIRE transmet la demande de remplacement de documents de santé de la pièce jointe au CONSOMMATEUR</p>
+        <p>- Le CONSOMMATEUR traite la demande de remplacement du document.</p>
+        <p>- Le CONSOMMATEUR retourne au GESTIONNAIRE un accusé de réception de la demande de remplacement du document.</p>
+        <p> </p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="processus-collaboratif-demande-de-suppression-de-documents">Processus collaboratif « Demande de suppression de document(s) »</h3>
+<h4 id="processus-collaboratif-demande-de-suppression-de-documents">Processus collaboratif « Demande de suppression de document(s) »</h4>
 
 <div class="figure" style="text-align: center;">
     <img src="image17.png" alt="Figure 11" title="Figure 11 : Processus collaboratif « Demande de suppression de document(s) » au niveau du CONSOMMATEUR" style="width:60%;" />
@@ -726,54 +709,54 @@ Le processus « Demande de remplacement de document(s) » permet également de g
 <p><br /></p>
 
 <table>
-<tbody>
-<tr>
-<td width="226">
-<p><strong>Service Attendu</strong></p>
-</td>
-<td width="423">
-<p>Le GESTIONNAIRE transmet au CONSOMMATEUR la demande de suppression de(s) document(s) de sant&eacute; d'un patient re&ccedil;ue sur la BAL MSSant&eacute; destinatrice.</p>
-</td>
-</tr>
-<tr>
-<td width="226">
-<p><strong>Pr&eacute;-Conditions</strong></p>
-</td>
-<td width="423">
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le patient est connu du consommateur.</p>
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le document doit &ecirc;tre valid&eacute; et doit correspondre &agrave; la derni&egrave;re version du document envoy&eacute; au CONSOMMATEUR.</p>
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le CONSOMMATEUR dispose de la derni&egrave;re version du document original dans sa base de donn&eacute;es.</p>
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le GESTIONNAIRE d&eacute;tecte qu'un courriel a &eacute;t&eacute; re&ccedil;u sur la BAL avec en pi&egrave;ce jointe une archive IHE_XDM.</p>
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le GESTIONNAIRE d&eacute;zippe l&rsquo;archive XDM. Il v&eacute;rifie qu&rsquo;elle contient des documents de sant&eacute; d&rsquo;un patient au format CDA ainsi qu&rsquo;un fichier de m&eacute;tadonn&eacute;es et prend connaissance du traitement &agrave; effectuer sur le document</p>
-</td>
-</tr>
-<tr>
-<td width="226">
-<p><strong>Post-Conditions</strong></p>
-</td>
-<td width="423">
-<p>Le GESTIONNAIRE trace les transmissions de document(s)</p>
-</td>
-</tr>
-<tr>
-<td width="226">
-<p><strong>Contraintes fonctionnelles</strong></p>
-</td>
-<td width="423">
-<p>La BAL du GESTIONNAIRE doit &ecirc;tre en capacit&eacute; de d&eacute;tecter les courriels entrants avec demande de traitement sur le(s) document(s)</p>
-</td>
-</tr>
-<tr>
-<td width="226">
-<p><strong>Sc&eacute;nario Nominal</strong></p>
-</td>
-<td width="423">
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Suite &agrave; la r&eacute;ception d&rsquo;un courriel sur la BAL destinatrice, le GESTIONNAIRE transmet la demande de suppression du document de sant&eacute; de la pi&egrave;ce jointe au CONSOMMATEUR</p>
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le CONSOMMATEUR traite la demande de suppression du document.</p>
-<p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Le CONSOMMATEUR retourne au GESTIONNAIRE un accusé de réception de suppression du document.</p>
-</td>
-</tr>
-</tbody>
+  <tbody>
+    <tr>
+      <th>
+        <p>Service Attendu</p>
+      </th>
+      <td>
+        <p>Le GESTIONNAIRE transmet au CONSOMMATEUR la demande de suppression de(s) document(s) de santé d'un patient reçue sur la BAL MSSanté destinatrice.</p>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <p>Pré-Conditions</p>
+      </th>
+      <td>
+        <p>- Le patient est connu du consommateur.</p>
+        <p>- Le document doit être validé et doit correspondre à la dernière version du document envoyé au CONSOMMATEUR.</p>
+        <p>- Le CONSOMMATEUR dispose de la dernière version du document original dans sa base de données.</p>
+        <p>- Le GESTIONNAIRE détecte qu'un courriel a été reçu sur la BAL avec en pièce jointe une archive IHE_XDM.</p>
+        <p>- Le GESTIONNAIRE dézippe l'archive XDM. Il vérifie qu'elle contient des documents de santé d'un patient au format CDA ainsi qu'un fichier de métadonnées et prend connaissance du traitement à effectuer sur le document</p>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <p>Post-Conditions</p>
+      </th>
+      <td>
+        <p>Le GESTIONNAIRE trace les transmissions de document(s)</p>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <p>Contraintes fonctionnelles</p>
+      </th>
+      <td>
+        <p>La BAL du GESTIONNAIRE doit être en capacité de détecter les courriels entrants avec demande de traitement sur le(s) document(s)</p>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <p>Scénario Nominal</p>
+      </th>
+      <td>
+        <p>- Suite à la réception d'un courriel sur la BAL destinatrice, le GESTIONNAIRE transmet la demande de suppression du document de santé de la pièce jointe au CONSOMMATEUR</p>
+        <p>- Le CONSOMMATEUR traite la demande de suppression du document.</p>
+        <p>- Le CONSOMMATEUR retourne au GESTIONNAIRE un accusé de réception de suppression du document.</p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 <h3 id="identification-des-flux">Identification des flux</h3>
@@ -824,7 +807,7 @@ Le processus « Demande de remplacement de document(s) » permet également de g
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 10, 2024 16:22+0000">2024-12-10</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Dec 13, 2024 08:22+0000">2024-12-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
