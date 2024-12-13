@@ -21,8 +21,6 @@ This section of the CI-SIS outlines the possibility for an organization's busine
 
 ### Avant-propos
 
-Ce document fait partie de la couche Service du Cadre d'Interopérabilité des Systèmes d'Information de santé (CI_SIS).
-
 <div style="width: 65%">
     <blockquote class="stu-note">
     <p>
@@ -30,7 +28,7 @@ Ce document fait partie de la couche Service du Cadre d'Interopérabilité des S
     </p>
     </blockquote>
 </div>
-
+Ce document fait partie de la couche Service du Cadre d'Interopérabilité des Systèmes d'Information de santé (CI_SIS).
 Ce présent volet décrit la possibilité pour un logiciel métier d’une organisation de déléguer à un acteur tiers, la plateforme d’intermédiation (PFI), la capacité de traiter un courriel entrant provenant d’une BAL MSSanté et de générer à partir de ce courriel une demande d’intégration ou de remplacement ou de suppression d’un document clinique en direction de l’application métier consommatrice. Ce volet est à considérer par le lecteur en association avec un autre volet du CI_SIS, [le volet « Transmission de document(s) CDA en HL7v2 »](https://esante.gouv.fr/volet-de-transmission-dun-document-cda-r2-en-hl7v2) de façon à avoir une vision de bout en bout des échanges au travers de la MSSanté (du CREATEUR de la demande de traitement sur un document vers le CONSOMMATEUR final de cette demande).
 
 Les deux volets en question intègrent à la fois une partie fonctionnelle et une partie technique.
