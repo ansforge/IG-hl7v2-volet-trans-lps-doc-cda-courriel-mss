@@ -3,8 +3,7 @@
 [Add a brief description of this IG in English]
 </p>
 
-<!--  A décommenter lors de la publication -->
-
+<!--  A décommenter lors de la publication 
 <div style="width: 65%">
     <blockquote class="stu-note">
     <p>
@@ -12,6 +11,7 @@
     </p>
     </blockquote>
 </div>
+-->
 
 
 <div class="figure">
