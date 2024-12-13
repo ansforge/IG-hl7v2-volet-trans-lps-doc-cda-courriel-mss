@@ -1,6 +1,10 @@
 <p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; width: 65%">
 <b>Brief description of this Implementation Guide</b><br>
-[Add a brief description of this IG in English]
+This section of the CI-SIS outlines the possibility for an organization's business software to delegate to a third-party entity, the Intermediation Platform (PFI), the ability to process an incoming email from an MSSanté mailbox and to generate, based on this email, a request for integration, replacement, or deletion of a clinical document directed toward the consuming business application. This section should be considered by the reader in conjunction with another section of the CI-SIS, the "Transmission of CDA document(s) in HL7v2" section, to provide an end-to-end view of exchanges through MSSanté (from the CREATOR of the document processing request to the final CONSUMER of this request).
+<br>
+The functional part provides, as an example and in a non-exhaustive manner, a set of use cases. Based on these use cases, the system actors (in the IHE sense) and the transactions occurring between these actors to address these use cases are then defined. Collaborative processes are subsequently described, and the flows between the actors are also identified.
+<br>
+The technical part outlines the standards chosen to implement the flows identified by the functional analysis and details the rules for implementing these standards.
 </p>
 
 <!--  A décommenter lors de la publication 
