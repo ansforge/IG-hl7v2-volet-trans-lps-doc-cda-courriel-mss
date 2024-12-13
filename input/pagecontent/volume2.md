@@ -17,6 +17,5 @@ Cette section décrit les détails techniques nécessaires à la mise en œuvre 
 ### Interactions entre les Acteurs
 {% include interactions-acteurs.md %}
 
-
 ### Profils de messages
 {% include profils-messages.md %}

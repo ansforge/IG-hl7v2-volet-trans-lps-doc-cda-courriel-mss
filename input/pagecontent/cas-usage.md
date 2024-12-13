@@ -1,6 +1,6 @@
 Cette section décrit, **à titre d’exemple et de façon non exhaustive**, un ensemble de cas d’usage. Pour une meilleure compréhension du lecteur, ces cas d’usage couvrent les échanges entre la PFI et le logiciel métier consommateur, mais également les échanges en amont de la PFI de l’établissement destinataire (et donc au-delà du périmètre du présent volet).
 
-### Réception et traitement par la PFI de l’établissement hospitalier d’un document clinique provenant d’un médecin traitant
+#### Réception et traitement par la PFI de l’établissement hospitalier d’un document clinique provenant d’un médecin traitant
 
 **Cas d’usage :** le médecin traitant du patient, le Dr Adam Hoda, envoi un compte rendu au médecin hospitalier qui prend en charge son patient.
 
@@ -10,11 +10,11 @@ La demande du Dr Adam est détectée et interprétée par la PFI de l’établis
 Si demandé initialement, l’accusé de réception du courriel est renvoyé vers la BAL du Dr Adam Hoda suite à la réception du mail sur le serveur de messagerie de l’établissement hospitalier.
 
 
-### Réception d’un compte rendu de biologie par un établissement hospitalier
+#### Réception d’un compte rendu de biologie par un établissement hospitalier
 
 **Cas d’usage :** un établissement hospitalier (le CH Martin) réceptionne, via MSSanté, un compte rendu de laboratoire concernant un patient pris en charge dans l’établissement, provenant d’un laboratoire d’analyses externe au CH Martin. Le laboratoire d’analyse ainsi que le CH Martin sont dotés d’une PFI. Ce cas d’usage nécessite un accord de partenariat entre les deux structures permettant de rendre possible l’échange MSSanté au travers des BAL applicatives.
 
-#### Description du cas nominal
+##### Description du cas nominal
 
 Le médecin biologiste du laboratoire d’analyses valide le compte rendu de biologie via son système de gestion de laboratoire (SGL) et précise les métadonnées de masquage du document aux PS et de visibilité au patient et à ses représentants légaux. Ces métadonnées peuvent également, selon les organisations mises en place, être paramétrées en fonction du type d’analyse réalisé. Le SGL est également paramétré pour prendre en compte les souhaits du médecin biologiste concernant la réception des accusés métier de réception DMP, de réception MSSanté par le serveur de messagerie de l’établissement CH Martin, et l’accusé métier de lecture/traitement du courriel MSSanté et du(des) document(s) CDA contenu(s) dans la pièce jointe IHE_XDM.zip.
 
@@ -44,7 +44,7 @@ La Figure 2 illustre les échanges de bout en bout relatifs à une demande de tr
 
 Le diagramme serait identique dans le cas d’une demande de remplacement ou de suppression du compte rendu.
 
-#### Description du cas en erreur
+##### Description du cas en erreur
 
 Le CR de biologie n’est pas intégré dans le logiciel métier du destinataire pour une raison technique (par exemple, non-conformité de la transaction de demande d’intégration du document) ou pour une raison fonctionnelle (par exemple, le patient n’est pas connu du logiciel destinataire).
 
@@ -62,13 +62,13 @@ La Figure 3 illustre la gestion des erreurs par l’établissement destinataire 
 
 Le diagramme serait identique dans le cas d’une demande de remplacement ou de suppression du compte rendu.
 
-### Transmission d’un document clinique d’un patient d’un établissement hospitalier vers un autre établissement hospitalier
+#### Transmission d’un document clinique d’un patient d’un établissement hospitalier vers un autre établissement hospitalier
 
 **Cas d’usage :** Le Dr Jean Dupont exerce dans le service X de l’établissement-A. Il souhaite transférer un de ses patients dans le service Y de l’établissement B. Il demande à la secrétaire médicale du service X d’envoyer le compte rendu d’hospitalisation de son patient à l’équipe de soins du service Y de l’établissement-B.
 
 La secrétaire médicale du service X de l’établissement-A envoie un courriel à la BAL du service Y de l’établissement-B. Les deux établissements sont dotés d’une PFI.
 
-#### Description du cas nominal
+##### Description du cas nominal
 
 Dans ce cas d’usage, le compte rendu d’hospitalisation est envoyé par MSSanté sur la BAL organisationnelle du service Y. La secrétaire de l’établissement-B consulte sa BAL organisationnelle. Si la secrétaire souhaite intégrer automatiquement les documents de la pièce jointe IHE_XDM.zip dans le DPI, elle transfère manuellement les courriels vers la BAL applicative du service Y. Ces courriels sont ensuite détectés par la BAL applicative de la PFI de l’établissement-B qui les traitent, construit pour chaque courriel la demande d’intégration/remplacement/suppression du document et envoie cette demande au DPI du service Y. le document est intégré/remplacé/supprimé dans le DPI du service Y.
 
@@ -107,7 +107,7 @@ La structure du MDN est précisée [ici](struct-msg-mdn.html).
 La Figure 4 illustre les échanges de bout en bout relatifs à une demande de transmission du compte rendu du SGL vers le DPI.
 Le diagramme serait identique dans le cas d’une demande de remplacement ou de suppression du compte rendu.
 
-#### Description du cas d'usage en erreur
+##### Description du cas d'usage en erreur
 
 La cinématique des échanges est la même que précédemment mais le compte rendu d’hospitalisation n’est pas intégré dans le DPI du service Y en raison de l’inexistence du patient dans le DPI.
 

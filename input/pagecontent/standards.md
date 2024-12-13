@@ -1,12 +1,12 @@
 -   HL7 v2.6 : Chapitre 9, message MDM (Medical Document Management) (1),
 
--   [Extension française du profil IHE PAM : PAM.fr, version 2.11](https://old.interopsante.org/offres/doc_inline_src/412/Publication-IHE_FRANCE_PAM_National_Extension_v2.11.pdf)
+-   [Extension française du profil IHE PAM : PAM.fr, version 2.11](https://www.interopsante.org/publications)
 
--   Les types de données utilisés (2) doivent se conformer aux spécifications [« Contraintes sur les types de données HL7 v2.5 applicables aux profils d'intégration du cadre technique IT Infrastructure dans le périmètre d'IHE France » release 1.8](https://old.interopsante.org/offres/doc_inline_src/412/IHE_France_Constraints_on_HL7_data_types_for_ITI_V1.8.pdf)
+-   Les types de données utilisés (2) doivent se conformer aux spécifications [« Contraintes sur les types de données HL7 v2.5 applicables aux profils d'intégration du cadre technique IT Infrastructure dans le périmètre d'IHE France » release 1.8](https://www.interopsante.org/publications)
 
 -   Le choix du protocole de transport est libre. L'utilisation du protocole MLLP est à privilégier pour gérer au mieux les accusés de réception techniques (ACK).
 
--   Dans le cadre de cette spécification, les documents médicaux véhiculés correspondent à des documents au format CDA-R2 conformes au [volet du CI-SIS « Structuration minimale des documents de santé »](https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_contenu_volet-structuration-minimale_v1.15.pdf).
+-   Dans le cadre de cette spécification, les documents médicaux véhiculés correspondent à des documents au format CDA-R2 conformes au [volet du CI-SIS « Structuration minimale des documents de santé »](https://esante.gouv.fr/volet-structuration-minimale-de-documents-de-sante).
 
 -   Les documents transmis par le message HL7 doivent être validés par le professionnel de santé dans l'application métier qui les a générés via un statut de validation géré en interne.
 
