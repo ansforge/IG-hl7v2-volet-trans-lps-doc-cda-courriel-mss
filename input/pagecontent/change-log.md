@@ -21,6 +21,7 @@
   * [exemples de messages d’acquittement](volume2.html#exemple)
     * Correction de MSH-21 (version de l’interface 1.1 au lieu de 1.2) sur le segment MSH du message initial MDM
     * Suppression du champ MSH-21 (le message d’acquittement n’a pas de contraintes particulières par rapport au message spécifié dans le standard international)
+    * [Ajout du code erreur 905](error-codes.html#codes-erreurs-de-traitement-du-message-hl7-mdm) ([15](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/15))
 
 ### Rappel de l'historique des anciennes versions au format PDF (avant novembre 2024)
 
