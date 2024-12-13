@@ -36,7 +36,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for HL7v2_trans_CDA_MSS</h1>
- <p>Generated Fri Dec 13 09:21:59 UTC 2024, FHIR version 4.0.1 for ans.hl7v2.fr.trans-cda-mss#1.1.1 (canonical = <a href="https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss">https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss</a> (<a href="https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
+ <p>Generated Fri Dec 13 10:29:44 UTC 2024, FHIR version 4.0.1 for ans.hl7v2.fr.trans-cda-mss#1.1.1 (canonical = <a href="https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss">https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss</a> (<a href="https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.8.1</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = ans.hl7v2.fr.trans-cda-mss, Canonical = https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss</td></tr>
@@ -45,21 +45,20 @@
  <tr><td>package-id</d><td>ans.hl7v2.fr.trans-cda-mss</td></tr>
  <tr><td>version</d><td>1.1.1</td></tr>
  <tr><td>path</d><td>https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/1.1.1</td></tr>
- <tr><td>Pub-Mode</d><td>working release</td></tr>
- <tr><td>status</d><td>draft</td></tr>
- <tr><td>Release-Label</d><td>ci-build</td></tr>
- <tr><td>Sequence (Group)</d><td>trial-use</td></tr>
- <tr><td>desc</d><td></td></tr>
+ <tr><td>Pub-Mode</d><td>milestone</td></tr>
+ <tr><td>status</d><td>trial-use</td></tr>
+ <tr><td>Release-Label</d><td>trial-implementation</td></tr>
+ <tr><td>Sequence (Group)</d><td>Publications</td></tr>
+ <tr><td>changes</d><td>change-log.html#version-111</td></tr>
  <tr><td>first</d><td>true</td></tr>
- <tr><td>title</d><td></td></tr>
- <tr><td>introduction</d><td></td></tr>
+ <tr><td>category</d><td>HL7v2</td></tr>
+ <tr><td>title</d><td>Volet transmission au LPS d'un document CDA provenant d'un courriel MSSanté</td></tr>
+ <tr><td>introduction</d><td>Ce volet du CI-SIS décrit la possibilité pour un logiciel métier d'une organisation de déléguer à un acteur tiers, la plateforme d'intermédiation (PFI), la capacité de traiter un courriel entrant provenant d'une BAL MSSanté et de générer à partir de ce courriel une demande d'intégration ou de remplacement ou de suppression d'un document clinique en direction de l'application métier consommatrice. Ce volet est à considérer par le lecteur en association avec un autre volet du CI_SIS, le volet « Transmission de document(s) CDA en HL7v2 » de façon à avoir une vision de bout en bout des échanges au travers de la MSSanté (du CREATEUR de la demande de traitement sur un document vers le CONSOMMATEUR final de cette demande).</td></tr>
  <tr><td>ci-build</d><td>https://ansforge.github.io/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/main/ig/</td></tr>
 </table>
 <ul><li><span title="Not Found">This IG has never been published</span> <img src="information.png" height="16px" width="16px"/></li>
 <li>This IG has never been published, so the version should start with '0.' or include a patch version e.g. '-ballot' <img src="icon-warning.png" height="16px" width="16px"/></li>
-<li>Proposed path for this publication should usually be the canonical with the version or sequence appended and then some kind of label (typically '-snapshot') <img src="icon-warning.png" height="16px" width="16px"/></li>
-<li>This release is not labelled as a milestone or technical correction, so should have a patch version (1.1.1) <img src="icon-warning.png" height="16px" width="16px"/></li>
-<li>No publication request category found (needed for first publication - consult FHIR product director for a value <img src="icon-error.gif" height="16px" width="16px"/></li>
+<li>No publication request description found <img src="icon-error.gif" height="16px" width="16px"/></li>
 </ul>
 </td></tr>
  <tr><td>Supressed Messages:</td><td><a href="#suppressed">19 Suppressed Issues</a>
@@ -129,7 +128,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>ImplementationGuide&#8203;.definition (l1&#8203;/c14681)</b></td><td><b>error</b></td><td title="Validation_VAL_Profile_Minimum"><b>ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1)</b></td>
+     <td><b>ImplementationGuide&#8203;.definition (l1&#8203;/c14706)</b></td><td><b>error</b></td><td title="Validation_VAL_Profile_Minimum"><b>ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1)</b></td>
    </tr>
 </table>
 <a name="suppressed"> </a>

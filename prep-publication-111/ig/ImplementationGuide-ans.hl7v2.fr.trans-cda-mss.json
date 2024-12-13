@@ -9,8 +9,8 @@
   "version" : "1.1.1",
   "name" : "HL7v2_trans_CDA_MSS",
   "title" : "Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté",
-  "status" : "draft",
-  "date" : "2024-12-13T09:21:40+00:00",
+  "status" : "active",
+  "date" : "2024-12-13T10:29:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -68,7 +68,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "ci-build"
+        "valueString" : "trial-implementation"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -358,7 +358,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "ci-build"
+        "valueString" : "trial-implementation"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
