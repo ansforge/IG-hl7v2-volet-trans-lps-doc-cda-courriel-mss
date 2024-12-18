@@ -56,7 +56,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Volet Transmission au LPS de documents CDA provenant d&#39;un courriel MSSanté</span>
             <br/>
-            <span style="display:inline-block;">1.1.1 - ci-build
+            <span style="display:inline-block;">1.1.1 - trial-implementation
 
 
 
@@ -228,7 +228,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
 
-  <table class="colsd">
+  <table class="colsi">
 
     <tr>
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/ImplementationGuide/ans.hl7v2.fr.trans-cda-mss<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/ImplementationGuide/ans.hl7v2.fr.trans-cda-mss"/></span>
@@ -248,7 +248,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <td colspan="4">
         
-          Draft
+          Active
           
             as of 2024-12-18
           
@@ -283,11 +283,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; width: 65%">
 <b>Brief description of this Implementation Guide</b><br />
-[Add a brief description of this IG in English]
+This implementation guide is part of the Service layer of the Health Information Systems Interoperability Framework (CI-SIS).
+This section of the CI-SIS outlines the possibility for an organization's business software to delegate to a third-party entity, the Intermediation Platform (PFI), the ability to process an incoming email from an MSSanté mailbox and to generate, based on this email, a request for integration, replacement, or deletion of a clinical document directed toward the consuming business application. This section should be considered by the reader in conjunction with another section of the CI-SIS, the "Transmission d'un document CDA-R2 en HL7v2" section, to provide an end-to-end view of exchanges through MSSanté (from the CREATOR of the document processing request to the final CONSUMER of this request).
 </p>
 
-<!--  A décommenter lors de la publication -->
-
+<!--  A décommenter lors de la publication 
 <div style="width: 65%">
     <blockquote class="stu-note">
     <p>
@@ -295,14 +295,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </p>
     </blockquote>
 </div>
+-->
 
 <div class="figure">
     <img src="ci-sis-logo.png" alt="CI-SIS" title="Logo du CI-SIS" style="width:100%;" />
 </div>
 
 <h3 id="avant-propos">Avant-propos</h3>
-
-<p>Ce document fait partie de la couche Service du Cadre d’Interopérabilité des Systèmes d’Information de santé (CI_SIS).</p>
 
 <div style="width: 65%">
     <blockquote class="stu-note">
@@ -311,8 +310,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </p>
     </blockquote>
 </div>
-
-<p>Ce présent volet décrit la possibilité pour un logiciel métier d’une organisation de déléguer à un acteur tiers, la plateforme d’intermédiation (PFI), la capacité de traiter un courriel entrant provenant d’une BAL MSSanté et de générer à partir de ce courriel une demande d’intégration ou de remplacement ou de suppression d’un document clinique en direction de l’application métier consommatrice. Ce volet est à considérer par le lecteur en association avec un autre volet du CI_SIS, <a href="https://esante.gouv.fr/volet-de-transmission-dun-document-cda-r2-en-hl7v2">le volet « Transmission de document(s) CDA en HL7v2 »</a> de façon à avoir une vision de bout en bout des échanges au travers de la MSSanté (du CREATEUR de la demande de traitement sur un document vers le CONSOMMATEUR final de cette demande).</p>
+<p>Ce document fait partie de la couche Service du Cadre d’Interopérabilité des Systèmes d’Information de santé (CI_SIS).
+Ce présent volet décrit la possibilité pour un logiciel métier d’une organisation de déléguer à un acteur tiers, la plateforme d’intermédiation (PFI), la capacité de traiter un courriel entrant provenant d’une BAL MSSanté et de générer à partir de ce courriel une demande d’intégration ou de remplacement ou de suppression d’un document clinique en direction de l’application métier consommatrice. Ce volet est à considérer par le lecteur en association avec un autre volet du CI_SIS, <a href="https://esante.gouv.fr/volet-de-transmission-dun-document-cda-r2-en-hl7v2">le volet « Transmission de document(s) CDA en HL7v2 »</a> de façon à avoir une vision de bout en bout des échanges au travers de la MSSanté (du CREATEUR de la demande de traitement sur un document vers le CONSOMMATEUR final de cette demande).</p>
 
 <p>Les deux volets en question intègrent à la fois une partie fonctionnelle et une partie technique.</p>
 
@@ -515,13 +514,13 @@ Ce volet du CI_SIS n’a pas vocation à décrire le cadre juridique applicable.
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Dec 18, 2024 08:53+0000">2024-12-18</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Dec 18, 2024 08:54+0000">2024-12-18</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/history.html">Historique des versions </a>
- | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ansforge/IG-hl7v2-volet-transmission-document-cda-r2/issues/new/choose">New Issue</a>
+ | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/new/choose">New Issue</a>
 
           </span>
         </p>

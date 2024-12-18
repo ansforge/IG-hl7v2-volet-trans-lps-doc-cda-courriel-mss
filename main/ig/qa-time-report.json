@@ -1,60 +1,60 @@
 {
-  "date" : "Wed, 18 Dec, 2024 08:53:21 +0000",
+  "date" : "Wed, 18 Dec, 2024 08:54:22 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
       "name" : "/fsh-generated/resources/ImplementationGuide-ans.hl7v2.fr.trans-cda-mss.json",
-      "size" : 3250,
+      "size" : 3263,
       "processes" : [
         {
           "activity" : "load",
-          "start" : 26,
+          "start" : 24,
           "length" : 34
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 26,
-          "length" : 5
+          "start" : 24,
+          "length" : 7
         },
         {
           "activity" : "generateNarratives",
-          "start" : 26,
-          "length" : 230
+          "start" : 24,
+          "length" : 172
         },
         {
           "activity" : "validate",
-          "start" : 26,
-          "length" : 2941
-        },
-        {
-          "activity" : "checkConformanceResources",
-          "start" : 29,
-          "length" : 1
+          "start" : 24,
+          "length" : 2781
         },
         {
           "activity" : "scanForUsageStats",
-          "start" : 29,
+          "start" : 27,
           "length" : 1
         },
         {
           "activity" : "generate1",
-          "start" : 29,
-          "length" : 108
-        },
-        {
-          "activity" : "generate2",
-          "start" : 31,
+          "start" : 27,
           "length" : 94
         },
         {
+          "activity" : "generate2",
+          "start" : 29,
+          "length" : 82
+        },
+        {
+          "activity" : "generateExampleZip",
+          "start" : 37,
+          "length" : 1
+        },
+        {
           "activity" : "generateValidationPack",
-          "start" : 39,
+          "start" : 37,
           "length" : 2
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 42,
-          "length" : 3
+          "start" : 39,
+          "length" : 2
         }
       ]
     }
