@@ -1,10 +1,10 @@
 <p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; width: 65%">
 <b>Brief description of this Implementation Guide</b><br>
-[Add a brief description of this IG in English]
+This implementation guide is part of the Service layer of the Health Information Systems Interoperability Framework (CI-SIS).
+This section of the CI-SIS outlines the possibility for an organization's business software to delegate to a third-party entity, the Intermediation Platform (PFI), the ability to process an incoming email from an MSSanté mailbox and to generate, based on this email, a request for integration, replacement, or deletion of a clinical document directed toward the consuming business application. This section should be considered by the reader in conjunction with another section of the CI-SIS, the "Transmission d'un document CDA-R2 en HL7v2" section, to provide an end-to-end view of exchanges through MSSanté (from the CREATOR of the document processing request to the final CONSUMER of this request).
 </p>
 
-<!--  A décommenter lors de la publication -->
-
+<!--  A décommenter lors de la publication 
 <div style="width: 65%">
     <blockquote class="stu-note">
     <p>
@@ -12,6 +12,7 @@
     </p>
     </blockquote>
 </div>
+-->
 
 
 <div class="figure">
@@ -20,8 +21,6 @@
 
 ### Avant-propos
 
-Ce document fait partie de la couche Service du Cadre d'Interopérabilité des Systèmes d'Information de santé (CI_SIS).
-
 <div style="width: 65%">
     <blockquote class="stu-note">
     <p>
@@ -29,7 +28,7 @@ Ce document fait partie de la couche Service du Cadre d'Interopérabilité des S
     </p>
     </blockquote>
 </div>
-
+Ce document fait partie de la couche Service du Cadre d'Interopérabilité des Systèmes d'Information de santé (CI_SIS).
 Ce présent volet décrit la possibilité pour un logiciel métier d’une organisation de déléguer à un acteur tiers, la plateforme d’intermédiation (PFI), la capacité de traiter un courriel entrant provenant d’une BAL MSSanté et de générer à partir de ce courriel une demande d’intégration ou de remplacement ou de suppression d’un document clinique en direction de l’application métier consommatrice. Ce volet est à considérer par le lecteur en association avec un autre volet du CI_SIS, [le volet « Transmission de document(s) CDA en HL7v2 »](https://esante.gouv.fr/volet-de-transmission-dun-document-cda-r2-en-hl7v2) de façon à avoir une vision de bout en bout des échanges au travers de la MSSanté (du CREATEUR de la demande de traitement sur un document vers le CONSOMMATEUR final de cette demande).
 
 Les deux volets en question intègrent à la fois une partie fonctionnelle et une partie technique.
