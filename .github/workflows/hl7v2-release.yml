@@ -1,6 +1,8 @@
-name: Workflow Release
+name: Workflow Release to IG-website-release
 on:
   workflow_call:
+
+  workflow_dispatch:
 jobs:
   run-release:
     runs-on: ubuntu-latest
@@ -14,8 +16,7 @@ jobs:
           github_page: "true"
           github_page_token: ${{ secrets.GITHUB_TOKEN }}
           bake: "false"
-          nos: "false"
-          validator_cli: "true"
+          validator_cli: "false"
           publish_repo: "ansforge/IG-website-release"
           publish_repo_token :  ${{ secrets.ANS_IG_API_TOKEN }} 
           publish_path_outpout : "./IG-website-release/www/ig/hl7v2"
