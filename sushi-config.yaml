@@ -2,7 +2,7 @@
 
 id: ans.hl7v2.fr.trans-cda-mss
 canonical: https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss # the last part of canonical and id must be the same
-name: HL7v2_trans_CDA_MSS # Should be an acronym
+name: CISIS_CDA_HL7_LPS # Should be an acronym
 title: Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté
 publisher:
   name: Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris
