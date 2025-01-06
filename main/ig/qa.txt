@@ -1,9 +1,9 @@
-HL7v2_trans_CDA_MSS : Validation Results
+CISIS_CDA_HL7_LPS : Validation Results
 =========================================
 
 err = 1, warn = 4, info = 0
 IG Publisher Version: 1.8.6
-Generated Mon Jan 06 11:12:32 UTC 2025. FHIR version 4.0.1 for ans.hl7v2.fr.trans-cda-mss#1.1.1 (canonical = https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss)
+Generated Mon Jan 06 12:23:10 UTC 2025. FHIR version 4.0.1 for ans.hl7v2.fr.trans-cda-mss#1.1.1 (canonical = https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss)
  Build Errors : 1 / 4 / 0
  /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/fsh-generated/resources/ImplementationGuide-ans.hl7v2.fr.trans-cda-mss : 1 / 0 / 1
 </table>

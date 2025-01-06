@@ -1,4 +1,4 @@
-HL7v2_trans_CDA_MSS : Validation Results
+CISIS_CDA_HL7_LPS : Validation Results
 =========================================
 
 err = 1, warn = 4, info = 0
