@@ -8,7 +8,8 @@ body:
     id: volet
     attributes:
       value: "### [CI-SIS]Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté"
-   - type: input
+      
+  - type: input
     id: section_identification
     attributes:
       label: "Identification de la section à changer"
