@@ -1,6 +1,6 @@
 {
-  "version" : "1.1.1",
-  "date" : "20250106122940",
+  "version" : "1.1.2",
+  "date" : "20250108153924",
   "notForPublication" : true,
   "name" : "ans.hl7v2.fr.trans-cda-mss.r4b"
 }
