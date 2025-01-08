@@ -7,11 +7,11 @@ title: Volet Transmission au LPS de documents CDA provenant d'un courriel MSSant
 publisher:
   name: Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris
   url: https://esante.gouv.fr
-status: active
-version: 1.1.1 # shall conforms to Semantic Versioning https://fr.wiktionary.org/wiki/SemVer
+status: draft
+version: 1.1.2 # shall conforms to Semantic Versioning https://fr.wiktionary.org/wiki/SemVer
 fhirVersion: 4.0.1
 copyrightYear: 2020+
-releaseLabel: trial-implementation
+releaseLabel: ci-build
 jurisdiction: urn:iso:std:iso:3166#FR "FRANCE"
 
 parameters:
