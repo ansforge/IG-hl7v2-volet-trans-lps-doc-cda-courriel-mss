@@ -8,11 +8,11 @@ body:
     id: volet
     attributes:
       value: "### [CI-SIS]Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté"
-  - type: input
+   - type: input
     id: section_identification
     attributes:
       label: "Identification de la section à changer"
-      description: "Identifier la section du volet concernée par la demande de changement (numéro de la section exemple 12.2.2, ou directement le lien lorsque le volet est sous forme de guide d'implémentation)"
+      description: "Identifier la section du volet concernée par la demande de changement (numéro de la section exemple 12.2.2, ou directement le lien)"
       placeholder: "Entrez le numéro ou le lien de la section"
     validations:
       required: true
@@ -21,7 +21,7 @@ body:
     id: issue_description
     attributes:
       label: "Votre demande de changement"
-      description: "Description de votre demande"
+      description: "Description de votre demande, du contexte, du problème rencontré"
       placeholder: "Décrivez votre demande"
     validations:
       required: true
@@ -33,23 +33,18 @@ body:
       description: "Proposer une modification (par exemple, une nouvelle formulation suggérée ou la description d'un moyen de résoudre le problème).\nProposer une solution ou une modification est fortement recommandé.\n Pour une suppression vous pouvez reprendre le texte et le barrer. \n Pour un ajout vous pouvez reprendre le paragraphe ou la section et surligner le texte ajouté.\n Vous pouvez également proposer une Pull Request (PR) lorsque le volet est sur un repository github et placer le lien ici vers cette PR"
       placeholder: "Proposez votre modification"
     validations:
-      required: false
+      required: true
 
-  - type: dropdown
+  - type: textarea
     id: impact_assessment
     attributes:
-      label: "Votre évaluation d'impact"
-      multiple: false
-      description: |
-        - **Majeur**: Question importante où il y a un problème majeur à résoudre. Nécessitera une concertation
-        - **Mineur**: Par exemple typo ou reformulation ne nécessitant pas de mise en concertation
-      options:
-        - Majeur
-        - Mineur
+      label: "Votre évaluation d'impact du changement "
+      description: "Veuillez indiquer ci-dessous votre évaluation de(s) impact(s) (gains et/ou risques) du changement proposé"
     validations:
-      required: true
+      required: false
   
   - type: textarea
+    id: complement
     attributes:
       label: Eléments complémentaires
       description: |
