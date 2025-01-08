@@ -6,11 +6,11 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide ans.hl7v2.fr.trans-cda-mss</b></p><a name=\"ans.hl7v2.fr.trans-cda-mss\"> </a><a name=\"hcans.hl7v2.fr.trans-cda-mss\"> </a><a name=\"ans.hl7v2.fr.trans-cda-mss-fr-FR\"> </a><h2>CISIS_CDA_HL7_LPS</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/ImplementationGuide/ans.hl7v2.fr.trans-cda-mss</pre></div>"
   },
   "url" : "https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/ImplementationGuide/ans.hl7v2.fr.trans-cda-mss",
-  "version" : "1.1.1",
+  "version" : "1.1.2",
   "name" : "CISIS_CDA_HL7_LPS",
   "title" : "Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté",
-  "status" : "active",
-  "date" : "2025-01-08T11:21:22+00:00",
+  "status" : "draft",
+  "date" : "2025-01-08T15:17:14+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -68,7 +68,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "trial-implementation"
+        "valueString" : "ci-build"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -358,7 +358,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "trial-implementation"
+        "valueString" : "ci-build"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
