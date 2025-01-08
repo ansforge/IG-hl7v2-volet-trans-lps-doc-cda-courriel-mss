@@ -1,0 +1,3720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Volume 2 : Détail des transactions - Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté v1.1.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style-ans.css"/>
+    <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+<div id="family-nav">
+    <img height="50" alt="HL7 v2" src="assets/images/hl7v2-logo.png"/>
+  </div>
+  <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
+    <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+  </div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Volet Transmission au LPS de documents CDA provenant d&#39;un courriel MSSanté</span>
+            <br/>
+            <span style="display:inline-block;">1.1.1 - trial-implementation
+
+
+
+  <img alt="France flag" src="assets/images/fra.svg" height="16" title="France"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 1 - Etude fonctionnelle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="volume1.html#cas-dusage">Cas d&apos;usage</a>
+      </li>
+      <li>
+        <a href="volume1.html#organisation-du-contexte-métier">Organisation métier</a>
+      </li>
+      <li>
+        <a href="volume1.html#acteurs-et-transactions">Acteurs et transactions</a>
+      </li>
+      <li>
+        <a href="volume1.html#définition-des-processus-collaboratifs">Définition des processus collaboratifs</a>
+      </li>
+      <li>
+        <a href="volume1.html#identification-des-flux">identification des flux</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2 – Détail des Transactions
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="volume2.html#introduction">Introduction</a>
+      </li>
+      <li>
+        <a href="volume2.html#périmetre-de-la-transaction">Périmètre de la transaction</a>
+      </li>
+      <li>
+        <a href="volume2.html#rôle-des-acteurs-pour-cette-transaction">Rôle des acteurs pour cette transaction</a>
+      </li>
+      <li>
+        <a href="volume2.html#choix-des-standards">Choix des standards</a>
+      </li>
+      <li>
+        <a href="volume2.html#evènements-déclenchants">Evènements déclenchants</a>
+      </li>
+      <li>
+        <a href="volume2.html#interactions-entre-les-acteurs">Interactions entre les Acteurs</a>
+      </li>
+      <li>
+        <a href="volume2.html#profils-de-messages">Profils de messages</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 3 - Annexes
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="lien-entete-cda-meta-xds.html">Lien entre l&apos;en-tête CDA et les métadonnées XDS</a>
+      </li>
+      <li>
+        <a href="meta-dmp-mss.html">Table MetaDMP/MSS</a>
+      </li>
+      <li>
+        <a href="error-codes.html">Codes erreurs de traitement du message HL7 MDM</a>
+      </li>
+      <li>
+        <a href="exemples.html">Exemples de messages</a>
+      </li>
+      <li>
+        <a href="struct-msg-mdn.html">Structure du MDN (MSS)</a>
+      </li>
+      <li>
+        <a href="glossaire.html">Glossaire</a>
+      </li>
+      <li>
+        <a href="doc-ref.html">Documents de référence</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="testplan.html">Test</a>
+  </li>
+  <li>
+    <a href="change-log.html">Historique des versions</a>
+  </li>
+  <li>
+    <a href="download.html">Téléchargements</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Volume 2 : Détail des transactions</b></li>
+
+          <span style="float:right;">
+
+            <a href="volume1.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="lien-entete-cda-meta-xds.html">next&gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté - Local Development build (v1.1.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Volume 2 : Détail des transactions</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#périmetre-de-la-transaction" id="markdown-toc-périmetre-de-la-transaction">Périmetre de la transaction</a></li>
+  <li><a href="#rôle-des-acteurs-pour-cette-transaction" id="markdown-toc-rôle-des-acteurs-pour-cette-transaction">Rôle des acteurs pour cette transaction</a></li>
+  <li><a href="#choix-des-standards" id="markdown-toc-choix-des-standards">Choix des standards</a></li>
+  <li><a href="#evènements-déclenchants" id="markdown-toc-evènements-déclenchants">Evènements déclenchants</a></li>
+  <li><a href="#interactions-entre-les-acteurs" id="markdown-toc-interactions-entre-les-acteurs">Interactions entre les Acteurs</a></li>
+  <li><a href="#profils-de-messages" id="markdown-toc-profils-de-messages">Profils de messages</a></li>
+</ul>
+
+</div>
+<h3 id="introduction">Introduction</h3>
+
+<p>Cette section décrit les détails techniques nécessaires à la mise en œuvre de la transaction permettant la transmission d’une demande de traitement (transmission initiale/remplacement/suppression) d’un document clinique au format CDA-R2 (Clinical Document Architecture Release 2) entre une Plateforme d’Intermédiation (PFI) et le logiciel métier du professionnel de santé, après détection d’un courriel reçu sur une Boîte Aux Lettres (BAL) MSSanté de l’établissement.</p>
+
+<h3 id="périmetre-de-la-transaction">Périmetre de la transaction</h3>
+<p>Le périmètre des spécifications s’applique à toute demande de transmission initiale/remplacement/suppression d’un document CDA-R2, provenant d’un courriel MSSanté réceptionné dans une BAL applicative et traité par la PFI de l’établissement hospitalier, accompagnée des informations du courriel et des métadonnées MSSanté associées au document. Ces informations sont encodées dans un flux HL7v2.6 MDM.</p>
+
+<p>Les spécifications couvrent également l’accusé de réception du message HL7 MDM.</p>
+
+<p>L’accusé de réception du message HL7 MDM rend compte de la bonne ou mauvaise intégration du message et des informations portées par le message au niveau de l’acteur CONSOMMATEUR.</p>
+
+<h3 id="rôle-des-acteurs-pour-cette-transaction">Rôle des acteurs pour cette transaction</h3>
+<table>
+  <tbody>
+    <tr>
+      <th>
+        <p><strong>Acteur</strong></p>
+      </th>
+      <th>
+        <p>GESTIONNAIRE</p>
+      </th>
+    </tr>
+    <tr>
+      <th>
+        <p><strong>Rôle</strong></p>
+      </th>
+      <td>
+        <p>- Le GESTIONNAIRE extrait les informations de l'archive IHE_XDM (pièce jointe du mail), analyse ces informations et construit le message HL7 MDM correspondant pour l'envoyer au CONSOMMATEUR.</p>
+        <p>- Le GESTIONNAIRE réceptionne l'accusé de réception et d'intégration du message HL7 MDM, gère cet accusé et construit un accusé de lecture MSSanté (MDN-Message Disposition Notification) en fonction du statut retourné par l'acquittement du message HL7 MDM.</p>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <p><strong>Acteur</strong></p>
+      </th>
+      <th>
+        <p>CONSOMMATEUR</p>
+      </th>
+    </tr>
+    <tr>
+      <th>
+        <p><strong>Rôle</strong></p>
+      </th>
+      <td>
+        <p>- Le CONSOMMATEUR reçoit la demande du GESTIONNAIRE (transmission initiale/remplacement/suppression d'un document) sous la forme d'un message HL7 MDM, intègre si possible dans sa base de données les informations portées par le message HL7 MDM et renvoie vers le GESTIONNAIRE l'accusé de réception du message HL7 MDM.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="choix-des-standards">Choix des standards</h3>
+<ul>
+  <li>
+    <p>HL7 v2.6 : Chapitre 9, message MDM (Medical Document Management) (1),</p>
+  </li>
+  <li>
+    <p><a href="https://www.interopsante.org/publications">Extension française du profil IHE PAM : PAM.fr, version 2.11</a></p>
+  </li>
+  <li>
+    <p>Les types de données utilisés (2) doivent se conformer aux spécifications <a href="https://www.interopsante.org/publications">« Contraintes sur les types de données HL7 v2.5 applicables aux profils d’intégration du cadre technique IT Infrastructure dans le périmètre d’IHE France » release 1.8</a></p>
+  </li>
+  <li>
+    <p>Le choix du protocole de transport est libre. L’utilisation du protocole MLLP est à privilégier pour gérer au mieux les accusés de réception techniques (ACK).</p>
+  </li>
+  <li>
+    <p>Dans le cadre de cette spécification, les documents médicaux véhiculés correspondent à des documents au format CDA-R2 conformes au <a href="https://esante.gouv.fr/volet-structuration-minimale-de-documents-de-sante">volet du CI-SIS « Structuration minimale des documents de santé »</a>.</p>
+  </li>
+  <li>
+    <p>Les documents transmis par le message HL7 doivent être validés par le professionnel de santé dans l’application métier qui les a générés via un statut de validation géré en interne.</p>
+  </li>
+</ul>
+
+<blockquote class="stu-note">
+    <p>
+    <b>(1) :</b> Les messages décrits au niveau de cette transaction implémentent la version 2.6 (message MDM) du standard HL7 mais pré adoptent le segment PRT de la version 2.9, permettant de spécifier l’expéditeur et le(s) destinataire(s) d’un courriel.
+    Le message MDM permet de transmettre un seul document.
+    </p>
+</blockquote>
+
+<blockquote class="stu-note">
+    <p>
+    <b>(2) :</b> Pour l'ensemble des champs de type CE en HL7v2.5 et CWE en HL7v2.6, la contrainte imposée en version 2.7 sur le type de donnée CE/CWE est pré adoptée. En conséquence, ces spécifications imposent de préciser le système de codage (CE/CWE.3) lorsque le code (CE/CWE.1) est renseigné. 
+Les bonnes pratiques consistent à renseigner systématiquement les 3 composantes : le code, le libellé du code et le libellé de la nomenclature.
+    </p>
+</blockquote>
+
+<h3 id="evènements-déclenchants">Evènements déclenchants</h3>
+<p>Après réception d’un courriel détecté dans une BAL applicative MSSanté, la PFI ouvre l’archive IHE_XDM contenant des documents médicaux et les transmets individuellement au LPS consommateur en utilisant un message HL7v2.6 de type MDM.</p>
+
+<p>Ensuite, le LPS accuse réception de cette demande de traitement sur le document avec un message HL7v2.6 de type ACK.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <th>
+        <p>Flux métiers</p>
+      </th>
+      <th>
+        <p>Type de message HL7v2.6</p>
+      </th>
+    </tr>
+    <tr>
+      <td rowspan="3">
+        <p>TransmissionDocuments</p>
+      </td>
+      <td>
+        <p>Transmission initiale d'un document : L'évènement utilisé sera le T02 « Original document notification »</p>
+        <p>-&gt;  <code>MDM^T02^MDM_T02</code></p>
+        <p>-&gt;  OBX-11 = F (Final results; Can only be changed with a corrected result.) [HL7 Tables 0085]</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>Suppression d'un document : L'évènement utilisé sera le T04 « Document status change notification and content »</p>
+        <p>-&gt;  <code>MDM^T04^MDM_T02</code></p>
+        <p>-&gt;  OBX-11 = D (Deletes the OBX record) [HL7 Tables 0085]</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>Remplacement d'un document : L'évènement utilisé sera le T10 « Document replacement notification and content »</p>
+        <p>-&gt;  <code>MDM^T10^MDM_T02</code></p>
+        <p>-&gt;  OBX-11 = C (Record coming over is a correction and thus replaces a final result) [HL7 Tables 0085]</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>ReponseTransmissionDocuments</p>
+      </td>
+      <td>
+        <p>ACK : Acquittement du message HL7 MDM</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="interactions-entre-les-acteurs">Interactions entre les Acteurs</h3>
+<div class="figure" style="text-align: center;">
+    <img src="image19.png" alt="Figure 13" title="Figure 13 : Diagramme de séquence – Message MDM" style="width:80%;" />
+    <figcaption><b>Figure 13 : Diagramme de séquence – Message MDM</b></figcaption>
+</div>
+<p><br />
+La gestion de l’accusé de lecture MSSanté (MDN-Message Disposition Notification) va dépendre de l’organisation choisie par l’établissement pour traiter les courriels réceptionnés.</p>
+
+<p>Ce flux d’accusé de lecture MSSanté (courriel MDN) rend compte de la lecture du courriel par le destinataire lorsque ce courriel est traité de façon manuelle. Dans le cas d’un traitement automatique du courriel par la PFI de l’établissement destinataire, ce flux d’accusé de lecture rend compte de la réalisation de la demande de traitement sur le document contenu dans le courriel par le logiciel métier associé à la BAL destinatrice du courriel.</p>
+
+<p>Dans le cas où le courriel entrant, réceptionné par une BAL organisationnelle, est transféré vers la BAL applicative associée pour traitement automatique de la demande, le courriel MDN généré par le GESTIONNAIRE (PFI) et envoyé à la BAL organisationnelle demandeuse est indispensable pour avertir l’utilisateur du succès ou de l’échec de la demande de traitement par le CONSOMMATEUR.</p>
+
+<p>La structure du MDN (Message Disposition Notification) est précisée <a href="struct-msg-mdn.html">ici</a>.</p>
+
+<h3 id="profils-de-messages">Profils de messages</h3>
+<h4 id="le-message-mdm-en-hl7-v26">Le message MDM en HL7 v2.6</h4>
+
+<h5 id="description-du-profil-du-message-mdm">Description du profil du message MDM</h5>
+<p>Le profil du message MDM est le suivant :</p>
+<table class="table-hl7v2">
+<tbody>
+  <tr>
+    <th>
+      <p>Segment</p>
+    </th>
+    <th>
+      <p>Meaning</p>
+    </th>
+    <th>
+      <p>Usage</p>
+    </th>
+    <th>
+      <p>Card.</p>
+    </th>
+    <th>
+      <p>§ HL7</p>
+    </th>
+  </tr>
+  <tr>
+      <td>
+        <p>MSH</p>
+      </td>
+      <td>
+        <p>Message Header</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+      <td>
+        <p>[1..1]</p>
+      </td>
+      <td>
+        <p>2</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p> [{SFT}]</p>
+      </td>
+      <td>
+        <p>Software Segment</p>
+      </td>
+      <td>
+        <p>O</p>
+      </td>
+      <td>
+        <p>[0..*]</p>
+      </td>
+      <td>
+        <p>2</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>[UAC]</p>
+      </td>
+      <td>
+        <p>User Authentication Credentials</p>
+      </td>
+      <td>
+        <p>O</p>
+      </td>
+      <td>
+        <p>[0..1]</p>
+      </td>
+      <td>
+        <p>2</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>EVN</p>
+      </td>
+      <td>
+        <p>Event type</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+      <td>
+        <p>[1..1]</p>
+      </td>
+      <td>
+        <p>2</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>PID</p>
+      </td>
+      <td>
+        <p>Patient Identification</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+      <td>
+        <p>[1..1]</p>
+      </td>
+      <td>
+        <p>3</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>PV1</p>
+      </td>
+      <td>
+        <p>Patient Visit</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+      <td>
+        <p>[1..1]</p>
+      </td>
+      <td>
+        <p>3</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p> </p>
+      </td>
+      <td>
+        <p>--- COMMON_ORDER begin</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+      <td>
+        <p>[1..1]</p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p> ORC</p>
+      </td>
+      <td>
+        <p>Common Order = demande de service sur le document</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+      <td>
+        <p>[1..1]</p>
+      </td>
+      <td>
+        <p>4</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p> [{</p>
+      </td>
+      <td>
+        <p>--- TIMING begin</p>
+      </td>
+      <td>
+        <p>O</p>
+      </td>
+      <td>
+        <p>[0..*]</p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>  TQ1</p>
+      </td>
+      <td>
+        <p>Timing/Quantity</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+      <td>
+        <p>[1..1]</p>
+      </td>
+      <td>
+        <p>4</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>  [{TQ2}]</p>
+      </td>
+      <td>
+        <p>Timing/Quantity RelationShip</p>
+      </td>
+      <td>
+        <p>O</p>
+      </td>
+      <td>
+        <p>[0..*]</p>
+      </td>
+      <td>
+        <p>4</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p> }]</p>
+      </td>
+      <td>
+        <p>--- TIMING end</p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p> OBR</p>
+      </td>
+      <td>
+        <p>Observation Request segment</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+      <td>
+        <p>[1..1]</p>
+      </td>
+      <td>
+        <p>4</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p> [{NTE}]</p>
+      </td>
+      <td>
+        <p>Notes and comments</p>
+      </td>
+      <td>
+        <p>O</p>
+      </td>
+      <td>
+        <p>[0..*]</p>
+      </td>
+      <td>
+        <p>2</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p> </p>
+      </td>
+      <td>
+        <p>--- COMMON_ORDER end</p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>TXA</p>
+      </td>
+      <td>
+        <p>Transcription document header</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+      <td>
+        <p>[1..1]</p>
+      </td>
+      <td>
+        <p>9</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>{</p>
+      </td>
+      <td>
+        <p>OBXNTE (Document, informations sur le courriel, métadonnées sur le document)</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+      <td>
+        <p>[1..*]</p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p> OBX</p>
+      </td>
+      <td>
+        <p>Observation/Result</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+      <td>
+        <p>[1..1]</p>
+      </td>
+      <td>
+        <p>9</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p> [{PRT}]</p>
+      </td>
+      <td>
+        <p>Participation : Expéditeur, destinataire(s) MSS et adresse mail sur laquelle le destinataire peut répondre. Segment PRT pré-adopté de la version 2.9</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+      <td>
+        <p>[1..*]</p>
+      </td>
+      <td>
+        <p>7 (v2.9)</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p> [{NTE}]</p>
+      </td>
+      <td>
+        <p>Notes and comments</p>
+      </td>
+      <td>
+        <p>O</p>
+      </td>
+      <td>
+        <p>[0..*]</p>
+      </td>
+      <td>
+        <p>2</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>}</p>
+      </td>
+      <td>
+        <p>---OBXNTE end</p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Le message HL7 MDM ne peut transmettre qu’un seul document médical.</p>
+
+<p>Les contraintes apportées par ce volet sur les données du message MDM sont décrites à la <a href="volume2.html#contraintes-appliquées-aux-messages-mdm-dans-le-contexte-de-ce-volet">section dédiée</a>.</p>
+
+<h5 id="description-fonctionnelle-du-message-mdm">Description fonctionnelle du message MDM</h5>
+
+<div class="figure" style="text-align: center;">
+    <img src="image20.png" alt="Figure 14" title="Figure 14 : Description fonctionnelle du message HL7 MDM" style="width:80%;" />
+    <figcaption><b>Figure 14 : Description fonctionnelle du message HL7 MDM</b></figcaption>
+</div>
+<p><br />
+Les groupes de segments en rouge sur le schéma représentent les éléments
+spécifiques à ce volet :</p>
+
+<ul>
+  <li>
+    <p>Un groupe OBXNTE, requis, contenant le document médical au format
+CDA-R2 codé en base64 suivi de segments PRT, pré-adoptés depuis la
+version 2.9 du standard, permettant ainsi de renseigner les
+informations de l’expéditeur (requis), le destinataire MSSanté
+(requis si connu) et, le cas échéant, l’adresse mail de réponse
+(contraintes décrites au <a href="volume2.html#le-groupe-de-segments-obxnte-portant-le-document-cda">paragraphe dédié</a>).</p>
+  </li>
+  <li>
+    <p>Le deuxième groupe véhicule, dans un segment OBX, les informations
+du courriel MSSanté dont a été extrait le document.</p>
+  </li>
+  <li>
+    <p>Les groupes OBXNTE suivants (requis et répétables) véhiculent les
+métadonnées spécifiques à l’envoi par la MSSanté.</p>
+  </li>
+</ul>
+
+<p>Dans le message MDM, le document est accompagné de quelques métadonnées
+renseignées au niveau du segment TXA. Il s’agit à minima du type de
+document (TXA-2), de la présentation du contenu du document (TXA-3), de
+l’identifiant unique du document (TXA-12), de l’identifiant unique du
+document remplacé (TXA-13) lorsque l’évènement est à T10 et du statut
+indiquant la complétude du document (TXA-17).</p>
+
+<h4 id="contraintes-appliquées-aux-messages-mdm-dans-le-contexte-de-ce-volet">Contraintes appliquées aux messages MDM dans le contexte de ce volet</h4>
+<p>Dans la suite de cette section, les valeurs indiquées en bleu dans les tableaux indiquent les valeurs fixes à insérer dans le champ du message.</p>
+
+<h5 id="eléments-de-contrôle-du-message-mdm">Eléments de contrôle du message MDM</h5>
+
+<h6 id="le-segment-msh--header-du-message">Le segment MSH – Header du message</h6>
+
+<table class="table-hl7v2">
+  <tbody>
+    <tr>
+      <th>
+        <p>Champ</p>
+      </th>
+      <th>
+        <p>Contenu</p>
+      </th>
+      <th>
+        <p>Type donnée</p>
+      </th>
+      <th>
+        <p>Caractère optionnel/obligatoire</p>
+        <p> </p>
+        <p> </p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-1</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">|</span> séparateur de champ</p>
+      </td>
+      <td>
+        <p>ST</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-2</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">^~\&amp;</span> : séparateur de composant, répétition, caractère d'échappement, séparateur de sous-composants</p>
+      </td>
+      <td>
+        <p>ST</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-3</p>
+      </td>
+      <td>
+        <p>Application émettrice</p>
+      </td>
+      <td>
+        <p>HD</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-4</p>
+      </td>
+      <td>
+        <p>Organisation émettrice</p>
+      </td>
+      <td>
+        <p>HD</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-5</p>
+      </td>
+      <td>
+        <p>Application réceptrice</p>
+      </td>
+      <td>
+        <p>HD</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-6</p>
+      </td>
+      <td>
+        <p>Organisation réceptrice</p>
+      </td>
+      <td>
+        <p>HD</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-7</p>
+      </td>
+      <td>
+        <p>Date/time du message</p>
+      </td>
+      <td>
+        <p>TS</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-9</p>
+      </td>
+      <td>
+        <p>Type du message</p>
+        <p><span class="hl7-color">MDM^T02^MDM_T02</span></p>
+        <p><span class="hl7-color">MDM^T10^MDM_T02</span></p>
+        <p><span class="hl7-color">MDM^T04^MDM_T02</span></p>
+      </td>
+      <td>
+        <p>MSG</p>
+      </td>
+      <td>
+        <p>R</p>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-10</p>
+      </td>
+      <td>
+        <p>Identifiant du message</p>
+      </td>
+      <td>
+        <p>ST</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-11</p>
+      </td>
+      <td>
+        <p>Processing Id</p>
+        <p><span class="hl7-color">P : en production</span></p>
+        <p><span class="hl7-color">T : message de test</span></p>
+        <p><span class="hl7-color">D : environnement de debug</span></p>
+      </td>
+      <td>
+        <p>PT</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-12</p>
+      </td>
+      <td>
+        <p>Version du standard <span class="hl7-color">2.6</span></p>
+      </td>
+      <td>
+        <p>VID</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-17</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">FRA</span></p>
+      </td>
+      <td>
+        <p>ID</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-18</p>
+      </td>
+      <td>
+        <p>Jeux de caractères, valeurs possibles :</p>
+        <p><span class="hl7-color">UNICODE UTF-8</span> ou <span class="hl7-color">8859/15</span></p>
+      </td>
+      <td>
+        <p>ID</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-21</p>
+      </td>
+      <td>
+        <p>Identifiant du profil de message</p>
+        <p>MSH-21.1 : Entity Identifier (<span class="hl7-color">1.1</span>)</p>
+        <p>MSH-21.2 : Namespace Id</p>
+        <p><span class="hl7-color">CISIS_CDA_HL7_LPS</span></p>
+      </td>
+      <td>
+        <p>EI</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h6 id="exemples">Exemples</h6>
+
+<p>Entête MSH d’un message MDM émis par le GESTIONNAIRE :</p>
+
+<p><code class="language-plaintext highlighter-rouge">MSH|^~\&amp;|PFI|CHU_X|DPI|CHU_X|202310030830||MDM^T02^MDM^T02^MDM_T02|12345|P|2.6|||||FRA|8859/15|||1.1^ CISIS_CDA_HL7_LPS</code></p>
+
+<h5 id="les-données-concernant-le-patient-et-la-venue-du-patient">Les données concernant le patient et la venue du patient</h5>
+
+<p>Le message HL7 MDM est centré sur un seul patient. Les informations concernant le patient sont décrites par le segment requis PID. Le segment PV1, requis dans le standard, représente la venue courante du patient.</p>
+
+<p>Ces deux segments doivent être renseignés conformément à la spécification « <a href="https://www.interopsante.org/publications">PAM – National extension France » version 2.11</a> publiée en 2024. Si l’INS est véhiculé, le segment PID doit suivre les contraintes décrites dans l’<a href="https://esante.gouv.fr/annexe-prise-en-charge-de-lins-dans-les-volets-du-ci-sis">annexe CI-SIS « Prise en charge de l’identifiant National de Santé (INS) dans les standards d’interopérabilité et les volets du CI-SIS »</a>.</p>
+
+<table class="table-hl7v2">
+  <tbody>
+    <tr>
+      <th>
+        <p>Champ</p>
+      </th>
+      <th>
+        <p>Contenu</p>
+      </th>
+      <th>
+        <p>Type donnée</p>
+      </th>
+      <th>
+        <p>Caractère optionnel/obligatoire</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p>PID-3</p>
+      </td>
+      <td>
+        <p>Identifiants du patient</p>
+      </td>
+      <td>
+        <p>CX</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>PID-5</p>
+      </td>
+      <td>
+        <p>Nom du patient</p>
+      </td>
+      <td>
+        <p>XPN</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Le PID-3 doit être identique aux identifiants de patient portés par le document CDA (recordTarget/patientRole/id).</p>
+
+<p>Pour le segment PV1, ce volet ajoute les contraintes suivantes :</p>
+<table class="table-hl7v2">
+  <tbody>
+    <tr>
+      <th>
+        <p>Champ</p>
+      </th>
+      <th>
+        <p>Contenu</p>
+      </th>
+      <th>
+        <p>Type donnée</p>
+      </th>
+      <th>
+        <p>Caractère optionnel/obligatoire</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p>PV1-2</p>
+      </td>
+      <td>
+        <p>Classe du patient : <span class="hl7-color">N</span> (Not applicable)</p>
+      </td>
+      <td>
+        <p>IS</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="le-segment-orc">Le segment ORC</h5>
+
+<table class="table-hl7v2">
+  <tbody>
+    <tr>
+      <th colspan="3">
+        <p>Composition du segment ORC : Usage = Required / Cardinalité = [1..1]</p>
+      </th>
+    </tr>
+    <tr>
+      <th>
+        <p>Elément requis :</p>
+      </th>
+      <th>
+        <p>Description :</p>
+      </th>
+      <th>
+        <p>Valeur :</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p><strong>Segment ORC</strong></p>
+      </td>
+      <td>
+        <p><strong>Common Order</strong></p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>ORC-1</p>
+      </td>
+      <td>
+        <p>Order control</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">NW</span> (New order/service dans le cas d'une demande d'intégration de document(s)</p>
+        <p><span class="hl7-color">RO</span> (Replace order) dans le cas d'une demande de remplacement</p>
+        <p><span class="hl7-color">CA</span> (Canceled) dans le cas d'une demande de suppression</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="le-segment-obr">Le segment OBR</h5>
+
+<table class="table-hl7v2">
+  <tbody>
+    <tr>
+      <th colspan="3">
+        <p>Composition du segment OBR : Usage = Required / Cardinalité = [1..1]</p>
+      </th>
+    </tr>
+    <tr>
+      <th>
+        <p>Elément requis :</p>
+      </th>
+      <th>
+        <p>Description :</p>
+      </th>
+      <th>
+        <p>Valeur :</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p><strong>Segment OBR</strong></p>
+      </td>
+      <td>
+        <p><strong>Observation Request</strong></p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBR-4</p>
+      </td>
+      <td>
+        <p>Universal Service Identifier</p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt;OBR-4.1</p>
+      </td>
+      <td>
+        <p>Code du document</p>
+      </td>
+      <td rowspan="2">
+        <p>Utiliser le <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-JDV-J07-XdsTypeCode-CISIS.html">JDV_J07-XdsTypeCode-CISIS</a> de la Nomenclature des Objets de Santé (NOS).</p>
+        <p>A noter qu'en cas d'envoi au DMP, le Gestionnaire doit contrôler que le type de document appartient au jeu de valeur défini par le DMP (<a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-JDV-J66-TypeCode-DMP.html">JDV_J66-TypeCode-DMP</a>).</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt;OBR-4.2</p>
+      </td>
+      <td>
+        <p>Libellé du document</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt;OBR-4.3</p>
+      </td>
+      <td>
+        <p>Système de codage dont est issu le code</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">LN</span> ou <span class="hl7-color">TRE_A05</span><a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/CodeSystem-TRE-A05-TypeDocComplementaire.html"> (lien vers la TRE)</a> en fonction de l'appartenance du code à l'un des trois systèmes de codage</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="les-données-dentête-du-document--segment-txa">Les données d’entête du document – Segment TXA</h5>
+
+<p>Le message MDM requiert l’utilisation du segment TXA qui porte les métadonnées associées au document contenu dans le message. Les contraintes apportées par ce volet sur le segment TXA sont les suivantes :</p>
+<table class="table-hl7v2">
+  <tbody>
+    <tr>
+      <th>
+        <p>Champ</p>
+      </th>
+      <th>
+        <p>Contenu</p>
+      </th>
+      <th>
+        <p>Type donnée</p>
+      </th>
+      <th>
+        <p>Caractère optionnel/obligatoire</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p>TXA-1</p>
+      </td>
+      <td>
+        <p>Set-ID TXA. Valeur = 1</p>
+      </td>
+      <td>
+        <p>SI</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>TXA-2</p>
+      </td>
+      <td>
+        <p>Type de document dont les valeurs sont à prendre dans</p>
+        <p>le <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-JDV-J07-XdsTypeCode-CISIS.html">JDV_J07-XdsTypeCode-CISIS</a> de la Nomenclature des Objets de Santé (NOS).</p>
+        <p>Par exemple : 11502-2</p>
+      </td>
+      <td>
+        <p>IS</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>TXA-3</p>
+      </td>
+      <td>
+        <p>Document Content Presentation</p>
+        <p><span class="hl7-color">TEXT</span></p>
+      </td>
+      <td>
+        <p>ID</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>TXA-12 <i>(Note 1)</i></p>
+      </td>
+      <td>
+        <p>Unique document number</p>
+        <p>Si ClinicalDocument/id@extension est renseigné :</p>
+        <p> ex : 58132^^1.2.250.2345.3245.13^ISO</p>
+        <p>Si ClinicalDocument/id@extension n'est pas renseigné :</p>
+        <p> ex : 1.2.250.2345.3245.13.58132</p>
+      </td>
+      <td>
+        <p>EI</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>TXA-13 <i>(Note 1)</i></p>
+      </td>
+      <td>
+        <p>Parent document number</p>
+        <p>Si ClinicalDocument/id@extension est renseigné :</p>
+        <p> ex : 58131^^1.2.250.2345.3245.13^ISO</p>
+        <p>Si ClinicalDocument/id@extension n'est pas renseigné :</p>
+        <p> ex : 1.2.250.2345.3245.13.58131</p>
+      </td>
+      <td>
+        <p>EI</p>
+      </td>
+      <td>
+        <p>C (Requis dans le cas d'une demande de remplacement)</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>TXA-17</p>
+      </td>
+      <td>
+        <p>Document completion status dont la valeur est à prendre dans la table HL7 0271</p>
+        <p><span class="hl7-color">AU</span></p>
+      </td>
+      <td>
+        <p>ID</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>(Note 1)</strong> : <em>conformément au volet de <strong>Structuration minimale des
+documents de santé</strong>, l’identifiant du document au sein du document CDA
+s’exprime soit par un OID complet identifiant complètement l’instance du
+document (sans extension), soit par une racine d’OID commune à toutes
+les instances de documents de l’émetteur associée à une extension propre
+à l’instance du document.</em></p>
+
+<p>La règle de peuplement des sous champs des champs TXA-12 et TXA-13 est
+la suivante :</p>
+
+<ul>
+  <li>
+    <p>si ClinicalDocument/id@extension est renseigné :</p>
+
+    <ul>
+      <li>
+        <p>TXA-12.1 &lt; = ClinicalDocument/id@extension</p>
+      </li>
+      <li>
+        <p>TXA-12.2 &lt; = Non renseigné</p>
+      </li>
+      <li>
+        <p>TXA-12.3 &lt; = ClinicalDocument/id@root</p>
+      </li>
+      <li>
+        <p>TXA-12.4 &lt; = ISO</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>si ClinicalDocument/id@extension n’est pas renseigné :</p>
+
+    <ul>
+      <li>
+        <p>TXA-12.1 &lt; = ClinicalDocument/id@root</p>
+      </li>
+      <li>
+        <p>TXA-12.2 &lt; = Non renseigné</p>
+      </li>
+      <li>
+        <p>TXA-12.3 &lt; = Non renseigné</p>
+      </li>
+      <li>
+        <p>TXA-12.4 &lt; = Non renseigné</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="les-données-concernant-la-demande-de-traitement-sur-le-document">Les données concernant la demande de traitement sur le document</h5>
+<h6 id="le-groupe-de-segments-obxnte-portant-le-document-cda">Le groupe de segments OBXNTE portant le document CDA</h6>
+
+<p>Le message HL7 MDM contient un premier groupe OBXNTE composé :</p>
+
+<ul>
+  <li>
+    <p>d’un segment OBX contenant un document encodé en Base64 dont le type
+MIME est précisé en OBX-5.2, il peut s’agir d’un document CDA-R2
+Niv1 ou d’un CDA-R2 Niv3,</p>
+  </li>
+  <li>
+    <p>d’un segment PRT requis, pré-adopté de HL7v2.9, véhiculant les
+informations sur l’expéditeur du courriel MSSanté,</p>
+  </li>
+  <li>
+    <p>d’un segment PRT requis si connu et répétable, pré-adopté de HL7v2.9, véhiculant
+les informations sur  le(s) destinataire(s) du courriel MSSanté,</p>
+  </li>
+  <li>
+    <p>d’un segment PRT optionnel et répétable, pré-adopté de HL7v2.9, l’(es) adresse(s) mail sur la(les)quelle(s) le(s) destinataire(s) peut ou peuvent répondre.</p>
+  </li>
+</ul>
+
+<p>Les champs des segments PRT doivent être renseignés conformément aux
+spécifications <a href="https://www.interopsante.org/publications">« Contraintes sur les types de données HL7 v2.5
+applicables aux profils d’intégration du cadre technique IT
+Infrastructure dans le périmètre d’IHE France » release 1.8</a>.</p>
+
+<p>Les tableaux suivants listent l’ensemble des <strong>segments et des champs à
+renseigner obligatoirement</strong>, dans l’ordre indiqué, à l’exception du
+dernier segment PRT permettant de préciser l’adresse mail de réponse
+(qui est optionnel). Seuls les segments et les champs indiqués dans les
+tableaux suivants sont à renseigner dans le message MDM :</p>
+
+<table class="table-hl7v2">
+  <tbody>
+    <tr>
+      <th colspan="3">
+        <p>Composition du groupe OBXNTE : Usage = Required / Cardinalité = [1..1]</p>
+      </th>
+    </tr>
+    <tr>
+      <th>
+        <p>Elément requis :</p>
+      </th>
+      <th>
+        <p>Description :</p>
+      </th>
+      <th>
+        <p>Valeur :</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p><strong>Segment OBX</strong></p>
+      </td>
+      <td>
+        <p><strong>Observation/Result</strong></p>
+      </td>
+      <td>
+        <p>Contient un document au format CDA-R2 </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-1</p>
+      </td>
+      <td>
+        <p>Set Id - Obx</p>
+      </td>
+      <td>
+        <p>Numéro de séquence du segment</p>
+        <p><span class="hl7-color">1</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-2 </p>
+      </td>
+      <td>
+        <p>Value Type</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">ED</span> (Encapsuled Data)</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-3 = OBR-4</p>
+      </td>
+      <td>
+        <p>Observation Identifier</p>
+      </td>
+      <td>
+        <p><strong> </strong></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-3.1 : </p>
+      </td>
+      <td>
+        <p>Code du Document</p>
+      </td>
+      <td rowspan="2">
+        <p>Utiliser le <a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/ValueSet-JDV-J07-XdsTypeCode-CISIS.html">JDV_J07-XdsTypeCode-CISIS</a> de la Nomenclature des Objets de Santé (NOS)</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-3.2 : </p>
+      </td>
+      <td>
+        <p>Libellé du Document</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt;OBX-3.3</p>
+      </td>
+      <td>
+        <p>Système de codage dont est issu le code</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">LN</span> ou <span class="hl7-color">TRE_A05</span><a href="https://ansforge.github.io/IG-terminologie-de-sante/ig/main/CodeSystem-TRE-A05-TypeDocComplementaire.html"> (lien vers la TRE)</a> en fonction de l'appartenance du code à l'un de ces systèmes de codage.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-5 </p>
+      </td>
+      <td>
+        <p>Observation Value</p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-5.1</p>
+      </td>
+      <td>
+        <p>Source Application</p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-5.2</p>
+      </td>
+      <td>
+        <p>Type</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">text</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-5.3</p>
+      </td>
+      <td>
+        <p>Data Subtype</p>
+      </td>
+      <td>
+        <p>Le champ prend la valeur <span class="hl7-color">XML</span>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-5.4</p>
+      </td>
+      <td>
+        <p>Encoding</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">Base64</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-5.5</p>
+      </td>
+      <td>
+        <p>Data</p>
+      </td>
+      <td>
+        <p>Intégrer le document CDA</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-11</p>
+      </td>
+      <td>
+        <p>Observation Result Status</p>
+      </td>
+      <td>
+        <p>Statut du document pris dans la table HL7 0085 (Observation Result Status Codes Interpretation)</p>
+        <p>·       <span class="hl7-color">F</span> : Document validé</p>
+        <p>·       <span class="hl7-color">D</span> : Document à supprimer</p>
+        <p>·       <span class="hl7-color">C</span> : Remplacement du Document</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><strong>Segment PRT (Requis)</strong></p>
+      </td>
+      <td>
+        <p><strong>Participation Information  Expéditeur</strong></p>
+      </td>
+      <td>
+        <p>Ce segment contient les informations de l'expéditeur à l'origine de la demande de traitement sur le document.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>PRT-2 </p>
+      </td>
+      <td>
+        <p>Action Code</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">UC</span> (Unchanged)</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>PRT-4 </p>
+      </td>
+      <td>
+        <p>Participation</p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-4.1</p>
+      </td>
+      <td>
+        <p>Code </p>
+      </td>
+      <td>
+        <p><span class="hl7-color">SB</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-4.2</p>
+      </td>
+      <td>
+        <p>Libellé du code</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">Send by</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-4.3</p>
+      </td>
+      <td>
+        <p>Name Of Coding System</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">participation</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>PRT-5 (Requis si connu)</p>
+      </td>
+      <td>
+        <p>Participation Person</p>
+      </td>
+      <td>
+        <p>Ce champ est requis si connu si l'expéditeur est un professionnel de santé (Note 1).</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-5.1 (Requis si connu)</p>
+      </td>
+      <td>
+        <p>ID number</p>
+      </td>
+      <td>
+        <p>Identifiant du professionnel de santé expéditeur</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-5.2 (Requis si connu)</p>
+      </td>
+      <td>
+        <p>Family Name</p>
+      </td>
+      <td>
+        <p>Nom d'exercice de l'expéditeur</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-5.3 (Requis si connu)</p>
+      </td>
+      <td>
+        <p>Given Name</p>
+      </td>
+      <td>
+        <p>Prénom d'exercice de l'expéditeur</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-5.9 (Requis si connu)</p>
+      </td>
+      <td>
+        <p>Assigning Authority</p>
+      </td>
+      <td>
+        <p>Autorité d'affectation de l'identifiant de l'expéditeur </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-5.13 (Conditionnel)</p>
+      </td>
+      <td>
+        <p>Identifier Type Code</p>
+      </td>
+      <td>
+        <p>Le type d'identifiant (<a href="http://www.interopsante.org/offres/doc_inline_src/412/IHE_France_Constraints_on_HL7_data_types_for_ITI_v.1.7.3.pdf">Table 0203 - Interop'Santé</a>) est requis lorsque le PRT-5.1 est renseigné</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>PRT-8 (Requis si connu)</p>
+      </td>
+      <td>
+        <p>Participation Organization</p>
+      </td>
+      <td>
+        <p>Ce champ est requis si connu si l'expéditeur est une organisation (Note 1).</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-8.1 (Requis si connu)</p>
+      </td>
+      <td>
+        <p>OrganizationName</p>
+      </td>
+      <td>
+        <p>Nom de l'organisation</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-8.6 (Requis si connu)</p>
+      </td>
+      <td>
+        <p>Assigning Authority</p>
+      </td>
+      <td>
+        <p>Autorité d'affectation de l'identifiant de l'organisation expéditrice du document</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-8.7 (Requis si connu)</p>
+      </td>
+      <td>
+        <p>Identifier Type Code</p>
+      </td>
+      <td>
+        <p>Type d'identifiant (<a href="http://www.interopsante.org/offres/doc_inline_src/412/IHE_France_Constraints_on_HL7_data_types_for_ITI_v.1.7.3.pdf">Table 0203 - Interop'Santé</a>)</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-8.10 (Requis si connu)</p>
+      </td>
+      <td>
+        <p>Organization number</p>
+      </td>
+      <td>
+        <p>Identifiant de l'organisation expéditrice du document</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>PRT-10 (Conditionnel)</p>
+      </td>
+      <td>
+        <p>Participation Device</p>
+      </td>
+      <td>
+        <p>Ce champ est requis si l'expéditeur est une application.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-10.1</p>
+      </td>
+      <td>
+        <p>Entity Identifier</p>
+      </td>
+      <td>
+        <p>Identifiant de l'application</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>PRT-15 (Requis)</p>
+      </td>
+      <td>
+        <p>Participant Telecommunication Address</p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-15.3</p>
+      </td>
+      <td>
+        <p>Telecommunication Equipment Type</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">X.400</span> (X.400 email address)</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-15.4</p>
+      </td>
+      <td>
+        <p>Communication Address</p>
+      </td>
+      <td>
+        <p>Intégrer l'adresse mail de l'expéditeur</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><strong>Segment PRT (Requis si connu)</strong></p>
+      </td>
+      <td>
+        <p><strong>Participation Information  Destinataire</strong></p>
+      </td>
+      <td>
+        <p>Contient les informations du destinataire initial du courriel MSSanté. Cf (Note 1), (Note 2).</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>PRT-2 </p>
+      </td>
+      <td>
+        <p>Action Code</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">UC</span> (Unchanged)</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>PRT-4 </p>
+      </td>
+      <td>
+        <p>Participation</p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-4.1</p>
+      </td>
+      <td>
+        <p>Code </p>
+      </td>
+      <td>
+        <p><span class="hl7-color">RCT</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-4.2</p>
+      </td>
+      <td>
+        <p>Libellé du code</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">Result Copies To</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-4.3</p>
+      </td>
+      <td>
+        <p>Name Of Coding System</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">participation</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>PRT-5 (Requis si connu)</p>
+      </td>
+      <td>
+        <p>Participation Person</p>
+      </td>
+      <td>
+        <p>Ce champ est requis si connu si le destinataire initial du courriel est un PS</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-5.1 (Requis si connu)</p>
+      </td>
+      <td>
+        <p>ID number</p>
+      </td>
+      <td>
+        <p>Identifiant du destinataire</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-5.2 (Requis si connu)</p>
+      </td>
+      <td>
+        <p>Family Name</p>
+      </td>
+      <td>
+        <p>Nom d'exercice du destinataire</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-5.3 (Requis si connu)</p>
+      </td>
+      <td>
+        <p>Given Name</p>
+      </td>
+      <td>
+        <p>Prénom d'exercice du destinataire</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-5.9 (Requis si connu)</p>
+      </td>
+      <td>
+        <p>Assigning Authority</p>
+      </td>
+      <td>
+        <p>Autorité d'affectation de l'identifiant du destinataire</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-5.13 (Conditionnel)</p>
+      </td>
+      <td>
+        <p>Identifier Type Code</p>
+      </td>
+      <td>
+        <p>Le type d'identifiant (<a href="http://www.interopsante.org/offres/doc_inline_src/412/IHE_France_Constraints_on_HL7_data_types_for_ITI_v.1.7.3.pdf">Table 0203 - Interop'Santé</a>) est requis lorsque le PRT-5.1 est renseigné</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>PRT-8 (Requis si connu)</p>
+      </td>
+      <td>
+        <p>Participation Organization</p>
+      </td>
+      <td>
+        <p>Ce champ permet de faciliter le traitement du document dans la bonne organisation au niveau du système CONSOMMATEUR (service, UF, pôle…). Cf (Note 3).</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-8.1 (Requis si connu)</p>
+      </td>
+      <td>
+        <p>OrganizationName</p>
+      </td>
+      <td>
+        <p>Nom du destinataire</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-8.6 (Requis si connu)</p>
+      </td>
+      <td>
+        <p>Assigning Authority</p>
+      </td>
+      <td>
+        <p>Autorité d'affectation de l'identifiant du destinataire</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-8.7 (Requis si connu)</p>
+      </td>
+      <td>
+        <p>Identifier Type Code</p>
+      </td>
+      <td>
+        <p>Type d'identifiant (<a href="http://www.interopsante.org/offres/doc_inline_src/412/IHE_France_Constraints_on_HL7_data_types_for_ITI_v.1.7.3.pdf">Table 0203 - Interop'Santé</a>)</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-8.10 (Requis si connu)</p>
+      </td>
+      <td>
+        <p>Organization number</p>
+      </td>
+      <td>
+        <p>Identifiant du destinataire</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>PRT-15 (Requis)</p>
+      </td>
+      <td>
+        <p>Participant Telecommunication Address</p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-15.3</p>
+      </td>
+      <td>
+        <p>Telecommunication Equipment Type</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">X.400</span> (X.400 email address)</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-15.4</p>
+      </td>
+      <td>
+        <p>Communication Address</p>
+      </td>
+      <td>
+        <p>Intégrer l'adresse MSSanté du destinataire</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><strong>Segment PRT (segment optionnel)</strong></p>
+      </td>
+      <td>
+        <p><strong>Participation Information adresse de réponse</strong></p>
+      </td>
+      <td>
+        <p>Ce segment optionnel permet d'indiquer l'adresse mail sur laquelle le destinataire peut répondre.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>PRT-2 </p>
+      </td>
+      <td>
+        <p>Action Code</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">UC</span> (Unchanged)</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>PRT-4 </p>
+      </td>
+      <td>
+        <p>Participation</p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-4.1</p>
+      </td>
+      <td>
+        <p>Code </p>
+      </td>
+      <td>
+        <p><span class="hl7-color">REPLY</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-4.2</p>
+      </td>
+      <td>
+        <p>Libellé du code</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">Reply To</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-4.3</p>
+      </td>
+      <td>
+        <p>Name Of Coding System</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">participation</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>PRT-15 </p>
+      </td>
+      <td>
+        <p>Participant Telecommunication Address</p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-15.3</p>
+      </td>
+      <td>
+        <p>Telecommunication Equipment Type</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">X.400</span> (X.400 email address)</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; PRT-15.4</p>
+      </td>
+      <td>
+        <p>Communication Address</p>
+      </td>
+      <td>
+        <p>Intégrer l'adresse mail de réponse</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em><strong>Note 1 :</strong> le renseignement des informations concernant l’identification de l’expéditeur/destinataire est conditionné à la capacité du GESTIONNAIRE à interroger l’annuaire de l’établissement.</em></p>
+
+<p><em><strong>Note 2 :</strong> en cas de transfert du courriel original au niveau de l’établissement destinataire, il n’est pas certain que l’acteur GESTIONNAIRE puisse récupérer l’information concernant le destinataire initial du courriel. Cette information peut être utilisée pour notifier au niveau du système CONSOMMATEUR, le PS ou le service clinique concerné par le courriel (organisation) du résultat du traitement réalisé sur le document par le système CONSOMMATEUR.</em></p>
+
+<p><em><strong>Note 3 :</strong> dans la configuration où le GESTIONNAIRE est en capacité de maintenir une table de correspondance entre une BAL et une organisation correspondante (service clinique, UF, pôle…), le champ PRT-8 permet de préciser l’organisation de l’établissement concerné par la demande de traitement sur le document au niveau du CONSOMMATEUR. Dans le cas où le GESTIONNAIRE n’est pas en capacité de maintenir cette table de correspondance, le système CONSOMMATEUR peut prévoir un paramétrage pour associer une organisation de l’établissement (service clinique, UF, pôle…) à une BAL afin de réaliser le traitement sur le document dans la bonne organisation.</em></p>
+
+<h6 id="le-groupe-de-segments-portant-les-informations-du-courriel-mssanté">Le groupe de segments portant les informations du courriel MSSanté</h6>
+
+<table class="table-hl7v2">
+  <tbody>
+    <tr>
+      <th colspan="3">
+        <p>Composition du groupe OBXNTE : Usage = Required / Cardinalité = [1..1]</p>
+      </th>
+    </tr>
+    <tr>
+      <th>
+        <p>Elément requis :</p>
+      </th>
+      <th>
+        <p>Description :</p>
+      </th>
+      <th>
+        <p>Valeur :</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p><strong>Segment OBX</strong></p>
+      </td>
+      <td>
+        <p><strong>Observation/Result</strong></p>
+      </td>
+      <td>
+        <p>Contient les informations du courriel MSSanté dont a été extrait le document</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-1</p>
+      </td>
+      <td>
+        <p>Set Id - Obx</p>
+      </td>
+      <td>
+        <p>Numéro de séquence du segment</p>
+        <p><span class="hl7-color">2</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-2</p>
+      </td>
+      <td>
+        <p>Value Type</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">ED</span> (Encapsulated Data)</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-3 </p>
+      </td>
+      <td>
+        <p>Observation Identifier</p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-3.1 : </p>
+      </td>
+      <td>
+        <p>Identifier</p>
+      </td>
+      <td>
+        <p>Identifiant unique du courriel correspondant à l'élément Message-ID de l'entête du courriel MSSanté</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-3.2 : </p>
+      </td>
+      <td>
+        <p>Text</p>
+      </td>
+      <td>
+        <p>Objet du courriel</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-4 </p>
+      </td>
+      <td>
+        <p>Observation Sub-id</p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-5 </p>
+      </td>
+      <td>
+        <p>Observation Value</p>
+      </td>
+      <td>
+        <p>Contenu du courriel codé en base 64</p>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-11</p>
+      </td>
+      <td>
+        <p>Observation Result Status</p>
+      </td>
+      <td>
+        <p>Valeur fixée à « <span class="hl7-color">F</span> »</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h6 id="groupes-obxnte-portant-les-métadonnées-mssanté">Groupes OBXNTE portant les métadonnées MSSanté</h6>
+
+<p>Cette section présente uniquement les métadonnées de restriction indispensables aux échanges avec la MSSanté. Ces groupes sont conformes à ceux définis dans le volet « Transmission de documents CDA en HL7v2 » version 2.1</p>
+
+<p>Les métadonnées peuvent être valorisées avec Y ou N suivant qu’elles sont activées ou non au moment de la validation du document.</p>
+
+<p>Ces métadonnées sont requises et doivent apparaître dans le message MDM dans l’ordre présenté ci-dessous.</p>
+
+<p>Pour l’ensemble des OBX listés dans cette section, le champ OBX-3 prend ses valeurs dans la <a href="meta-dmp-mss.html">table « MetaDMP/MSS »</a>. Le champ OBX-11 étant requis par le standard HL7v2, la valeur de ce champ est arbitrairement fixée à « F ».</p>
+
+<p><strong>Document Masqué aux professionnels de Santé</strong></p>
+
+<p>Cet OBX permet au Consommateur de vérifier que le document n’est pas masqué aux professionnels de santé.</p>
+<table class="table-hl7v2">
+  <tbody>
+    <tr>
+      <th colspan="3">
+        <p>Composition du groupe OBSERVATION/OBXNTE : Usage = Required / Cardinalité = [1..1]</p>
+      </th>
+    </tr>
+    <tr>
+      <th>
+        <p>Elément requis :</p>
+      </th>
+      <th>
+        <p>Description :</p>
+      </th>
+      <th>
+        <p>Valeur :</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p><strong>Segment OBX</strong></p>
+      </td>
+      <td>
+        <p><strong>Observation/Result</strong></p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-1</p>
+      </td>
+      <td>
+        <p>Set Id - Obx</p>
+      </td>
+      <td>
+        <p>Numéro de séquence du segment</p>
+        <p><span class="hl7-color">3</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-2</p>
+      </td>
+      <td>
+        <p>Value Type</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">CWE</span> (Coded with Exceptions)</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-3</p>
+      </td>
+      <td>
+        <p>Observation Identifier</p>
+      </td>
+      <td>
+        <p><strong> </strong></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-3.1 : </p>
+      </td>
+      <td>
+        <p>Code :</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">MASQUE_PS</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-3.2 : </p>
+      </td>
+      <td>
+        <p>Libellé :</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">Masqué aux professionnels de Santé</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-3.3 :</p>
+      </td>
+      <td>
+        <p>Name of Coding system</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">MetaDMPMSS</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-5</p>
+      </td>
+      <td>
+        <p>Observation Value</p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-5.1</p>
+      </td>
+      <td>
+        <p>Code :</p>
+      </td>
+      <td>
+        <p>Table HL7 : 0136 :</p>
+        <p>·       <span class="hl7-color">N</span> (No) à MASQUE_PS non Actif</p>
+        <p>·       <span class="hl7-color">Y</span> (Yes) à MASQUE_PS Actif</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-5.3</p>
+      </td>
+      <td>
+        <p>Name Of Coding System</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">expandedYes-NoIndicator</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-11</p>
+      </td>
+      <td>
+        <p>Observation Result Status</p>
+      </td>
+      <td>
+        <p>Valeur fixée à « <span class="hl7-color">F</span> » </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Document Non visible par le patient</strong></p>
+
+<p>Cet OBX permet d’informer le Consommateur que le document est masqué ou non au patient.</p>
+
+<table class="table-hl7v2">
+  <tbody>
+    <tr>
+      <th colspan="3">
+        <p>Composition du groupe OBSERVATION/OBXNTE : Usage = Required / Cardinalité = [1..1]</p>
+      </th>
+    </tr>
+    <tr>
+      <th>
+        <p>Elément requis :</p>
+      </th>
+      <th>
+        <p>Description :</p>
+      </th>
+      <th>
+        <p>Valeur :</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p><strong>Segment OBX</strong></p>
+      </td>
+      <td>
+        <p><strong>Observation/Result</strong></p>
+      </td>
+      <td>
+        <p><strong> </strong></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-1</p>
+      </td>
+      <td>
+        <p>Set Id - Obx</p>
+      </td>
+      <td>
+        <p>Numéro de séquence du segment</p>
+        <p><span class="hl7-color">4</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-2</p>
+      </td>
+      <td>
+        <p>Value Type</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">CWE</span> (Coded with Exceptions)</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-3</p>
+      </td>
+      <td>
+        <p>Observation Identifier</p>
+      </td>
+      <td>
+        <p><strong> </strong></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-3.1 : </p>
+      </td>
+      <td>
+        <p>Code :</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">INVISIBLE_PATIENT</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-3.2 : </p>
+      </td>
+      <td>
+        <p>Libellé :</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">Document Non Visible par le patient</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-3.3 :</p>
+      </td>
+      <td>
+        <p>Name of Coding system</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">MetaDMPMSS</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-5</p>
+      </td>
+      <td>
+        <p>Observation Value</p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-5.1</p>
+      </td>
+      <td>
+        <p>Code :</p>
+      </td>
+      <td>
+        <p>Table HL7 : 0136 :</p>
+        <p>·       <span class="hl7-color">Y</span> (YES) à INVISIBLE_PATIENT actif</p>
+        <p>·       <span class="hl7-color">N</span> (No) à INVISIBLE_PATIENT non actif</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-5.3</p>
+      </td>
+      <td>
+        <p>Name Of Coding System</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">expandedYes-NoIndicator</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-11</p>
+      </td>
+      <td>
+        <p>Observation Result Status</p>
+      </td>
+      <td>
+        <p>Valeur fixée à « <span class="hl7-color">F</span> » </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Document Non visible par les représentants légaux du patient</strong></p>
+
+<p>Cet OBX permet d’informer le Consommateur que le document est masqué ou non aux représentants légaux du patient.</p>
+
+<table class="table-hl7v2">
+  <tbody>
+    <tr>
+      <th colspan="3">
+        <p>Composition du groupe OBSERVATION/OBXNTE : Usage = Required / Cardinalité = [1..1]</p>
+      </th>
+    </tr>
+    <tr>
+      <th>
+        <p>Elément requis :</p>
+      </th>
+      <th>
+        <p>Description :</p>
+      </th>
+      <th>
+        <p>Valeur :</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p><strong>Segment OBX</strong></p>
+      </td>
+      <td>
+        <p><strong>Observation/Result</strong></p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-1</p>
+      </td>
+      <td>
+        <p>Set Id - Obx</p>
+      </td>
+      <td>
+        <p>Numéro de séquence du segment</p>
+        <p><span class="hl7-color">5</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-2</p>
+      </td>
+      <td>
+        <p>Value Type</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">CWE</span> (Coded with Exceptions)</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-3</p>
+      </td>
+      <td>
+        <p>Observation Identifier</p>
+      </td>
+      <td>
+        <p><strong> </strong></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-3.1 : </p>
+      </td>
+      <td>
+        <p>Code :</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">INVISIBLE_ REP_LEGAUX</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-3.2 : </p>
+      </td>
+      <td>
+        <p>Libellé :</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">Non visible par les représentants Légaux du patient</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-3.3 :</p>
+      </td>
+      <td>
+        <p>Name of Coding system</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">MetaDMPMSS</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-5</p>
+      </td>
+      <td>
+        <p>Observation Value</p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-5.1</p>
+      </td>
+      <td>
+        <p>Code :</p>
+      </td>
+      <td>
+        <p>Table HL7 : 0136 :</p>
+        <p>·       <span class="hl7-color">Y</span> (YES) à INVISIBLE_ REP_LEGAUX actif</p>
+        <p>·       <span class="hl7-color">N</span> (No) à INVISIBLE_ REP_LEGAUX non actif</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-5.3</p>
+      </td>
+      <td>
+        <p>Name Of Coding System</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">expandedYes-NoIndicator</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-11</p>
+      </td>
+      <td>
+        <p>Observation Result Status</p>
+      </td>
+      <td>
+        <p>Valeur fixée à « <span class="hl7-color">F</span> » </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Modification Confidentiality Code</strong></p>
+
+<p>Cet OBX permet d’informer le Consommateur que la transaction porte une modification du CONFIDENTIALITY CODE indiquant une mise à jour de la métadonnée de mise en visibilité du document au patients et/ou aux représentants légaux.</p>
+
+<table class="table-hl7v2">
+  <tbody>
+    <tr>
+      <th colspan="3">
+        <p>Composition du groupe OBSERVATION/OBXNTE : Usage = Required / Cardinalité = [1..1]</p>
+      </th>
+    </tr>
+    <tr>
+      <th>
+        <p>Elément requis :</p>
+      </th>
+      <th>
+        <p>Description :</p>
+      </th>
+      <th>
+        <p>Valeur :</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p><strong>Segment OBX</strong></p>
+      </td>
+      <td>
+        <p><strong>Observation/Result</strong></p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-1</p>
+      </td>
+      <td>
+        <p>Set Id - Obx</p>
+      </td>
+      <td>
+        <p>Numéro de séquence du segment</p>
+        <p><span class="hl7-color">6</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-2</p>
+      </td>
+      <td>
+        <p>Value Type</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">CWE</span> (Coded with Exceptions)</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-3</p>
+      </td>
+      <td>
+        <p>Observation Identifier</p>
+      </td>
+      <td>
+        <p><strong> </strong></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-3.1 : </p>
+      </td>
+      <td>
+        <p>Code :</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">MODIF_CONF_CODE</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-3.2 : </p>
+      </td>
+      <td>
+        <p>Libellé :</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">Modification Confidentiality Code</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-3.3 :</p>
+      </td>
+      <td>
+        <p>Name of Coding system</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">MetaDMPMSS</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-5</p>
+      </td>
+      <td>
+        <p>Observation Value</p>
+      </td>
+      <td>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-5.1</p>
+      </td>
+      <td>
+        <p>Code :</p>
+      </td>
+      <td>
+        <p>Table HL7 : 0136 :</p>
+        <p>-        <span class="hl7-color">Y</span> (Yes) à MODIF_CONF_CODE actif</p>
+        <p>-        <span class="hl7-color">N</span> (No) à MODIF_CONF_CODE non Actif</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>&gt; OBX-5.3</p>
+      </td>
+      <td>
+        <p>Name Of Coding System</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">expandedYes-NoIndicator</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>OBX-11</p>
+      </td>
+      <td>
+        <p>Observation Result Status</p>
+      </td>
+      <td>
+        <p>Valeur fixée à « <span class="hl7-color">F</span> » </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Un exemple est disponible <a href="exemples.html">ici</a>.</p>
+
+<h4 id="le-message-dacquittement-hl7v2">Le message d’acquittement HL7v2</h4>
+
+<h5 id="profil-du-message-ack">Profil du message ACK</h5>
+
+<p>Le profil du message ACK est le suivant :</p>
+
+<table class="table-hl7v2">
+  <tr>
+    <th>
+      <p>Segment</p>
+    </th>
+    <th>
+      <p>Meaning</p>
+    </th>
+    <th>
+      <p>Usage</p>
+    </th>
+    <th>
+      <p>Card.</p>
+    </th>
+    <th>
+      <p>HL7 §</p>
+    </th>
+  </tr>
+  <tbody>
+    <tr>
+      <td>
+        <p>MSH</p>
+      </td>
+      <td>
+        <p>Message header</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+      <td>
+        <p>[1..1]</p>
+      </td>
+      <td>
+        <p>2</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>[{SFT}]</p>
+      </td>
+      <td>
+        <p>Software segment</p>
+      </td>
+      <td>
+        <p>O</p>
+      </td>
+      <td>
+        <p>[0..*]</p>
+      </td>
+      <td>
+        <p>2</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>[UAC]</p>
+      </td>
+      <td>
+        <p>User Authentication Credential</p>
+      </td>
+      <td>
+        <p>O</p>
+      </td>
+      <td>
+        <p>[0..1]</p>
+      </td>
+      <td>
+        <p>2</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSA</p>
+      </td>
+      <td>
+        <p>Message Acknowledgement</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+      <td>
+        <p>[1..1]</p>
+      </td>
+      <td>
+        <p>2</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>[{ERR}]</p>
+      </td>
+      <td>
+        <p>Error</p>
+      </td>
+      <td>
+        <p>C</p>
+      </td>
+      <td>
+        <p>[0..*]</p>
+      </td>
+      <td>
+        <p>2</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="structure-fonctionnelle-du-message">Structure fonctionnelle du message</h5>
+
+<p>Après réception du message MDM, le LPS (DPI ou RIS dans le contexte SEGUR vague 2) va acquitter le message. Ci-dessous la structure du message ACK :</p>
+<div class="figure" style="text-align: center;">
+    <img src="image21.png" alt="Figure 15" title="Figure 15 : Description fonctionnelle du message ACK
+" style="width:80%;" />
+    <figcaption><b>Figure 15 : Description fonctionnelle du message ACK</b></figcaption>
+</div>
+<p><br />
+Ces segments doivent être conformes au standard HL7v2.6.</p>
+
+<h5 id="description-des-contraintes-à-appliquer-sur-le-message-ack">Description des contraintes à appliquer sur le message ACK</h5>
+
+<h6 id="segment-msh">Segment MSH</h6>
+
+<p>Le segment MSH reprend une partie des informations du message initial :</p>
+
+<table class="table-hl7v2">
+  <tbody>
+    <tr>
+      <th colspan="2">
+        <p>Message initial</p>
+      </th>
+      <th colspan="2">
+        <p>Message d'acquittement</p>
+      </th>
+    </tr>
+    <tr>
+      <th>
+        <p>Champ</p>
+      </th>
+      <th>
+        <p>Description</p>
+      </th>
+      <th>
+        <p>Champ</p>
+      </th>
+      <th>
+        <p>Description</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.3">MSH.3</a> - Sending Application​</p>
+      </td>
+      <td>
+        <p>Application source du message à acquitter</p>
+      </td>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.5">MSH.5</a> - Receiving Application​</p>
+      </td>
+      <td>
+        <p>Application destinatrice de l'acquittement</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.4">MSH.4</a> - Sending Facility​</p>
+      </td>
+      <td>
+        <p>Facility source du message à acquitter</p>
+      </td>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.6">MSH.6</a> - Receiving Facility​</p>
+      </td>
+      <td>
+        <p>Etablissement destinataire de l'acquittement</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.5">MSH.5</a> - Receiving Application​</p>
+      </td>
+      <td>
+        <p>Application destinatrice du message à acquitter</p>
+      </td>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.3">MSH.3</a> - Sending Application​</p>
+      </td>
+      <td>
+        <p>Application source de l'acquittement</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.6">MSH.6</a> - Receiving Facility​</p>
+      </td>
+      <td>
+        <p>Facility destinatrice du message à acquitter</p>
+      </td>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.4">MSH.4</a> - Sending Facility​</p>
+      </td>
+      <td>
+        <p>Etablissement source de l'acquittement</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.11">MSH.11</a> - Processing Id​</p>
+      </td>
+      <td>
+        <p>Identifiant de traitement</p>
+      </td>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.11">MSH.11</a> - Processing Id​</p>
+      </td>
+      <td>
+        <p>Identifiant de traitement</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Le champ MSH.9 « Message type » prend la valeur : <code class="language-plaintext highlighter-rouge">ACK^T02^ACK</code> ou <code class="language-plaintext highlighter-rouge">ACK^T04^ACK</code> ou <code class="language-plaintext highlighter-rouge">ACK^T10^ACK</code> selon l’évènement du message initial.</p>
+
+<table class="table-hl7v2">
+  <tbody>
+    <tr>
+      <th>
+        <p>Champ</p>
+      </th>
+      <th>
+        <p>Contenu</p>
+      </th>
+      <th>
+        <p>Type donnée</p>
+      </th>
+      <th>
+        <p>Caractère optionnel/obligatoire</p>
+        <p> </p>
+        <p> </p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-1</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">|</span> séparateur de champ</p>
+      </td>
+      <td>
+        <p>ST</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-2</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">^~\&amp;</span> : séparateur de composant, répétition, caractère d'échappement, séparateur de sous-composants</p>
+      </td>
+      <td>
+        <p>ST</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-3</p>
+      </td>
+      <td>
+        <p>Application émettrice</p>
+      </td>
+      <td>
+        <p>HD</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-4</p>
+      </td>
+      <td>
+        <p>Organisation émettrice</p>
+      </td>
+      <td>
+        <p>HD</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-5</p>
+      </td>
+      <td>
+        <p>Application réceptrice</p>
+      </td>
+      <td>
+        <p>HD</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-6</p>
+      </td>
+      <td>
+        <p>Organisation réceptrice</p>
+      </td>
+      <td>
+        <p>HD</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-7</p>
+      </td>
+      <td>
+        <p>Date/time du message</p>
+      </td>
+      <td>
+        <p>TS</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-9</p>
+      </td>
+      <td>
+        <p>Type du message, selon l'évènement du message initial :</p>
+        <p><span class="hl7-color">ACK^T02^ACK</span></p>
+        <p><span class="hl7-color">ACK^T04^ACK</span></p> 
+        <p><span class="hl7-color">ACK^T10^ACK</span></p>
+        <p> </p>
+      </td>
+      <td>
+        <p>MSG</p>
+      </td>
+      <td>
+        <p>R</p>
+        <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-10</p>
+      </td>
+      <td>
+        <p>Identifiant du message</p>
+      </td>
+      <td>
+        <p>ST</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-11</p>
+      </td>
+      <td>
+        <p>Processing Id</p>
+        <p><span class="hl7-color">P</span> : en production</p>
+        <p><span class="hl7-color">T</span> : message de test</p>
+        <p><span class="hl7-color">D</span> : environnement de debug</p>
+      </td>
+      <td>
+        <p>PT</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-12</p>
+      </td>
+      <td>
+        <p>Version du standard <span class="hl7-color">2.6</span> pour MDM</p>
+      </td>
+      <td>
+        <p>VID</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-17</p>
+      </td>
+      <td>
+        <p><span class="hl7-color">FRA</span></p>
+      </td>
+      <td>
+        <p>ID</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>MSH-18</p>
+      </td>
+      <td>
+        <p>Jeux de caractères, valeurs possibles :</p>
+        <p><span class="hl7-color">UNICODE UTF-8</span> ou <span class="hl7-color">8859/15</span></p>
+      </td>
+      <td>
+        <p>ID</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h6 id="segment-msa">Segment MSA</h6>
+
+<p>Le segment MSA contient à minima les champs suivants :</p>
+
+<table class="table-hl7v2">
+  <tbody>
+    <tr>
+      <th>
+        <p>Champ requis</p>
+      </th>
+      <th>
+        <p>Contenu</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.6">MSA.1</a> - Acknowledgment Code</p>
+      </td>
+      <td>
+        <p>Code d'acquittement du message :</p>
+        <p>·       AA (Original mode: Application Accept - Enhanced mode: Application acknowledgment: Accept) : le message a été compris et intégré par l'application destinatrice qui prend la responsabilité du message et libère ainsi l'application productrice de toute obligation de le renvoyer.</p>
+        <p>·       AE (Original mode: Application Error - Enhanced mode: Application acknowledgment: Error) : le message contient des erreurs de syntaxe.   </p>
+        <p>·       AR (Original mode: Application Reject - Enhanced mode: Application acknowledgment: Reject) : le message est rejeté pour une raison circonstancielle. Il peut être réémis plus tard. </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><a href="https://hl7-definition.caristix.com/v2/HL7v2.8/Fields/MSH.6">MSA.2</a> - Message Control Id</p>
+      </td>
+      <td>
+        <p>Rappel l'identifiant du message acquitté correspondant au champ MSH.10 du message initial.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h6 id="segment-err">Segment ERR</h6>
+
+<p>Ce segment est utilisé au niveau des messages d’acquittement HL7 dans le cas où le champ MSA-1 prend la valeur AE (Application error).</p>
+
+<p>Le tableau ci-dessous liste les champs à renseigner pour le segment ERR :</p>
+
+<table class="table-hl7v2">
+  <tbody>
+    <tr>
+      <th>
+        <p>Champ</p>
+      </th>
+      <th>
+        <p>Contenu</p>
+      </th>
+      <th>
+        <p>Type donnée</p>
+      </th>
+      <th>
+        <p>Caractère optionnel/obligatoire</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p>ERR-2</p>
+      </td>
+      <td>
+        <p>Localisation de l'erreur dans le cas d'une erreur de syntaxe du message initial.</p>
+      </td>
+      <td>
+        <p>ERL</p>
+      </td>
+      <td>
+        <p>O</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>ERR-3</p>
+      </td>
+      <td>
+        <p>Code erreur HL7 dont les valeurs sont à prendre dans la table HL7 0357 (nom symbolique : messageErrorCondition)</p>
+      </td>
+      <td>
+        <p>CWE</p>
+      </td>
+      <td>
+        <p>R(Note 1) (Note 2)</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>ERR-4</p>
+      </td>
+      <td>
+        <p>Sévérité de l'erreur dont les valeurs sont à prendre dans la table HL7 0516 (nom symbolique : errorSeverity)</p>
+      </td>
+      <td>
+        <p>ID</p>
+      </td>
+      <td>
+        <p>R</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>ERR-5</p>
+      </td>
+      <td>
+        <p>Code erreur du traitement applicatif du message HL7 dont les valeurs sont à prendre dans la table user-defined 0533 (nom symbolique : applicationErrorCode)</p>
+      </td>
+      <td>
+        <p>CWE</p>
+      </td>
+      <td>
+        <p>C(Note 1) (Note 2)</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em><strong>(Note 1) :</strong> les valeurs possibles pour les champs ERR-3 et ERR-5 sont listées dans les tables messageErrorCondition et applicationErrorCondition précisées <a href="error-codes.html">ici</a>.</em></p>
+
+<p><em><strong>Note (2) :</strong> dans le cas où le rejet du message HL7 MDM est dû à un problème applicatif au niveau du CONSOMMATEUR, le champ ERR-3 sera renseigné avec la valeur « 207 » (Application error) et le champ ERR-5 sera renseigné avec une valeur comprise dans la table applicationErrorCode. Dans le cas où le message MDM est rejeté par le système CONSOMMATEUR pour une raison technique, le champ ERR-3 sera renseigné avec une valeur comprise dans la table messageErrorCondition et le champ ERR-5 ne sera pas renseigné.</em></p>
+
+<h6 id="exemple">Exemple</h6>
+
+<p>Entête MSH d’un message MDM émis par le GESTIONNAIRE vers le CONSOMMATEUR :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MSH|^~\&amp;|PFI|CHU_X|DPI|CHU_X|202310030830||MDM^T02^MDM_T02|12345|P|2.6|||||FRA|8859/15|||1.1^ CISIS_CDA_HL7_LPS
+</code></pre></div></div>
+<p>Un acquittement positif retourné par le CONSOMMATEUR :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MSH|^~\&amp;|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12346|P|2.6|||AL|AL|FRA|8859/15
+MSA|AA|12345
+</code></pre></div></div>
+
+<p>Un acquittement négatif retourné par le CONSOMMATEUR : version d’HL7 inconnue</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MSH|^~\&amp;|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12347|P|2.6|||AL|AL|FRA|8859/15
+MSA|AE|12345
+ERR||MSH^1^12|203^Unsupported version id^messageErrorCondition|E
+</code></pre></div></div>
+
+<p>Un acquittement négatif retourné par le CONSOMMATEUR : patient inconnu du DPI (erreur applicative)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MSH|^~\&amp;|DPI|CHU_X|PFI|CHU_X|202310030831||ACK^T02^ACK|12347|P|2.6|||AL|AL|FRA|8859/15
+MSA|AE|12345
+ERR||PID^1^3|207^Application error^messageErrorCondition| E|902^Identifiant de patient inconnu^applicationErrorCode
+</code></pre></div></div>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&#xA0;
+
+                <a href="volume1.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&#xA0;
+
+                <a href="lien-entete-cda-meta-xds.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 8, 2025 11:21+0000">2025-01-08</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)"></span>
+            Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/history.html">Historique des versions </a>
+ | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/new/choose">New Issue</a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+
+  <!-- Ajout ANS -->
+  <script src="assets/js/app.js" type="text/javascript"> </script>
+  <script src="assets/js/vendor.js" type="text/javascript"> </script>
+  <!-- Fin ajout ANS -->
+
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+
+  <!-- Analytics Below
+  ================================================== -->
+
+
+  <!-- AJOUT ANS -->
+
+<footer class="footer footer-principal" role="contentinfo">
+  <div class="footer__region1">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4 text-center text-md-left">
+          <div class="logos">        
+            <div class="logo logo--0">
+              <a href="https://solidarites-sante.gouv.fr" title="Ministère des Solidarités et de la Santé (nouvelle fenêtre)" target="_blank" rel="nofollow">
+                
+                <img src="assets/images/logo-ministere.svg" alt="Ministère des Solidarités et de la Santé" width="133" height="77" loading="lazy" />
+                
+              </a>
+            </div>
+        
+            <div class="logo logo--1">
+              <a href="https://esante.gouv.fr/" title="Agence du numérique en santé (nouvelle fenêtre)" target="_blank" rel="nofollow">
+                
+                <img src="assets/images/logo-ANS-footer.svg" alt="Agence du numérique en santé" width="106" height="74" loading="lazy" />
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 text-center text-md-left">
+          <p class="footer__title">Agence du Numérique en Santé</p>
+          <p>2-10 Rue d'Oradour-sur-Glane 75015 Paris</p>
+
+          <!-- <div class="m-social">
+            <ul class="m-social__list">        
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://www.linkedin.com/company/agence-du-numerique-en-sante/" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-linkedin" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#linkedin"></use></svg>
+                  </div>
+                  <span class="sr-only">linkedin</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://twitter.com/esante_gouv_fr" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-twitter" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#twitter"></use></svg>
+                  </div>
+                  <span class="sr-only">twitter</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://www.youtube.com/channel/UCd1zuSaU5cE1lRCpwv_HSMA" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-youtube" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#youtube"></use></svg>
+                  </div>
+                  <span class="sr-only">youtube</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://esante.gouv.fr/rss.xml" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-rss" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#rss"></use></svg>
+                  </div>
+                  <span class="sr-only">rss</span>
+                </a>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+        
+        <div class="col-6 col-lg-4">
+          <ul class="footer-list">
+            <li class="footer-list__item footer-list__item--hasIcon">
+              <a href="mailto:ci-sis@esante.gouv.fr" class="mailto-link">
+                <svg class="svg-icon svg-angle-right" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#angle-right"></use></svg>Contact</a>
+              </li>
+              <!-- <li class="footer-list__item">
+                <a href="https://interop-pprod.esante.gouv.fr/ci-sis-specifications/wp-content/uploads/CGU_espace_de_tests_v1.1.pdf" class="file-link">Mentions légales</a>
+              </li>
+               -->
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    <!-- <div class="footer__region2">
+      <div class="container">
+        <div class="footer-contentinfo">
+          <ul class="footer-list footer-list--inline">
+
+          </ul>
+        </div>
+      </div>
+    </div> -->
+  </footer>
+  </body>
+</html>
+
