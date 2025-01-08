@@ -5,7 +5,7 @@
     "mode" : "working",
     "status" : "draft",
     "sequence" : "Publications",
-    "desc" : "Version corrective du volet transmission au LPS d'un document CDA provenant d'un courriel MSSanté au format guide d'implémentation (IG). Les précédentes versions du volet étant publiées au format pdf.",
+    "desc" : "Version corrective du volet transmission au LPS d'un document CDA provenant d'un courriel MSSanté.",
     "changes" : "change-log.html#version-nnn",
     "title" : "[CI-SIS]Volet transmission au LPS d'un document CDA provenant d'un courriel MSSanté"
     }
