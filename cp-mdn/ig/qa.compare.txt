@@ -1,0 +1,17 @@
+CISIS_CDA_HL7_LPS : Validation Results
+=========================================
+
+err = 1, warn = 4, info = 0
+$--
+Generated $--. FHIR version $-- for ans.hl7v2.fr.trans-cda-mss#$-- (canonical = https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss)
+ Build Errors : 1 / 4 / 0
+ /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/fsh-generated/resources/ImplementationGuide-ans.hl7v2.fr.trans-cda-mss : 1 / 0 / 1
+</table>
+== n/a ==
+ERROR: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/change-log.html#/html/body/div/div/div/div/div/ul/li/ul/li/a at Line 268, column 12: The link 'volume2.html#document-masqué-aux-professionnels-de-santé' for "Document Masqué aux professionnels de Santé" cannot be resolved (valid targets: 57 targets)
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/ImplementationGuide-ans.hl7v2.fr.trans-cda-mss.json ==
+ERROR: ImplementationGuide/ans.hl7v2.fr.trans-cda-mss: ImplementationGuide.definition: ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1)
