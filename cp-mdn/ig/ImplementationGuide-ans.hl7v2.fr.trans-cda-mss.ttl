@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "CISIS_CDA_HL7_LPS"] ; # 
   fhir:title [ fhir:v "Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-01-09T18:31:05+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-01-09T18:33:48+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -605,6 +605,14 @@
          ] ) ;
          fhir:name [ fhir:v "struct-msg-mdn.html"^^xsd:anyURI ] ;
          fhir:title [ fhir:v "Structure du MDN (MSSanté)" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "struct-email-standard.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "struct-email-standard.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Structure d'un message de notification format courriel standard" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [

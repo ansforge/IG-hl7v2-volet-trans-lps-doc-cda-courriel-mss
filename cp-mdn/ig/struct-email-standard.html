@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Téléchargements - Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté v1.1.2</title>
+    <title>Structure d&#39;un message de notification format courriel standard - Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté v1.1.2</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -41,8 +41,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"14"}
-    h3,h4,h5,h6{--heading-prefix:"14"}</style>
+    <style type="text/css">h2{--heading-prefix:"9"}
+    h3,h4,h5,h6{--heading-prefix:"9"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -192,15 +192,15 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Téléchargements</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Structure d'un message de notification format courriel standard</b></li>
 
           <span style="float:right;">
 
-            <a href="change-log.html">&lt;prev</a> | 
+            <a href="struct-msg-mdn.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
-          | <a href="artifacts.html">next&gt;</a>
+          | <a href="glossaire.html">next&gt;</a>
 
           </span>
 
@@ -223,7 +223,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté - Local Development build (v1.1.2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
-  <h2>Téléchargements</h2>
+  <h2>Structure d&#39;un message de notification format courriel standard</h2>
   
 
 
@@ -238,21 +238,135 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
-</div>
-<p>L’implementation guide contient un package <a href="package.tgz">téléchargeable ici</a> permettant de valider les instances par rapport aux profils qu’il contient.</p>
-
-<p>Ensemble des ressources téléchargeables :</p>
-
-<ul>
-  <li><a href="full-ig.zip">L’ensemble de la specification (zip)</a></li>
-  <li><a href="package.tgz">Package (tgz)</a></li>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#contexte" id="markdown-toc-contexte">Contexte</a></li>
+  <li><a href="#contenu-clé-du-courriel" id="markdown-toc-contenu-clé-du-courriel">Contenu clé du courriel</a></li>
+  <li><a href="#construction-du-courriel" id="markdown-toc-construction-du-courriel">Construction du courriel</a></li>
+  <li><a href="#exemple-de-courriel" id="markdown-toc-exemple-de-courriel">Exemple de courriel</a></li>
+  <li><a href="#différences-clés-avec-un-mdn" id="markdown-toc-différences-clés-avec-un-mdn">Différences clés avec un MDN</a></li>
 </ul>
 
-<h3 id="exemples">Exemples</h3>
+</div>
+<h3 id="contexte">Contexte</h3>
 
-<p>Les exemples sont disponibles sur github <a href="https://github.com/ansforge/hl7V2-exemples">ici</a>.</p>
+<p>Si un MDN (Message Disposition Notification) n’a pas été explicitement demandé par le destinataire (via l’entête <code class="language-plaintext highlighter-rouge">Disposition-Notification-To</code> dans le message d’origine), vous ne pouvez pas utiliser un MDN tel que défini par la <a href="https://datatracker.ietf.org/doc/html/rfc8098">RFC 8098</a>, car il suppose qu’un accusé de réception ou une notification d’état a été requis.</p>
+
+<p>Dans ce cas, pour retourner une notification similaire à celle d’un MDN, vous pouvez utiliser un courriel “standard” avec une structure et un contenu adaptés.
+Ce courriel doit être compréhensible par l’humain et inclure toutes les informations nécessaires pour expliquer le problème ou fournir un retour en cas d’erreur comme pour les cas d’usage :</p>
+
+<ul>
+  <li><a href="volume1.html#description-du-cas-en-erreur">Réception d’un compte rendu de biologie par un établissement hospitalier</a></li>
+  <li><a href="volume1.html#description-du-cas-dusage-en-erreur">Transmission d’un document clinique d’un patient d’un établissement hospitalier vers un autre établissement hospitalier</a></li>
+</ul>
+
+<h3 id="contenu-clé-du-courriel">Contenu clé du courriel</h3>
+
+<p>Voici les points essentiels pour construire le courriel standard en tant que notification :</p>
+
+<ul>
+  <li>Sujet clair : Expliquez qu’il s’agit d’une notification (ex. : “Notification de traitement du message”).</li>
+  <li>Corps du message :
+    <ul>
+      <li>Fournissez une explication lisible par l’humain.</li>
+      <li>Mentionnez le problème détecté (erreur, statut ou autre).</li>
+      <li>Indiquez des instructions pour corriger ou prévenir le problème.</li>
+    </ul>
+  </li>
+  <li>Inclusion du message d’origine :
+Ajoutez le message d’origine (ou une partie) comme pièce jointe (<code class="language-plaintext highlighter-rouge">message/rfc822</code>).
+Cela permet au destinataire de comprendre le contexte.</li>
+  <li>Pièces jointes :
+    <ul>
+      <li>Les pièces jointes envoyées avec le courriel d’origine (IHE_XDM.zip et le pdf) doivent être remises en pièces jointes du courriel pour pouvoir traiter les erreurs.</li>
+      <li>Le contenu est encodé en Base64 pour respecter le standard MIME.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="construction-du-courriel">Construction du courriel</h3>
+
+<h4 id="format-du-courriel">Format du courriel</h4>
+
+<p>Le courriel doit respecter la <a href="https://datatracker.ietf.org/doc/html/rfc5322">RFC 5322 ‘Internet Message Format’</a></p>
+
+<h4 id="contenu-du-courriel">Contenu du courriel</h4>
+
+<p>RFC 2045 à 2049 : Multipurpose Internet Mail Extensions (MIME)
+Ces RFC définissent les extensions MIME qui permettent d’inclure des contenus non textuels (comme des fichiers) dans les courriels.</p>
+
+<p>RFC 1872 (Optionnel) : Encapsulation du message original
+Recommande l’utilisation de message/rfc822 pour encapsuler un message électronique complet dans un autre courriel.
+Exemple dans notre courriel :
+Le message original est inclus comme pièce jointe avec Content-Type: message/rfc822.</p>
+
+<h3 id="exemple-de-courriel">Exemple de courriel</h3>
+
+<p>Exemple d’un courriel standard qui pourrait être envoyé comme notification manuelle. Le contenu est réorganisé pour être compréhensible par un humain, tout en respectant les principes des courriels standards avec des pièces jointes.
+Cet exemple illustre le cas d’usage <a href="volume1.html#description-du-cas-dusage-en-erreur">Transmission d’un document clinique d’un patient d’un établissement hospitalier vers un autre établissement hospitalier</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Date: Wed, 20 Feb 2024 00:19:00 -0400
+From: serviceY_auto@chb.mssante.fr
+To: serviceY@chb.mssante.fr
+Message-ID: &lt;199509200019.12345@chb.mssante.fr&gt;
+Subject: Notification : Erreur d’intégration du document "ECHOGRAPHIE ABDOMINOPELVIENNE CORSE FIGATELLIX"
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="boundary12345"
+
+--boundary12345
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+Bonjour,
+
+Le document envoyé n’a pas pu être intégré correctement dans le système. 
+Voici les détails de l’erreur rencontrée :
+
+- **Erreur détectée :** Identifiant de patient inconnu
+- **Code d’erreur :** 902
+- **Gravité :** E (Error)
+
+Vous trouverez en pièce jointe :
+1. Le message original contenant le document soumis.
+2. Les fichiers liés (archive ZIP et PDF associés au message original).
+
+Veuillez vérifier les informations fournies et soumettre à nouveau les documents après correction. 
+Si le problème persiste, contactez notre service technique.
+
+Cordialement,  
+L’équipe technique du service Y  
+
+--boundary12345
+Content-Type: message/rfc822
+Content-Disposition: attachment; filename="message_original.eml"
+
+&lt;Insérer ici le contenu du courriel MSSanté à l’origine du MDN et ses pièces jointes&gt;
+
+--boundary12345
+Content-Type: application/zip; name="IHE_XDM.zip"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="IHE_XDM.zip"
+
+&lt;Ici apparaît le fichier IHE_XDM.zip encodé en base64&gt;
+
+--boundary12345
+Content-Type: application/pdf; name="20220531_CR_d_imagerie_medicale_CORSE_FIGATELLIX.pdf"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="20220531_CR_d_imagerie_medicale_CORSE_FIGATELLIX.pdf"
+
+&lt;Ici apparaît le fichier 20220531_CR_d_imagerie_medicale_CORSE_FIGATELLIX.pdf encodé en base64&gt;
+
+--boundary12345--
+</code></pre></div></div>
+
+<h3 id="différences-clés-avec-un-mdn">Différences clés avec un MDN</h3>
+<p>Contrairement à un MDN :</p>
+
+<p>Ce courriel standard est non-automatisé et non structuré pour un traitement machine. L’entête <code class="language-plaintext highlighter-rouge">Disposition</code> avec le format <code class="language-plaintext highlighter-rouge">processed/Error: ...</code> est spécifique aux MDN et n’est pas standard dans un courriel classique. LE code erreur ne peut être que véhiculer :</p>
+<ul>
+  <li>dans e corps du message</li>
+  <li>en pièce jointe, pour conserver un format structuré qui pourrait être traité par un système.</li>
+</ul>
 
 
 
@@ -277,7 +391,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="change-log.html">&lt;prev</a>
+                <a href="struct-msg-mdn.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -285,7 +399,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="artifacts.html">next&gt;</a>
+                <a href="glossaire.html">next&gt;</a>
 
               </td>
             </tr>
