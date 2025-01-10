@@ -23,7 +23,7 @@ Seul le processus « Transmission de documents reçus par MSS » des spécificat
 
 ## Contexte technique du projet
 
-**[TEST pour transformer la version pdf du volet "Transmission au LPS d'un document CDA provenant d'un courriel MSSanté" en guide d'implémentation.]**
+**[Transformation la version pdf du volet "Transmission au LPS d'un document CDA provenant d'un courriel MSSanté" en guide d'implémentation.]**
 
 # CI/CD
 
