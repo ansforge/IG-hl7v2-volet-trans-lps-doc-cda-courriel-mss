@@ -1,0 +1,9 @@
+[
+  {
+    "id" : "ans.hl7v2.fr.trans-cda-mss",
+    "type" : "ImplementationGuide",
+    "url" : "https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/ImplementationGuide/ans.hl7v2.fr.trans-cda-mss",
+    "version" : "1.1.2",
+    "name" : "CISIS_CDA_HL7_LPS"
+  }
+]
