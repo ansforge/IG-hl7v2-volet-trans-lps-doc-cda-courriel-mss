@@ -23,7 +23,7 @@ Seul le processus « Transmission de documents reçus par MSS » des spécificat
 
 ## Contexte technique du projet
 
-**[Transformation la version pdf du volet "Transmission au LPS d'un document CDA provenant d'un courriel MSSanté" en guide d'implémentation.]**
+**Transformation de la version pdf du volet "Transmission au LPS d'un document CDA provenant d'un courriel MSSanté" en guide d'implémentation.**
 
 # CI/CD
 
@@ -35,8 +35,6 @@ Les workflows associés à ce repository (.github/workflows) permettent :
 Accès à la version ci-build : https://ansforge.github.io/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/main/ig/
 
 # Notes
-
-[A COMPLETER: notes supplémentaires pour le lecteur de la spec]
 
 
 ## Acronymes
