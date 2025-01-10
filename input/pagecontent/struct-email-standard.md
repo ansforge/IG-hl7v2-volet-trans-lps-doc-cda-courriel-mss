@@ -24,21 +24,9 @@ Cela permet au destinataire de comprendre le contexte.
   * Les pièces jointes envoyées avec le courriel d'origine (IHE_XDM.zip et le pdf) doivent être remises en pièces jointes du courriel pour pouvoir traiter les erreurs.
   * Le contenu est encodé en Base64 pour respecter le standard MIME.
 
-### Construction du courriel
-
-#### Format du courriel
+### Format du courriel
 
 Le courriel doit respecter la [RFC 5322 'Internet Message Format'](https://datatracker.ietf.org/doc/html/rfc5322)
-
-#### Contenu du courriel
-
-RFC 2045 à 2049 : Multipurpose Internet Mail Extensions (MIME)
-Ces RFC définissent les extensions MIME qui permettent d'inclure des contenus non textuels (comme des fichiers) dans les courriels.
-
-RFC 1872 (Optionnel) : Encapsulation du message original
-Recommande l'utilisation de message/rfc822 pour encapsuler un message électronique complet dans un autre courriel.
-Exemple dans notre courriel :
-Le message original est inclus comme pièce jointe avec Content-Type: message/rfc822.
 
 
 ### Exemple de courriel
@@ -105,6 +93,8 @@ Content-Disposition: attachment; filename="20220531_CR_d_imagerie_medicale_CORSE
 ### Différences clés avec un MDN
 Contrairement à un MDN :
 
-  Ce courriel standard est non-automatisé et non structuré pour un traitement machine. L'entête `Disposition` avec le format `processed/Error: ...` est spécifique aux MDN et n'est pas standard dans un courriel classique. LE code erreur ne peut être que véhiculer :
-* dans e corps du message
-* en pièce jointe, pour conserver un format structuré qui pourrait être traité par un système.
+  Ce courriel standard est non-automatisé et non structuré pour un traitement machine. L'entête `Disposition` avec le format `processed/Error: ...` est spécifique aux MDN et n'est pas standard dans un courriel classique. 
+  Le code erreur ne peut être véhiculé que :
+* dans le corps du message
+* ou en pièce jointe, pour conserver un format structuré qui pourrait être traité par un système.
+
