@@ -242,7 +242,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#contexte" id="markdown-toc-contexte">Contexte</a></li>
   <li><a href="#contenu-clé-du-courriel" id="markdown-toc-contenu-clé-du-courriel">Contenu clé du courriel</a></li>
-  <li><a href="#construction-du-courriel" id="markdown-toc-construction-du-courriel">Construction du courriel</a></li>
+  <li><a href="#format-du-courriel" id="markdown-toc-format-du-courriel">Format du courriel</a></li>
   <li><a href="#exemple-de-courriel" id="markdown-toc-exemple-de-courriel">Exemple de courriel</a></li>
   <li><a href="#différences-clés-avec-un-mdn" id="markdown-toc-différences-clés-avec-un-mdn">Différences clés avec un MDN</a></li>
 </ul>
@@ -284,21 +284,9 @@ Cela permet au destinataire de comprendre le contexte.</li>
   </li>
 </ul>
 
-<h3 id="construction-du-courriel">Construction du courriel</h3>
-
-<h4 id="format-du-courriel">Format du courriel</h4>
+<h3 id="format-du-courriel">Format du courriel</h3>
 
 <p>Le courriel doit respecter la <a href="https://datatracker.ietf.org/doc/html/rfc5322">RFC 5322 ‘Internet Message Format’</a></p>
-
-<h4 id="contenu-du-courriel">Contenu du courriel</h4>
-
-<p>RFC 2045 à 2049 : Multipurpose Internet Mail Extensions (MIME)
-Ces RFC définissent les extensions MIME qui permettent d’inclure des contenus non textuels (comme des fichiers) dans les courriels.</p>
-
-<p>RFC 1872 (Optionnel) : Encapsulation du message original
-Recommande l’utilisation de message/rfc822 pour encapsuler un message électronique complet dans un autre courriel.
-Exemple dans notre courriel :
-Le message original est inclus comme pièce jointe avec Content-Type: message/rfc822.</p>
 
 <h3 id="exemple-de-courriel">Exemple de courriel</h3>
 
@@ -362,10 +350,11 @@ Content-Disposition: attachment; filename="20220531_CR_d_imagerie_medicale_CORSE
 <h3 id="différences-clés-avec-un-mdn">Différences clés avec un MDN</h3>
 <p>Contrairement à un MDN :</p>
 
-<p>Ce courriel standard est non-automatisé et non structuré pour un traitement machine. L’entête <code class="language-plaintext highlighter-rouge">Disposition</code> avec le format <code class="language-plaintext highlighter-rouge">processed/Error: ...</code> est spécifique aux MDN et n’est pas standard dans un courriel classique. LE code erreur ne peut être que véhiculer :</p>
+<p>Ce courriel standard est non-automatisé et non structuré pour un traitement machine. L’entête <code class="language-plaintext highlighter-rouge">Disposition</code> avec le format <code class="language-plaintext highlighter-rouge">processed/Error: ...</code> est spécifique aux MDN et n’est pas standard dans un courriel classique. 
+  Le code erreur ne peut être véhiculé que :</p>
 <ul>
-  <li>dans e corps du message</li>
-  <li>en pièce jointe, pour conserver un format structuré qui pourrait être traité par un système.</li>
+  <li>dans le corps du message</li>
+  <li>ou en pièce jointe, pour conserver un format structuré qui pourrait être traité par un système.</li>
 </ul>
 
 
@@ -409,7 +398,7 @@ Content-Disposition: attachment; filename="20220531_CR_d_imagerie_medicale_CORSE
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 9, 2025 18:33+0000">2025-01-09</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 10, 2025 17:33+0000">2025-01-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
