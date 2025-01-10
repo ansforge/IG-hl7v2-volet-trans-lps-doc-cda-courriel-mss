@@ -3,9 +3,9 @@
 
 [![Workflow Init](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/actions/workflows/fhir-workflows.yml/badge.svg)](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/actions/workflows/fhir-workflows.yml)
 
-Ce repository est un test pour transformer la version pdf du volet "Transmission au LPS d'un document CDA provenant d'un courriel MSSanté" en guide d'implémentation.
+Ce repository concerne la transformation la version pdf du volet "Transmission au LPS d'un document CDA provenant d'un courriel MSSanté" en guide d'implémentation puis les nouvelles versions de ce volet à partir de la version 1.1.1
 
-**Il ne se substitue pas au volet officiel du CI-SIS publié ici : [https://esante.gouv.fr/transmission-au-lps-de-documents-cda-provenant-dun-courriel-mssante](https://esante.gouv.fr/transmission-au-lps-de-documents-cda-provenant-dun-courriel-mssante)**
+**Le volet du CI-SIS publié ici : [https://esante.gouv.fr/transmission-au-lps-de-documents-cda-provenant-dun-courriel-mssante](https://esante.gouv.fr/transmission-au-lps-de-documents-cda-provenant-dun-courriel-mssante)**
 
 
 # Contexte
