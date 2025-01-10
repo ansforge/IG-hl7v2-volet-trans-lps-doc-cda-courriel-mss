@@ -5,7 +5,7 @@
 
 Ce repository concerne la transformation la version pdf du volet "Transmission au LPS d'un document CDA provenant d'un courriel MSSanté" en guide d'implémentation puis les nouvelles versions de ce volet à partir de la version 1.1.1
 
-**Le volet du CI-SIS publié ici : [https://esante.gouv.fr/transmission-au-lps-de-documents-cda-provenant-dun-courriel-mssante](https://esante.gouv.fr/transmission-au-lps-de-documents-cda-provenant-dun-courriel-mssante)**
+**Le volet du CI-SIS est publié ici : [https://esante.gouv.fr/transmission-au-lps-de-documents-cda-provenant-dun-courriel-mssante](https://esante.gouv.fr/transmission-au-lps-de-documents-cda-provenant-dun-courriel-mssante)**
 
 
 # Contexte
