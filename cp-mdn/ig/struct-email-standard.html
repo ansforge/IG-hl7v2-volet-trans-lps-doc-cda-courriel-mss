@@ -253,13 +253,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Si un MDN (Message Disposition Notification) n’a pas été explicitement demandé par le destinataire (via l’entête <code class="language-plaintext highlighter-rouge">Disposition-Notification-To</code> dans le message d’origine), vous ne pouvez pas utiliser un MDN tel que défini par la <a href="https://datatracker.ietf.org/doc/html/rfc8098">RFC 8098</a>, car il suppose qu’un accusé de réception ou une notification d’état a été requis.</p>
 
 <p>Dans ce cas, pour retourner une notification similaire à celle d’un MDN, vous pouvez utiliser un courriel “standard” avec une structure et un contenu adaptés.
-Ce courriel doit être compréhensible par l’humain et inclure toutes les informations nécessaires pour expliquer le problème ou fournir un retour en cas d’erreur comme pour les cas d’usage :</p>
-
-<ul>
-  <li><a href="volume1.html#description-du-cas-en-erreur">Réception d’un compte rendu de biologie par un établissement hospitalier</a></li>
-  <li><a href="volume1.html#description-du-cas-dusage-en-erreur">Transmission d’un document clinique d’un patient d’un établissement hospitalier vers un autre établissement hospitalier</a></li>
-</ul>
-
+Ce courriel doit être compréhensible par l’humain et inclure toutes les informations nécessaires pour expliquer le problème ou fournir un retour en cas d’erreur comme pour les renvois d’erreur vers une BAL dédiée lorsque l’émetteur n’a pas demandé de MDN.</p>
 <h3 id="contenu-clé-du-courriel">Contenu clé du courriel</h3>
 
 <p>Voici les points essentiels pour construire le courriel standard en tant que notification :</p>
@@ -352,6 +346,7 @@ Content-Disposition: attachment; filename="20220531_CR_d_imagerie_medicale_CORSE
 
 <p>Ce courriel standard est non-automatisé et non structuré pour un traitement machine. L’entête <code class="language-plaintext highlighter-rouge">Disposition</code> avec le format <code class="language-plaintext highlighter-rouge">processed/Error: ...</code> est spécifique aux MDN et n’est pas standard dans un courriel classique. 
   Le code erreur ne peut être véhiculé que :</p>
+
 <ul>
   <li>dans le corps du message</li>
   <li>ou en pièce jointe, pour conserver un format structuré qui pourrait être traité par un système.</li>
@@ -398,7 +393,7 @@ Content-Disposition: attachment; filename="20220531_CR_d_imagerie_medicale_CORSE
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 10, 2025 17:33+0000">2025-01-10</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 13, 2025 15:07+0000">2025-01-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
