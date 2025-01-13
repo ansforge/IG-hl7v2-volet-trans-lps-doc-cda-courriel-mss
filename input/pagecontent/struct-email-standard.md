@@ -36,7 +36,7 @@ Date: Wed, 20 Feb 2024 00:19:00 -0400
 From: serviceY_auto@chb.mssante.fr
 To: serviceY@chb.mssante.fr
 Message-ID: <199509200019.12345@chb.mssante.fr>
-Subject: Notification : Erreur d’intégration du document "ECHOGRAPHIE ABDOMINOPELVIENNE CORSE FIGATELLIX"
+Subject: [Erreur d’intégration !][902] XDM/1.0/DDM+ECHOGRAPHIE ABDOMINOPELVIENNE CORSE FIGATELLIX 12/10/1988
 MIME-Version: 1.0
 Content-Type: multipart/mixed; boundary="boundary12345"
 
