@@ -3,11 +3,7 @@
 Si un MDN (Message Disposition Notification) n'a pas été explicitement demandé par le destinataire (via l'entête `Disposition-Notification-To` dans le message d'origine), vous ne pouvez pas utiliser un MDN tel que défini par la [RFC 8098](https://datatracker.ietf.org/doc/html/rfc8098), car il suppose qu'un accusé de réception ou une notification d'état a été requis.
 
 Dans ce cas, pour retourner une notification similaire à celle d’un MDN, vous pouvez utiliser un courriel "standard" avec une structure et un contenu adaptés.
-Ce courriel doit être compréhensible par l'humain et inclure toutes les informations nécessaires pour expliquer le problème ou fournir un retour en cas d'erreur comme pour les cas d'usage :
-
-* [Réception d’un compte rendu de biologie par un établissement hospitalier](volume1.html#description-du-cas-en-erreur)
-* [Transmission d’un document clinique d’un patient d’un établissement hospitalier vers un autre établissement hospitalier](volume1.html#description-du-cas-dusage-en-erreur)
-
+Ce courriel doit être compréhensible par l'humain et inclure toutes les informations nécessaires pour expliquer le problème ou fournir un retour en cas d'erreur comme pour les renvois d'erreur vers une BAL dédiée lorsque l'émetteur n'a pas demandé de MDN.
 ### Contenu clé du courriel
 
 Voici les points essentiels pour construire le courriel standard en tant que notification :
@@ -32,7 +28,7 @@ Le courriel doit respecter la [RFC 5322 'Internet Message Format'](https://datat
 ### Exemple de courriel
 
 Exemple d'un courriel standard qui pourrait être envoyé comme notification manuelle. Le contenu est réorganisé pour être compréhensible par un humain, tout en respectant les principes des courriels standards avec des pièces jointes.
-Cet exemple illustre le cas d'usage [Transmission d’un document clinique d’un patient d’un établissement hospitalier vers un autre établissement hospitalier](volume1.html#description-du-cas-dusage-en-erreur)
+Cet exemple illustre le cas d'usage [Transmission d'un document clinique d'un patient d'un établissement hospitalier vers un autre établissement hospitalier](volume1.html#description-du-cas-dusage-en-erreur)
 
 
 ```
@@ -95,6 +91,6 @@ Contrairement à un MDN :
 
   Ce courriel standard est non-automatisé et non structuré pour un traitement machine. L'entête `Disposition` avec le format `processed/Error: ...` est spécifique aux MDN et n'est pas standard dans un courriel classique. 
   Le code erreur ne peut être véhiculé que :
+
 * dans le corps du message
 * ou en pièce jointe, pour conserver un format structuré qui pourrait être traité par un système.
-
