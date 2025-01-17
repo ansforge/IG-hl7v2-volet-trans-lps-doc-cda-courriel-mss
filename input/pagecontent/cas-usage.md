@@ -65,7 +65,7 @@ Le diagramme serait identique dans le cas d’une demande de remplacement ou de 
 <blockquote class="stu-note">
     <p>
 Dans le cas où un MDN (Message Disposition Notification) n'a pas été explicitement demandé par le destinataire (via l'entête `Disposition-Notification-To` dans le message d'origine), et que pour pouvoir gérer toutes les erreurs on souhaite utiliser une BAL dédiée, un courriel 'standard' peut être utlisé.
-La structure du courriel est précisée [ici](struct-email-standard.html).
+La structure du courriel est précisée <a href="struct-email-standard.html">ici</a>.
 
 <div class="figure" style='text-align: center;'>
     {%include bal-erreur.svg%}
@@ -141,7 +141,7 @@ Le diagramme serait identique dans le cas d’une demande de remplacement ou de 
 <blockquote class="stu-note">
     <p>
 Dans le cas où un MDN (Message Disposition Notification) n'a pas été explicitement demandé par le destinataire (via l'entête `Disposition-Notification-To` dans le message d'origine), et que pour pouvoir gérer toutes les erreurs on souhaite utiliser une BAL dédiée, un courriel 'standard' peut être utlisé.
-La structure du courriel est précisée [ici](struct-email-standard.html).
+La structure du courriel est précisée <a href="struct-email-standard.html">ici</a>.
 
 <div class="figure" style='text-align: center;'>
     {%include bal-erreur.svg%}
