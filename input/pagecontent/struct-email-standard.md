@@ -2,13 +2,17 @@
 
 Si un MDN (Message Disposition Notification) n'a pas été explicitement demandé par le destinataire (via l'entête `Disposition-Notification-To` dans le message d'origine), vous ne pouvez pas utiliser un MDN tel que défini par la [RFC 8098](https://datatracker.ietf.org/doc/html/rfc8098), car il suppose qu'un accusé de réception ou une notification d'état a été requis.
 
+Si on souhaite utiliser une BAL vers laquelle rediriger, l'ensemble des erreurs pour pouvoir les traiter, le message MDN ne peut être utilisé.
+
 Dans ce cas, pour retourner une notification similaire à celle d’un MDN, vous pouvez utiliser un courriel "standard" avec une structure et un contenu adaptés.
 Ce courriel doit être compréhensible par l'humain et inclure toutes les informations nécessaires pour expliquer le problème ou fournir un retour en cas d'erreur comme pour les renvois d'erreur vers une BAL dédiée lorsque l'émetteur n'a pas demandé de MDN.
+
 ### Contenu clé du courriel
 
 Voici les points essentiels pour construire le courriel standard en tant que notification :
 
-* Sujet clair : Expliquez qu'il s'agit d'une notification (ex. : "Notification de traitement du message").
+* Objet du message : il doit être précisé
+de la manière suivante afin de faciliter la lecture et le traitement de la notification : `[KO Intégration système !][code erreur] XDM/1.0/DDM+<libellé> <NOM> <prénom> <date de naissance>`.
 * Corps du message :
   * Fournissez une explication lisible par l'humain.
   * Mentionnez le problème détecté (erreur, statut ou autre).

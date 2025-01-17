@@ -28,7 +28,7 @@ messages en boucle. Dans ce cas l'envoi du MDN nécessite une
 confirmation de l'utilisateur.
 
 Dans le cas d'un MDN en erreur, l'objet du MDN doit être précisé
-de la façon suivante : `[KO Intégration système ! ] XDM/1.0/DDM+<libellé> <NOM> <prénom> <date de naissance>`.
+de la façon suivante : `[KO Intégration système !][code erreur] XDM/1.0/DDM+<libellé> <NOM> <prénom> <date de naissance>`.
 
 Dans le cas contraire, l'objet du MDN est précisé par `XDM/1.0/DDM+<libellé> <NOM> <prénom> <date de naissance>`.
 
@@ -103,7 +103,7 @@ L'exemple suivant décrit le MDN (accusé de lecture négatif) généré dans le
 Date: Wed, 20 Feb 2024 00:19:00 (EDT) -0400
 From: serviceY_auto@chb.mssante.fr
 Message-Id: <199509200019.12345>
-Subject: [Erreur d’intégration !] XDM/1.0/DDM+ECHOGRAPHIE ABDOMINOPELVIENNE CORSE FIGATELLIX 12/10/1988
+Subject: [KO Intégration système !][902] XDM/1.0/DDM+ECHOGRAPHIE ABDOMINOPELVIENNE CORSE FIGATELLIX 12/10/1988
 To: serviceY@chb.mssante.fr
 MIME-Version: 1.0
 Content-Type: multipart/report; report-type=disposition-notification; boundary="RAA14128.773615765"
