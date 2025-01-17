@@ -18,6 +18,7 @@ participant "BAL AP" as MSSR
 participant "PFI" as PFIR
 participant "DPI" as DPIR
 participant "BAL Perso/Service" as BALP
+participant "BAL Gestion Erreur" as BALE
 Actor "PS" as PSR
 end box
 
@@ -71,7 +72,7 @@ PFIE->MSSE:8. IMAP (recupération DSN)
 PFIE->PFIE:9. Traitement du DSN
 
 
-PFIE->DPIE:10. Acusé de recpetion ZAM
+PFIE->DPIE:10. Acusé de reception ZAM
     activate DPIE
 
 DPIE->PFIE:11. ACK
@@ -107,7 +108,7 @@ PFIR->PFIR:16. Constitution du courriel
 PFIR->MSSR:17. Envoi  du courriel
 
 MSSR->BALP:18. Envoi  du courriel
-    activate BALP
+    activate BALE
 end  
 end
 
