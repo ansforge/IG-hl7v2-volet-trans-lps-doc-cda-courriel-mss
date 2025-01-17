@@ -51,7 +51,12 @@
   </div>
   <div style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; " id="ans-nav">
     <a no-external="true" id="hl7-logo" href="https://esante.gouv.fr/"><img src="assets/images/logo-ANS.svg" alt="ANS Logo" height="50"/></a>
+    <a no-external="true" id="hl7-search-lnk" href="searchform.html"><img src="assets/images/search.png" alt="Search FHIR"/></a>
   </div>
+
+  <div id="ig-search">
+ </div>
+
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté</span>
@@ -265,7 +270,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <ul>
       <li><a href="volume2.html#choix-des-standards">Choix des standards</a> : suppression de la phrase « Les échanges MSSanté doivent prendre en compte les restrictions positionnées sur le message. (Exemple : un document avec un masquage Médecin ne doit pas être envoyé sur le mail MSSanté du médecin). » qui n’a pas de rapport avec le choix des standards. (<a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2">2</a>)</li>
       <li>correction typos/cohérence pour le type message en MSH-9.3 dans les <a href="volume2.html#eléments-de-contrôle-du-message-mdm">profils des messages</a> (<a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/6">6</a>)</li>
-      <li><a name="l505">​</a><a href="volume2.html#document-masqué-aux-professionnels-de-santé">Document Masqué aux professionnels de Santé</a> : métadonnée de masquage aux PS : Ajout de la valeur manquante Y (YES) (<a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2">2</a>)</li>
+      <li><a name="l511">​</a><a href="volume2.html#document-masqué-aux-professionnels-de-santé">Document Masqué aux professionnels de Santé</a> : métadonnée de masquage aux PS : Ajout de la valeur manquante Y (YES) (<a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2">2</a>)</li>
       <li>Correction description des segments PRT pour ‘destinataire’ et ‘adresse mail de réponse’ dans les <a href="volume2.html#le-groupe-de-segments-obxnte-portant-le-document-cda">profils des messages</a> <a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/9">(9)</a></li>
       <li>Déplacement de la section LIEN ENTRE L’EN-TETE CDA ET LES METADONNEES XDS dans Volume 3 Annexes (<a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/8">8</a>)</li>
     </ul>
@@ -878,7 +883,7 @@ Cet historique est également disponible dans la dernière version du volet au f
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 10, 2025 17:48+0000">2025-01-10</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 17, 2025 17:02+0000">2025-01-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
