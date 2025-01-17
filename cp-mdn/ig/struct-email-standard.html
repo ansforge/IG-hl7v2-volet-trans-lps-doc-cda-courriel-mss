@@ -51,7 +51,12 @@
   </div>
   <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
     <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
   </div>
+
+  <div id="ig-search">
+ </div>
+
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Volet Transmission au LPS de documents CDA provenant d&#39;un courriel MSSanté</span>
@@ -252,14 +257,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Si un MDN (Message Disposition Notification) n’a pas été explicitement demandé par le destinataire (via l’entête <code class="language-plaintext highlighter-rouge">Disposition-Notification-To</code> dans le message d’origine), vous ne pouvez pas utiliser un MDN tel que défini par la <a href="https://datatracker.ietf.org/doc/html/rfc8098">RFC 8098</a>, car il suppose qu’un accusé de réception ou une notification d’état a été requis.</p>
 
+<p>Si on souhaite utiliser une BAL vers laquelle rediriger, l’ensemble des erreurs pour pouvoir les traiter, le message MDN ne peut être utilisé.</p>
+
 <p>Dans ce cas, pour retourner une notification similaire à celle d’un MDN, vous pouvez utiliser un courriel “standard” avec une structure et un contenu adaptés.
 Ce courriel doit être compréhensible par l’humain et inclure toutes les informations nécessaires pour expliquer le problème ou fournir un retour en cas d’erreur comme pour les renvois d’erreur vers une BAL dédiée lorsque l’émetteur n’a pas demandé de MDN.</p>
+
 <h3 id="contenu-clé-du-courriel">Contenu clé du courriel</h3>
 
 <p>Voici les points essentiels pour construire le courriel standard en tant que notification :</p>
 
 <ul>
-  <li>Sujet clair : Expliquez qu’il s’agit d’une notification (ex. : “Notification de traitement du message”).</li>
+  <li>Objet du message : il doit être précisé
+de la manière suivante afin de faciliter la lecture et le traitement de la notification : <code class="language-plaintext highlighter-rouge">[KO Intégration système !][code erreur] XDM/1.0/DDM+&lt;libellé&gt; &lt;NOM&gt; &lt;prénom&gt; &lt;date de naissance&gt;</code>.</li>
   <li>Corps du message :
     <ul>
       <li>Fournissez une explication lisible par l’humain.</li>
@@ -393,7 +402,7 @@ Content-Disposition: attachment; filename="20220531_CR_d_imagerie_medicale_CORSE
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 13, 2025 15:34+0000">2025-01-13</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 17, 2025 17:38+0000">2025-01-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
