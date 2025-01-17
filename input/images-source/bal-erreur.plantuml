@@ -107,7 +107,7 @@ PFIR->PFIR:16. Constitution du courriel
 
 PFIR->MSSR:17. Envoi  du courriel
 
-MSSR->BALP:18. Envoi  du courriel
+MSSR->BALE:18. Envoi  du courriel
     activate BALE
 end  
 end
