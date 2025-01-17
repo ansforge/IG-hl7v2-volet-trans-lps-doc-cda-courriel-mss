@@ -1,9 +1,9 @@
-La RFC 8098 définit le type de contenu
+La [RFC 8098](https://datatracker.ietf.org/doc/html/rfc8098) définit le type de contenu
 « message/disposition-notification » propre au MDN (Message
 Disposition Notification). Ce MDN est utilisé pour notifier
 l'émetteur d'un courriel de tout traitement qui survient après la
-livraison de ce courriel au niveau du récepteur. Conformément à la RFC
-8098, ce MDN doit :
+livraison de ce courriel au niveau du récepteur. Conformément à la [RFC
+8098](https://datatracker.ietf.org/doc/html/rfc8098), ce MDN doit :
 
 -   Être lisible par un humain et par une machine,
 
@@ -12,7 +12,7 @@ livraison de ce courriel au niveau du récepteur. Conformément à la RFC
     initialement envoyé et à l'adresse du récepteur initial au nom
     duquel le MDN a été produit,
 
--   Être structuré conformément à la RFC 2822 et la RFC 8098,
+-   Être structuré conformément à la [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) et la [RFC 8098](https://datatracker.ietf.org/doc/html/rfc8098),
 
 L'envoi du MDN à l'expéditeur du courriel initial est
 conditionné par la présence d'un entête Disposition-Notification-To au
@@ -20,7 +20,7 @@ niveau du courriel expédié. D'autres informations peuvent également être
 fournies en utilisant les entêtes Original-Recipient et
 Disposition-Notification-Options.
 
-La RFC 8098 précise qu'un MDN ne devrait pas être renvoyé
+La R[FC 8098](https://datatracker.ietf.org/doc/html/rfc8098) précise qu'un MDN ne devrait pas être renvoyé
 automatiquement par le récepteur du courriel dans le cas où l'entête
 Disposition-Notification-To diffère de l'adresse précisée dans l'entête
 returm-Path du courriel envoyé, ceci afin d'éviter une transmission de
