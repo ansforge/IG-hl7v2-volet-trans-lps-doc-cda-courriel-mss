@@ -7,54 +7,54 @@
       "size" : 3441,
       "processes" : [
         {
+          "activity" : "loadDepInfo",
+          "start" : 28,
+          "length" : 1
+        },
+        {
           "activity" : "load",
-          "start" : 24,
-          "length" : 36
+          "start" : 28,
+          "length" : 30
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 24,
+          "start" : 29,
           "length" : 5
         },
         {
           "activity" : "generateNarratives",
-          "start" : 24,
-          "length" : 197
+          "start" : 29,
+          "length" : 175
         },
         {
           "activity" : "validate",
-          "start" : 25,
-          "length" : 1328
+          "start" : 29,
+          "length" : 1276
         },
         {
           "activity" : "generate1",
-          "start" : 27,
-          "length" : 86
+          "start" : 32,
+          "length" : 75
         },
         {
           "activity" : "generate2",
-          "start" : 30,
-          "length" : 115
+          "start" : 39,
+          "length" : 102
         },
         {
           "activity" : "generateExampleZip",
-          "start" : 39,
-          "length" : 1
-        },
-        {
-          "activity" : "generateExampleZip",
-          "start" : 39,
+          "start" : 49,
           "length" : 1
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 39,
+          "start" : 50,
           "length" : 2
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 41,
-          "length" : 1
+          "start" : 52,
+          "length" : 2
         }
       ]
     }
