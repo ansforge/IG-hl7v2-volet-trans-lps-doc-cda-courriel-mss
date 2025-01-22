@@ -106,6 +106,7 @@ group Gestion du courriel d'erreur
 PFIR->PFIR:16. Constitution du courriel
 
 PFIR->MSSR:17. Envoi  du courriel
+    activate MSSR
 
 MSSR->BALE:18. Envoi  du courriel
     activate BALE
