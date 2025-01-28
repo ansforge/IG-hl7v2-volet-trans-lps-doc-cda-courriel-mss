@@ -230,5 +230,16 @@ Cette table est décrite à titre indicatif et pourra être enrichie si besoin, 
         <p>L'INS du patient est présent dans le document CDA contenu dans le message HL7, mais l'ensemble des traits complémentaires ne sont pas présents. Dans ce cas, la demande de traitement sur le document (intégration/remplacement/suppression) ne peut pas être réalisée de façon automatique par le système consommateur.</p>
       </td>
     </tr>
+   <tr>
+      <td>
+        <p>906</p>
+      </td>
+      <td>
+        <p>Erreur 'Autre'</p>
+      </td>
+      <td>
+        <p>Si les autres codes erreurs ne correspondent pas au cas d'erreur rencontré ce code erreur peut être utilisé.</p>
+      </td>
+    </tr>
   </tbody>
 </table>
