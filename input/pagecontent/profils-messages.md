@@ -1346,7 +1346,7 @@ tableaux suivants sont à renseigner dans le message MDM :
         <p>Identifier Type Code</p>
       </td>
       <td>
-        <p>Le type d'identifiant (<a href="http://www.interopsante.org/offres/doc_inline_src/412/IHE_France_Constraints_on_HL7_data_types_for_ITI_v.1.7.3.pdf">Table 0203 - Interop'Santé</a>) est requis lorsque le PRT-5.1 est renseigné</p>
+        <p>Le type d'identifiant (issu de la <a href="https://www.interopsante.org/publications">Table 0203 - Interop'Santé</a> présent dan le document "Contraintes sur les types de données HL7 v2.5 applicables aux profils d’intégration du cadre technique IT Infrastructure dans le périmètre d’IHE France") est requis lorsque le PRT-5.1 est renseigné</p>
       </td>
     </tr>
     <tr>
@@ -1390,7 +1390,7 @@ tableaux suivants sont à renseigner dans le message MDM :
         <p>Identifier Type Code</p>
       </td>
       <td>
-        <p>Type d'identifiant (<a href="http://www.interopsante.org/offres/doc_inline_src/412/IHE_France_Constraints_on_HL7_data_types_for_ITI_v.1.7.3.pdf">Table 0203 - Interop'Santé</a>)</p>
+        <p>Type d'identifiant (issu de la <a href="https://www.interopsante.org/publications">Table 0203 - Interop'Santé</a> présent dan le document "Contraintes sur les types de données HL7 v2.5 applicables aux profils d’intégration du cadre technique IT Infrastructure dans le périmètre d’IHE France")</p>
       </td>
     </tr>
     <tr>
@@ -1588,7 +1588,7 @@ tableaux suivants sont à renseigner dans le message MDM :
         <p>Identifier Type Code</p>
       </td>
       <td>
-        <p>Le type d'identifiant (<a href="http://www.interopsante.org/offres/doc_inline_src/412/IHE_France_Constraints_on_HL7_data_types_for_ITI_v.1.7.3.pdf">Table 0203 - Interop'Santé</a>) est requis lorsque le PRT-5.1 est renseigné</p>
+        <p>Le type d'identifiant (issu de la <a href="https://www.interopsante.org/publications">Table 0203 - Interop'Santé</a> présent dan le document "Contraintes sur les types de données HL7 v2.5 applicables aux profils d’intégration du cadre technique IT Infrastructure dans le périmètre d’IHE France") est requis lorsque le PRT-5.1 est renseigné</p>
       </td>
     </tr>
     <tr>
@@ -1632,7 +1632,7 @@ tableaux suivants sont à renseigner dans le message MDM :
         <p>Identifier Type Code</p>
       </td>
       <td>
-        <p>Type d'identifiant (<a href="http://www.interopsante.org/offres/doc_inline_src/412/IHE_France_Constraints_on_HL7_data_types_for_ITI_v.1.7.3.pdf">Table 0203 - Interop'Santé</a>)</p>
+        <p>Type d'identifiant (issu de la <a href="https://www.interopsante.org/publications">Table 0203 - Interop'Santé</a> présent dan le document "Contraintes sur les types de données HL7 v2.5 applicables aux profils d’intégration du cadre technique IT Infrastructure dans le périmètre d’IHE France")</p>
       </td>
     </tr>
     <tr>
