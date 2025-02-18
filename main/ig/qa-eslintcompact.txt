@@ -2,12 +2,16 @@ CISIS_CDA_HL7_LPS
 =========================================
 
 Generic: line 0, col 0, Error - The link 'volume2.html#document-masqué-aux-professionnels-de-santé' for "Document Masqué aux professionnels de Santé" cannot be resolved (valid targets: 59 targets) (NOTFOUND)
+Generic: line 0, col 0, Error - The image source 'assets/images/fra.svg' cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Warning - The <script> containing the javascript '$( document ).ready('... is illegal and not allowed on the HL7 cibuild - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 cibuild (INVALID)
 Generic: line 0, col 0, Warning - The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide (NOTFOUND)
 Generic: line 0, col 0, Warning - An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide (NOTFOUND)
 Generic: line 0, col 0, Warning - An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide (NOTFOUND)
 Generic: line 0, col 0, Warning - The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide (NOTFOUND)
 /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/fsh-generated/resources/ImplementationGuide-ans.hl7v2.fr.trans-cda-mss.json: line 1, col 14677, Error - ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1) (STRUCTURE)
+/home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/fsh-generated/resources/ImplementationGuide-ans.hl7v2.fr.trans-cda-mss.json: line 1, col 14678, Error - HL7 Implementation Guides must state their status explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status (BUSINESSRULE)
+/home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/fsh-generated/resources/ImplementationGuide-ans.hl7v2.fr.trans-cda-mss.json: line 1, col 14678, Error - HL7 Implementation Guides must state their owning workgroup explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-wg (BUSINESSRULE)
+/home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/fsh-generated/resources/ImplementationGuide-ans.hl7v2.fr.trans-cda-mss.json: line 1, col 14678, Warning - HL7 Implementation Guides should state their maturity explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm (BUSINESSRULE)
 
-err = 1, warn = 5, info = 0
-IG Publisher Version: 1.8.9
+err = 3, warn = 6, info = 0
+IG Publisher Version: 1.8.13
