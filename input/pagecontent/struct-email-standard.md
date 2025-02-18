@@ -1,27 +1,27 @@
 ### Contexte
 
-Si un MDN (Message Disposition Notification) n'a pas été explicitement demandé par le destinataire (via l'entête `Disposition-Notification-To` dans le message d'origine), vous ne pouvez pas utiliser un MDN tel que défini par la [RFC 8098](https://datatracker.ietf.org/doc/html/rfc8098), car il suppose qu'un accusé de réception ou une notification d'état a été requis.
+Dans le cas où un MDN (Message Disposition Notification) n'a pas été explicitement demandé par le destinataire (via l'entête `Disposition-Notification-To` dans le message d'origine), il n'est pas possible d'envoyer un  MDN tel que défini par la [RFC 8098](https://datatracker.ietf.org/doc/html/rfc8098), car il suppose qu'un accusé de réception ou une notification d'état a été requis.
 
-Si on souhaite utiliser une BAL vers laquelle rediriger, l'ensemble des erreurs pour pouvoir les traiter, le message MDN ne peut être utilisé.
+Le MDN ne peut pas être utilisé pour rediriger et traiter l'ensemble des erreurs.
+Dans ce cas, pour retourner une notification similaire à celle d’un MDN, il faut  utiliser un courriel "standard" avec une structure et un contenu adaptés.
 
-Dans ce cas, pour retourner une notification similaire à celle d’un MDN, vous pouvez utiliser un courriel "standard" avec une structure et un contenu adaptés.
-Ce courriel doit être compréhensible par l'humain et inclure toutes les informations nécessaires pour expliquer le problème ou fournir un retour en cas d'erreur comme pour les renvois d'erreur vers une BAL dédiée lorsque l'émetteur n'a pas demandé de MDN.
+Ce courriel doit 
+- Être compréhensible par l'humain
+- Inclure toutes les informations nécessaires pour expliquer le problème afin de le traiter
+- Être structuré conformément à la RFC 2822 
 
-### Contenu clé du courriel
+### Contenu  du courriel
 
-Voici les points essentiels pour construire le courriel standard en tant que notification :
+Le courriel standart doit être composé de la façon suivante : 
 
 * Objet du message : il doit être précisé
-de la manière suivante afin de faciliter la lecture et le traitement de la notification : `[KO Intégration système !][code erreur] XDM/1.0/DDM+<libellé> <NOM> <prénom> <date de naissance>`.
+de la façon suivante afin de faciliter la lecture et le traitement de la notification : `[KO Intégration système !][code erreur] XDM/1.0/DDM+<libellé> <NOM> <prénom> <date de naissance>`.
 * Corps du message :
-  * Fournissez une explication lisible par l'humain.
-  * Mentionnez le problème détecté (erreur, statut ou autre).
-  * Indiquez des instructions pour corriger ou prévenir le problème.
-* Inclusion du message d'origine :
-Ajoutez le message d'origine (ou une partie) comme pièce jointe (`message/rfc822`).
-Cela permet au destinataire de comprendre le contexte.
+  * La première partie contient du texte lisible par un être humain. Dans le contexte du présent volet, ce texte doit au moins contenir, en cas d’erreur, le code et le libellé de l’erreur retournés par le CONSOMMATEUR.
+  Par exemple : « Le message ci-dessous n’a pas pu être intégré automatiquement dans le DPI pour la raison suivante : <libellé de l’erreur> ».
+* Inclusion du message d'origine : contient le corps du courriel d’origine.
 * Pièces jointes :
-  * Les pièces jointes envoyées avec le courriel d'origine (IHE_XDM.zip et le pdf) doivent être remises en pièces jointes du courriel pour pouvoir traiter les erreurs.
+  * Les pièces jointes envoyées avec le courriel d’origine (IHE_XDM.ZIP et le pdf) doivent être remises en pièces jointes du courriel.
   * Le contenu est encodé en Base64 pour respecter le standard MIME.
 
 ### Format du courriel
@@ -53,9 +53,9 @@ Bonjour,
 Le document envoyé n’a pas pu être intégré correctement dans le système. 
 Voici les détails de l’erreur rencontrée :
 
-- **Erreur détectée :** Identifiant de patient inconnu
-- **Code d’erreur :** 902
-- **Gravité :** E (Error)
+- Erreur détectée : Identifiant de patient inconnu
+- Code d’erreur : 902
+
 
 Vous trouverez en pièce jointe :
 1. Le message original contenant le document soumis.
@@ -71,7 +71,7 @@ L’équipe technique du service Y
 Content-Type: message/rfc822
 Content-Disposition: attachment; filename="message_original.eml"
 
-<Insérer ici le contenu du courriel MSSanté à l’origine du MDN et ses pièces jointes>
+<Insérer ici le contenu du courriel MSSanté à l’origine  et ses pièces jointes>
 
 --boundary12345
 Content-Type: application/zip; name="IHE_XDM.zip"
@@ -93,8 +93,10 @@ Content-Disposition: attachment; filename="20220531_CR_d_imagerie_medicale_CORSE
 ### Différences clés avec un MDN
 Contrairement à un MDN :
 
-  Ce courriel standard est non-automatisé et non structuré pour un traitement machine. L'entête `Disposition` avec le format `processed/Error: ...` est spécifique aux MDN et n'est pas standard dans un courriel classique. 
+  Ce courriel standard est non-automatisé et non structuré pour un traitement machine. L'entête `Disposition` avec le format `processed/Error: ...` est spécifique aux MDN et n'est pas standard dans un courriel classique.
+  
   Le code erreur ne peut être véhiculé que :
 
-* dans le corps du message
+* Dans l'objet du message
+* Dans le corps du message
 * ou en pièce jointe, pour conserver un format structuré qui pourrait être traité par un système.
