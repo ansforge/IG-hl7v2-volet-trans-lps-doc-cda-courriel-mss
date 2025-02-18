@@ -65,7 +65,7 @@
 
 
 
-  <img alt="France flag" src="assets/images/fra.svg" height="16" title="France"/>
+  <img alt=" flag" src="assets/images/zwe.svg" height="16" title=""/>
 
 
             </span>
@@ -246,7 +246,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#contexte" id="markdown-toc-contexte">Contexte</a></li>
-  <li><a href="#contenu-clé-du-courriel" id="markdown-toc-contenu-clé-du-courriel">Contenu clé du courriel</a></li>
+  <li><a href="#contenu--du-courriel" id="markdown-toc-contenu--du-courriel">Contenu  du courriel</a></li>
   <li><a href="#format-du-courriel" id="markdown-toc-format-du-courriel">Format du courriel</a></li>
   <li><a href="#exemple-de-courriel" id="markdown-toc-exemple-de-courriel">Exemple de courriel</a></li>
   <li><a href="#différences-clés-avec-un-mdn" id="markdown-toc-différences-clés-avec-un-mdn">Différences clés avec un MDN</a></li>
@@ -255,33 +255,35 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h3 id="contexte">Contexte</h3>
 
-<p>Si un MDN (Message Disposition Notification) n’a pas été explicitement demandé par le destinataire (via l’entête <code class="language-plaintext highlighter-rouge">Disposition-Notification-To</code> dans le message d’origine), vous ne pouvez pas utiliser un MDN tel que défini par la <a href="https://datatracker.ietf.org/doc/html/rfc8098">RFC 8098</a>, car il suppose qu’un accusé de réception ou une notification d’état a été requis.</p>
+<p>Dans le cas où un MDN (Message Disposition Notification) n’a pas été explicitement demandé par le destinataire (via l’entête <code class="language-plaintext highlighter-rouge">Disposition-Notification-To</code> dans le message d’origine), il n’est pas possible d’envoyer un  MDN tel que défini par la <a href="https://datatracker.ietf.org/doc/html/rfc8098">RFC 8098</a>, car il suppose qu’un accusé de réception ou une notification d’état a été requis.</p>
 
-<p>Si on souhaite utiliser une BAL vers laquelle rediriger, l’ensemble des erreurs pour pouvoir les traiter, le message MDN ne peut être utilisé.</p>
+<p>Le MDN ne peut pas être utilisé pour rediriger et traiter l’ensemble des erreurs.
+Dans ce cas, pour retourner une notification similaire à celle d’un MDN, il faut  utiliser un courriel “standard” avec une structure et un contenu adaptés.</p>
 
-<p>Dans ce cas, pour retourner une notification similaire à celle d’un MDN, vous pouvez utiliser un courriel “standard” avec une structure et un contenu adaptés.
-Ce courriel doit être compréhensible par l’humain et inclure toutes les informations nécessaires pour expliquer le problème ou fournir un retour en cas d’erreur comme pour les renvois d’erreur vers une BAL dédiée lorsque l’émetteur n’a pas demandé de MDN.</p>
+<p>Ce courriel doit</p>
+<ul>
+  <li>Être compréhensible par l’humain</li>
+  <li>Inclure toutes les informations nécessaires pour expliquer le problème afin de le traiter</li>
+  <li>Être structuré conformément à la RFC 2822</li>
+</ul>
 
-<h3 id="contenu-clé-du-courriel">Contenu clé du courriel</h3>
+<h3 id="contenu--du-courriel">Contenu  du courriel</h3>
 
-<p>Voici les points essentiels pour construire le courriel standard en tant que notification :</p>
+<p>Le courriel standart doit être composé de la façon suivante :</p>
 
 <ul>
   <li>Objet du message : il doit être précisé
-de la manière suivante afin de faciliter la lecture et le traitement de la notification : <code class="language-plaintext highlighter-rouge">[KO Intégration système !][code erreur] XDM/1.0/DDM+&lt;libellé&gt; &lt;NOM&gt; &lt;prénom&gt; &lt;date de naissance&gt;</code>.</li>
+de la façon suivante afin de faciliter la lecture et le traitement de la notification : <code class="language-plaintext highlighter-rouge">[KO Intégration système !][code erreur] XDM/1.0/DDM+&lt;libellé&gt; &lt;NOM&gt; &lt;prénom&gt; &lt;date de naissance&gt;</code>.</li>
   <li>Corps du message :
     <ul>
-      <li>Fournissez une explication lisible par l’humain.</li>
-      <li>Mentionnez le problème détecté (erreur, statut ou autre).</li>
-      <li>Indiquez des instructions pour corriger ou prévenir le problème.</li>
+      <li>La première partie contient du texte lisible par un être humain. Dans le contexte du présent volet, ce texte doit au moins contenir, en cas d’erreur, le code et le libellé de l’erreur retournés par le CONSOMMATEUR.
+Par exemple : « Le message ci-dessous n’a pas pu être intégré automatiquement dans le DPI pour la raison suivante : &lt;libellé de l’erreur&gt; ».</li>
     </ul>
   </li>
-  <li>Inclusion du message d’origine :
-Ajoutez le message d’origine (ou une partie) comme pièce jointe (<code class="language-plaintext highlighter-rouge">message/rfc822</code>).
-Cela permet au destinataire de comprendre le contexte.</li>
+  <li>Inclusion du message d’origine : contient le corps du courriel d’origine.</li>
   <li>Pièces jointes :
     <ul>
-      <li>Les pièces jointes envoyées avec le courriel d’origine (IHE_XDM.zip et le pdf) doivent être remises en pièces jointes du courriel pour pouvoir traiter les erreurs.</li>
+      <li>Les pièces jointes envoyées avec le courriel d’origine (IHE_XDM.ZIP et le pdf) doivent être remises en pièces jointes du courriel.</li>
       <li>Le contenu est encodé en Base64 pour respecter le standard MIME.</li>
     </ul>
   </li>
@@ -313,9 +315,9 @@ Bonjour,
 Le document envoyé n’a pas pu être intégré correctement dans le système. 
 Voici les détails de l’erreur rencontrée :
 
-- **Erreur détectée :** Identifiant de patient inconnu
-- **Code d’erreur :** 902
-- **Gravité :** E (Error)
+- Erreur détectée : Identifiant de patient inconnu
+- Code d’erreur : 902
+
 
 Vous trouverez en pièce jointe :
 1. Le message original contenant le document soumis.
@@ -331,7 +333,7 @@ L’équipe technique du service Y
 Content-Type: message/rfc822
 Content-Disposition: attachment; filename="message_original.eml"
 
-&lt;Insérer ici le contenu du courriel MSSanté à l’origine du MDN et ses pièces jointes&gt;
+&lt;Insérer ici le contenu du courriel MSSanté à l’origine  et ses pièces jointes&gt;
 
 --boundary12345
 Content-Type: application/zip; name="IHE_XDM.zip"
@@ -353,11 +355,13 @@ Content-Disposition: attachment; filename="20220531_CR_d_imagerie_medicale_CORSE
 <h3 id="différences-clés-avec-un-mdn">Différences clés avec un MDN</h3>
 <p>Contrairement à un MDN :</p>
 
-<p>Ce courriel standard est non-automatisé et non structuré pour un traitement machine. L’entête <code class="language-plaintext highlighter-rouge">Disposition</code> avec le format <code class="language-plaintext highlighter-rouge">processed/Error: ...</code> est spécifique aux MDN et n’est pas standard dans un courriel classique. 
-  Le code erreur ne peut être véhiculé que :</p>
+<p>Ce courriel standard est non-automatisé et non structuré pour un traitement machine. L’entête <code class="language-plaintext highlighter-rouge">Disposition</code> avec le format <code class="language-plaintext highlighter-rouge">processed/Error: ...</code> est spécifique aux MDN et n’est pas standard dans un courriel classique.</p>
+
+<p>Le code erreur ne peut être véhiculé que :</p>
 
 <ul>
-  <li>dans le corps du message</li>
+  <li>Dans l’objet du message</li>
+  <li>Dans le corps du message</li>
   <li>ou en pièce jointe, pour conserver un format structuré qui pourrait être traité par un système.</li>
 </ul>
 
@@ -402,7 +406,7 @@ Content-Disposition: attachment; filename="20220531_CR_d_imagerie_medicale_CORSE
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 22, 2025 11:02+0000">2025-01-22</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 18, 2025 14:30+0000">2025-02-18</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
