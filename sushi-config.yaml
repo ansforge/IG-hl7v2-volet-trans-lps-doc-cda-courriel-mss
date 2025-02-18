@@ -34,6 +34,8 @@ pages:
         title: "Exemples de messages"
     struct-msg-mdn.md:
         title: "Structure du MDN (MSSanté)"
+    struct-email-standard.md:
+        title: "Structure d'un message de notification format courriel standard"
     glossaire.md:
         title: "Glossaire"
     doc-ref.md:
@@ -69,6 +71,7 @@ menu:
         "Codes erreurs de traitement du message HL7 MDM": error-codes.html
         "Exemples de messages": exemples.html
         "Structure du MDN (MSS)": struct-msg-mdn.html
+        "Structure d'un message de notification format courriel standard": struct-email-standard.html 
         "Glossaire": glossaire.html
         "Documents de référence": doc-ref.html
     Test: testplan.html
