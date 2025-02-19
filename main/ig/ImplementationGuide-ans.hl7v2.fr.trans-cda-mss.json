@@ -10,7 +10,7 @@
   "name" : "CISIS_CDA_HL7_LPS",
   "title" : "Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté",
   "status" : "draft",
-  "date" : "2025-02-18T17:31:11+00:00",
+  "date" : "2025-02-19T16:05:25+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -704,6 +704,15 @@
         }],
         "nameUrl" : "struct-msg-mdn.html",
         "title" : "Structure du MDN (MSSanté)",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "struct-email-standard.html"
+        }],
+        "nameUrl" : "struct-email-standard.html",
+        "title" : "Structure d'un message de notification format courriel standard",
         "generation" : "markdown"
       },
       {
