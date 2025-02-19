@@ -1,0 +1,125 @@
+@startuml
+scale 1024*768
+
+box  "Emmetteur" #palegreen
+actor "PS" as PSE
+participant "DPI" as DPIE
+participant "PFI" as PFIE
+participant "BAL AP" as MSSE
+end box
+
+box  "Support Editeur" #LightCoral
+
+end box
+
+
+box  "Recepteur" #paleturquoise
+participant "BAL AP" as MSSR
+participant "PFI" as PFIR
+participant "DPI" as DPIR
+participant "BAL Perso/Service" as BALP
+participant "BAL Gestion Erreur" as BALE
+Actor "PS" as PSR
+end box
+
+
+
+
+group BAL AP à BAL ERREUR
+
+
+
+group Demande d'integration via MSS
+PSE->DPIE:1. Selection du CR à envoyer
+	activate DPIE
+
+DPIE->PFIE:2. Demande d'integration du CR via MSS
+	activate PFIE
+
+PFIE->DPIE:3.Acceptation de la demande
+	deactivate DPIE
+
+PFIE->PFIE:4. Constitution du courriel (PDF + IHE_XDM.ZIP)
+
+PFIE->MSSE:5.
+    activate MSSE
+    deactivate PFIE
+
+MSSE->BALP:6. SMTP
+    activate BALP
+    deactivate MSSR
+    deactivate MSSE
+
+
+
+end
+
+
+
+
+
+group Accusé de reception MSS
+
+BALP->MSSE:7. SMTP (DSN)
+    deactivate MSSR
+    activate MSSE
+
+
+PFIE->MSSE:8. IMAP (recupération DSN)
+    activate PFIE
+    deactivate MSSE
+
+PFIE->PFIE:9. Traitement du DSN
+
+
+PFIE->DPIE:10. Acusé de reception ZAM
+    activate DPIE
+
+DPIE->PFIE:11. ACK
+    deactivate DPIE
+    deactivate PFIE
+
+end
+group Traitement de la demande d'intégration
+
+BALP->MSSR:6.BIS Transfert
+    activate MSSR
+    deactivate BALP
+
+PFIR->MSSR:12. Recupération IHE_XDM.ZIP
+    activate PFIR
+    activate MSSR
+
+PFIR->PFIR:13. Traitement de l'archive  IHE_XDM.ZIP
+
+PFIR->DPIR:14. Demande d'integration 
+    activate DPIR
+
+
+DPIR->PFIR:15. Retour de la demande d'integration
+    deactivate DPIR
+end
+
+group Gestion du courriel d'erreur
+
+
+PFIR->PFIR:16. Constitution du courriel
+
+PFIR->MSSR:17. Envoi  du courriel
+    activate MSSR
+
+MSSR->BALE:18. Envoi  du courriel
+    activate BALE
+end  
+end
+
+
+
+
+
+
+
+
+
+    
+@enduml

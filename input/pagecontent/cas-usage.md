@@ -62,6 +62,20 @@ La Figure 3 illustre la gestion des erreurs par l’établissement destinataire 
 
 Le diagramme serait identique dans le cas d’une demande de remplacement ou de suppression du compte rendu.
 
+<blockquote class="stu-note">
+    <p>
+Dans le cas où un MDN (Message Disposition Notification) n'a pas été explicitement demandé par le destinataire (via l'entête `Disposition-Notification-To` dans le message d'origine), et que pour pouvoir gérer toutes les erreurs on souhaite utiliser une BAL dédiée, un courriel 'standard' peut être utlisé.
+La structure du courriel est précisée <a href="struct-email-standard.html">ici</a>.
+
+<div class="figure" style='text-align: center;'>
+    {%include bal-erreur.svg%}
+    <figcaption><b>Figure 3 bis: Réception d’un CR de biologie médicale - Gestion des erreurs vers une BAL dédiée</b></figcaption>
+</div>    
+<br>
+<b>Ce cas d'usage est hors périmètre de ce volet.</b>
+    </p>
+</blockquote>
+
 #### Transmission d’un document clinique d’un patient d’un établissement hospitalier vers un autre établissement hospitalier
 
 **Cas d’usage :** Le Dr Jean Dupont exerce dans le service X de l’établissement-A. Il souhaite transférer un de ses patients dans le service Y de l’établissement B. Il demande à la secrétaire médicale du service X d’envoyer le compte rendu d’hospitalisation de son patient à l’équipe de soins du service Y de l’établissement-B.
@@ -100,7 +114,7 @@ La structure du MDN est précisée [ici](struct-msg-mdn.html).
 </div>
 <div class="figure" style='text-align: center;'>
     <img src="image11.png" alt="Figure 4" title="Figure 4 : Transmission d’un document clinique d’un patient d’un CH vers un autre CH -Cas nominal" style="width:80%;">
-    <figcaption><b>Figure 4 : Transmission d’un document clinique d’un patient d’un CH vers un autre CH -Cas nominal</b></figcaption>
+    <figcaption><b>Figure 4 : Transmission d’un document clinique d’un patient d’un CH vers un autre CH - Cas nominal</b></figcaption>
 </div>    
 <br>
 
@@ -116,7 +130,7 @@ La figure ci-dessous représente uniquement la partie basse de la figure précé
 
 <div class="figure" style='text-align: center;'>
     <img src="image12.png" alt="Figure 5" title="Figure 5 : Transmission d’un document clinique d’un patient d’un CH vers un autre CH -Gestion des erreurs" style="width:80%;">
-    <figcaption><b>Figure 5 : Transmission d’un document clinique d’un patient d’un CH vers un autre CH -Gestion des erreurs</b></figcaption>
+    <figcaption><b>Figure 5 : Transmission d’un document clinique d’un patient d’un CH vers un autre CH - Gestion des erreurs</b></figcaption>
 </div>    
 <br>
 
@@ -124,3 +138,17 @@ La figure ci-dessous représente uniquement la partie basse de la figure précé
 La Figure 5 illustre la gestion des erreurs par l’établissement destinataire dans le cas d’une demande de transmission d’un compte rendu vers le DPI d’un autre établissement.
 
 Le diagramme serait identique dans le cas d’une demande de remplacement ou de suppression du compte rendu.
+
+<blockquote class="stu-note">
+    <p>
+Dans le cas où un MDN (Message Disposition Notification) n'a pas été explicitement demandé par le destinataire (via l'entête `Disposition-Notification-To` dans le message d'origine), et que pour pouvoir gérer toutes les erreurs on souhaite utiliser une BAL dédiée, un courriel 'standard' peut être utlisé.
+La structure du courriel est précisée <a href="struct-email-standard.html">ici</a>.
+
+<div class="figure" style='text-align: center;'>
+    {%include bal-erreur.svg%}
+    <figcaption><b>Figure 5 bis: Transmission d’un document clinique d’un patient d’un CH vers un autre CH - Gestion des erreurs vers une BAL dédiée</b></figcaption>
+</div>    
+<br>
+<b>Ce cas d'usage est hors périmètre de ce volet.</b>
+    </p>
+</blockquote>
