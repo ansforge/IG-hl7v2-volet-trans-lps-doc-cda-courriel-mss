@@ -2,10 +2,10 @@
     "package-id" : "ans.hl7v2.fr.trans-cda-mss",
     "version" : "1.1.2",
     "path" : "https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/1.1.2",
-    "mode" : "working",
-    "status" : "draft",
+    "mode" : "milestone",
+    "status" : "trial-use",
     "sequence" : "Publications",
-    "desc" : "Version corrective du volet transmission au LPS d'un document CDA provenant d'un courriel MSSanté.",
-    "changes" : "change-log.html#version-nnn",
+    "desc" : "Nouvelle version mineure du volet transmission au LPS d'un document CDA provenant d'un courriel MSSanté.",
+    "changes" : "change-log.html#version-1.1.2",
     "title" : "[CI-SIS]Volet transmission au LPS d'un document CDA provenant d'un courriel MSSanté"
     }
