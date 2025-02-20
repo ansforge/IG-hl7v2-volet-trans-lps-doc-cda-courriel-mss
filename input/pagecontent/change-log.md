@@ -1,3 +1,16 @@
+### version 1.1.2
+
+**Version mineure sans impact sur le développement (corrections de typo, précisions ou ajout d'informations)**
+
+* Ajout de la possibilité d'utiliser un courriel standard à la place du MDN pour la gestion des erreurs ([22](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/22))
+  * ajout d'une note pour décrire le [cas d'usage](volume1.html#cas-dusage)
+  * ajout d'une [annexe décrivant le format du courriel standard](struct-email-standard.html)
+  * modification de l'[annexe décrivant le MDN](struct-msg-mdn.html) : ajout d'hyperliens et ajout du [code erreur] dans l'objet
+
+* Correction du lien vers le volet InteropSanté pour la table Table 0203 dans les [profils des messages](volume2.html#le-groupe-de-segments-obxnte-portant-le-document-cda) ([28](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/28))
+
+* Ajout du code 906 'autres type d'erreur' dans l'annexe [Codes erreurs de traitement du message HL7 MDM](error-codes.html) ([25](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/25))
+
 ### version 1.1.1
 
 **Version mineure sans impact sur le développement (changement de format, corrections de typo, précisions ou ajout d'informations)**
