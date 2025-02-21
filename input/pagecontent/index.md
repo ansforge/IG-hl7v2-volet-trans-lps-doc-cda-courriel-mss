@@ -4,7 +4,7 @@ This implementation guide is part of the Service layer of the Health Information
 This section of the CI-SIS outlines the possibility for an organization's business software to delegate to a third-party entity, the Intermediation Platform (PFI), the ability to process an incoming email from an MSSanté mailbox and to generate, based on this email, a request for integration, replacement, or deletion of a clinical document directed toward the consuming business application. This section should be considered by the reader in conjunction with another section of the CI-SIS, the "Transmission d'un document CDA-R2 en HL7v2" section, to provide an end-to-end view of exchanges through MSSanté (from the CREATOR of the document processing request to the final CONSUMER of this request).
 </p>
 
-<!--  A commenter lors de la publication -->
+<!--  A commenter lors de la publication 
 <div style="width: 65%">
   <blockquote class="stu-note">
     <p>
@@ -12,7 +12,7 @@ This section of the CI-SIS outlines the possibility for an organization's busine
     </p>
   </blockquote>
 </div>
-
+-->
 <div class="figure">
     <img src="ci-sis-logo.png" alt="CI-SIS" title="Logo du CI-SIS" style="width:100%;">
 </div>
