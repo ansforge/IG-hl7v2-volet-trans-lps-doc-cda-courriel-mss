@@ -3,14 +3,14 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="ans.hl7v2.fr.trans-cda-mss"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide ans.hl7v2.fr.trans-cda-mss</b></p><a name="ans.hl7v2.fr.trans-cda-mss"> </a><a name="hcans.hl7v2.fr.trans-cda-mss"> </a><a name="ans.hl7v2.fr.trans-cda-mss-fr-FR"> </a><h2>CISIS_CDA_HL7_LPS</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/ImplementationGuide/ans.hl7v2.fr.trans-cda-mss</pre></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide ans.hl7v2.fr.trans-cda-mss</b></p><a name="ans.hl7v2.fr.trans-cda-mss"> </a><a name="hcans.hl7v2.fr.trans-cda-mss"> </a><a name="ans.hl7v2.fr.trans-cda-mss-fr-FR"> </a><h2>CISIS_CDA_HL7_LPS</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/ImplementationGuide/ans.hl7v2.fr.trans-cda-mss</pre></div>
   </text>
   <url value="https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/ImplementationGuide/ans.hl7v2.fr.trans-cda-mss"/>
   <version value="1.1.2"/>
   <name value="CISIS_CDA_HL7_LPS"/>
   <title value="Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté"/>
   <status value="active"/>
-  <date value="2025-02-21T22:39:46+00:00"/>
+  <date value="2025-03-03T16:50:25+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
