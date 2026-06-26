@@ -1,0 +1,20 @@
+CISIS_CDA_HL7_LPS : Validation Results
+=========================================
+
+err = 2, warn = 5, info = 1
+IG Publisher Version: 2.2.10
+Generated Fri Jun 26 11:56:20 UTC 2026. FHIR version 4.0.1 for ans.hl7v2.fr.trans-cda-mss#1.1.3 (canonical = https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss)
+ Build Errors : 1 / 5 / 0
+ /__w/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/fsh-generated/resources/ImplementationGuide-ans.hl7v2.fr.trans-cda-mss : 2 / 0 / 2
+</table>
+== n/a ==
+ERROR: change-log.html#/html/body/div/div/div/div/div/ul/li/ul/li/a at Line 295, column 12: The link 'volume2.html#document-masqué-aux-professionnels-de-santé' for "Document Masqué aux professionnels de Santé" cannot be resolved (valid targets: 59 targets)
+WARNING: /__w/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/searchform.html#/html/body/script at Line 255, column 7: The <script> containing the javascript '$( document ).ready('... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/ImplementationGuide-ans.hl7v2.fr.trans-cda-mss.json ==
+ERROR: ImplementationGuide/ans.hl7v2.fr.trans-cda-mss: ImplementationGuide.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. Valid display is 'France (la)' (fr) (for the language(s) 'fr-FR')
+ERROR: ImplementationGuide/ans.hl7v2.fr.trans-cda-mss: ImplementationGuide.definition: ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1)
+INFORMATION: Resource: The resource ImplementationGuide/ans.hl7v2.fr.trans-cda-mss could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
