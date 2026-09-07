@@ -243,8 +243,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#éligibilité-au-mécanisme-mdn" id="markdown-toc-éligibilité-au-mécanisme-mdn">Éligibilité au mécanisme MDN</a></li>
+  <li><a href="#objet-du-mdn" id="markdown-toc-objet-du-mdn">Objet du MDN</a></li>
+  <li><a href="#structure-du-corps-du-mdn" id="markdown-toc-structure-du-corps-du-mdn">Structure du corps du MDN</a></li>
+  <li><a href="#exemple-dun-mdn" id="markdown-toc-exemple-dun-mdn">Exemple d’un MDN</a></li>
+</ul>
+
 </div>
 <p>La <a href="https://datatracker.ietf.org/doc/html/rfc8098">RFC 8098</a> définit le type de contenu
 « message/disposition-notification » propre au MDN (Message
@@ -264,7 +270,7 @@ initialement envoyé et à l’adresse du récepteur initial au nom
 duquel le MDN a été produit,</p>
   </li>
   <li>
-    <p>Être structuré conformément à la <a href="https://datatracker.ietf.org/doc/html/rfc2822">RFC 2822</a> et la <a href="https://datatracker.ietf.org/doc/html/rfc8098">RFC 8098</a>,</p>
+    <p>Être structuré conformément à la <a href="https://datatracker.ietf.org/doc/html/rfc5322">RFC 5322</a> (qui rend obsolète la RFC 2822) et la <a href="https://datatracker.ietf.org/doc/html/rfc8098">RFC 8098</a>,</p>
   </li>
 </ul>
 
@@ -274,60 +280,204 @@ niveau du courriel expédié. D’autres informations peuvent également être
 fournies en utilisant les entêtes Original-Recipient et
 Disposition-Notification-Options.</p>
 
-<p>La R<a href="https://datatracker.ietf.org/doc/html/rfc8098">FC 8098</a> précise qu’un MDN ne devrait pas être renvoyé
+<p>La <a href="https://datatracker.ietf.org/doc/html/rfc8098">RFC 8098</a> précise qu’un MDN ne devrait pas être renvoyé
 automatiquement par le récepteur du courriel dans le cas où l’entête
 Disposition-Notification-To diffère de l’adresse précisée dans l’entête
-returm-Path du courriel envoyé, ceci afin d’éviter une transmission de
+Return-Path du courriel envoyé, ceci afin d’éviter une transmission de
 messages en boucle. Dans ce cas l’envoi du MDN nécessite une
 confirmation de l’utilisateur.</p>
+
+<h3 id="éligibilité-au-mécanisme-mdn">Éligibilité au mécanisme MDN</h3>
+
+<p>Le <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2">Référentiel socle MSSanté #2</a> (v1.0.1 du 18/01/2024) rend le mécanisme MDN obligatoire dans les deux sens :</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Exigence</th>
+      <th>Énoncé</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ECO.2.3.2</code></td>
+      <td>« Le système DOIT permettre de demander au destinataire un accusé de lecture (MDN) lors de l’émission d’un courriel. »</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ECO.3.1.6</code></td>
+      <td>« Le système DOIT permettre de retourner un accusé de lecture (MDN) lorsqu’un message reçu le demande. »</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Ces exigences ne s’imposent toutefois qu’aux <strong>clients de messagerie MSSanté</strong>, c’est-à-dire, au sens de ce référentiel, à tout logiciel métier (client lourd ou SaaS) utilisé par un professionnel habilité et comportant des fonctions d’échange par messagerie MSSanté — que ces échanges soient réalisés manuellement au travers d’une IHM ou de façon automatisée (DPI, SIL, RIS…). Le référentiel précise qu’il « ne s’applique donc pas aux interfaces webmail ou clients de messageries standards (type Outlook ou Thunderbird) ».</p>
+
+<blockquote class="stu-note">
+    <p>
+    <b>Point d'attention :</b> la production d'un MDN n'est donc pas garantie sur l'ensemble de la chaîne. Dans le cas d'usage décrit par ce volet, le courriel parvient à la BAL applicative après un transfert depuis la BAL organisationnelle du service destinataire. Si ce transfert est réalisé au moyen d'un webmail ou d'un client de messagerie standard — hors du périmètre du Référentiel socle MSSanté #2 — rien ne garantit que l'entête <code>Disposition-Notification-To</code> soit positionné sur le courriel transféré. Or, sans cet entête, aucun MDN ne peut être émis en retour.
+    <br /><br />
+    C'est la situation pour laquelle le volet prévoit un <a href="struct-email-standard.html">courriel standard de notification</a> en substitution du MDN.
+    </p>
+</blockquote>
+
+<p>Le Référentiel socle MSSanté #2 précise par ailleurs que, « dans la présente version du référentiel, seule l’information sur la “lecture” du message est demandée en retour, mais l’intégration des PJ dans le système cible pourrait être confirmée par le même mécanisme ». L’usage du MDN décrit dans la présente annexe — rendre compte du résultat de l’intégration du document dans le système cible — relève de cette extension que le référentiel anticipe. C’est ce qui justifie le recours au type de traitement <code class="language-plaintext highlighter-rouge">processed</code> plutôt qu’à <code class="language-plaintext highlighter-rouge">displayed</code> <em>(Note 1)</em>.</p>
+
+<h3 id="objet-du-mdn">Objet du MDN</h3>
 
 <p>Dans le cas d’un MDN en erreur, l’objet du MDN doit être précisé
 de la façon suivante : <code class="language-plaintext highlighter-rouge">[KO Intégration système !][code erreur] XDM/1.0/DDM+&lt;libellé&gt; &lt;NOM&gt; &lt;prénom&gt; &lt;date de naissance&gt;</code>.</p>
 
 <p>Dans le cas contraire, l’objet du MDN est précisé par <code class="language-plaintext highlighter-rouge">XDM/1.0/DDM+&lt;libellé&gt; &lt;NOM&gt; &lt;prénom&gt; &lt;date de naissance&gt;</code>.</p>
 
-<p>Le MDN est de type « multipart/report » :
-<code class="language-plaintext highlighter-rouge">Content-Type:multipart/report;report-type=disposition-notification; boundary="RAA14128.773615765/example.com"</code></p>
+<h3 id="structure-du-corps-du-mdn">Structure du corps du MDN</h3>
+
+<p>Le MDN est de type « multipart/report » :</p>
+
+<p><code class="language-plaintext highlighter-rouge">Content-Type: multipart/report; report-type=disposition-notification; boundary="RAA14128.773615765"</code></p>
+
+<p><strong>Besoin fonctionnel :</strong> en cas d’erreur, le MDN doit restituer au destinataire l’intégralité du courriel d’origine — entêtes, corps et pièces jointes — afin de lui permettre de traiter l’erreur (reprise manuelle, correction puis réémission).</p>
+
+<p>Conformément à la <a href="https://datatracker.ietf.org/doc/html/rfc6522#section-4">RFC 6522 §4</a> et à la <a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3">RFC 8098 §3</a>, le corps d’un « multipart/report » comporte deux ou trois parties, à rôles fixés et dans un ordre imposé. Dans le contexte du présent volet, les trois parties sont attendues :</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th><code class="language-plaintext highlighter-rouge">Content-Type</code></th>
+      <th>Rôle</th>
+      <th>Cardinalité dans ce volet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><code class="language-plaintext highlighter-rouge">text/plain</code></td>
+      <td>Texte lisible par un être humain</td>
+      <td>Obligatoire</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><code class="language-plaintext highlighter-rouge">message/disposition-notification</code></td>
+      <td>Compte rendu exploitable par une machine</td>
+      <td>Obligatoire</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><code class="language-plaintext highlighter-rouge">message/rfc822</code></td>
+      <td>Courriel d’origine restitué intégralement, pièces jointes comprises</td>
+      <td>Obligatoire</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Chaque partie est introduite par le délimiteur <code class="language-plaintext highlighter-rouge">--&lt;boundary&gt;</code> ; la dernière partie est suivie du délimiteur de clôture <code class="language-plaintext highlighter-rouge">--&lt;boundary&gt;--</code>, encadré de deux tirets ASCII (caractère <code class="language-plaintext highlighter-rouge">-</code>, U+002D) de part et d’autre (<a href="https://datatracker.ietf.org/doc/html/rfc2046#section-5.1.1">RFC 2046 §5.1.1</a>). Au sein de chaque partie, les entêtes sont séparés du contenu par une <strong>ligne vide</strong> (<a href="https://datatracker.ietf.org/doc/html/rfc2045">RFC 2045</a>).</p>
+
+<h4 id="première-partie--texte-lisible-par-un-être-humain">Première partie : texte lisible par un être humain</h4>
 
 <ul>
   <li>
-    <p>La première partie contient du texte lisible par un être humain.
-Dans le contexte du présent volet, ce texte doit au moins contenir,
+    <p>Dans le contexte du présent volet, ce texte doit au moins contenir,
 en cas d’erreur, le code et le libellé de l’erreur retournés par le
 CONSOMMATEUR.</p>
 
     <ul>
-      <li>Par exemple : « <code class="language-plaintext highlighter-rouge">Le message ci-dessous n’a pas pu être intégré automatiquement dans le DPI pour la raison suivante : &lt;libellé de l’erreur&gt;</code> ».</li>
+      <li>Par exemple : « <code class="language-plaintext highlighter-rouge">Le message ci-dessous n’a pas pu être intégré automatiquement dans le DPI pour la raison suivante : &lt;libellé de l’erreur&gt;</code> ».</li>
     </ul>
   </li>
   <li>
-    <p>La seconde partie est conforme au type de contenu message/disposition-notification constitué de différents champs d’entête formatés selon la RFC 2822. Parmi ces champs, « <code class="language-plaintext highlighter-rouge">Disposition:</code> » et <code class="language-plaintext highlighter-rouge">« Final-Recipient: » </code> sont obligatoires :</p>
-
-    <ul>
-      <li>
-        <p>Le champ <code class="language-plaintext highlighter-rouge">« Disposition: »</code> rend compte du résultat du traitement du courriel par le destinataire <em>(Note 1)</em>:</p>
-
-        <ul>
-          <li>En cas de succès, le contenu du champ « <code class="language-plaintext highlighter-rouge">Disposition:</code> » prend la valeur : « <code class="language-plaintext highlighter-rouge">Disposition: automatic-action/MDN-sent-automatically; processed</code> »</li>
-        </ul>
-      </li>
-    </ul>
+    <p>Cette partie déclare son jeu de caractères (<code class="language-plaintext highlighter-rouge">Content-Type: text/plain; charset="UTF-8"</code>), les libellés d’erreur pouvant comporter des caractères accentués.</p>
   </li>
-  <li>En cas d’erreur, le contenu du champ « Disposition: » prend la valeur : « <code class="language-plaintext highlighter-rouge">Disposition:automatic-action/MDN-sent-automatically; processed/Error: code erreur^libellé erreur</code> »</li>
-  <li>Le champ « <code class="language-plaintext highlighter-rouge">Final-Recipient:</code> » qui correspond à l’adresse du destinataire pour lequel le MDN est émis. La valeur de ce champ peut être différente de l’adresse initialement fournie par l’émetteur du courriel, notamment en cas de transfert du courriel initial par le destinataire.</li>
 </ul>
 
-<p>Dans le contexte de ce volet, de façon à permettre le traitement du MDN par la PFI réceptrice, le MDN devra également préciser les champs suivants :</p>
+<h4 id="deuxième-partie--compte-rendu-exploitable-par-une-machine">Deuxième partie : compte rendu exploitable par une machine</h4>
+
+<p>Cette partie est conforme au type de contenu <code class="language-plaintext highlighter-rouge">message/disposition-notification</code>. Son contenu est constitué de différents champs formatés selon la <a href="https://datatracker.ietf.org/doc/html/rfc5322">RFC 5322</a> et séparés de l’entête <code class="language-plaintext highlighter-rouge">Content-Type</code> de la partie par une ligne vide. Parmi ces champs, « <code class="language-plaintext highlighter-rouge">Disposition:</code> » et « <code class="language-plaintext highlighter-rouge">Final-Recipient:</code> » sont obligatoires :</p>
 
 <ul>
   <li>
-    <p>Le champ identifiant du courriel d’origine « <code class="language-plaintext highlighter-rouge">Original-Message-ID</code> » qui indique l’identifiant du courriel initial pour lequel le MDN est produit. Il est obtenu à partir de l’entête Message-ID du courriel initial.</p>
+    <p>Le champ « <code class="language-plaintext highlighter-rouge">Disposition:</code> » rend compte du résultat du traitement du courriel par le destinataire <em>(Note 1)</em> :</p>
+
+    <ul>
+      <li>
+        <p>En cas de succès, le contenu du champ « <code class="language-plaintext highlighter-rouge">Disposition:</code> » prend la valeur : « <code class="language-plaintext highlighter-rouge">Disposition: automatic-action/MDN-sent-automatically; processed</code> »</p>
+      </li>
+      <li>
+        <p>En cas d’erreur, le contenu du champ « <code class="language-plaintext highlighter-rouge">Disposition:</code> » prend la valeur : « <code class="language-plaintext highlighter-rouge">Disposition: automatic-action/MDN-sent-automatically; processed/Error: code erreur^libellé erreur</code> »</p>
+      </li>
+    </ul>
   </li>
-  <li>Le champ « <code class="language-plaintext highlighter-rouge">Original-Recipient:</code> » qui indique l’adresse du destinataire du courriel d’origine, telle que spécifiée par l’expéditeur du courriel pour lequel le MDN est émis. Cette valeur est obtenue à partir de l’entête Original-Recipient du courriel pour lequel le MDN est généré.</li>
-  <li>La troisième partie contient le corps du courriel d’origine.</li>
+  <li>
+    <p>Le champ « <code class="language-plaintext highlighter-rouge">Error:</code> » (<a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.7">RFC 8098 §3.2.7</a>) est l’emplacement que la RFC 8098 prévoit pour porter un texte de diagnostic lorsque le modificateur <code class="language-plaintext highlighter-rouge">error</code> est présent. Il est recommandé d’y reprendre le code et le libellé de l’erreur, sous la forme <code class="language-plaintext highlighter-rouge">code erreur^libellé erreur</code> (voir le point d’attention ci-dessous).</p>
+  </li>
+  <li>
+    <p>Le champ « <code class="language-plaintext highlighter-rouge">Final-Recipient:</code> » qui correspond à l’adresse du destinataire pour lequel le MDN est émis. La valeur de ce champ peut être différente de l’adresse initialement fournie par l’émetteur du courriel, notamment en cas de transfert du courriel initial par le destinataire.</p>
+  </li>
 </ul>
 
-<p>Les pièces jointes envoyées avec le courriel d’origine (IHE_XDM.zip et le pdf) doivent être remises en pièces jointes du courriel MDN.</p>
+<p>Dans le contexte de ce volet, de façon à permettre le traitement du MDN par la PFI réceptrice, le MDN devra également préciser les champs suivants :</p>
+
+<ul>
+  <li>
+    <p>Le champ identifiant du courriel d’origine « <code class="language-plaintext highlighter-rouge">Original-Message-ID:</code> » qui indique l’identifiant du courriel initial pour lequel le MDN est produit. Il est obtenu à partir de l’entête <code class="language-plaintext highlighter-rouge">Message-ID</code> du courriel initial.</p>
+  </li>
+  <li>
+    <p>Le champ « <code class="language-plaintext highlighter-rouge">Original-Recipient:</code> » qui indique l’adresse du destinataire du courriel d’origine, telle que spécifiée par l’expéditeur du courriel pour lequel le MDN est émis. Cette valeur est obtenue à partir de l’entête <code class="language-plaintext highlighter-rouge">Original-Recipient</code> du courriel pour lequel le MDN est généré.</p>
+  </li>
+</ul>
+
+<p>Le champ « <code class="language-plaintext highlighter-rouge">Reporting-UA:</code> », qui identifie l’agent ayant produit le MDN, est recommandé par la <a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.1">RFC 8098 §3.2.1</a>.</p>
+
+<blockquote class="stu-note">
+    <p>
+    <b>Point d'attention :</b> la valeur « <code>processed/Error: code erreur^libellé erreur</code> » du champ <code>Disposition:</code> n'est pas conforme à la grammaire de la <a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.6">RFC 8098 §3.2.6</a> : un <code>disposition-modifier</code> y est défini comme un <code>Atom</code> au sens de la <a href="https://datatracker.ietf.org/doc/html/rfc5322#section-3.2.3">RFC 5322 §3.2.3</a>, lequel n'admet ni le caractère « : » ni les espaces. Le code erreur porté par cette valeur n'est donc pas exploitable par un outillage MDN standard, qui ne retiendra que « <code>processed</code> ».
+    <br /><br />
+    Cette forme, historiquement retenue par le volet, est conservée. Le champ <code>Error:</code> permet aux CONSOMMATEURS s'appuyant sur un outillage MDN standard d'accéder à la même information.
+    <br /><br />
+    La <a href="https://datatracker.ietf.org/doc/html/rfc8098">RFC 8098</a> demeure la référence pour la structure du MDN ; le présent volet se limite à préciser les informations que le MDN doit véhiculer pour permettre son traitement automatisé par la PFI réceptrice.
+    </p>
+</blockquote>
+
+<h5 id="valeurs-attendues-des-champs-dadressage">Valeurs attendues des champs d’adressage</h5>
+
+<p>Le tableau ci-dessous précise les valeurs attendues dans le contexte MSSanté décrit par le présent volet : le courriel est réceptionné sur une BAL organisationnelle puis transféré vers la BAL applicative associée, et le MDN est produit par la PFI pour le compte de cette BAL applicative.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Champ</th>
+      <th>Valeur attendue</th>
+      <th>Référence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">From:</code> du MDN</td>
+      <td>BAL applicative qui a réceptionné le courriel traité et pour le compte de laquelle le MDN est produit</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">To:</code> du MDN</td>
+      <td>Adresse indiquée dans l’entête <code class="language-plaintext highlighter-rouge">Disposition-Notification-To</code> du courriel traité — dans le cas d’usage décrit par ce volet, la BAL organisationnelle du service destinataire</td>
+      <td><a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3">RFC 8098 §3</a></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Original-Recipient:</code></td>
+      <td>Adresse du destinataire telle que spécifiée par l’expéditeur du courriel traité, reprise de l’entête <code class="language-plaintext highlighter-rouge">Original-Recipient</code> de ce courriel — soit la BAL applicative</td>
+      <td><a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.3">RFC 8098 §3.2.3</a></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Final-Recipient:</code></td>
+      <td>Adresse de la BAL pour laquelle le MDN est émis. Cette valeur est <strong>identique à celle du champ <code class="language-plaintext highlighter-rouge">From:</code></strong> du MDN</td>
+      <td><a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.4">RFC 8098 §3.2.4</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Dans le cas d’usage décrit par ce volet, le courriel traité par la PFI est celui qui a été transféré sur la BAL applicative : les champs <code class="language-plaintext highlighter-rouge">Original-Recipient:</code> et <code class="language-plaintext highlighter-rouge">Final-Recipient:</code> portent donc la même adresse, celle de la BAL applicative. Ces deux valeurs peuvent différer dans d’autres organisations, notamment lorsque le courriel est de nouveau transféré par le destinataire.</p>
+
+<h4 id="troisième-partie--courriel-dorigine">Troisième partie : courriel d’origine</h4>
+
+<p>Cette partie, de type <code class="language-plaintext highlighter-rouge">message/rfc822</code>, contient le courriel d’origine restitué <strong>dans son intégralité</strong> : ses entêtes, son corps et ses pièces jointes (<code class="language-plaintext highlighter-rouge">IHE_XDM.zip</code> et le pdf), encodées en base64 comme dans le courriel initial.</p>
 
 <hr />
 <p><strong>(Note 1)</strong> : Détail du champ obligatoire « <code class="language-plaintext highlighter-rouge">Disposition:</code> » : ce champ permet de préciser :</p>
@@ -341,7 +491,7 @@ CONSOMMATEUR.</p>
         <p>La valeur « manual-action » indique que le traitement du courriel résulte d’une action explicite réalisée par l’utilisateur.</p>
       </li>
       <li>
-        <p>La valeur « automatic-action » indique que le traitement du courriel a été réalisée de façon automatique.</p>
+        <p>La valeur « automatic-action » indique que le traitement du courriel a été réalisé de façon automatique.</p>
       </li>
     </ul>
   </li>
@@ -350,14 +500,14 @@ CONSOMMATEUR.</p>
 
     <ul>
       <li>
-        <p><code class="language-plaintext highlighter-rouge">sending mode="MDN-sent-manually" / "MDN-sent-automatically"</code>.</p>
+        <p><code class="language-plaintext highlighter-rouge">sending-mode = "MDN-sent-manually" / "MDN-sent-automatically"</code>.</p>
 
         <ul>
           <li>
-            <p>La Valeur “MDN-sent-manually » est utilisée lorsque l’utilisateur a donné son autorisation explicite d’envoyer un MDN particulier.</p>
+            <p>La valeur « MDN-sent-manually » est utilisée lorsque l’utilisateur a donné son autorisation explicite d’envoyer un MDN particulier.</p>
           </li>
           <li>
-            <p>La valeur MDN-sent-automatically » permet de configurer l’envoi automatique des MDN.</p>
+            <p>La valeur « MDN-sent-automatically » permet de configurer l’envoi automatique des MDN.</p>
           </li>
         </ul>
       </li>
@@ -368,7 +518,7 @@ CONSOMMATEUR.</p>
 
     <ul>
       <li>
-        <p><code class="language-plaintext highlighter-rouge">disposition--type="displayed" / "deleted" / "dispatched" /"processed"</code></p>
+        <p><code class="language-plaintext highlighter-rouge">disposition-type = "displayed" / "deleted" / "dispatched" / "processed"</code></p>
 
         <ul>
           <li>
@@ -381,7 +531,7 @@ CONSOMMATEUR.</p>
             <p>processed : le message a été traité sans être affiché au destinataire. Il est possible qu’il n’y ait pas d’utilisateur associé à la BAL.</p>
           </li>
           <li>
-            <p>deleted : le courriel a été supprimé. Le destinataire peut ne pas avoir visualiser le message ou peut l’avoir visualisé.</p>
+            <p>deleted : le courriel a été supprimé. Le destinataire peut ne pas avoir visualisé le message ou peut l’avoir visualisé.</p>
           </li>
         </ul>
       </li>
@@ -398,44 +548,78 @@ CONSOMMATEUR.</p>
 
 <hr />
 
-<p>Exemple d’un MDN :</p>
+<h3 id="exemple-dun-mdn">Exemple d’un MDN</h3>
 
-<p>L’exemple suivant décrit le MDN (accusé de lecture négatif) généré dans le contexte du cas d’usage « Transfert d’un patient d’un CH vers un autre CH -Gestion des erreurs » présenté au <a href="volume1.html#description-du-cas-en-erreur">paragraphe suivant</a> du présent volet.</p>
+<p>L’exemple suivant décrit le MDN (accusé de lecture négatif) généré dans le contexte du cas d’usage « Transmission d’un document clinique d’un patient d’un CH vers un autre CH - Gestion des erreurs » présenté au <a href="volume1.html#description-du-cas-dusage-en-erreur">paragraphe suivant</a> du présent volet.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Date: Wed, 20 Feb 2024 00:19:00 (EDT) -0400
+<p>Cet exemple est fourni à titre <strong>illustratif et n’a pas valeur normative</strong> : les exigences du volet sont portées par les paragraphes qui précèdent. Les valeurs qu’il contient (adresses, identifiants, dates, frontières MIME) sont fictives.</p>
+
+<p>Le courriel traité par la PFI de l’établissement-B est celui qui a été transféré depuis la BAL organisationnelle du service Y (<code class="language-plaintext highlighter-rouge">serviceY@chb.mssante.fr</code>) vers la BAL applicative associée (<code class="language-plaintext highlighter-rouge">serviceY_auto@chb.mssante.fr</code>). Ce courriel est restitué intégralement, pièces jointes comprises, dans la troisième partie du MDN.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Date: Tue, 20 Feb 2024 00:19:00 +0100 (CET)
 From: serviceY_auto@chb.mssante.fr
-Message-Id: &lt;199509200019.12345&gt;
-Subject: [KO Intégration système !][902] XDM/1.0/DDM+ECHOGRAPHIE ABDOMINOPELVIENNE CORSE FIGATELLIX 12/10/1988
 To: serviceY@chb.mssante.fr
+Message-Id: &lt;20240220001900.12345@chb.mssante.fr&gt;
+Subject: [KO Intégration système !][902] XDM/1.0/DDM+ECHOGRAPHIE ABDOMINOPELVIENNE CORSE FIGATELLIX 12/10/1988
 MIME-Version: 1.0
-Content-Type: multipart/report; report-type=disposition-notification; boundary="RAA14128.773615765"
+Content-Type: multipart/report; report-type=disposition-notification;
+ boundary="RAA14128.773615765"
+
 --RAA14128.773615765
-Le document n’a pas pu être intégré.
-Le système a retourné l'erreur 902^Identifiant de patient inconnu^messageErrorCondition| E^Error^errorSeverity
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+Le document n'a pas pu être intégré.
+Le système a retourné l'erreur 902 : Identifiant de patient inconnu
+
 --RAA14128.773615765
 Content-Type: message/disposition-notification
-Original-Recipient: rfc822;serviceY_auto@chb.mssante.fr 
-Final-Recipient: rfc822; serviceY_auto@chb.mssante.fr 
-Original-Message-ID: &lt;199509192301.23456 &gt;
-Disposition:automatic-action/MDN-sent-automatically; processed/Error: 902^Identifiant de patient inconnu^messageErrorCondition| E^Error^errorSeverity
+
+Reporting-UA: pfi.chb.mssante.fr; PFI de l'établissement-B
+Original-Recipient: rfc822;serviceY_auto@chb.mssante.fr
+Final-Recipient: rfc822;serviceY_auto@chb.mssante.fr
+Original-Message-ID: &lt;20240219230100.23456@chb.mssante.fr&gt;
+Disposition: automatic-action/MDN-sent-automatically; processed/Error: 902^Identifiant de patient inconnu
+Error: 902^Identifiant de patient inconnu
+
 --RAA14128.773615765
 Content-Type: message/rfc822
-Ici apparaît le contenu du courriel MSSanté à l’origine du MDN et ses pièces jointes.
---RAA14128.773615765—
-Content-Type: application/zip ; name="IHE_XDM.zip"
-Content-Transfert-Encoding: base64
-Content-Disposition: attachment;filename= "IHE_XDM.zip"
 
-Ici apparaît le fichier IHE_XDM.zip encode en base64.
---RAA14128.773615765—
-Content-Type: application/pdf ; name="20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf"
-Content-Transfert-Encoding: base64
-Content-Disposition: attachment;filename= "20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf"
+Date: Mon, 19 Feb 2024 23:01:00 +0100 (CET)
+From: serviceY@chb.mssante.fr
+To: serviceY_auto@chb.mssante.fr
+Message-ID: &lt;20240219230100.23456@chb.mssante.fr&gt;
+Subject: XDM/1.0/DDM+ECHOGRAPHIE ABDOMINOPELVIENNE CORSE FIGATELLIX 12/10/1988
+Disposition-Notification-To: serviceY@chb.mssante.fr
+Original-Recipient: rfc822;serviceY_auto@chb.mssante.fr
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="ZZZ09876.543210987"
+
+--ZZZ09876.543210987
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+Ici apparaît le corps du courriel MSSanté à l'origine du MDN.
+
+--ZZZ09876.543210987
+Content-Type: application/zip; name="IHE_XDM.zip"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="IHE_XDM.zip"
+
+Ici apparaît le fichier IHE_XDM.zip encodé en base64.
+
+--ZZZ09876.543210987
+Content-Type: application/pdf; name="20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf"
 
 Ici apparaît le fichier 20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf encodé en base64.
---RAA14128.773615765--
 
+--ZZZ09876.543210987--
+
+--RAA14128.773615765--
 </code></pre></div></div>
+
 
 
 
@@ -477,7 +661,7 @@ Ici apparaît le fichier 20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf e
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Sep 7, 2026 15:05+0000">2026-09-07</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Sep 7, 2026 16:19+0000">2026-09-07</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

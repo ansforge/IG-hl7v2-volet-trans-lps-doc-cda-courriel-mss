@@ -1,43 +1,48 @@
 {
-  "date" : "Mon, 07 Sep, 2026 15:05:51 +0000",
+  "date" : "Mon, 07 Sep, 2026 16:19:48 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [{
     "name" : "/fsh-generated/resources/ImplementationGuide-ans.hl7v2.fr.trans-cda-mss.json",
     "size" : 3441,
     "processes" : [{
       "activity" : "load",
-      "start" : 27,
+      "start" : 26,
       "length" : 19
     },
     {
       "activity" : "checkR4R4B",
-      "start" : 28,
-      "length" : 17
+      "start" : 26,
+      "length" : 13
     },
     {
       "activity" : "generateNarratives",
-      "start" : 28,
-      "length" : 44
+      "start" : 26,
+      "length" : 42
     },
     {
       "activity" : "validate",
-      "start" : 28,
-      "length" : 3207
+      "start" : 26,
+      "length" : 2177
     },
     {
       "activity" : "generate1",
-      "start" : 32,
-      "length" : 86
+      "start" : 29,
+      "length" : 91
     },
     {
       "activity" : "generate2",
-      "start" : 37,
-      "length" : 52
+      "start" : 32,
+      "length" : 100
     },
     {
       "activity" : "generateValidationPack",
-      "start" : 44,
-      "length" : 3
+      "start" : 38,
+      "length" : 2
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 48,
+      "length" : 1
     }]
   },
   {
@@ -45,7 +50,7 @@
     "size" : 3883,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 37,
+      "start" : 32,
       "length" : 1
     }]
   },
@@ -61,26 +66,21 @@
     "name" : "/input/pagecontent/testplan.md",
     "size" : 3698,
     "processes" : [{
-      "activity" : "validate",
-      "start" : 31,
-      "length" : 1
-    },
-    {
       "activity" : "generate2",
-      "start" : 37,
+      "start" : 32,
       "length" : 1
     }]
   },
   {
     "name" : "/input/pagecontent/struct-email-standard.md",
-    "size" : 4816
+    "size" : 6420
   },
   {
     "name" : "/input/pagecontent/acteurs-transactions.md",
     "size" : 4910,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 37,
+      "start" : 32,
       "length" : 1
     }]
   },
@@ -90,12 +90,7 @@
   },
   {
     "name" : "/input/pagecontent/exemples.md",
-    "size" : 272,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 37,
-      "length" : 1
-    }]
+    "size" : 272
   },
   {
     "name" : "/input/pagecontent/interactions-acteurs.md",
@@ -103,7 +98,12 @@
   },
   {
     "name" : "/input/pagecontent/volume1.md",
-    "size" : 324
+    "size" : 324,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 32,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/pagecontent/doc-ref.md",
@@ -111,25 +111,30 @@
   },
   {
     "name" : "/input/pagecontent/struct-msg-mdn.md",
-    "size" : 8068,
+    "size" : 17258,
     "processes" : [{
+      "activity" : "scan",
+      "start" : 26,
+      "length" : 1
+    },
+    {
       "activity" : "generate2",
-      "start" : 37,
+      "start" : 32,
       "length" : 1
     }]
   },
   {
     "name" : "/input/pagecontent/download.md",
-    "size" : 393,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 37,
-      "length" : 1
-    }]
+    "size" : 393
   },
   {
     "name" : "/input/pagecontent/evenements-declenchants.md",
-    "size" : 1746
+    "size" : 1746,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 32,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/pagecontent/identification-flux.md",
@@ -140,8 +145,8 @@
     "size" : 69420,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 37,
-      "length" : 8
+      "start" : 32,
+      "length" : 7
     }]
   },
   {
@@ -149,18 +154,13 @@
     "size" : 6599,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 37,
+      "start" : 32,
       "length" : 1
     }]
   },
   {
     "name" : "/input/pagecontent/def-proc-collab.md",
-    "size" : 7503,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 37,
-      "length" : 1
-    }]
+    "size" : 7503
   },
   {
     "name" : "/input/pagecontent/perimetre-transaction.md",
@@ -168,25 +168,20 @@
   },
   {
     "name" : "/input/pagecontent/autres_ressources.md",
-    "size" : 94
-  },
-  {
-    "name" : "/input/pagecontent/contexte-metier.md",
-    "size" : 2486,
+    "size" : 94,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 37,
-      "length" : 1
-    }]
-  },
-  {
-    "name" : "/input/pagecontent/role.md",
-    "size" : 1332,
-    "processes" : [{
-      "activity" : "generateLogicalMaps",
       "start" : 32,
       "length" : 1
     }]
+  },
+  {
+    "name" : "/input/pagecontent/contexte-metier.md",
+    "size" : 2486
+  },
+  {
+    "name" : "/input/pagecontent/role.md",
+    "size" : 1332
   },
   {
     "name" : "/input/pagecontent/volume2.md",
@@ -194,24 +189,29 @@
   },
   {
     "name" : "/input/pagecontent/securite.md",
-    "size" : 900
+    "size" : 900,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 32,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/pagecontent/cas-usage.md",
     "size" : 15082,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 37,
+      "start" : 32,
       "length" : 1
     }]
   },
   {
     "name" : "/input/pagecontent/change-log.md",
-    "size" : 46890,
+    "size" : 50119,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 37,
-      "length" : 3
+      "start" : 32,
+      "length" : 2
     }]
   },
   {
@@ -220,20 +220,25 @@
   },
   {
     "name" : "/input/pagecontent/meta-dmp-mss.md",
-    "size" : 2870
-  },
-  {
-    "name" : "/input/pagecontent/index.md",
-    "size" : 11965,
+    "size" : 2870,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 37,
+      "start" : 32,
       "length" : 1
     }]
   },
   {
+    "name" : "/input/pagecontent/index.md",
+    "size" : 11965
+  },
+  {
     "name" : "/template/config",
-    "size" : 0
+    "size" : 0,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 32,
+      "length" : 1
+    }]
   },
   {
     "name" : "/template/config/_config.yml",
@@ -245,12 +250,7 @@
   },
   {
     "name" : "/input/images/image21.png",
-    "size" : 20615,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 37,
-      "length" : 1
-    }]
+    "size" : 20615
   },
   {
     "name" : "/input/images/image19.png",
@@ -262,7 +262,17 @@
   },
   {
     "name" : "/input/images/image13.png",
-    "size" : 17868
+    "size" : 17868,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 26,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 32,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/images/image11.png",
@@ -274,12 +284,7 @@
   },
   {
     "name" : "/input/images/image12.png",
-    "size" : 348158,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 37,
-      "length" : 1
-    }]
+    "size" : 348158
   },
   {
     "name" : "/input/images/image16.png",
@@ -291,7 +296,12 @@
   },
   {
     "name" : "/input/images/image8.png",
-    "size" : 248255
+    "size" : 248255,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 32,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/images/anImage.png",
@@ -299,12 +309,7 @@
   },
   {
     "name" : "/input/images/ci-sis-logo.png",
-    "size" : 61365,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 37,
-      "length" : 1
-    }]
+    "size" : 61365
   },
   {
     "name" : "/input/images/image17.png",
@@ -320,7 +325,12 @@
   },
   {
     "name" : "/input/images/image20.png",
-    "size" : 145118
+    "size" : 145118,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 32,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/images/image9.png",
@@ -328,11 +338,6 @@
   },
   {
     "name" : "/temp/pages/_includes/artifacts.xml",
-    "size" : 600,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 37,
-      "length" : 1
-    }]
+    "size" : 600
   }]
 }
