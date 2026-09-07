@@ -1,3 +1,21 @@
+### version 1.1.3
+
+**Version mineure sans impact sur le développement (corrections de typo, précisions ou ajout d'informations)**
+
+* Revue des exemples de MDN et de courriel standard, et clarification du traitement des pièces jointes ([35](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/35))
+  * [Structure du MDN](struct-msg-mdn.html) :
+    * ajout d'une section « Éligibilité au mécanisme MDN » rappelant les exigences `ECO.2.3.2` et `ECO.3.1.6` du [Référentiel socle MSSanté #2](https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2), le périmètre d'application de ce référentiel (clients de messagerie MSSanté, à l'exclusion des webmails et des clients de messageries standards), et la conséquence sur la disponibilité du MDN — situation pour laquelle le volet prévoit le [courriel standard](struct-email-standard.html)
+    * précision du nombre et du rôle des parties du « multipart/report » (deux ou trois parties à rôles fixés, conformément aux [RFC 6522](https://datatracker.ietf.org/doc/html/rfc6522#section-4) et [RFC 8098](https://datatracker.ietf.org/doc/html/rfc8098#section-3)), et énoncé du besoin fonctionnel associé
+    * précision de l'emplacement des pièces jointes du courriel d'origine : elles sont restituées dans la troisième partie `message/rfc822`, qui contient le courriel d'origine dans son intégralité
+    * ajout d'un tableau précisant les valeurs attendues des champs `From:`, `To:`, `Original-Recipient:` et `Final-Recipient:` dans le contexte MSSanté
+    * ajout du champ `Error:` ([RFC 8098 §3.2.7](https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.7)), recommandé pour porter le code et le libellé de l'erreur, et point d'attention sur la non-conformité de la valeur `processed/Error: code erreur^libellé erreur` du champ `Disposition:` à la grammaire de la RFC 8098, cette forme étant conservée en l'état
+    * correction de l'exemple (délimiteurs MIME de fin de partie, entête `Content-Transfer-Encoding`, lignes vides séparant les entêtes du contenu de chaque partie, format de l'entête `Date:`, identifiants de message, jeu de caractères de la première partie) et mention de son caractère illustratif et non normatif
+    * corrections de typographie et de références (RFC 5322 en remplacement de la RFC 2822 obsolète, `Return-Path`, notation de l'ABNF du champ `Disposition:`), et correction du lien vers le cas d'usage en erreur
+  * [Structure d'un message de notification format courriel standard](struct-email-standard.html) :
+    * précision du traitement des pièces jointes : elles figurent à la fois dans la partie `message/rfc822` restituant le courriel d'origine et comme pièces jointes du courriel de notification. Cette duplication est volontaire, et justifiée par la reprise manuelle de l'erreur par un utilisateur ; elle distingue le courriel standard du MDN, dont la structure est contrainte par les RFC 6522 et 8098
+    * harmonisation de l'objet de l'exemple avec le format `[KO Intégration système !][code erreur]` prescrit par le volet
+    * correction de typographie (« courriel standart »)
+
 ### version 1.1.2
 
 **Version mineure sans impact sur le développement (corrections de typo, précisions ou ajout d'informations)**
