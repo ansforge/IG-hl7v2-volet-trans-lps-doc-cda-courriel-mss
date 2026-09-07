@@ -1,0 +1,25 @@
+# ans.hl7v2.fr.trans-cda-mss#1.1.3: Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté
+
+## Pages
+
+* [Accueil](index.md)
+* [Exemples de messages](exemples.md)
+* [Volume 1 : Etude fonctionnelle](volume1.md)
+* [Test](testplan.md)
+* [Structure du MDN (MSSanté)](struct-msg-mdn.md)
+* [Historique des versions](change-log.md)
+* [Volume 2 : Détail des transactions](volume2.md)
+* [Structure d'un message de notification format courriel standard](struct-email-standard.md)
+* [Documents de référence](doc-ref.md)
+* [Artifacts Summary](artifacts.md)
+* [Table MetaDMP/MSS](meta-dmp-mss.md)
+* [Téléchargements](download.md)
+* [Codes erreurs de traitement du message HL7 MDM](error-codes.md)
+* [Glossaire](glossaire.md)
+* [Lien entre l'en-tête CDA et les métadonnées XDS](lien-entete-cda-meta-xds.md)
+
+## Resources
+
+### ImplementationGuides
+
+* [Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté](index.md)
