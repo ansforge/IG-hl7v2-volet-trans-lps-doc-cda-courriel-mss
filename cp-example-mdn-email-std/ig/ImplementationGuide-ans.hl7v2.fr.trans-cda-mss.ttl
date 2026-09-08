@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "CISIS_CDA_HL7_LPS"] ;
   fhir:ImplementationGuide.title [ fhir:value "Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté"] ;
   fhir:ImplementationGuide.status [ fhir:value "draft"] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-09-07T16:19:48+00:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-09-08T12:21:05+00:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
   fhir:ImplementationGuide.contact [
      fhir:index 0 ;

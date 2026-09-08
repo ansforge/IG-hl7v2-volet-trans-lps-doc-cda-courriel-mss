@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss/ImplementationGuide/ans.hl7v2.fr.trans-cda-mss | *Version*:1.1.3 |
-| Draft as of 2026-09-07 | *Computable Name*:CISIS_CDA_HL7_LPS |
+| Draft as of 2026-09-08 | *Computable Name*:CISIS_CDA_HL7_LPS |
 
  **Brief description of this Implementation Guide**
  This implementation guide is part of the Service layer of the Health Information Systems Interoperability Framework (CI-SIS). This section of the CI-SIS outlines the possibility for an organization's business software to delegate to a third-party entity, the Intermediation Platform (PFI), the ability to process an incoming email from an MSSanté mailbox and to generate, based on this email, a request for integration, replacement, or deletion of a clinical document directed toward the consuming business application. This section should be considered by the reader in conjunction with another section of the CI-SIS, the "Transmission d'un document CDA-R2 en HL7v2" section, to provide an end-to-end view of exchanges through MSSanté (from the CREATOR of the document processing request to the final CONSUMER of this request). 
@@ -105,7 +105,7 @@ Ce document s’adresse aux développeurs des interfaces interopérables des sys
   "name" : "CISIS_CDA_HL7_LPS",
   "title" : "Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté",
   "status" : "draft",
-  "date" : "2026-09-07T16:19:48+00:00",
+  "date" : "2026-09-08T12:21:05+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

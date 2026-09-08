@@ -1,47 +1,57 @@
 {
-  "date" : "Mon, 07 Sep, 2026 16:19:48 +0000",
+  "date" : "Tue, 08 Sep, 2026 12:21:05 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [{
     "name" : "/fsh-generated/resources/ImplementationGuide-ans.hl7v2.fr.trans-cda-mss.json",
     "size" : 3441,
     "processes" : [{
       "activity" : "load",
-      "start" : 26,
-      "length" : 19
+      "start" : 24,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 24,
+      "length" : 17
     },
     {
       "activity" : "checkR4R4B",
-      "start" : 26,
-      "length" : 13
+      "start" : 25,
+      "length" : 15
     },
     {
       "activity" : "generateNarratives",
-      "start" : 26,
-      "length" : 42
+      "start" : 25,
+      "length" : 47
     },
     {
       "activity" : "validate",
-      "start" : 26,
-      "length" : 2177
+      "start" : 25,
+      "length" : 2036
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 28,
+      "length" : 1
     },
     {
       "activity" : "generate1",
-      "start" : 29,
-      "length" : 91
+      "start" : 28,
+      "length" : 81
     },
     {
       "activity" : "generate2",
       "start" : 32,
-      "length" : 100
+      "length" : 64
     },
     {
       "activity" : "generateValidationPack",
-      "start" : 38,
-      "length" : 2
+      "start" : 37,
+      "length" : 3
     },
     {
       "activity" : "scanExamplesForR5",
-      "start" : 48,
+      "start" : 45,
       "length" : 1
     }]
   },
@@ -60,20 +70,25 @@
   },
   {
     "name" : "/input/pagecontent/lien-entete-cda-meta-xds.md",
-    "size" : 411
+    "size" : 411,
+    "processes" : [{
+      "activity" : "scan",
+      "start" : 25,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/pagecontent/testplan.md",
-    "size" : 3698,
+    "size" : 3698
+  },
+  {
+    "name" : "/input/pagecontent/struct-email-standard.md",
+    "size" : 6606,
     "processes" : [{
       "activity" : "generate2",
       "start" : 32,
       "length" : 1
     }]
-  },
-  {
-    "name" : "/input/pagecontent/struct-email-standard.md",
-    "size" : 6420
   },
   {
     "name" : "/input/pagecontent/acteurs-transactions.md",
@@ -90,7 +105,12 @@
   },
   {
     "name" : "/input/pagecontent/exemples.md",
-    "size" : 272
+    "size" : 272,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 32,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/pagecontent/interactions-acteurs.md",
@@ -98,12 +118,7 @@
   },
   {
     "name" : "/input/pagecontent/volume1.md",
-    "size" : 324,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 32,
-      "length" : 1
-    }]
+    "size" : 324
   },
   {
     "name" : "/input/pagecontent/doc-ref.md",
@@ -113,14 +128,9 @@
     "name" : "/input/pagecontent/struct-msg-mdn.md",
     "size" : 17258,
     "processes" : [{
-      "activity" : "scan",
-      "start" : 26,
-      "length" : 1
-    },
-    {
       "activity" : "generate2",
       "start" : 32,
-      "length" : 1
+      "length" : 3
     }]
   },
   {
@@ -160,7 +170,12 @@
   },
   {
     "name" : "/input/pagecontent/def-proc-collab.md",
-    "size" : 7503
+    "size" : 7503,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 32,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/pagecontent/perimetre-transaction.md",
@@ -168,12 +183,7 @@
   },
   {
     "name" : "/input/pagecontent/autres_ressources.md",
-    "size" : 94,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 32,
-      "length" : 1
-    }]
+    "size" : 94
   },
   {
     "name" : "/input/pagecontent/contexte-metier.md",
@@ -181,7 +191,12 @@
   },
   {
     "name" : "/input/pagecontent/role.md",
-    "size" : 1332
+    "size" : 1332,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 32,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/pagecontent/volume2.md",
@@ -189,12 +204,7 @@
   },
   {
     "name" : "/input/pagecontent/securite.md",
-    "size" : 900,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 32,
-      "length" : 1
-    }]
+    "size" : 900
   },
   {
     "name" : "/input/pagecontent/cas-usage.md",
@@ -207,11 +217,11 @@
   },
   {
     "name" : "/input/pagecontent/change-log.md",
-    "size" : 50119,
+    "size" : 50370,
     "processes" : [{
       "activity" : "generate2",
       "start" : 32,
-      "length" : 2
+      "length" : 5
     }]
   },
   {
@@ -220,25 +230,20 @@
   },
   {
     "name" : "/input/pagecontent/meta-dmp-mss.md",
-    "size" : 2870,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 32,
-      "length" : 1
-    }]
+    "size" : 2870
   },
   {
     "name" : "/input/pagecontent/index.md",
-    "size" : 11965
-  },
-  {
-    "name" : "/template/config",
-    "size" : 0,
+    "size" : 11965,
     "processes" : [{
       "activity" : "generate2",
       "start" : 32,
-      "length" : 1
+      "length" : 2
     }]
+  },
+  {
+    "name" : "/template/config",
+    "size" : 0
   },
   {
     "name" : "/template/config/_config.yml",
@@ -264,11 +269,6 @@
     "name" : "/input/images/image13.png",
     "size" : 17868,
     "processes" : [{
-      "activity" : "validate",
-      "start" : 26,
-      "length" : 1
-    },
-    {
       "activity" : "generate2",
       "start" : 32,
       "length" : 1
@@ -296,12 +296,7 @@
   },
   {
     "name" : "/input/images/image8.png",
-    "size" : 248255,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 32,
-      "length" : 1
-    }]
+    "size" : 248255
   },
   {
     "name" : "/input/images/anImage.png",
@@ -317,7 +312,12 @@
   },
   {
     "name" : "/input/images/image15.png",
-    "size" : 15664
+    "size" : 15664,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 32,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/images/image14.png",
@@ -325,12 +325,7 @@
   },
   {
     "name" : "/input/images/image20.png",
-    "size" : 145118,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 32,
-      "length" : 1
-    }]
+    "size" : 145118
   },
   {
     "name" : "/input/images/image9.png",
