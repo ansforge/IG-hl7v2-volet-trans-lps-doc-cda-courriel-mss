@@ -21,7 +21,7 @@ de la façon suivante afin de faciliter la lecture et le traitement de la notifi
   Par exemple : « Le message ci-dessous n’a pas pu être intégré automatiquement dans le DPI pour la raison suivante : <libellé de l’erreur> ».
 * Inclusion du message d'origine : une partie de type `message/rfc822` contient le courriel d’origine restitué **dans son intégralité** — ses entêtes, son corps et ses pièces jointes — afin que l'utilisateur dispose de tous les éléments nécessaires au traitement de l'erreur.
 * Pièces jointes :
-  * Les pièces jointes envoyées avec le courriel d’origine (IHE_XDM.ZIP et le pdf) sont restituées au sein de cette partie `message/rfc822`, et non comme pièces jointes du courriel de notification lui-même : le courriel d'origine étant restitué en entier, les y reprendre une seconde fois doublerait le volume du courriel sans apporter d'information supplémentaire.
+  * Les pièces jointes envoyées avec le courriel d’origine (IHE_XDM.ZIP et le pdf) sont restituées au sein de cette partie `message/rfc822`.
   * Le contenu est encodé en Base64 pour respecter le standard MIME.
 
 Ce courriel est un « multipart/mixed » : contrairement au « multipart/report » du [MDN](struct-msg-mdn.html), sa structure n'est pas contrainte par une RFC — le nombre et l'ordre des parties sont libres. Le courriel d'origine y est néanmoins restitué de la même façon que dans le MDN, au sein d'une unique partie `message/rfc822` portant le message complet, de sorte que les deux annexes décrivent le même traitement des pièces jointes.
