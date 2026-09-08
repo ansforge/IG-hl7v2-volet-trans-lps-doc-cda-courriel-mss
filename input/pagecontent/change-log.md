@@ -12,8 +12,9 @@
     * correction de l'exemple (délimiteurs MIME de fin de partie, entête `Content-Transfer-Encoding`, lignes vides séparant les entêtes du contenu de chaque partie, format de l'entête `Date:`, identifiants de message, jeu de caractères de la première partie) et mention de son caractère illustratif et non normatif
     * corrections de typographie et de références (RFC 5322 en remplacement de la RFC 2822 obsolète, `Return-Path`, notation de l'ABNF du champ `Disposition:`), et correction du lien vers le cas d'usage en erreur
   * [Structure d'un message de notification format courriel standard](struct-email-standard.html) :
-    * précision du traitement des pièces jointes : elles figurent à la fois dans la partie `message/rfc822` restituant le courriel d'origine et comme pièces jointes du courriel de notification. Cette duplication est volontaire, et justifiée par la reprise manuelle de l'erreur par un utilisateur ; elle distingue le courriel standard du MDN, dont la structure est contrainte par les RFC 6522 et 8098
+    * précision du traitement des pièces jointes : le courriel d'origine est restitué dans son intégralité au sein d'une unique partie `message/rfc822`, ses pièces jointes n'étant plus reprises une seconde fois comme pièces jointes du courriel de notification — traitement identique à celui de l'annexe [Structure du MDN](struct-msg-mdn.html)
     * harmonisation de l'objet de l'exemple avec le format `[KO Intégration système !][code erreur]` prescrit par le volet
+    * correction de l'exemple (`Content-Transfer-Encoding: 8bit` pour un contenu accentué, restitution complète du courriel d'origine encapsulé, dont l'absence d'entête `Disposition-Notification-To` justifie le recours au courriel standard) et mention de son caractère illustratif et non normatif
     * correction de typographie (« courriel standart »)
 
 ### version 1.1.2
