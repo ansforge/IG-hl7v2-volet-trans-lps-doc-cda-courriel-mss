@@ -91,6 +91,17 @@ Dans le contexte de ce volet, de façon à permettre le traitement du MDN par la
 
 -   Le champ « `Original-Recipient:` » qui indique l'adresse du destinataire du courriel d'origine, telle que spécifiée par l'expéditeur du courriel pour lequel le MDN est émis. Cette valeur est obtenue à partir de l'entête `Original-Recipient` du courriel pour lequel le MDN est généré.
 
+##### Valeurs attendues des champs d'adressage
+
+Le tableau ci-dessous précise les valeurs attendues dans le contexte MSSanté décrit par le présent volet : le courriel est réceptionné sur une BAL organisationnelle, puis transféré vers la BAL applicative associée, et le MDN est produit par la PFI pour le compte de cette BAL applicative.
+
+| Champ | Valeur attendue | Référence |
+|---|---|---|
+| `From:` du MDN | La BAL applicative qui a réceptionné le courriel traité, et pour le compte de laquelle le MDN est produit | |
+| `To:` du MDN | L'adresse indiquée dans l'entête `Disposition-Notification-To` du courriel traité — dans le cas d'usage décrit par ce volet, la BAL organisationnelle du service destinataire | [RFC 8098 §3](https://datatracker.ietf.org/doc/html/rfc8098#section-3) |
+| `Original-Recipient:` | L'adresse du destinataire telle que spécifiée par l'expéditeur du courriel traité, soit la BAL applicative | [RFC 8098 §3.2.3](https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.3) |
+| `Final-Recipient:` | L'adresse du destinataire pour lequel le MDN est émis, soit la BAL applicative ; elle peut différer de la précédente en cas de transfert | [RFC 8098 §3.2.4](https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.4) |
+
 ##### Détail du champ « `Disposition:` »
 
 Ce champ permet de préciser :
