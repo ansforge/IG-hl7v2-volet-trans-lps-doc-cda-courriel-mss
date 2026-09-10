@@ -80,7 +80,7 @@ Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté - ve
 
           IG &copy; 2020+           <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>
 .  Package ans.hl7v2.fr.trans-cda-mss#1.1.3 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
-. Generated           <span title="Thu, Sep 10, 2026 16:37+0000">2026-09-10</span>
+. Generated           <span title="Thu, Sep 10, 2026 16:42+0000">2026-09-10</span>
 
                     <br/>
 
@@ -110,7 +110,7 @@ Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté - ve
 
           IG &copy; 2020+           <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>
 .  Package ans.hl7v2.fr.trans-cda-mss#1.1.3 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
-. Generated           <span title="Thu, Sep 10, 2026 16:37+0000">2026-09-10</span>
+. Generated           <span title="Thu, Sep 10, 2026 16:42+0000">2026-09-10</span>
 
                     <br/>
 
@@ -210,6 +210,26 @@ précision, sous l’exemple, que le nom du fichier PDF suit la convention      
  du                   <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2">Référentiel socle MSSanté #2</a>
  — où                   <code class="language-plaintext highlighter-rouge">_</code>
  sépare les champs, les libellés admettant espaces et caractères accentués — et que ces caractères doivent être encodés dans les paramètres                   <code class="language-plaintext highlighter-rouge">name</code>
+ et                   <code class="language-plaintext highlighter-rouge">filename</code>
+ selon la                   <a href="https://datatracker.ietf.org/doc/html/rfc2231">RFC 2231</a>
+                </li>
+
+                          <li>
+                  <code class="language-plaintext highlighter-rouge">Content-Transfer-Encoding: 8bit</code>
+ déclaré sur la partie                   <code class="language-plaintext highlighter-rouge">message/rfc822</code>
+ de l’exemple : à défaut elle valait                   <code class="language-plaintext highlighter-rouge">7bit</code>
+ alors que son contenu est en                   <code class="language-plaintext highlighter-rouge">8bit</code>
+, et la                   <a href="https://datatracker.ietf.org/doc/html/rfc2045#section-6.4">RFC 2045 &sect;6.4</a>
+ n’autorise que                   <code class="language-plaintext highlighter-rouge">7bit</code>
+,                   <code class="language-plaintext highlighter-rouge">8bit</code>
+ ou                   <code class="language-plaintext highlighter-rouge">binary</code>
+ pour un type composite
+                </li>
+
+                          <li>
+rappel que les entêtes ne peuvent porter que des caractères US-ASCII, l’entête                   <code class="language-plaintext highlighter-rouge">Subject:</code>
+ devant être encodé selon la                   <a href="https://datatracker.ietf.org/doc/html/rfc2047">RFC 2047</a>
+ et les paramètres                   <code class="language-plaintext highlighter-rouge">name</code>
  et                   <code class="language-plaintext highlighter-rouge">filename</code>
  selon la                   <a href="https://datatracker.ietf.org/doc/html/rfc2231">RFC 2231</a>
                 </li>
@@ -344,6 +364,12 @@ corrections de forme de l’exemple : entête                   <code class="lan
 emplacement des pièces jointes : le courriel d’origine est restitué dans son intégralité au sein d’une partie                   <code class="language-plaintext highlighter-rouge">message/rfc822</code>
 , ses pièces jointes n’étant plus reprises une seconde fois comme pièces jointes de la notification — traitement identique à celui de l’annexe                   <a href="struct-msg-mdn.html">Structure du MDN</a>
 .                   <strong>Un ÉMETTEUR de notification qui joignait les pièces au premier niveau doit désormais les laisser dans le courriel d’origine restitué</strong>
+                </li>
+
+                          <li>
+mêmes corrections d’encodage que dans l’annexe MDN :                   <code class="language-plaintext highlighter-rouge">Content-Transfer-Encoding: 8bit</code>
+ sur la partie                   <code class="language-plaintext highlighter-rouge">message/rfc822</code>
+, et rappel de l’encodage RFC 2047 / RFC 2231 des entêtes ; nettoyage des espaces en fin de ligne
                 </li>
 
                           <li>
@@ -577,7 +603,7 @@ correction typos/cohérence pour le type message en MSH-9.3 dans les           <
           <a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2">github.com</a>
         </td>
         <td>
-          <a name="l924">​</a>
+          <a name="l976">​</a>
           <a href="volume2.html#document-masqué-aux-professionnels-de-santé">Document Masqué aux professionnels de Santé</a>
  : métadonnée de masquage aux PS : Ajout de la valeur manquante Y (YES) (          <a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2">2</a>
 )
@@ -1026,11 +1052,7 @@ Cet emplacement ne contrevient pas au           <a href="https://esante.gouv.fr/
 Le nom du fichier PDF suit la convention de nommage           <code class="language-plaintext highlighter-rouge">ECO.2.1.6</code>
  du           <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2">Référentiel socle MSSanté #2</a>
 , dont le caractère           <code class="language-plaintext highlighter-rouge">_</code>
- sépare les champs et dont les libellés admettent espaces et caractères accentués. Dans un courriel réel, ces caractères doivent être encodés dans les paramètres           <code class="language-plaintext highlighter-rouge">name</code>
- et           <code class="language-plaintext highlighter-rouge">filename</code>
- selon la           <a href="https://datatracker.ietf.org/doc/html/rfc2231">RFC 2231</a>
- — soit ici           <code class="language-plaintext highlighter-rouge">filename*=UTF-8''20220531_CR%20d%27imagerie%20m%C3%A9dicale_CORSE_FIGATELLIX.pdf</code>
- — forme non reprise dans l’exemple pour en préserver la lisibilité.
+ sépare les champs et dont les libellés admettent espaces et caractères accentués.
         </td>
       </tr>
       <tr>

@@ -308,6 +308,8 @@ Cet exemple illustre le cas d’usage <a href="volume1.html#description-du-cas-d
 
 <p>On notera que le courriel d’origine ne porte pas d’entête <code class="language-plaintext highlighter-rouge">Disposition-Notification-To</code> : c’est précisément la raison pour laquelle la notification prend la forme d’un courriel standard et non d’un <a href="struct-msg-mdn.html">MDN</a>.</p>
 
+<p>Les entêtes d’un courriel ne peuvent porter que des caractères US-ASCII (<a href="https://datatracker.ietf.org/doc/html/rfc5322">RFC 5322</a>) : dans un courriel réel, l’entête <code class="language-plaintext highlighter-rouge">Subject:</code> doit être encodé selon la <a href="https://datatracker.ietf.org/doc/html/rfc2047">RFC 2047</a> et les paramètres <code class="language-plaintext highlighter-rouge">name</code> et <code class="language-plaintext highlighter-rouge">filename</code> selon la <a href="https://datatracker.ietf.org/doc/html/rfc2231">RFC 2231</a>. Ces formes ne sont pas reprises dans l’exemple, pour en préserver la lisibilité.</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Date: Tue, 20 Feb 2024 00:19:00 +0100 (CET)
 From: serviceY_auto@chb.mssante.fr
 To: serviceY@chb.mssante.fr
@@ -322,24 +324,24 @@ Content-Transfer-Encoding: 8bit
 
 Bonjour,
 
-Le document envoyé n’a pas pu être intégré correctement dans le système. 
+Le document envoyé n’a pas pu être intégré correctement dans le système.
 Voici les détails de l’erreur rencontrée :
 
 - Erreur détectée : Identifiant de patient inconnu
 - Code d’erreur : 902
 
-
 Vous trouverez en pièce jointe le courriel d'origine, avec son contenu et
 ses fichiers (archive IHE_XDM.zip et compte rendu au format PDF).
 
-Veuillez vérifier les informations fournies et soumettre à nouveau les documents après correction. 
+Veuillez vérifier les informations fournies et soumettre à nouveau les documents après correction.
 Si le problème persiste, contactez notre service technique.
 
-Cordialement,  
-L’équipe technique du service Y  
+Cordialement,
+L’équipe technique du service Y
 
 --boundary12345
 Content-Type: message/rfc822
+Content-Transfer-Encoding: 8bit
 Content-Disposition: attachment; filename="message_original.eml"
 
 Date: Mon, 19 Feb 2024 23:01:00 +0100 (CET)
@@ -373,6 +375,7 @@ Ici apparaît le fichier 20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf e
 --ZZZ09876.543210987--
 
 --boundary12345--
+
 </code></pre></div></div>
 
 <h3 id="différences-clés-avec-un-mdn">Différences clés avec un MDN</h3>
@@ -429,7 +432,7 @@ Ici apparaît le fichier 20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf e
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 10, 2026 16:37+0000">2026-09-10</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 10, 2026 16:42+0000">2026-09-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

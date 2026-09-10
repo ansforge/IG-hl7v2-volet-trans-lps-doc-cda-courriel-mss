@@ -45,6 +45,8 @@ Il est fourni à titre **illustratif et n’a pas valeur normative** : les exige
 
 On notera que le courriel d’origine ne porte pas d’entête `Disposition-Notification-To` : c’est précisément la raison pour laquelle la notification prend la forme d’un courriel standard et non d’un [MDN](struct-msg-mdn.md).
 
+Les entêtes d’un courriel ne peuvent porter que des caractères US-ASCII ([RFC 5322](https://datatracker.ietf.org/doc/html/rfc5322)) : dans un courriel réel, l’entête `Subject:` doit être encodé selon la [RFC 2047](https://datatracker.ietf.org/doc/html/rfc2047) et les paramètres `name` et `filename` selon la [RFC 2231](https://datatracker.ietf.org/doc/html/rfc2231). Ces formes ne sont pas reprises dans l’exemple, pour en préserver la lisibilité.
+
 ```
 Date: Tue, 20 Feb 2024 00:19:00 +0100 (CET)
 From: serviceY_auto@chb.mssante.fr
@@ -60,24 +62,24 @@ Content-Transfer-Encoding: 8bit
 
 Bonjour,
 
-Le document envoyé n’a pas pu être intégré correctement dans le système. 
+Le document envoyé n’a pas pu être intégré correctement dans le système.
 Voici les détails de l’erreur rencontrée :
 
 - Erreur détectée : Identifiant de patient inconnu
 - Code d’erreur : 902
 
-
 Vous trouverez en pièce jointe le courriel d'origine, avec son contenu et
 ses fichiers (archive IHE_XDM.zip et compte rendu au format PDF).
 
-Veuillez vérifier les informations fournies et soumettre à nouveau les documents après correction. 
+Veuillez vérifier les informations fournies et soumettre à nouveau les documents après correction.
 Si le problème persiste, contactez notre service technique.
 
-Cordialement,  
-L’équipe technique du service Y  
+Cordialement,
+L’équipe technique du service Y
 
 --boundary12345
 Content-Type: message/rfc822
+Content-Transfer-Encoding: 8bit
 Content-Disposition: attachment; filename="message_original.eml"
 
 Date: Mon, 19 Feb 2024 23:01:00 +0100 (CET)
@@ -111,6 +113,7 @@ Ici apparaît le fichier 20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf e
 --ZZZ09876.543210987--
 
 --boundary12345--
+
 
 ```
 
