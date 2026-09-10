@@ -245,6 +245,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#éligibilité-au-mécanisme-mdn" id="markdown-toc-éligibilité-au-mécanisme-mdn">Éligibilité au mécanisme MDN</a></li>
   <li><a href="#objet-du-mdn" id="markdown-toc-objet-du-mdn">Objet du MDN</a></li>
   <li><a href="#structure-du-corps-du-mdn" id="markdown-toc-structure-du-corps-du-mdn">Structure du corps du MDN</a></li>
   <li><a href="#exemple-dun-mdn" id="markdown-toc-exemple-dun-mdn">Exemple d’un MDN</a></li>
@@ -286,6 +287,27 @@ automatiquement par le récepteur du courriel dans le cas où l’entête
 messages en boucle. Dans ce cas l’envoi du MDN nécessite une
 confirmation de l’utilisateur.</p>
 
+<h3 id="éligibilité-au-mécanisme-mdn">Éligibilité au mécanisme MDN</h3>
+
+<p>Pour MSSanté, le MDN est prescrit par le <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2">Référentiel socle MSSanté #2</a>, qui en délègue la structure à la <a href="https://datatracker.ietf.org/doc/html/rfc8098">RFC 8098</a> sans en définir d’autre :</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">ECO.2.3.2</code> : le client émetteur doit pouvoir demander un accusé de lecture ;</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">ECO.3.1.6</code> : le client destinataire doit retourner un MDN lorsque le message reçu le demande.</p>
+  </li>
+</ul>
+
+<p>Ce référentiel s’applique aux logiciels métier des professionnels habilités, pour des échanges manuels comme automatisés, mais « ne s’applique donc pas aux interfaces webmail ou clients de messageries standards (type Outlook ou Thunderbird) ».</p>
+
+<blockquote class="stu-note">
+    <p>
+    <b>Point d'attention :</b> la production d'un MDN n'est donc pas garantie sur l'ensemble de la chaîne. Dans le cas d'usage décrit par ce volet, le courriel parvient à la BAL applicative après un transfert depuis la BAL organisationnelle du service destinataire. Si ce transfert est réalisé au moyen d'un webmail ou d'un client de messagerie standard — hors du périmètre de ce référentiel — rien ne garantit que l'entête <code>Disposition-Notification-To</code> soit positionné sur le courriel transféré. Or, sans cet entête, aucun MDN ne peut être émis en retour. C'est pour cette situation que le volet prévoit le <a href="struct-email-standard.html">courriel standard</a>.
+    </p>
+</blockquote>
+
 <h3 id="objet-du-mdn">Objet du MDN</h3>
 
 <p>Dans le cas d’un MDN en erreur, l’objet du MDN doit être précisé
@@ -297,6 +319,43 @@ de la façon suivante : <code class="language-plaintext highlighter-rouge">[KO 
 
 <p>Le MDN est de type « multipart/report » :
 <code class="language-plaintext highlighter-rouge">Content-Type: multipart/report; report-type=disposition-notification; boundary="&lt;frontière&gt;"</code></p>
+
+<p>La <a href="https://datatracker.ietf.org/doc/html/rfc6522#section-3">RFC 6522 §3</a> décrit deux ou trois parties, dans cet ordre, dont le rôle est fixé :</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th><code class="language-plaintext highlighter-rouge">Content-Type</code></th>
+      <th>Rôle</th>
+      <th>Statut</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><code class="language-plaintext highlighter-rouge">text/plain</code></td>
+      <td>Texte lisible par un être humain</td>
+      <td>requise</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><code class="language-plaintext highlighter-rouge">message/disposition-notification</code></td>
+      <td>Compte rendu exploitable par une machine</td>
+      <td>requise</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><code class="language-plaintext highlighter-rouge">message/rfc822</code></td>
+      <td>Courriel d’origine</td>
+      <td>optionnelle pour la RFC 6522, requise par le présent volet</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Ces trois parties répondent à trois besoins distincts : la première permet à un utilisateur de comprendre ce qui s’est passé, la deuxième permet à la PFI réceptrice de traiter la notification sans intervention humaine, et la troisième lui restitue le courriel d’origine, sans lequel elle ne pourrait ni identifier le document concerné ni le soumettre à nouveau après correction.</p>
+
+<p>La RFC 6522 ne traite pas le cas de parties supplémentaires : elle ne les interdit pas, mais le traitement qu’un outillage MDN leur appliquerait n’est pas spécifié.</p>
 
 <h4 id="première-partie--texte-lisible-par-un-être-humain">Première partie : texte lisible par un être humain</h4>
 
@@ -338,6 +397,42 @@ de la façon suivante : <code class="language-plaintext highlighter-rouge">[KO 
     <p>Le champ « <code class="language-plaintext highlighter-rouge">Original-Recipient:</code> » qui indique l’adresse du destinataire du courriel d’origine, telle que spécifiée par l’expéditeur du courriel pour lequel le MDN est émis. Cette valeur est obtenue à partir de l’entête <code class="language-plaintext highlighter-rouge">Original-Recipient</code> du courriel pour lequel le MDN est généré.</p>
   </li>
 </ul>
+
+<h5 id="valeurs-attendues-des-champs-dadressage">Valeurs attendues des champs d’adressage</h5>
+
+<p>Le tableau ci-dessous précise les valeurs attendues dans le contexte MSSanté décrit par le présent volet : le courriel est réceptionné sur une BAL organisationnelle, puis transféré vers la BAL applicative associée, et le MDN est produit par la PFI pour le compte de cette BAL applicative.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Champ</th>
+      <th>Valeur attendue</th>
+      <th>Référence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">From:</code> du MDN</td>
+      <td>La BAL applicative qui a réceptionné le courriel traité, et pour le compte de laquelle le MDN est produit</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">To:</code> du MDN</td>
+      <td>L’adresse indiquée dans l’entête <code class="language-plaintext highlighter-rouge">Disposition-Notification-To</code> du courriel traité — dans le cas d’usage décrit par ce volet, la BAL organisationnelle du service destinataire</td>
+      <td><a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3">RFC 8098 §3</a></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Original-Recipient:</code></td>
+      <td>L’adresse du destinataire telle que spécifiée par l’expéditeur du courriel traité, soit la BAL applicative</td>
+      <td><a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.3">RFC 8098 §3.2.3</a></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Final-Recipient:</code></td>
+      <td>L’adresse du destinataire pour lequel le MDN est émis, soit la BAL applicative ; elle peut différer de la précédente en cas de transfert</td>
+      <td><a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.4">RFC 8098 §3.2.4</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <h5 id="détail-du-champ-disposition">Détail du champ « <code class="language-plaintext highlighter-rouge">Disposition:</code> »</h5>
 
@@ -511,7 +606,7 @@ Ici apparaît le fichier 20220531_CR_d_imagerie_medicale_CORSE_FIGATELLIX.pdf en
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 10, 2026 15:32+0000">2026-09-10</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 10, 2026 15:45+0000">2026-09-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

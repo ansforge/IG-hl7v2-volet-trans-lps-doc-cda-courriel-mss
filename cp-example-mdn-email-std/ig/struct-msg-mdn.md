@@ -15,6 +15,17 @@ L’envoi du MDN à l’expéditeur du courriel initial est conditionné par la 
 
 La [RFC 8098](https://datatracker.ietf.org/doc/html/rfc8098) précise qu’un MDN ne devrait pas être renvoyé automatiquement par le récepteur du courriel dans le cas où l’entête `Disposition-Notification-To` diffère de l’adresse précisée dans l’entête `Return-Path` du courriel envoyé, ceci afin d’éviter une transmission de messages en boucle. Dans ce cas l’envoi du MDN nécessite une confirmation de l’utilisateur.
 
+### Éligibilité au mécanisme MDN
+
+Pour MSSanté, le MDN est prescrit par le [Référentiel socle MSSanté #2](https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2), qui en délègue la structure à la [RFC 8098](https://datatracker.ietf.org/doc/html/rfc8098) sans en définir d’autre :
+
+* `ECO.2.3.2` : le client émetteur doit pouvoir demander un accusé de lecture ;
+* `ECO.3.1.6` : le client destinataire doit retourner un MDN lorsque le message reçu le demande.
+
+Ce référentiel s’applique aux logiciels métier des professionnels habilités, pour des échanges manuels comme automatisés, mais « ne s’applique donc pas aux interfaces webmail ou clients de messageries standards (type Outlook ou Thunderbird) ».
+
+>  **Point d'attention :** la production d'un MDN n'est donc pas garantie sur l'ensemble de la chaîne. Dans le cas d'usage décrit par ce volet, le courriel parvient à la BAL applicative après un transfert depuis la BAL organisationnelle du service destinataire. Si ce transfert est réalisé au moyen d'un webmail ou d'un client de messagerie standard — hors du périmètre de ce référentiel — rien ne garantit que l'entête `Disposition-Notification-To` soit positionné sur le courriel transféré. Or, sans cet entête, aucun MDN ne peut être émis en retour. C'est pour cette situation que le volet prévoit le [courriel standard](struct-email-standard.md). 
+
 ### Objet du MDN
 
 Dans le cas d’un MDN en erreur, l’objet du MDN doit être précisé de la façon suivante : `[KO Intégration système !][code erreur] XDM/1.0/DDM+<libellé> <NOM> <prénom> <date de naissance>`.
@@ -24,6 +35,18 @@ Dans le cas contraire, l’objet du MDN est précisé par `XDM/1.0/DDM+<libellé
 ### Structure du corps du MDN
 
 Le MDN est de type « multipart/report » : `Content-Type: multipart/report; report-type=disposition-notification; boundary="<frontière>"`
+
+La [RFC 6522 §3](https://datatracker.ietf.org/doc/html/rfc6522#section-3) décrit deux ou trois parties, dans cet ordre, dont le rôle est fixé :
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| 1 | `text/plain` | Texte lisible par un être humain | requise |
+| 2 | `message/disposition-notification` | Compte rendu exploitable par une machine | requise |
+| 3 | `message/rfc822` | Courriel d’origine | optionnelle pour la RFC 6522, requise par le présent volet |
+
+Ces trois parties répondent à trois besoins distincts : la première permet à un utilisateur de comprendre ce qui s’est passé, la deuxième permet à la PFI réceptrice de traiter la notification sans intervention humaine, et la troisième lui restitue le courriel d’origine, sans lequel elle ne pourrait ni identifier le document concerné ni le soumettre à nouveau après correction.
+
+La RFC 6522 ne traite pas le cas de parties supplémentaires : elle ne les interdit pas, mais le traitement qu’un outillage MDN leur appliquerait n’est pas spécifié.
 
 #### Première partie : texte lisible par un être humain
 
@@ -42,6 +65,17 @@ Dans le contexte de ce volet, de façon à permettre le traitement du MDN par la
 
 * Le champ identifiant du courriel d’origine « `Original-Message-ID:` » qui indique l’identifiant du courriel initial pour lequel le MDN est produit. Il est obtenu à partir de l’entête `Message-ID` du courriel initial.
 * Le champ « `Original-Recipient:` » qui indique l’adresse du destinataire du courriel d’origine, telle que spécifiée par l’expéditeur du courriel pour lequel le MDN est émis. Cette valeur est obtenue à partir de l’entête `Original-Recipient` du courriel pour lequel le MDN est généré.
+
+##### Valeurs attendues des champs d’adressage
+
+Le tableau ci-dessous précise les valeurs attendues dans le contexte MSSanté décrit par le présent volet : le courriel est réceptionné sur une BAL organisationnelle, puis transféré vers la BAL applicative associée, et le MDN est produit par la PFI pour le compte de cette BAL applicative.
+
+| | | |
+| :--- | :--- | :--- |
+| `From:`du MDN | La BAL applicative qui a réceptionné le courriel traité, et pour le compte de laquelle le MDN est produit |   |
+| `To:`du MDN | L’adresse indiquée dans l’entête`Disposition-Notification-To`du courriel traité — dans le cas d’usage décrit par ce volet, la BAL organisationnelle du service destinataire | [RFC 8098 §3](https://datatracker.ietf.org/doc/html/rfc8098#section-3) |
+| `Original-Recipient:` | L’adresse du destinataire telle que spécifiée par l’expéditeur du courriel traité, soit la BAL applicative | [RFC 8098 §3.2.3](https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.3) |
+| `Final-Recipient:` | L’adresse du destinataire pour lequel le MDN est émis, soit la BAL applicative ; elle peut différer de la précédente en cas de transfert | [RFC 8098 §3.2.4](https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.4) |
 
 ##### Détail du champ « Disposition: »
 
