@@ -27,28 +27,34 @@ automatiquement par le récepteur du courriel dans le cas où l'entête
 messages en boucle. Dans ce cas l'envoi du MDN nécessite une
 confirmation de l'utilisateur.
 
+### Objet du MDN
+
 Dans le cas d'un MDN en erreur, l'objet du MDN doit être précisé
 de la façon suivante : `[KO Intégration système !][code erreur] XDM/1.0/DDM+<libellé> <NOM> <prénom> <date de naissance>`.
 
 Dans le cas contraire, l'objet du MDN est précisé par `XDM/1.0/DDM+<libellé> <NOM> <prénom> <date de naissance>`.
 
+### Structure du corps du MDN
+
 Le MDN est de type « multipart/report » :
-`Content-Type:multipart/report;report-type=disposition-notification; boundary="RAA14128.773615765/example.com"`
+`Content-Type: multipart/report; report-type=disposition-notification; boundary="<frontière>"`
 
--   La première partie contient du texte lisible par un être humain.
-    Dans le contexte du présent volet, ce texte doit au moins contenir,
-    en cas d'erreur, le code et le libellé de l'erreur retournés par le
-    CONSOMMATEUR.
+#### Première partie : texte lisible par un être humain
 
-    -   Par exemple : « `Le message ci-dessous n’a pas pu être intégré automatiquement dans le DPI pour la raison suivante : <libellé de l’erreur>` ».
+Cette partie contient du texte lisible par un être humain. Dans le contexte du présent volet, ce texte doit au moins contenir, en cas d'erreur, le code et le libellé de l'erreur retournés par le CONSOMMATEUR.
 
--   La seconde partie est conforme au type de contenu message/disposition-notification constitué de différents champs d'entête formatés selon la [RFC 5322](https://datatracker.ietf.org/doc/html/rfc5322). Parmi ces champs, « `Disposition:` » et « `Final-Recipient:` » sont obligatoires :
+-   Par exemple : « `Le message ci-dessous n’a pas pu être intégré automatiquement dans le DPI pour la raison suivante : <libellé de l’erreur>` ».
 
-    -   Le champ « `Disposition:` » rend compte du résultat du traitement du courriel par le destinataire _(Note 1)_ :
+#### Deuxième partie : compte rendu exploitable par une machine
 
-        -   En cas de succès, le contenu du champ « `Disposition:` » prend la valeur : « `Disposition: automatic-action/MDN-sent-automatically; processed` »
+Cette partie est conforme au type de contenu message/disposition-notification constitué de différents champs d'entête formatés selon la [RFC 5322](https://datatracker.ietf.org/doc/html/rfc5322). Parmi ces champs, « `Disposition:` » et « `Final-Recipient:` » sont obligatoires :
 
--   En cas d'erreur, le contenu du champ « `Disposition:` » prend la valeur : « `Disposition:automatic-action/MDN-sent-automatically; processed/Error: code erreur^libellé erreur` »
+-   Le champ « `Disposition:` » rend compte du résultat du traitement du courriel par le destinataire (voir le détail ci-dessous) :
+
+    -   En cas de succès, le contenu du champ « `Disposition:` » prend la valeur : « `Disposition: automatic-action/MDN-sent-automatically; processed` »
+
+    -   En cas d'erreur, le contenu du champ « `Disposition:` » prend la valeur : « `Disposition:automatic-action/MDN-sent-automatically; processed/Error: code erreur^libellé erreur` »
+
 -   Le champ « `Final-Recipient:` » qui correspond à l'adresse du destinataire pour lequel le MDN est émis. La valeur de ce champ peut être différente de l'adresse initialement fournie par l'émetteur du courriel, notamment en cas de transfert du courriel initial par le destinataire.
 
 Dans le contexte de ce volet, de façon à permettre le traitement du MDN par la PFI réceptrice, le MDN devra également préciser les champs suivants :
@@ -56,13 +62,13 @@ Dans le contexte de ce volet, de façon à permettre le traitement du MDN par la
 -   Le champ identifiant du courriel d'origine « `Original-Message-ID:` » qui indique l'identifiant du courriel initial pour lequel le MDN est produit. Il est obtenu à partir de l'entête `Message-ID` du courriel initial.
 
 -   Le champ « `Original-Recipient:` » qui indique l'adresse du destinataire du courriel d'origine, telle que spécifiée par l'expéditeur du courriel pour lequel le MDN est émis. Cette valeur est obtenue à partir de l'entête `Original-Recipient` du courriel pour lequel le MDN est généré.
--   La troisième partie contient le corps du courriel d'origine.
 
-Les pièces jointes envoyées avec le courriel d'origine (IHE_XDM.zip et le pdf) doivent être remises en pièces jointes du courriel MDN.
+##### Détail du champ « `Disposition:` »
 
-------------------------------------------
- **(Note 1)** : Détail du champ obligatoire « `Disposition:` » : ce champ permet de préciser :
- -   Le mode de traitement effectué sur le courriel : traitement automatique ou manuel
+Ce champ permet de préciser :
+
+-   Le mode de traitement effectué sur le courriel : traitement automatique ou manuel
+
     -   `action-mode = "manual-action" / "automatic-action"`.
 
         -   La valeur « manual-action » indique que le traitement du courriel résulte d'une action explicite réalisée par l'utilisateur.
@@ -93,9 +99,13 @@ Les pièces jointes envoyées avec le courriel d'origine (IHE_XDM.zip et le pdf)
 
     -   `disposition-modifier = "error"`
 
-------------------------------------------
+#### Troisième partie : courriel d'origine
 
-Exemple d'un MDN :
+Cette partie contient le corps du courriel d'origine.
+
+Les pièces jointes envoyées avec le courriel d'origine (IHE_XDM.zip et le pdf) doivent être remises en pièces jointes du courriel MDN.
+
+### Exemple d'un MDN
 
 L'exemple suivant décrit le MDN (accusé de lecture négatif) généré dans le contexte du cas d'usage [Transmission d'un document clinique d'un patient d'un établissement hospitalier vers un autre établissement hospitalier](volume1.html#description-du-cas-dusage-en-erreur) du présent volet.
 
