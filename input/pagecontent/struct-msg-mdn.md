@@ -100,37 +100,48 @@ Exemple d'un MDN :
 L'exemple suivant décrit le MDN (accusé de lecture négatif) généré dans le contexte du cas d'usage [Transmission d'un document clinique d'un patient d'un établissement hospitalier vers un autre établissement hospitalier](volume1.html#description-du-cas-dusage-en-erreur) du présent volet.
 
 ```
-Date: Wed, 20 Feb 2024 00:19:00 (EDT) -0400
+Date: Tue, 20 Feb 2024 00:19:00 +0100 (CET)
 From: serviceY_auto@chb.mssante.fr
-Message-Id: <199509200019.12345>
+Message-ID: <20240220001900.12345@chb.mssante.fr>
 Subject: [KO Intégration système !][902] XDM/1.0/DDM+ECHOGRAPHIE ABDOMINOPELVIENNE CORSE FIGATELLIX 12/10/1988
 To: serviceY@chb.mssante.fr
 MIME-Version: 1.0
-Content-Type: multipart/report; report-type=disposition-notification; boundary="RAA14128.773615765"
+Content-Type: multipart/report; report-type=disposition-notification;
+ boundary="RAA14128.773615765"
+
 --RAA14128.773615765
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
 Le document n’a pas pu être intégré.
 Le système a retourné l'erreur 902^Identifiant de patient inconnu^messageErrorCondition| E^Error^errorSeverity
+
 --RAA14128.773615765
 Content-Type: message/disposition-notification
-Original-Recipient: rfc822;serviceY_auto@chb.mssante.fr 
-Final-Recipient: rfc822; serviceY_auto@chb.mssante.fr 
-Original-Message-ID: <199509192301.23456 >
+
+Original-Recipient: rfc822;serviceY_auto@chb.mssante.fr
+Final-Recipient: rfc822;serviceY_auto@chb.mssante.fr
+Original-Message-ID: <20240219230100.23456@chb.mssante.fr>
 Disposition:automatic-action/MDN-sent-automatically; processed/Error: 902^Identifiant de patient inconnu^messageErrorCondition| E^Error^errorSeverity
+
 --RAA14128.773615765
 Content-Type: message/rfc822
+
 Ici apparaît le contenu du courriel MSSanté à l’origine du MDN et ses pièces jointes.
---RAA14128.773615765—
-Content-Type: application/zip ; name="IHE_XDM.zip"
-Content-Transfert-Encoding: base64
-Content-Disposition: attachment;filename= "IHE_XDM.zip"
 
-Ici apparaît le fichier IHE_XDM.zip encode en base64.
---RAA14128.773615765—
-Content-Type: application/pdf ; name="20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf"
-Content-Transfert-Encoding: base64
-Content-Disposition: attachment;filename= "20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf"
+--RAA14128.773615765
+Content-Type: application/zip; name="IHE_XDM.zip"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="IHE_XDM.zip"
 
-Ici apparaît le fichier 20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf encodé en base64.
+Ici apparaît le fichier IHE_XDM.zip encodé en base64.
+
+--RAA14128.773615765
+Content-Type: application/pdf; name="20220531_CR_d_imagerie_medicale_CORSE_FIGATELLIX.pdf"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="20220531_CR_d_imagerie_medicale_CORSE_FIGATELLIX.pdf"
+
+Ici apparaît le fichier 20220531_CR_d_imagerie_medicale_CORSE_FIGATELLIX.pdf encodé en base64.
+
 --RAA14128.773615765--
-
 ```
