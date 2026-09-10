@@ -31,6 +31,8 @@ Le courriel standard doit être composé de la façon suivante :
 * Le contenu est encodé en Base64 pour respecter le standard MIME.
  
 
+>  **Point d'attention :** le courriel d'origine étant restitué dans une partie `message/rfc822`, l'accès aux documents qu'il contient suppose de l'ouvrir. Le traitement de ce type de partie varie selon les clients de messagerie : certains l'affichent et donnent accès à ses pièces jointes en une manipulation, d'autres ne proposent que le téléchargement d'un fichier `.eml`, à ouvrir avec un autre outil. Cette annexe couvrant précisément les situations où la notification est reçue au moyen d'un webmail ou d'un client de messagerie standard, hors du périmètre du [Référentiel socle MSSanté #2](https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2), ce point mérite d'être vérifié à l'intégration. 
+
 ### Format du courriel
 
 Le courriel doit respecter la [RFC 5322 ‘Internet Message Format’](https://datatracker.ietf.org/doc/html/rfc5322)
