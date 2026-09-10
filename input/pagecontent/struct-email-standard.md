@@ -24,6 +24,12 @@ de la façon suivante afin de faciliter la lecture et le traitement de la notifi
   * Les pièces jointes envoyées avec le courriel d’origine (IHE_XDM.ZIP et le pdf) sont restituées au sein de cette partie, puisqu’elle porte le courriel d’origine complet. Elles n’y figurent qu’une seule fois : les reprendre en outre comme pièces jointes de la notification doublerait le volume du courriel sans apporter d’information supplémentaire.
   * Le contenu est encodé en Base64 pour respecter le standard MIME.
 
+<blockquote class="stu-note">
+    <p>
+    <b>Point d'attention :</b> le courriel d'origine étant restitué dans une partie <code>message/rfc822</code>, l'accès aux documents qu'il contient suppose de l'ouvrir. Le traitement de ce type de partie varie selon les clients de messagerie : certains l'affichent et donnent accès à ses pièces jointes en une manipulation, d'autres ne proposent que le téléchargement d'un fichier <code>.eml</code>, à ouvrir avec un autre outil. Cette annexe couvrant précisément les situations où la notification est reçue au moyen d'un webmail ou d'un client de messagerie standard, hors du périmètre du <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2">Référentiel socle MSSanté #2</a>, ce point mérite d'être vérifié à l'intégration.
+    </p>
+</blockquote>
+
 ### Format du courriel
 
 Le courriel doit respecter la [RFC 5322 'Internet Message Format'](https://datatracker.ietf.org/doc/html/rfc5322)
