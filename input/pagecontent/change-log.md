@@ -1,3 +1,12 @@
+### version 1.1.3
+
+**Version mineure sans impact sur le développement (corrections de typo, précisions ou ajout d'informations)**
+
+* Revue des exemples de MDN et de courriel standard ([35](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/35))
+  * [Structure du MDN](struct-msg-mdn.html) :
+    * corrections de références et de typographie : [RFC 5322](https://datatracker.ietf.org/doc/html/rfc5322) en remplacement de la RFC 2822 obsolète, lien malformé vers la RFC 8098, `Return-Path`, notation de l'ABNF du champ `Disposition:` (`sending-mode`, `disposition-type`), et noms d'entêtes et de champs en police à chasse fixe
+    * correction du lien vers le cas d'usage illustré par l'exemple, qui renvoyait à la réception d'un compte rendu de biologie au lieu de la transmission d'un document clinique entre établissements
+
 ### version 1.1.2
 
 **Version mineure sans impact sur le développement (corrections de typo, précisions ou ajout d'informations)**

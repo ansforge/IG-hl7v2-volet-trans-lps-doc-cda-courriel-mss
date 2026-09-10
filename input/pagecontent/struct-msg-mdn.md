@@ -12,18 +12,18 @@ livraison de ce courriel au niveau du récepteur. Conformément à la [RFC
     initialement envoyé et à l'adresse du récepteur initial au nom
     duquel le MDN a été produit,
 
--   Être structuré conformément à la [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) et la [RFC 8098](https://datatracker.ietf.org/doc/html/rfc8098),
+-   Être structuré conformément à la [RFC 5322](https://datatracker.ietf.org/doc/html/rfc5322) et la [RFC 8098](https://datatracker.ietf.org/doc/html/rfc8098),
 
 L'envoi du MDN à l'expéditeur du courriel initial est
-conditionné par la présence d'un entête Disposition-Notification-To au
+conditionné par la présence d'un entête `Disposition-Notification-To` au
 niveau du courriel expédié. D'autres informations peuvent également être
-fournies en utilisant les entêtes Original-Recipient et
-Disposition-Notification-Options.
+fournies en utilisant les entêtes `Original-Recipient` et
+`Disposition-Notification-Options`.
 
-La R[FC 8098](https://datatracker.ietf.org/doc/html/rfc8098) précise qu'un MDN ne devrait pas être renvoyé
+La [RFC 8098](https://datatracker.ietf.org/doc/html/rfc8098) précise qu'un MDN ne devrait pas être renvoyé
 automatiquement par le récepteur du courriel dans le cas où l'entête
-Disposition-Notification-To diffère de l'adresse précisée dans l'entête
-returm-Path du courriel envoyé, ceci afin d'éviter une transmission de
+`Disposition-Notification-To` diffère de l'adresse précisée dans l'entête
+`Return-Path` du courriel envoyé, ceci afin d'éviter une transmission de
 messages en boucle. Dans ce cas l'envoi du MDN nécessite une
 confirmation de l'utilisateur.
 
@@ -42,20 +42,20 @@ Le MDN est de type « multipart/report » :
 
     -   Par exemple : « `Le message ci-dessous n’a pas pu être intégré automatiquement dans le DPI pour la raison suivante : <libellé de l’erreur>` ».
 
--   La seconde partie est conforme au type de contenu message/disposition-notification constitué de différents champs d'entête formatés selon la RFC 2822. Parmi ces champs, « `Disposition:` » et `« Final-Recipient: » ` sont obligatoires :
+-   La seconde partie est conforme au type de contenu message/disposition-notification constitué de différents champs d'entête formatés selon la [RFC 5322](https://datatracker.ietf.org/doc/html/rfc5322). Parmi ces champs, « `Disposition:` » et « `Final-Recipient:` » sont obligatoires :
 
-    -   Le champ `« Disposition: »` rend compte du résultat du traitement du courriel par le destinataire _(Note 1)_:
+    -   Le champ « `Disposition:` » rend compte du résultat du traitement du courriel par le destinataire _(Note 1)_ :
 
         -   En cas de succès, le contenu du champ « `Disposition:` » prend la valeur : « `Disposition: automatic-action/MDN-sent-automatically; processed` »
 
--   En cas d'erreur, le contenu du champ « Disposition: » prend la valeur : « `Disposition:automatic-action/MDN-sent-automatically; processed/Error: code erreur^libellé erreur` »
+-   En cas d'erreur, le contenu du champ « `Disposition:` » prend la valeur : « `Disposition:automatic-action/MDN-sent-automatically; processed/Error: code erreur^libellé erreur` »
 -   Le champ « `Final-Recipient:` » qui correspond à l'adresse du destinataire pour lequel le MDN est émis. La valeur de ce champ peut être différente de l'adresse initialement fournie par l'émetteur du courriel, notamment en cas de transfert du courriel initial par le destinataire.
 
 Dans le contexte de ce volet, de façon à permettre le traitement du MDN par la PFI réceptrice, le MDN devra également préciser les champs suivants :
 
--   Le champ identifiant du courriel d'origine « `Original-Message-ID` » qui indique l'identifiant du courriel initial pour lequel le MDN est produit. Il est obtenu à partir de l'entête Message-ID du courriel initial.
+-   Le champ identifiant du courriel d'origine « `Original-Message-ID:` » qui indique l'identifiant du courriel initial pour lequel le MDN est produit. Il est obtenu à partir de l'entête `Message-ID` du courriel initial.
 
--   Le champ « `Original-Recipient:` » qui indique l'adresse du destinataire du courriel d'origine, telle que spécifiée par l'expéditeur du courriel pour lequel le MDN est émis. Cette valeur est obtenue à partir de l'entête Original-Recipient du courriel pour lequel le MDN est généré.
+-   Le champ « `Original-Recipient:` » qui indique l'adresse du destinataire du courriel d'origine, telle que spécifiée par l'expéditeur du courriel pour lequel le MDN est émis. Cette valeur est obtenue à partir de l'entête `Original-Recipient` du courriel pour lequel le MDN est généré.
 -   La troisième partie contient le corps du courriel d'origine.
 
 Les pièces jointes envoyées avec le courriel d'origine (IHE_XDM.zip et le pdf) doivent être remises en pièces jointes du courriel MDN.
@@ -67,19 +67,19 @@ Les pièces jointes envoyées avec le courriel d'origine (IHE_XDM.zip et le pdf)
 
         -   La valeur « manual-action » indique que le traitement du courriel résulte d'une action explicite réalisée par l'utilisateur.
 
-        -   La valeur « automatic-action » indique que le traitement du courriel a été réalisée de façon automatique.
+        -   La valeur « automatic-action » indique que le traitement du courriel a été réalisé de façon automatique.
 
 -   Le mode d'envoi du MDN
 
-    -   `sending mode="MDN-sent-manually" / "MDN-sent-automatically"`.
+    -   `sending-mode = "MDN-sent-manually" / "MDN-sent-automatically"`.
 
-        -   La Valeur "MDN-sent-manually » est utilisée lorsque l'utilisateur a donné son autorisation explicite d'envoyer un MDN particulier.
+        -   La valeur « MDN-sent-manually » est utilisée lorsque l'utilisateur a donné son autorisation explicite d'envoyer un MDN particulier.
 
-        -   La valeur MDN-sent-automatically » permet de configurer l'envoi automatique des MDN.
+        -   La valeur « MDN-sent-automatically » permet de configurer l'envoi automatique des MDN.
 
 -   Le type de traitement réalisé
 
-    -   `disposition--type="displayed" / "deleted" / "dispatched" /"processed"`
+    -   `disposition-type = "displayed" / "dispatched" / "processed" / "deleted"`
 
         -   displayed : le courriel a été affiché dans la BAL du destinataire
 
@@ -87,7 +87,7 @@ Les pièces jointes envoyées avec le courriel d'origine (IHE_XDM.zip et le pdf)
 
         -   processed : le message a été traité sans être affiché au destinataire. Il est possible qu'il n'y ait pas d'utilisateur associé à la BAL.
 
-        -   deleted : le courriel a été supprimé. Le destinataire peut ne pas avoir visualiser le message ou peut l'avoir visualisé.
+        -   deleted : le courriel a été supprimé. Le destinataire peut ne pas avoir visualisé le message ou peut l'avoir visualisé.
 
 -   Le cas échéant, l'erreur rencontrée
 
@@ -97,7 +97,7 @@ Les pièces jointes envoyées avec le courriel d'origine (IHE_XDM.zip et le pdf)
 
 Exemple d'un MDN :
 
-L'exemple suivant décrit le MDN (accusé de lecture négatif) généré dans le contexte du cas d'usage « Transfert d'un patient d'un CH vers un autre CH -Gestion des erreurs » présenté au [paragraphe suivant](volume1.html#description-du-cas-en-erreur) du présent volet.
+L'exemple suivant décrit le MDN (accusé de lecture négatif) généré dans le contexte du cas d'usage [Transmission d'un document clinique d'un patient d'un établissement hospitalier vers un autre établissement hospitalier](volume1.html#description-du-cas-dusage-en-erreur) du présent volet.
 
 ```
 Date: Wed, 20 Feb 2024 00:19:00 (EDT) -0400
