@@ -39,6 +39,18 @@ Dans le cas contraire, l'objet du MDN est précisé par `XDM/1.0/DDM+<libellé> 
 Le MDN est de type « multipart/report » :
 `Content-Type: multipart/report; report-type=disposition-notification; boundary="<frontière>"`
 
+La [RFC 6522 §3](https://datatracker.ietf.org/doc/html/rfc6522#section-3) décrit deux ou trois parties, dans cet ordre, dont le rôle est fixé :
+
+| # | `Content-Type` | Rôle | Statut |
+|---|---|---|---|
+| 1 | `text/plain` | Texte lisible par un être humain | requise |
+| 2 | `message/disposition-notification` | Compte rendu exploitable par une machine | requise |
+| 3 | `message/rfc822` | Courriel d'origine | optionnelle pour la RFC 6522, requise par le présent volet |
+
+Ces trois parties répondent à trois besoins distincts : la première permet à un utilisateur de comprendre ce qui s'est passé, la deuxième permet à la PFI réceptrice de traiter la notification sans intervention humaine, et la troisième lui restitue le courriel d'origine, sans lequel elle ne pourrait ni identifier le document concerné ni le soumettre à nouveau après correction.
+
+La RFC 6522 ne traite pas le cas de parties supplémentaires : elle ne les interdit pas, mais le traitement qu'un outillage MDN leur appliquerait n'est pas spécifié.
+
 #### Première partie : texte lisible par un être humain
 
 Cette partie contient du texte lisible par un être humain. Dans le contexte du présent volet, ce texte doit au moins contenir, en cas d'erreur, le code et le libellé de l'erreur retournés par le CONSOMMATEUR.

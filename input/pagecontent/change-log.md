@@ -11,6 +11,7 @@
     * mise en sections de la page — « Objet du MDN », « Structure du corps du MDN » avec une sous-section par partie du `multipart/report`, et « Exemple d'un MDN » — la « Note 1 » encadrée de filets devenant la sous-section « Détail du champ `Disposition:` » rattachée à la deuxième partie
     * correction des niveaux d'énumération, les champs `Disposition:`, `Final-Recipient:`, `Original-Message-ID:` et `Original-Recipient:` étant mêlés à l'énumération des trois parties du MDN au lieu de lui être subordonnés
     * suppression de la frontière MIME d'exemple (`boundary="RAA14128.773615765/example.com"`) donnée dans le texte normatif du champ `Content-Type` du MDN, une frontière étant choisie librement par l'émetteur pour chaque message
+    * précision du nombre et du rôle des parties du `multipart/report` : la [RFC 6522 §3](https://datatracker.ietf.org/doc/html/rfc6522#section-3) décrit deux ou trois parties dont le rôle est fixé, les deux premières requises et la troisième optionnelle pour la RFC mais requise par le présent volet, et ne traite pas le cas de parties supplémentaires — sans les interdire, elle ne spécifie pas le traitement qui leur serait appliqué ; ajout du besoin fonctionnel auquel répond chacune des trois parties
 
 ### version 1.1.2
 
