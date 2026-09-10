@@ -30,6 +30,9 @@
     * harmonisation de l'objet de l'exemple avec le format `[KO Intégration système !][code erreur]` que prescrit la page elle-même, l'exemple portant `[Erreur d'intégration !]`
     * corrections de forme de l'exemple : entête `Date:` (le 20 février 2024 était un mardi, zone horaire alignée sur l'annexe MDN), identifiant de message cohérent avec cette date, et `Content-Transfer-Encoding: 8bit` en remplacement de `7bit`, le texte de la première partie comportant des caractères accentués
     * mention du caractère illustratif et non normatif de l'exemple, et du caractère fictif des valeurs qu'il contient
+    * emplacement des pièces jointes : le courriel d'origine est restitué dans son intégralité au sein d'une partie `message/rfc822`, ses pièces jointes n'étant plus reprises une seconde fois comme pièces jointes de la notification — traitement identique à celui de l'annexe [Structure du MDN](struct-msg-mdn.html). **Un ÉMETTEUR de notification qui joignait les pièces au premier niveau doit désormais les laisser dans le courriel d'origine restitué**
+    * complétion de l'exemple, dont la partie `message/rfc822` ne portait qu'un texte de substitution : le courriel d'origine y figure désormais avec ses entêtes, son corps et ses deux pièces jointes, et l'absence d'entête `Disposition-Notification-To` — qui est la raison d'être de cette annexe — y est signalée
+    * nom du fichier PDF de l'exemple remis en conformité avec la convention `ECO.2.1.6` du Référentiel socle MSSanté #2, où `_` sépare les champs et où les libellés admettent espaces et caractères accentués
     * mise à jour du paragraphe « Différences clés avec un MDN », qui décrivait la forme `processed/Error: ...` du champ `Disposition:` remplacée dans l'annexe [Structure du MDN](struct-msg-mdn.html)
 
 ### version 1.1.2
