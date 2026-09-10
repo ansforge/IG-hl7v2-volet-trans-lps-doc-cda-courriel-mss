@@ -17,7 +17,7 @@ La [RFC 8098](https://datatracker.ietf.org/doc/html/rfc8098) précise qu’un MD
 
 ### Éligibilité au mécanisme MDN
 
-Le [Référentiel socle MSSanté #2](https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2) (v1.0.1 du 18/01/2024) rend le mécanisme MDN obligatoire dans les deux sens :
+Le [Référentiel socle MSSanté #2](https://esante.gouv.fr/sites/default/files/media/document/ans_mss_ref2_clients_de_messageries_mssante_v1.0.1_20240118.pdf) (v1.0.1 du 18/01/2024) rend le mécanisme MDN obligatoire dans les deux sens :
 
 | | |
 | :--- | :--- |
