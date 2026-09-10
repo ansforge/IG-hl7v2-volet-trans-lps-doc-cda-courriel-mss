@@ -152,6 +152,8 @@ L'exemple suivant décrit le MDN (accusé de lecture négatif) généré dans le
 
 Il est fourni à titre **illustratif et n'a pas valeur normative** : les exigences du volet sont portées par les paragraphes qui précèdent. Les valeurs qu'il contient (adresses, identifiants, dates, frontières MIME) sont fictives.
 
+
+Le nom du fichier PDF suit la convention de nommage `ECO.2.1.6` du [Référentiel socle MSSanté #2](https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2), dont le caractère `_` sépare les champs et dont les libellés admettent espaces et caractères accentués. Dans un courriel réel, ces caractères doivent être encodés dans les paramètres `name` et `filename` selon la [RFC 2231](https://datatracker.ietf.org/doc/html/rfc2231) — soit ici `filename*=UTF-8''20220531_CR%20d%27imagerie%20m%C3%A9dicale_CORSE_FIGATELLIX.pdf` — forme non reprise dans l'exemple pour en préserver la lisibilité.
 ```
 Date: Tue, 20 Feb 2024 00:19:00 +0100 (CET)
 From: serviceY_auto@chb.mssante.fr
@@ -204,11 +206,11 @@ Content-Disposition: attachment; filename="IHE_XDM.zip"
 Ici apparaît le fichier IHE_XDM.zip encodé en base64.
 
 --ZZZ09876.543210987
-Content-Type: application/pdf; name="20220531_CR_d_imagerie_medicale_CORSE_FIGATELLIX.pdf"
+Content-Type: application/pdf; name="20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf"
 Content-Transfer-Encoding: base64
-Content-Disposition: attachment; filename="20220531_CR_d_imagerie_medicale_CORSE_FIGATELLIX.pdf"
+Content-Disposition: attachment; filename="20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf"
 
-Ici apparaît le fichier 20220531_CR_d_imagerie_medicale_CORSE_FIGATELLIX.pdf encodé en base64.
+Ici apparaît le fichier 20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf encodé en base64.
 
 --ZZZ09876.543210987--
 
