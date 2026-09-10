@@ -181,8 +181,10 @@ L'exemple suivant décrit le MDN (accusé de lecture négatif) généré dans le
 
 Il est fourni à titre **illustratif et n'a pas valeur normative** : les exigences du volet sont portées par les paragraphes qui précèdent. Les valeurs qu'il contient (adresses, identifiants, dates, frontières MIME) sont fictives.
 
+Le nom du fichier PDF suit la convention de nommage `ECO.2.1.6` du [Référentiel socle MSSanté #2](https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2), dont le caractère `_` sépare les champs et dont les libellés admettent espaces et caractères accentués.
 
-Le nom du fichier PDF suit la convention de nommage `ECO.2.1.6` du [Référentiel socle MSSanté #2](https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2), dont le caractère `_` sépare les champs et dont les libellés admettent espaces et caractères accentués. Dans un courriel réel, ces caractères doivent être encodés dans les paramètres `name` et `filename` selon la [RFC 2231](https://datatracker.ietf.org/doc/html/rfc2231) — soit ici `filename*=UTF-8''20220531_CR%20d%27imagerie%20m%C3%A9dicale_CORSE_FIGATELLIX.pdf` — forme non reprise dans l'exemple pour en préserver la lisibilité.
+Les entêtes d'un courriel ne peuvent porter que des caractères US-ASCII ([RFC 5322](https://datatracker.ietf.org/doc/html/rfc5322)) : dans un courriel réel, l'entête `Subject:` doit être encodé selon la [RFC 2047](https://datatracker.ietf.org/doc/html/rfc2047) et les paramètres `name` et `filename` selon la [RFC 2231](https://datatracker.ietf.org/doc/html/rfc2231). Ces formes ne sont pas reprises dans l'exemple, pour en préserver la lisibilité. Pour ce fichier, la forme conforme du paramètre serait `filename*=UTF-8''20220531_CR%20d%27imagerie%20m%C3%A9dicale_CORSE_FIGATELLIX.pdf`.
+
 ```
 Date: Tue, 20 Feb 2024 00:19:00 +0100 (CET)
 From: serviceY_auto@chb.mssante.fr
@@ -212,6 +214,7 @@ Error: 902^Identifiant de patient inconnu^applicationErrorCondition| E^Error^err
 
 --RAA14128.773615765
 Content-Type: message/rfc822
+Content-Transfer-Encoding: 8bit
 
 Date: Mon, 19 Feb 2024 23:01:00 +0100 (CET)
 From: serviceY@chb.mssante.fr

@@ -5,14 +5,14 @@ Dans le cas où un MDN (Message Disposition Notification) n'a pas été explicit
 Le MDN ne peut pas être utilisé pour rediriger et traiter l'ensemble des erreurs.
 Dans ce cas, pour retourner une notification similaire à celle d’un MDN, il faut  utiliser un courriel "standard" avec une structure et un contenu adaptés.
 
-Ce courriel doit 
+Ce courriel doit
 - Être compréhensible par l'humain
 - Inclure toutes les informations nécessaires pour expliquer le problème afin de le traiter
-- Être structuré conformément à la [RFC 5322](https://datatracker.ietf.org/doc/html/rfc5322) 
+- Être structuré conformément à la [RFC 5322](https://datatracker.ietf.org/doc/html/rfc5322)
 
 ### Contenu  du courriel
 
-Le courriel standard doit être composé de la façon suivante : 
+Le courriel standard doit être composé de la façon suivante :
 
 * Objet du message : il doit être précisé
 de la façon suivante afin de faciliter la lecture et le traitement de la notification : `[KO Intégration système !][code erreur] XDM/1.0/DDM+<libellé> <NOM> <prénom> <date de naissance>`.
@@ -34,7 +34,6 @@ de la façon suivante afin de faciliter la lecture et le traitement de la notifi
 
 Le courriel doit respecter la [RFC 5322 'Internet Message Format'](https://datatracker.ietf.org/doc/html/rfc5322)
 
-
 ### Exemple de courriel
 
 Exemple d'un courriel standard qui pourrait être envoyé comme notification manuelle. Le contenu est réorganisé pour être compréhensible par un humain, tout en respectant les principes des courriels standards avec des pièces jointes.
@@ -43,6 +42,8 @@ Cet exemple illustre le cas d'usage [Transmission d'un document clinique d'un pa
 Il est fourni à titre **illustratif et n'a pas valeur normative** : les exigences du volet sont portées par les paragraphes qui précèdent. Les valeurs qu'il contient (adresses, identifiants, dates, frontières MIME) sont fictives.
 
 On notera que le courriel d'origine ne porte pas d'entête `Disposition-Notification-To` : c'est précisément la raison pour laquelle la notification prend la forme d'un courriel standard et non d'un [MDN](struct-msg-mdn.html).
+
+Les entêtes d'un courriel ne peuvent porter que des caractères US-ASCII ([RFC 5322](https://datatracker.ietf.org/doc/html/rfc5322)) : dans un courriel réel, l'entête `Subject:` doit être encodé selon la [RFC 2047](https://datatracker.ietf.org/doc/html/rfc2047) et les paramètres `name` et `filename` selon la [RFC 2231](https://datatracker.ietf.org/doc/html/rfc2231). Ces formes ne sont pas reprises dans l'exemple, pour en préserver la lisibilité.
 
 ```
 Date: Tue, 20 Feb 2024 00:19:00 +0100 (CET)
@@ -59,24 +60,24 @@ Content-Transfer-Encoding: 8bit
 
 Bonjour,
 
-Le document envoyé n’a pas pu être intégré correctement dans le système. 
+Le document envoyé n’a pas pu être intégré correctement dans le système.
 Voici les détails de l’erreur rencontrée :
 
 - Erreur détectée : Identifiant de patient inconnu
 - Code d’erreur : 902
 
-
 Vous trouverez en pièce jointe le courriel d'origine, avec son contenu et
 ses fichiers (archive IHE_XDM.zip et compte rendu au format PDF).
 
-Veuillez vérifier les informations fournies et soumettre à nouveau les documents après correction. 
+Veuillez vérifier les informations fournies et soumettre à nouveau les documents après correction.
 Si le problème persiste, contactez notre service technique.
 
-Cordialement,  
-L’équipe technique du service Y  
+Cordialement,
+L’équipe technique du service Y
 
 --boundary12345
 Content-Type: message/rfc822
+Content-Transfer-Encoding: 8bit
 Content-Disposition: attachment; filename="message_original.eml"
 
 Date: Mon, 19 Feb 2024 23:01:00 +0100 (CET)
@@ -110,13 +111,14 @@ Ici apparaît le fichier 20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf e
 --ZZZ09876.543210987--
 
 --boundary12345--
+
 ```
 
 ### Différences clés avec un MDN
 Contrairement à un MDN :
 
   Ce courriel standard est non-automatisé et non structuré pour un traitement machine. Les champs `Disposition:` et `Error:` du compte rendu exploitable par une machine sont spécifiques au [MDN](struct-msg-mdn.html) et n'ont pas d'équivalent dans un courriel classique.
-  
+
   Le code erreur ne peut être véhiculé que :
 
 * Dans l'objet du message
