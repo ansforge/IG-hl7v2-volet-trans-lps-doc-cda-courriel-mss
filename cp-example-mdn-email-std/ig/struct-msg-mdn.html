@@ -302,6 +302,8 @@ confirmation de l’utilisateur.</p>
 
 <p>Ce référentiel s’applique aux logiciels métier des professionnels habilités, pour des échanges manuels comme automatisés, mais « ne s’applique donc pas aux interfaces webmail ou clients de messageries standards (type Outlook ou Thunderbird) ».</p>
 
+<p>Le référentiel précise l’usage attendu du mécanisme : il « permet de savoir que le message a bien été reçu par le destinataire et quel traitement il a effectué lors de la réception du message : lecture, intégration des pièces jointes dans le système cible ». L’emploi que le présent volet en fait — rendre compte de l’intégration du document dans le DPI — relève donc de ce que le socle prévoit.</p>
+
 <blockquote class="stu-note">
     <p>
     <b>Point d'attention :</b> la production d'un MDN n'est donc pas garantie sur l'ensemble de la chaîne. Dans le cas d'usage décrit par ce volet, le courriel parvient à la BAL applicative après un transfert depuis la BAL organisationnelle du service destinataire. Si ce transfert est réalisé au moyen d'un webmail ou d'un client de messagerie standard — hors du périmètre de ce référentiel — rien ne garantit que l'entête <code>Disposition-Notification-To</code> soit positionné sur le courriel transféré. Or, sans cet entête, aucun MDN ne peut être émis en retour. C'est pour cette situation que le volet prévoit le <a href="struct-email-standard.html">courriel standard</a>.
@@ -347,7 +349,7 @@ de la façon suivante : <code class="language-plaintext highlighter-rouge">[KO 
     <tr>
       <td>3</td>
       <td><code class="language-plaintext highlighter-rouge">message/rfc822</code></td>
-      <td>Courriel d’origine</td>
+      <td>Courriel d’origine : ses entêtes, son corps et ses pièces jointes</td>
       <td>optionnelle pour la RFC 6522, requise par le présent volet</td>
     </tr>
   </tbody>
@@ -397,6 +399,8 @@ de la façon suivante : <code class="language-plaintext highlighter-rouge">[KO 
     <p>Le champ « <code class="language-plaintext highlighter-rouge">Original-Recipient:</code> » qui indique l’adresse du destinataire du courriel d’origine, telle que spécifiée par l’expéditeur du courriel pour lequel le MDN est émis. Cette valeur est obtenue à partir de l’entête <code class="language-plaintext highlighter-rouge">Original-Recipient</code> du courriel pour lequel le MDN est généré.</p>
   </li>
 </ul>
+
+<p>Le champ « <code class="language-plaintext highlighter-rouge">Reporting-UA:</code> », qui identifie l’agent ayant produit le MDN, n’est pas obligatoire, mais la <a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.1">RFC 8098 §3.2.1</a> recommande (<code class="language-plaintext highlighter-rouge">SHOULD</code>) de le renseigner sauf configuration contraire. Dans le contexte de ce volet, il identifie la PFI qui a produit le MDN.</p>
 
 <h5 id="valeurs-attendues-des-champs-dadressage">Valeurs attendues des champs d’adressage</h5>
 
@@ -510,9 +514,15 @@ de la façon suivante : <code class="language-plaintext highlighter-rouge">[KO 
 
 <h4 id="troisième-partie--courriel-dorigine">Troisième partie : courriel d’origine</h4>
 
-<p>Cette partie contient le corps du courriel d’origine.</p>
+<p>Cette partie contient le courriel d’origine restitué <strong>dans son intégralité</strong> : ses entêtes, son corps et ses pièces jointes. <strong>Aucun élément ne doit être perdu.</strong></p>
 
-<p>Les pièces jointes envoyées avec le courriel d’origine (IHE_XDM.zip et le pdf) doivent être remises en pièces jointes du courriel MDN.</p>
+<p>En cas d’erreur, l’objectif est que le destinataire du MDN dispose de tous les éléments nécessaires au retraitement sans avoir à retrouver le courriel d’origine par un autre moyen : identifier le document et l’usager concernés, corriger ce qui a fait échouer l’intégration, et soumettre à nouveau les documents. Le courriel d’origine étant restitué comme objet, il reste réinjectable tel quel dans une chaîne de traitement.</p>
+
+<p>Les pièces jointes envoyées avec le courriel d’origine (IHE_XDM.zip et le pdf) sont restituées au sein de cette partie, puisqu’elle porte le courriel d’origine complet. Elles n’y figurent qu’une seule fois : les reprendre en outre comme pièces jointes du MDN doublerait le volume du message sans apporter d’information supplémentaire, et placerait ces copies dans des parties dont la RFC 6522 ne spécifie pas le traitement.</p>
+
+<p>Cet emplacement ne contrevient pas au <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2">Référentiel socle MSSanté #2</a> : son exigence <code class="language-plaintext highlighter-rouge">ECO.2.1.1</code> — un courriel transmettant des documents de santé doit contenir « en pièces jointes du courriel » une archive <code class="language-plaintext highlighter-rouge">IHE_XDM.zip</code> et les mêmes documents médicaux au format PDF/A-1 — porte sur le courriel MSSanté qui transmet les documents, et non sur la notification qui en rend compte. La troisième partie restituant ce courriel tel quel, ses pièces jointes demeurent à l’emplacement que le référentiel prescrit.</p>
+
+<p>Le socle veut par ailleurs que le destinataire d’un courriel transmettant des documents de santé puisse en prendre connaissance « sans avoir besoin d’un LPS (cas d’un webmail ou d’une application mobile) grâce au(x) fichier(s) PDF ». La restitution intégrale du courriel d’origine préserve cette possibilité : le PDF y figure tel qu’il a été transmis, et le destinataire du MDN y accède en ouvrant le courriel encapsulé.</p>
 
 <h3 id="exemple-dun-mdn">Exemple d’un MDN</h3>
 
@@ -520,6 +530,7 @@ de la façon suivante : <code class="language-plaintext highlighter-rouge">[KO 
 
 <p>Il est fourni à titre <strong>illustratif et n’a pas valeur normative</strong> : les exigences du volet sont portées par les paragraphes qui précèdent. Les valeurs qu’il contient (adresses, identifiants, dates, frontières MIME) sont fictives.</p>
 
+<p>Le nom du fichier PDF suit la convention de nommage <code class="language-plaintext highlighter-rouge">ECO.2.1.6</code> du <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2">Référentiel socle MSSanté #2</a>, dont le caractère <code class="language-plaintext highlighter-rouge">_</code> sépare les champs et dont les libellés admettent espaces et caractères accentués. Dans un courriel réel, ces caractères doivent être encodés dans les paramètres <code class="language-plaintext highlighter-rouge">name</code> et <code class="language-plaintext highlighter-rouge">filename</code> selon la <a href="https://datatracker.ietf.org/doc/html/rfc2231">RFC 2231</a> — soit ici <code class="language-plaintext highlighter-rouge">filename*=UTF-8''20220531_CR%20d%27imagerie%20m%C3%A9dicale_CORSE_FIGATELLIX.pdf</code> — forme non reprise dans l’exemple pour en préserver la lisibilité.</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Date: Tue, 20 Feb 2024 00:19:00 +0100 (CET)
 From: serviceY_auto@chb.mssante.fr
 Message-ID: &lt;20240220001900.12345@chb.mssante.fr&gt;
@@ -539,6 +550,7 @@ Le système a retourné l'erreur 902^Identifiant de patient inconnu^messageError
 --RAA14128.773615765
 Content-Type: message/disposition-notification
 
+Reporting-UA: pfi.chb.mssante.fr; PFI de l'établissement-B
 Original-Recipient: rfc822;serviceY_auto@chb.mssante.fr
 Final-Recipient: rfc822;serviceY_auto@chb.mssante.fr
 Original-Message-ID: &lt;20240219230100.23456@chb.mssante.fr&gt;
@@ -547,21 +559,36 @@ Disposition:automatic-action/MDN-sent-automatically; processed/Error: 902^Identi
 --RAA14128.773615765
 Content-Type: message/rfc822
 
-Ici apparaît le contenu du courriel MSSanté à l’origine du MDN et ses pièces jointes.
+Date: Mon, 19 Feb 2024 23:01:00 +0100 (CET)
+From: serviceY@chb.mssante.fr
+To: serviceY_auto@chb.mssante.fr
+Message-ID: &lt;20240219230100.23456@chb.mssante.fr&gt;
+Subject: XDM/1.0/DDM+ECHOGRAPHIE ABDOMINOPELVIENNE CORSE FIGATELLIX 12/10/1988
+Disposition-Notification-To: serviceY@chb.mssante.fr
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="ZZZ09876.543210987"
 
---RAA14128.773615765
+--ZZZ09876.543210987
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+Ici apparaît le corps du courriel MSSanté à l'origine du MDN.
+
+--ZZZ09876.543210987
 Content-Type: application/zip; name="IHE_XDM.zip"
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="IHE_XDM.zip"
 
 Ici apparaît le fichier IHE_XDM.zip encodé en base64.
 
---RAA14128.773615765
-Content-Type: application/pdf; name="20220531_CR_d_imagerie_medicale_CORSE_FIGATELLIX.pdf"
+--ZZZ09876.543210987
+Content-Type: application/pdf; name="20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf"
 Content-Transfer-Encoding: base64
-Content-Disposition: attachment; filename="20220531_CR_d_imagerie_medicale_CORSE_FIGATELLIX.pdf"
+Content-Disposition: attachment; filename="20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf"
 
-Ici apparaît le fichier 20220531_CR_d_imagerie_medicale_CORSE_FIGATELLIX.pdf encodé en base64.
+Ici apparaît le fichier 20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf encodé en base64.
+
+--ZZZ09876.543210987--
 
 --RAA14128.773615765--
 </code></pre></div></div>
@@ -606,7 +633,7 @@ Ici apparaît le fichier 20220531_CR_d_imagerie_medicale_CORSE_FIGATELLIX.pdf en
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 10, 2026 15:45+0000">2026-09-10</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 10, 2026 16:16+0000">2026-09-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
