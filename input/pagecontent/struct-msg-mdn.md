@@ -144,13 +144,15 @@ Ce champ permet de préciser :
 
 #### Troisième partie : courriel d'origine
 
-Cette partie contient le courriel d'origine restitué **dans son intégralité** : ses entêtes, son corps et ses pièces jointes.
+Cette partie contient le courriel d'origine restitué **dans son intégralité** : ses entêtes, son corps et ses pièces jointes. **Aucun élément ne doit être perdu.**
+
+En cas d'erreur, l'objectif est que le destinataire du MDN dispose de tous les éléments nécessaires au retraitement sans avoir à retrouver le courriel d'origine par un autre moyen : identifier le document et l'usager concernés, corriger ce qui a fait échouer l'intégration, et soumettre à nouveau les documents — le cas échéant en sollicitant l'émetteur initial, à qui le courriel d'origine complet peut être retransmis tel quel.
 
 Les pièces jointes envoyées avec le courriel d'origine (IHE_XDM.zip et le pdf) sont restituées au sein de cette partie, puisqu'elle porte le courriel d'origine complet. Elles n'y figurent qu'une seule fois : les reprendre en outre comme pièces jointes du MDN doublerait le volume du message sans apporter d'information supplémentaire, et placerait ces copies dans des parties dont la RFC 6522 ne spécifie pas le traitement.
 
 Cet emplacement ne contrevient pas au [Référentiel socle MSSanté #2](https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2) : son exigence `ECO.2.1.1` — un courriel transmettant des documents de santé doit contenir « en pièces jointes du courriel » une archive `IHE_XDM.zip` et les mêmes documents médicaux au format PDF/A-1 — porte sur le courriel MSSanté qui transmet les documents, et non sur la notification qui en rend compte. La troisième partie restituant ce courriel tel quel, ses pièces jointes demeurent à l'emplacement que le référentiel prescrit.
 
-Le socle veut par ailleurs que le destinataire d'un tel courriel puisse prendre connaissance des documents « sans avoir besoin d'un LPS (cas d'un webmail ou d'une application mobile) grâce au(x) fichier(s) PDF ». Dans le cas d'usage décrit par ce volet, le MDN est retourné à la BAL organisationnelle qui a elle-même transféré le courriel d'origine vers la BAL applicative : son titulaire dispose donc déjà de ce courriel et de ses pièces jointes. La troisième partie du MDN sert la traçabilité et la reprise du traitement, non la première lecture des documents.
+Le socle veut par ailleurs que le destinataire d'un courriel transmettant des documents de santé puisse en prendre connaissance « sans avoir besoin d'un LPS (cas d'un webmail ou d'une application mobile) grâce au(x) fichier(s) PDF ». La restitution intégrale du courriel d'origine préserve cette possibilité : le PDF y figure tel qu'il a été transmis, et le destinataire du MDN y accède en ouvrant le courriel encapsulé.
 
 ### Exemple d'un MDN
 
