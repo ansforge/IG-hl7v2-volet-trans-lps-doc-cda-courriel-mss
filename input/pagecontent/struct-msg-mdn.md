@@ -146,7 +146,7 @@ Ce champ permet de préciser :
 
 Cette partie contient le courriel d'origine restitué **dans son intégralité** : ses entêtes, son corps et ses pièces jointes. **Aucun élément ne doit être perdu.**
 
-En cas d'erreur, l'objectif est que le destinataire du MDN dispose de tous les éléments nécessaires au retraitement sans avoir à retrouver le courriel d'origine par un autre moyen : identifier le document et l'usager concernés, corriger ce qui a fait échouer l'intégration, et soumettre à nouveau les documents — le cas échéant en sollicitant l'émetteur initial, à qui le courriel d'origine complet peut être retransmis tel quel.
+En cas d'erreur, l'objectif est que le destinataire du MDN dispose de tous les éléments nécessaires au retraitement sans avoir à retrouver le courriel d'origine par un autre moyen : identifier le document et l'usager concernés, corriger ce qui a fait échouer l'intégration, et soumettre à nouveau les documents. Le courriel d'origine étant restitué comme objet, il reste réinjectable tel quel dans une chaîne de traitement.
 
 Les pièces jointes envoyées avec le courriel d'origine (IHE_XDM.zip et le pdf) sont restituées au sein de cette partie, puisqu'elle porte le courriel d'origine complet. Elles n'y figurent qu'une seule fois : les reprendre en outre comme pièces jointes du MDN doublerait le volume du message sans apporter d'information supplémentaire, et placerait ces copies dans des parties dont la RFC 6522 ne spécifie pas le traitement.
 
