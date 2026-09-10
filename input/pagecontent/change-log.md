@@ -24,6 +24,14 @@
     * ajout d'une section « Éligibilité au mécanisme MDN » rappelant que le MDN est prescrit pour MSSanté par le [Référentiel socle MSSanté #2](https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2) (exigences `ECO.2.3.2` et `ECO.3.1.6`), que ce référentiel ne s'applique ni aux webmails ni aux clients de messageries standards, et qu'un transfert par l'un d'eux peut faire disparaître l'entête `Disposition-Notification-To` sans lequel aucun MDN ne peut être émis — situation pour laquelle le volet prévoit le [courriel standard](struct-email-standard.html)
     * précision du nombre et du rôle des parties du `multipart/report` : la [RFC 6522 §3](https://datatracker.ietf.org/doc/html/rfc6522#section-3) décrit deux ou trois parties dont le rôle est fixé, les deux premières requises et la troisième optionnelle pour la RFC mais requise par le présent volet, et ne traite pas le cas de parties supplémentaires — sans les interdire, elle ne spécifie pas le traitement qui leur serait appliqué ; ajout du besoin fonctionnel auquel répond chacune des trois parties
 
+  * [Structure d'un message de notification format courriel standard](struct-email-standard.html) :
+    * correction de la coquille « courriel standart »
+    * référence à la RFC 2822 obsolète remplacée par la [RFC 5322](https://datatracker.ietf.org/doc/html/rfc5322), que la section « Format du courriel » de la même page citait déjà
+    * harmonisation de l'objet de l'exemple avec le format `[KO Intégration système !][code erreur]` que prescrit la page elle-même, l'exemple portant `[Erreur d'intégration !]`
+    * corrections de forme de l'exemple : entête `Date:` (le 20 février 2024 était un mardi, zone horaire alignée sur l'annexe MDN), identifiant de message cohérent avec cette date, et `Content-Transfer-Encoding: 8bit` en remplacement de `7bit`, le texte de la première partie comportant des caractères accentués
+    * mention du caractère illustratif et non normatif de l'exemple, et du caractère fictif des valeurs qu'il contient
+    * mise à jour du paragraphe « Différences clés avec un MDN », qui décrivait la forme `processed/Error: ...` du champ `Disposition:` remplacée dans l'annexe [Structure du MDN](struct-msg-mdn.html)
+
 ### version 1.1.2
 
 **Version mineure sans impact sur le développement (corrections de typo, précisions ou ajout d'informations)**

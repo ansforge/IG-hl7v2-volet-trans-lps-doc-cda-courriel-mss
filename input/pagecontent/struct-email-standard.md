@@ -8,14 +8,14 @@ Dans ce cas, pour retourner une notification similaire à celle d’un MDN, il f
 Ce courriel doit 
 - Être compréhensible par l'humain
 - Inclure toutes les informations nécessaires pour expliquer le problème afin de le traiter
-- Être structuré conformément à la RFC 2822 
+- Être structuré conformément à la [RFC 5322](https://datatracker.ietf.org/doc/html/rfc5322) 
 
 ### Contenu  du courriel
 
-Le courriel standart doit être composé de la façon suivante : 
+Le courriel standard doit être composé de la façon suivante : 
 
 * Objet du message : il doit être précisé
-de la façon suivante afin de faciliter la lecture et le traitement de la notification : `[KO Intégration système !][code erreur] XDM/1.0/DDM+<libellé> <NOM> <prénom> <date de naissance>`.
+de la façon suivante afin de faciliter la lecture et le traitement de la notification : `[KO Intégration système !][code erreur] XDM/1.0/DDM+<libellé> <NOM> <prénom> <date de naissance>`.
 * Corps du message :
   * La première partie contient du texte lisible par un être humain. Dans le contexte du présent volet, ce texte doit au moins contenir, en cas d’erreur, le code et le libellé de l’erreur retournés par le CONSOMMATEUR.
   Par exemple : « Le message ci-dessous n’a pas pu être intégré automatiquement dans le DPI pour la raison suivante : <libellé de l’erreur> ».
@@ -34,19 +34,20 @@ Le courriel doit respecter la [RFC 5322 'Internet Message Format'](https://datat
 Exemple d'un courriel standard qui pourrait être envoyé comme notification manuelle. Le contenu est réorganisé pour être compréhensible par un humain, tout en respectant les principes des courriels standards avec des pièces jointes.
 Cet exemple illustre le cas d'usage [Transmission d'un document clinique d'un patient d'un établissement hospitalier vers un autre établissement hospitalier](volume1.html#description-du-cas-dusage-en-erreur)
 
+Il est fourni à titre **illustratif et n'a pas valeur normative** : les exigences du volet sont portées par les paragraphes qui précèdent. Les valeurs qu'il contient (adresses, identifiants, dates, frontières MIME) sont fictives.
 
 ```
-Date: Wed, 20 Feb 2024 00:19:00 -0400
+Date: Tue, 20 Feb 2024 00:19:00 +0100 (CET)
 From: serviceY_auto@chb.mssante.fr
 To: serviceY@chb.mssante.fr
-Message-ID: <199509200019.12345@chb.mssante.fr>
-Subject: [Erreur d’intégration !][902] XDM/1.0/DDM+ECHOGRAPHIE ABDOMINOPELVIENNE CORSE FIGATELLIX 12/10/1988
+Message-ID: <20240220001900.12345@chb.mssante.fr>
+Subject: [KO Intégration système !][902] XDM/1.0/DDM+ECHOGRAPHIE ABDOMINOPELVIENNE CORSE FIGATELLIX 12/10/1988
 MIME-Version: 1.0
 Content-Type: multipart/mixed; boundary="boundary12345"
 
 --boundary12345
 Content-Type: text/plain; charset="UTF-8"
-Content-Transfer-Encoding: 7bit
+Content-Transfer-Encoding: 8bit
 
 Bonjour,
 
@@ -93,7 +94,7 @@ Content-Disposition: attachment; filename="20220531_CR_d_imagerie_medicale_CORSE
 ### Différences clés avec un MDN
 Contrairement à un MDN :
 
-  Ce courriel standard est non-automatisé et non structuré pour un traitement machine. L'entête `Disposition` avec le format `processed/Error: ...` est spécifique aux MDN et n'est pas standard dans un courriel classique.
+  Ce courriel standard est non-automatisé et non structuré pour un traitement machine. Les champs `Disposition:` et `Error:` du compte rendu exploitable par une machine sont spécifiques au [MDN](struct-msg-mdn.html) et n'ont pas d'équivalent dans un courriel classique.
   
   Le code erreur ne peut être véhiculé que :
 
