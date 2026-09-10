@@ -61,7 +61,7 @@ La [RFC 6522 §3](https://datatracker.ietf.org/doc/html/rfc6522#section-3) décr
 |---|---|---|---|
 | 1 | `text/plain` | Texte lisible par un être humain | requise |
 | 2 | `message/disposition-notification` | Compte rendu exploitable par une machine | requise |
-| 3 | `message/rfc822` | Courriel d'origine | optionnelle pour la RFC 6522, requise par le présent volet |
+| 3 | `message/rfc822` | Courriel d'origine : ses entêtes, son corps et ses pièces jointes | optionnelle pour la RFC 6522, requise par le présent volet |
 
 Ces trois parties répondent à trois besoins distincts : la première permet à un utilisateur de comprendre ce qui s'est passé, la deuxième permet à la PFI réceptrice de traiter la notification sans intervention humaine, et la troisième lui restitue le courriel d'origine, sans lequel elle ne pourrait ni identifier le document concerné ni le soumettre à nouveau après correction.
 
@@ -142,9 +142,9 @@ Ce champ permet de préciser :
 
 #### Troisième partie : courriel d'origine
 
-Cette partie contient le corps du courriel d'origine.
+Cette partie contient le courriel d'origine restitué **dans son intégralité** : ses entêtes, son corps et ses pièces jointes.
 
-Les pièces jointes envoyées avec le courriel d'origine (IHE_XDM.zip et le pdf) doivent être remises en pièces jointes du courriel MDN.
+Les pièces jointes envoyées avec le courriel d'origine (IHE_XDM.zip et le pdf) sont restituées au sein de cette partie, puisqu'elle porte le courriel d'origine complet. Elles n'y figurent qu'une seule fois : les reprendre en outre comme pièces jointes du MDN doublerait le volume du message sans apporter d'information supplémentaire, et placerait ces copies dans des parties dont la RFC 6522 ne spécifie pas le traitement.
 
 ### Exemple d'un MDN
 
@@ -181,21 +181,36 @@ Disposition:automatic-action/MDN-sent-automatically; processed/Error: 902^Identi
 --RAA14128.773615765
 Content-Type: message/rfc822
 
-Ici apparaît le contenu du courriel MSSanté à l’origine du MDN et ses pièces jointes.
+Date: Mon, 19 Feb 2024 23:01:00 +0100 (CET)
+From: serviceY@chb.mssante.fr
+To: serviceY_auto@chb.mssante.fr
+Message-ID: <20240219230100.23456@chb.mssante.fr>
+Subject: XDM/1.0/DDM+ECHOGRAPHIE ABDOMINOPELVIENNE CORSE FIGATELLIX 12/10/1988
+Disposition-Notification-To: serviceY@chb.mssante.fr
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="ZZZ09876.543210987"
 
---RAA14128.773615765
+--ZZZ09876.543210987
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+Ici apparaît le corps du courriel MSSanté à l'origine du MDN.
+
+--ZZZ09876.543210987
 Content-Type: application/zip; name="IHE_XDM.zip"
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="IHE_XDM.zip"
 
 Ici apparaît le fichier IHE_XDM.zip encodé en base64.
 
---RAA14128.773615765
+--ZZZ09876.543210987
 Content-Type: application/pdf; name="20220531_CR_d_imagerie_medicale_CORSE_FIGATELLIX.pdf"
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="20220531_CR_d_imagerie_medicale_CORSE_FIGATELLIX.pdf"
 
 Ici apparaît le fichier 20220531_CR_d_imagerie_medicale_CORSE_FIGATELLIX.pdf encodé en base64.
+
+--ZZZ09876.543210987--
 
 --RAA14128.773615765--
 ```
