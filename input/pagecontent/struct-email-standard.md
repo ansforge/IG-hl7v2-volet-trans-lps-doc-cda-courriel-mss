@@ -12,19 +12,17 @@ Ce courriel doit
 
 ### Contenu  du courriel
 
-Le courriel standard doit être composé de la façon suivante :
+Le courriel standart doit être composé de la façon suivante : 
 
 * Objet du message : il doit être précisé
-de la façon suivante afin de faciliter la lecture et le traitement de la notification : `[KO Intégration système !][code erreur] XDM/1.0/DDM+<libellé> <NOM> <prénom> <date de naissance>`.
+de la façon suivante afin de faciliter la lecture et le traitement de la notification : `[KO Intégration système !][code erreur] XDM/1.0/DDM+<libellé> <NOM> <prénom> <date de naissance>`.
 * Corps du message :
   * La première partie contient du texte lisible par un être humain. Dans le contexte du présent volet, ce texte doit au moins contenir, en cas d’erreur, le code et le libellé de l’erreur retournés par le CONSOMMATEUR.
   Par exemple : « Le message ci-dessous n’a pas pu être intégré automatiquement dans le DPI pour la raison suivante : <libellé de l’erreur> ».
-* Inclusion du message d'origine : une partie de type `message/rfc822` contient le courriel d’origine restitué **dans son intégralité** — ses entêtes, son corps et ses pièces jointes — afin que l'utilisateur dispose de tous les éléments nécessaires au traitement de l'erreur.
+* Inclusion du message d'origine : contient le corps du courriel d’origine.
 * Pièces jointes :
-  * Les pièces jointes envoyées avec le courriel d’origine (IHE_XDM.ZIP et le pdf) sont restituées au sein de cette partie `message/rfc822`.
+  * Les pièces jointes envoyées avec le courriel d’origine (IHE_XDM.ZIP et le pdf) doivent être remises en pièces jointes du courriel.
   * Le contenu est encodé en Base64 pour respecter le standard MIME.
-
-Ce courriel est un « multipart/mixed » : contrairement au « multipart/report » du [MDN](struct-msg-mdn.html), sa structure n'est pas contrainte par une RFC — le nombre et l'ordre des parties sont libres. Le courriel d'origine y est néanmoins restitué de la même façon que dans le MDN, au sein d'une unique partie `message/rfc822` portant le message complet, de sorte que les deux annexes décrivent le même traitement des pièces jointes.
 
 ### Format du courriel
 
@@ -36,74 +34,58 @@ Le courriel doit respecter la [RFC 5322 'Internet Message Format'](https://datat
 Exemple d'un courriel standard qui pourrait être envoyé comme notification manuelle. Le contenu est réorganisé pour être compréhensible par un humain, tout en respectant les principes des courriels standards avec des pièces jointes.
 Cet exemple illustre le cas d'usage [Transmission d'un document clinique d'un patient d'un établissement hospitalier vers un autre établissement hospitalier](volume1.html#description-du-cas-dusage-en-erreur)
 
-Cet exemple est fourni à titre **illustratif et n'a pas valeur normative** : les exigences du volet sont portées par les paragraphes qui précèdent. Les valeurs qu'il contient (adresses, identifiants, dates, frontières MIME) sont fictives.
-
-On notera que le courriel d'origine encapsulé ne porte pas d'entête `Disposition-Notification-To` : c'est précisément la raison pour laquelle la notification prend la forme d'un courriel standard et non d'un [MDN](struct-msg-mdn.html).
 
 ```
-Date: Tue, 20 Feb 2024 00:19:00 +0100 (CET)
+Date: Wed, 20 Feb 2024 00:19:00 -0400
 From: serviceY_auto@chb.mssante.fr
 To: serviceY@chb.mssante.fr
-Message-ID: <20240220001900.12345@chb.mssante.fr>
-Subject: [KO Intégration système !][902] XDM/1.0/DDM+ECHOGRAPHIE ABDOMINOPELVIENNE CORSE FIGATELLIX 12/10/1988
+Message-ID: <199509200019.12345@chb.mssante.fr>
+Subject: [Erreur d’intégration !][902] XDM/1.0/DDM+ECHOGRAPHIE ABDOMINOPELVIENNE CORSE FIGATELLIX 12/10/1988
 MIME-Version: 1.0
 Content-Type: multipart/mixed; boundary="boundary12345"
 
 --boundary12345
 Content-Type: text/plain; charset="UTF-8"
-Content-Transfer-Encoding: 8bit
+Content-Transfer-Encoding: 7bit
 
 Bonjour,
 
-Le document envoyé n'a pas pu être intégré correctement dans le système.
-Voici les détails de l'erreur rencontrée :
+Le document envoyé n’a pas pu être intégré correctement dans le système. 
+Voici les détails de l’erreur rencontrée :
 
 - Erreur détectée : Identifiant de patient inconnu
-- Code d'erreur : 902
+- Code d’erreur : 902
 
-Vous trouverez en pièce jointe le courriel d'origine, avec son contenu et
-ses fichiers (archive IHE_XDM.zip et compte rendu au format PDF).
 
-Veuillez vérifier les informations fournies et soumettre à nouveau les
-documents après correction. Si le problème persiste, contactez notre
-service technique.
+Vous trouverez en pièce jointe :
+1. Le message original contenant le document soumis.
+2. Les fichiers liés (archive ZIP et PDF associés au message original).
 
-Cordialement,
-L'équipe technique du service Y
+Veuillez vérifier les informations fournies et soumettre à nouveau les documents après correction. 
+Si le problème persiste, contactez notre service technique.
+
+Cordialement,  
+L’équipe technique du service Y  
 
 --boundary12345
 Content-Type: message/rfc822
 Content-Disposition: attachment; filename="message_original.eml"
 
-Date: Mon, 19 Feb 2024 23:01:00 +0100 (CET)
-From: serviceY@chb.mssante.fr
-To: serviceY_auto@chb.mssante.fr
-Message-ID: <20240219230100.23456@chb.mssante.fr>
-Subject: XDM/1.0/DDM+ECHOGRAPHIE ABDOMINOPELVIENNE CORSE FIGATELLIX 12/10/1988
-MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="ZZZ09876.543210987"
+<Insérer ici le contenu du courriel MSSanté à l’origine  et ses pièces jointes>
 
---ZZZ09876.543210987
-Content-Type: text/plain; charset="UTF-8"
-Content-Transfer-Encoding: 8bit
-
-Ici apparaît le corps du courriel MSSanté à l'origine de la notification.
-
---ZZZ09876.543210987
+--boundary12345
 Content-Type: application/zip; name="IHE_XDM.zip"
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="IHE_XDM.zip"
 
-Ici apparaît le fichier IHE_XDM.zip encodé en base64.
+<Ici apparaît le fichier IHE_XDM.zip encodé en base64>
 
---ZZZ09876.543210987
+--boundary12345
 Content-Type: application/pdf; name="20220531_CR_d_imagerie_medicale_CORSE_FIGATELLIX.pdf"
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="20220531_CR_d_imagerie_medicale_CORSE_FIGATELLIX.pdf"
 
-Ici apparaît le fichier 20220531_CR_d_imagerie_medicale_CORSE_FIGATELLIX.pdf encodé en base64.
-
---ZZZ09876.543210987--
+<Ici apparaît le fichier 20220531_CR_d_imagerie_medicale_CORSE_FIGATELLIX.pdf encodé en base64>
 
 --boundary12345--
 ```
