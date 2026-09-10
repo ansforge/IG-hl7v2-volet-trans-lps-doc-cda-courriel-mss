@@ -91,6 +91,8 @@ Dans le contexte de ce volet, de façon à permettre le traitement du MDN par la
 
 -   Le champ « `Original-Recipient:` » qui indique l'adresse du destinataire du courriel d'origine, telle que spécifiée par l'expéditeur du courriel pour lequel le MDN est émis. Cette valeur est obtenue à partir de l'entête `Original-Recipient` du courriel pour lequel le MDN est généré.
 
+Le champ « `Reporting-UA:` », qui identifie l'agent ayant produit le MDN, n'est pas obligatoire, mais la [RFC 8098 §3.2.1](https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.1) recommande (`SHOULD`) de le renseigner sauf configuration contraire. Dans le contexte de ce volet, il identifie la PFI qui a produit le MDN.
+
 ##### Valeurs attendues des champs d'adressage
 
 Le tableau ci-dessous précise les valeurs attendues dans le contexte MSSanté décrit par le présent volet : le courriel est réceptionné sur une BAL organisationnelle, puis transféré vers la BAL applicative associée, et le MDN est produit par la PFI pour le compte de cette BAL applicative.
@@ -170,6 +172,7 @@ Le système a retourné l'erreur 902^Identifiant de patient inconnu^messageError
 --RAA14128.773615765
 Content-Type: message/disposition-notification
 
+Reporting-UA: pfi.chb.mssante.fr; PFI de l'établissement-B
 Original-Recipient: rfc822;serviceY_auto@chb.mssante.fr
 Final-Recipient: rfc822;serviceY_auto@chb.mssante.fr
 Original-Message-ID: <20240219230100.23456@chb.mssante.fr>
