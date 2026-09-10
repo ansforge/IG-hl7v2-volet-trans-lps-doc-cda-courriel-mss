@@ -61,6 +61,7 @@ Cette partie contient du texte lisible par un être humain. Dans le contexte du 
 Cette partie est conforme au type de contenu message/disposition-notification constitué de différents champs d’entête formatés selon la [RFC 5322](https://datatracker.ietf.org/doc/html/rfc5322). Parmi ces champs, « `Disposition:` » et « `Final-Recipient:` » sont obligatoires :
 
 * Le champ « `Disposition:` » rend compte du résultat du traitement du courriel par le destinataire (voir le détail ci-dessous) :
+* Le champ « `Error:` » ([RFC 8098 §3.2.7](https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.7)) porte le texte de diagnostic associé au modificateur `error`. En cas d’erreur, il est obligatoire et reprend la chaîne d’erreur retournée par le CONSOMMATEUR dans le segment `ERR` de son accusé de réception, qui porte au minimum `code erreur^libellé erreur`.
 * Le champ « `Final-Recipient:` » qui correspond à l’adresse du destinataire pour lequel le MDN est émis. La valeur de ce champ peut être différente de l’adresse initialement fournie par l’émetteur du courriel, notamment en cas de transfert du courriel initial par le destinataire.
 
 Dans le contexte de ce volet, de façon à permettre le traitement du MDN par la PFI réceptrice, le MDN devra également préciser les champs suivants :
@@ -69,6 +70,12 @@ Dans le contexte de ce volet, de façon à permettre le traitement du MDN par la
 * Le champ « `Original-Recipient:` » qui indique l’adresse du destinataire du courriel d’origine, telle que spécifiée par l’expéditeur du courriel pour lequel le MDN est émis. Cette valeur est obtenue à partir de l’entête `Original-Recipient` du courriel pour lequel le MDN est généré.
 
 Le champ « `Reporting-UA:` », qui identifie l’agent ayant produit le MDN, n’est pas obligatoire, mais la [RFC 8098 §3.2.1](https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.1) recommande (`SHOULD`) de le renseigner sauf configuration contraire. Dans le contexte de ce volet, il identifie la PFI qui a produit le MDN.
+
+>  **Point d'attention :** les versions antérieures du présent volet plaçaient la chaîne d'erreur dans le modificateur du champ `Disposition:`, sous la forme « `processed/Error: code erreur^libellé erreur` ». Cette valeur n'est pas conforme à la grammaire de la [RFC 8098 §3.2.6](https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.6), qui n'admet après le `/` qu'un modificateur unique : le littéral `error`, ou un `extension-disposition-modifier` défini comme un `Atom` au sens de la [RFC 5322 §3.2.3](https://datatracker.ietf.org/doc/html/rfc5322#section-3.2.3) — jeton qui n'admet ni les espaces ni le caractère « : ». Le texte de diagnostic dispose, quant à lui, de son propre champ `Error:`. 
+
+ Cette valeur contredisait au demeurant la grammaire que ces mêmes versions rappelaient par ailleurs (`disposition-modifier = "error"`). La présente version corrige cette incohérence **sans rien changer à la chaîne d'erreur elle-même**, qui est seulement déplacée dans le champ prévu pour elle : ```Valeur prescrite par les versions antérieures : Disposition: automatic-action/MDN-sent-automatically; processed/Error: 902^Identifiant de patient inconnu^applicationErrorCondition| E^Error^errorSeverity Valeur prescrite par la présente version : Disposition: automatic-action/MDN-sent-automatically; processed/error Error: 902^Identifiant de patient inconnu^applicationErrorCondition| E^Error^errorSeverity``` **Conséquence pour les implémentations :** un système qui extrayait la chaîne d'erreur du champ `Disposition:` doit désormais la lire dans le champ `Error:`. En contrepartie, le MDN devient interprétable par un outillage MDN standard, qui ne pouvait pas analyser le modificateur de la forme précédente et n'en retenait que « `processed` ». 
+
+ La [RFC 8098](https://datatracker.ietf.org/doc/html/rfc8098) demeure la référence pour la structure du MDN ; le présent volet se limite à préciser les informations que le MDN doit véhiculer pour permettre son traitement automatisé. 
 
 ##### Valeurs attendues des champs d’adressage
 
@@ -125,7 +132,7 @@ Content-Type: text/plain; charset="UTF-8"
 Content-Transfer-Encoding: 8bit
 
 Le document n’a pas pu être intégré.
-Le système a retourné l'erreur 902^Identifiant de patient inconnu^messageErrorCondition| E^Error^errorSeverity
+Le système a retourné l'erreur 902^Identifiant de patient inconnu^applicationErrorCondition| E^Error^errorSeverity
 
 --RAA14128.773615765
 Content-Type: message/disposition-notification
@@ -134,7 +141,8 @@ Reporting-UA: pfi.chb.mssante.fr; PFI de l'établissement-B
 Original-Recipient: rfc822;serviceY_auto@chb.mssante.fr
 Final-Recipient: rfc822;serviceY_auto@chb.mssante.fr
 Original-Message-ID: <20240219230100.23456@chb.mssante.fr>
-Disposition:automatic-action/MDN-sent-automatically; processed/Error: 902^Identifiant de patient inconnu^messageErrorCondition| E^Error^errorSeverity
+Disposition: automatic-action/MDN-sent-automatically; processed/error
+Error: 902^Identifiant de patient inconnu^applicationErrorCondition| E^Error^errorSeverity
 
 --RAA14128.773615765
 Content-Type: message/rfc822

@@ -105,7 +105,7 @@ Ce document s’adresse aux développeurs des interfaces interopérables des sys
   "name" : "CISIS_CDA_HL7_LPS",
   "title" : "Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté",
   "status" : "draft",
-  "date" : "2026-09-10T16:16:24+00:00",
+  "date" : "2026-09-10T16:33:24+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
