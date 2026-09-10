@@ -27,6 +27,22 @@ automatiquement par le récepteur du courriel dans le cas où l'entête
 messages en boucle. Dans ce cas l'envoi du MDN nécessite une
 confirmation de l'utilisateur.
 
+### Éligibilité au mécanisme MDN
+
+Pour MSSanté, le MDN est prescrit par le [Référentiel socle MSSanté #2](https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2), qui en délègue la structure à la [RFC 8098](https://datatracker.ietf.org/doc/html/rfc8098) sans en définir d'autre :
+
+-   `ECO.2.3.2` : le client émetteur doit pouvoir demander un accusé de lecture ;
+
+-   `ECO.3.1.6` : le client destinataire doit retourner un MDN lorsque le message reçu le demande.
+
+Ce référentiel s'applique aux logiciels métier des professionnels habilités, pour des échanges manuels comme automatisés, mais « ne s'applique donc pas aux interfaces webmail ou clients de messageries standards (type Outlook ou Thunderbird) ».
+
+<blockquote class="stu-note">
+    <p>
+    <b>Point d'attention :</b> la production d'un MDN n'est donc pas garantie sur l'ensemble de la chaîne. Dans le cas d'usage décrit par ce volet, le courriel parvient à la BAL applicative après un transfert depuis la BAL organisationnelle du service destinataire. Si ce transfert est réalisé au moyen d'un webmail ou d'un client de messagerie standard — hors du périmètre de ce référentiel — rien ne garantit que l'entête <code>Disposition-Notification-To</code> soit positionné sur le courriel transféré. Or, sans cet entête, aucun MDN ne peut être émis en retour. C'est pour cette situation que le volet prévoit le <a href="struct-email-standard.html">courriel standard</a>.
+    </p>
+</blockquote>
+
 ### Objet du MDN
 
 Dans le cas d'un MDN en erreur, l'objet du MDN doit être précisé
