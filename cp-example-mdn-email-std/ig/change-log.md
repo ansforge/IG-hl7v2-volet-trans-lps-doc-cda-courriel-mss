@@ -13,6 +13,11 @@
 * [Structure du MDN](struct-msg-mdn.md) : 
 * corrections de références et de typographie : [RFC 5322](https://datatracker.ietf.org/doc/html/rfc5322) en remplacement de la RFC 2822 obsolète, lien malformé vers la RFC 8098, `Return-Path`, notation de l’ABNF du champ `Disposition:` (`sending-mode`, `disposition-type`), et noms d’entêtes et de champs en police à chasse fixe
 * correction du lien vers le cas d’usage illustré par l’exemple, qui renvoyait à la réception d’un compte rendu de biologie au lieu de la transmission d’un document clinique entre établissements
+* corrections de forme de l’exemple : entête `Date:` au format de la [RFC 5322](https://datatracker.ietf.org/doc/html/rfc5322#section-3.3) (zone horaire avant le commentaire, jour de la semaine exact), identifiants de message pourvus d’une partie domaine et débarrassés d’un espace parasite, lignes vides séparant les entêtes du contenu de chaque partie MIME, deux délimiteurs de partie écrits avec un tiret cadratin au lieu de deux traits d’union, `Content-Transfert-Encoding` corrigé en `Content-Transfer-Encoding`, jeu de caractères déclaré sur la première partie, repliement de l’entête `Content-Type` du message, et nom du fichier PDF sans espaces ni caractères accentués, qui auraient exigé l’encodage de la [RFC 2231](https://datatracker.ietf.org/doc/html/rfc2231)
+* mention du caractère illustratif et non normatif de l’exemple, et du caractère fictif des valeurs qu’il contient
+* mise en sections de la page — « Objet du MDN », « Structure du corps du MDN » avec une sous-section par partie du `multipart/report`, et « Exemple d’un MDN » — la « Note 1 » encadrée de filets devenant la sous-section « Détail du champ `Disposition:` » rattachée à la deuxième partie
+* correction des niveaux d’énumération, les champs `Disposition:`, `Final-Recipient:`, `Original-Message-ID:` et `Original-Recipient:` étant mêlés à l’énumération des trois parties du MDN au lieu de lui être subordonnés
+* suppression de la frontière MIME d’exemple (`boundary="RAA14128.773615765/example.com"`) donnée dans le texte normatif du champ `Content-Type` du MDN, une frontière étant choisie librement par l’émetteur pour chaque message
  
  
 
