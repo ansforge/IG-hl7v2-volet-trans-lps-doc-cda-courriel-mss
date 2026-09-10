@@ -429,7 +429,16 @@ CONSOMMATEUR.</p>
 
 <blockquote class="stu-note">
     <p>
-    <b>Point d'attention :</b> la valeur « <code>processed/Error: code erreur^libellé erreur</code> » du champ <code>Disposition:</code> n'est pas conforme à la grammaire de la <a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.6">RFC 8098 §3.2.6</a> : un <code>disposition-modifier</code> y est défini comme un <code>Atom</code> au sens de la <a href="https://datatracker.ietf.org/doc/html/rfc5322#section-3.2.3">RFC 5322 §3.2.3</a>, lequel n'admet ni le caractère « : » ni les espaces. Le code erreur porté par cette valeur n'est donc pas exploitable par un outillage MDN standard, qui ne retiendra que « <code>processed</code> ».
+    <b>Point d'attention :</b> la grammaire du champ <code>Disposition:</code> (<a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.6">RFC 8098 §3.2.6</a>) n'admet, après le <code>/</code>, qu'un modificateur unique : le littéral <code>error</code>, ou un <code>extension-disposition-modifier</code> défini comme un <code>Atom</code> au sens de la <a href="https://datatracker.ietf.org/doc/html/rfc5322#section-3.2.3">RFC 5322 §3.2.3</a> — jeton qui n'admet ni le caractère « : » ni les espaces. Le texte de diagnostic dispose, quant à lui, de son propre champ <code>Error:</code>. La forme retenue par le volet place donc dans le modificateur ce que la RFC répartit sur deux champs :
+    </p>
+    <pre>Forme retenue par le volet :
+Disposition: automatic-action/MDN-sent-automatically; processed/Error: 902^Identifiant de patient inconnu
+
+Forme conforme à la grammaire de la RFC 8098 :
+Disposition: automatic-action/MDN-sent-automatically; processed/error
+Error: 902^Identifiant de patient inconnu</pre>
+    <p>
+    Un outillage MDN standard ne peut pas interpréter le modificateur de la première forme : il ne retiendra que « <code>processed</code> » et le code erreur sera perdu.
     <br /><br />
     Cette forme, historiquement retenue par le volet, est conservée. Le champ <code>Error:</code> permet aux CONSOMMATEURS s'appuyant sur un outillage MDN standard d'accéder à la même information.
     <br /><br />
@@ -661,7 +670,7 @@ Ici apparaît le fichier 20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf e
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 10, 2026 14:29+0000">2026-09-10</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 10, 2026 14:40+0000">2026-09-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
