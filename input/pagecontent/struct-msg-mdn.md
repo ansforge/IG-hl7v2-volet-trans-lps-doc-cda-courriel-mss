@@ -37,6 +37,8 @@ Pour MSSanté, le MDN est prescrit par le [Référentiel socle MSSanté #2](http
 
 Ce référentiel s'applique aux logiciels métier des professionnels habilités, pour des échanges manuels comme automatisés, mais « ne s'applique donc pas aux interfaces webmail ou clients de messageries standards (type Outlook ou Thunderbird) ».
 
+Le référentiel précise l'usage attendu du mécanisme : il « permet de savoir que le message a bien été reçu par le destinataire et quel traitement il a effectué lors de la réception du message : lecture, intégration des pièces jointes dans le système cible ». L'emploi que le présent volet en fait — rendre compte de l'intégration du document dans le DPI — relève donc de ce que le socle prévoit.
+
 <blockquote class="stu-note">
     <p>
     <b>Point d'attention :</b> la production d'un MDN n'est donc pas garantie sur l'ensemble de la chaîne. Dans le cas d'usage décrit par ce volet, le courriel parvient à la BAL applicative après un transfert depuis la BAL organisationnelle du service destinataire. Si ce transfert est réalisé au moyen d'un webmail ou d'un client de messagerie standard — hors du périmètre de ce référentiel — rien ne garantit que l'entête <code>Disposition-Notification-To</code> soit positionné sur le courriel transféré. Or, sans cet entête, aucun MDN ne peut être émis en retour. C'est pour cette situation que le volet prévoit le <a href="struct-email-standard.html">courriel standard</a>.
@@ -145,6 +147,10 @@ Ce champ permet de préciser :
 Cette partie contient le courriel d'origine restitué **dans son intégralité** : ses entêtes, son corps et ses pièces jointes.
 
 Les pièces jointes envoyées avec le courriel d'origine (IHE_XDM.zip et le pdf) sont restituées au sein de cette partie, puisqu'elle porte le courriel d'origine complet. Elles n'y figurent qu'une seule fois : les reprendre en outre comme pièces jointes du MDN doublerait le volume du message sans apporter d'information supplémentaire, et placerait ces copies dans des parties dont la RFC 6522 ne spécifie pas le traitement.
+
+Cet emplacement ne contrevient pas au [Référentiel socle MSSanté #2](https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2) : son exigence `ECO.2.1.1` — un courriel transmettant des documents de santé doit contenir « en pièces jointes du courriel » une archive `IHE_XDM.zip` et les mêmes documents médicaux au format PDF/A-1 — porte sur le courriel MSSanté qui transmet les documents, et non sur la notification qui en rend compte. La troisième partie restituant ce courriel tel quel, ses pièces jointes demeurent à l'emplacement que le référentiel prescrit.
+
+Le socle veut par ailleurs que le destinataire d'un tel courriel puisse prendre connaissance des documents « sans avoir besoin d'un LPS (cas d'un webmail ou d'une application mobile) grâce au(x) fichier(s) PDF ». Dans le cas d'usage décrit par ce volet, le MDN est retourné à la BAL organisationnelle qui a elle-même transféré le courriel d'origine vers la BAL applicative : son titulaire dispose donc déjà de ce courriel et de ses pièces jointes. La troisième partie du MDN sert la traçabilité et la reprise du traitement, non la première lecture des documents.
 
 ### Exemple d'un MDN
 
