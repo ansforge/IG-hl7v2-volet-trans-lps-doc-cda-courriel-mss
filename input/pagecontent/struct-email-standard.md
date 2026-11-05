@@ -21,7 +21,7 @@ de la façon suivante afin de faciliter la lecture et le traitement de la notifi
   Par exemple : « Le message ci-dessous n’a pas pu être intégré automatiquement dans le DPI pour la raison suivante : <libellé de l’erreur> ».
 * Restitution du courriel d'origine : une partie de type `message/rfc822` contient le courriel d’origine restitué **dans son intégralité** — ses entêtes, son corps et ses pièces jointes. **Aucun élément ne doit être perdu**, afin que le destinataire de la notification dispose de tous les éléments nécessaires au retraitement sans avoir à retrouver le courriel d’origine par un autre moyen.
 * Pièces jointes :
-  * Les pièces jointes envoyées avec le courriel d’origine (IHE_XDM.ZIP et le pdf) sont restituées au sein de cette partie, puisqu’elle porte le courriel d’origine complet. Elles n’y figurent qu’une seule fois : les reprendre en outre comme pièces jointes de la notification doublerait le volume du courriel sans apporter d’information supplémentaire.
+  * Les pièces jointes envoyées avec le courriel d’origine (IHE_XDM.ZIP et le pdf) sont restituées au sein de cette partie, puisqu’elle porte le courriel d’origine complet. Il n’est pas nécessaire de les reprendre en outre comme pièces jointes de la notification : cela doublerait le volume du courriel sans apporter d’information supplémentaire.
   * Le contenu est encodé en Base64 pour respecter le standard MIME.
 
 <blockquote class="stu-note">
