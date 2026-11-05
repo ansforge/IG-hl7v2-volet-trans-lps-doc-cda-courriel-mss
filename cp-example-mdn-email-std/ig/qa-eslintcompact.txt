@@ -2,7 +2,7 @@ CISIS_CDA_HL7_LPS
 =========================================
 
 Generic: line 0, col 0, Warning - The html source is not well formed: Found "</span>" expecting "</p>" at line 292 column 18 (STRUCTURE)
-Generic: line 0, col 0, Warning - The html source is not well formed: Found "</span>" expecting "</p>" at line 942 column 18 (STRUCTURE)
+Generic: line 0, col 0, Warning - The html source is not well formed: Found "</span>" expecting "</p>" at line 943 column 18 (STRUCTURE)
 Generic: line 0, col 0, Error - The link 'volume2.html#document-masqué-aux-professionnels-de-santé' for "Document Masqué aux professionnels de Santé" cannot be resolved (valid targets: 59 targets) (NOTFOUND)
 Generic: line 0, col 0, Warning - The html source is not well formed: Found "</span>" expecting "</p>" at line 315 column 18 (STRUCTURE)
 Generic: line 0, col 0, Warning - The html source is not well formed: Found "</span>" expecting "</p>" at line 311 column 18 (STRUCTURE)
@@ -26,7 +26,7 @@ Generic: line 0, col 0, Warning - The html source is not well formed: Found "</d
 Generic: line 0, col 0, Warning - The html source is not well formed: Found "</a>" expecting "</img>" at line 172 column 22 (STRUCTURE)
 Generic: line 0, col 0, Warning - The html source is not well formed: Found "</a>" expecting "</img>" at line 179 column 22 (STRUCTURE)
 Generic: line 0, col 0, Warning - The <script> containing the javascript '$( document ).ready('... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (INVALID)
-Generic: line 0, col 0, Warning - The html source is not well formed: Found "</span>" expecting "</p>" at line 443 column 18 (STRUCTURE)
+Generic: line 0, col 0, Warning - The html source is not well formed: Found "</span>" expecting "</p>" at line 437 column 18 (STRUCTURE)
 Generic: line 0, col 0, Warning - The html source is not well formed: Found "</span>" expecting "</p>" at line 541 column 18 (STRUCTURE)
 Generic: line 0, col 0, Warning - The html source is not well formed: Found "</span>" expecting "</p>" at line 385 column 18 (STRUCTURE)
 Generic: line 0, col 0, Error - The page skips a heading level: <h5> 'Niveau 1 (N1)' (id=niveau-1-n1) follows <h3> 'Les niveaux des scénarios gazelle' (id=les-niveaux-des-scénarios-gazelle), so it should be <h4>. Heading levels must not skip a level going down (WCAG compliance test) (STRUCTURE)

@@ -7,7 +7,7 @@
 
 ### Contexte
 
-Dans le cas où un MDN (Message Disposition Notification) n’a pas été explicitement demandé par le destinataire (via l’entête `Disposition-Notification-To` dans le message d’origine), il n’est pas possible d’envoyer un MDN tel que défini par la [RFC 8098](https://datatracker.ietf.org/doc/html/rfc8098), car il suppose qu’un accusé de réception ou une notification d’état a été requis.
+Un MDN (Message Disposition Notification) ne peut être émis que si le courriel reçu porte un entête `Disposition-Notification-To`, positionné par son expéditeur ([RFC 8098 §2.1](https://datatracker.ietf.org/doc/html/rfc8098#section-2.1)). En l’absence de cet entête, aucun MDN ne peut être retourné.
 
 Le MDN ne peut pas être utilisé pour rediriger et traiter l’ensemble des erreurs. Dans ce cas, pour retourner une notification similaire à celle d’un MDN, il faut utiliser un courriel “standard” avec une structure et un contenu adaptés.
 
@@ -23,19 +23,14 @@ Le courriel standard doit être composé de la façon suivante :
 
 * Objet du message : il doit être précisé de la façon suivante afin de faciliter la lecture et le traitement de la notification : `[KO Intégration système !][code erreur] XDM/1.0/DDM+<libellé> <NOM> <prénom> <date de naissance>`.
 * Corps du message : 
-* La première partie contient du texte lisible par un être humain. Dans le contexte du présent volet, ce texte doit au moins contenir, en cas d’erreur, le code et le libellé de l’erreur retournés par le CONSOMMATEUR. Par exemple : « Le message ci-dessous n’a pas pu être intégré automatiquement dans le DPI pour la raison suivante : <libellé de l’erreur> ».
+* La première partie contient du texte lisible par un être humain. Dans le contexte du présent volet, ce texte doit au moins contenir, en cas d’erreur, le code et le libellé de l’erreur retournés par le CONSOMMATEUR. Par exemple : « Le message ci-dessous n’a pas pu être intégré automatiquement dans le DPI pour la raison suivante : ` <libellé de l’erreur> ».`
  
 * Restitution du courriel d’origine : une partie de type `message/rfc822` contient le courriel d’origine restitué **dans son intégralité** — ses entêtes, son corps et ses pièces jointes. **Aucun élément ne doit être perdu**, afin que le destinataire de la notification dispose de tous les éléments nécessaires au retraitement sans avoir à retrouver le courriel d’origine par un autre moyen.
 * Pièces jointes : 
 * Les pièces jointes envoyées avec le courriel d’origine (IHE_XDM.ZIP et le pdf) sont restituées au sein de cette partie, puisqu’elle porte le courriel d’origine complet. Il n’est pas nécessaire de les reprendre en outre comme pièces jointes de la notification : cela doublerait le volume du courriel sans apporter d’information supplémentaire.
-* Le contenu est encodé en Base64 pour respecter le standard MIME.
  
 
 >  **Point d'attention :** le courriel d'origine étant restitué dans une partie `message/rfc822`, l'accès aux documents qu'il contient suppose de l'ouvrir. Le traitement de ce type de partie varie selon les clients de messagerie : certains l'affichent et donnent accès à ses pièces jointes en une manipulation, d'autres ne proposent que le téléchargement d'un fichier `.eml`, à ouvrir avec un autre outil. Cette annexe couvrant précisément les situations où la notification est reçue au moyen d'un webmail ou d'un client de messagerie standard, hors du périmètre du [Référentiel socle MSSanté #2](https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2), ce point mérite d'être vérifié à l'intégration. 
-
-### Format du courriel
-
-Le courriel doit respecter la [RFC 5322 ‘Internet Message Format’](https://datatracker.ietf.org/doc/html/rfc5322)
 
 ### Exemple de courriel
 
@@ -65,7 +60,7 @@ Bonjour,
 Le document envoyé n’a pas pu être intégré correctement dans le système.
 Voici les détails de l’erreur rencontrée :
 
-- Erreur détectée : Identifiant de patient inconnu
+- Erreur détectée : Identifiant patient inconnu
 - Code d’erreur : 902
 
 Vous trouverez en pièce jointe le courriel d'origine, avec son contenu et

@@ -57,7 +57,7 @@ Sur la figure suivante, seule la partie basse de la figure précédente est repr
 
 Le diagramme serait identique dans le cas d’une demande de remplacement ou de suppression du compte rendu.
 
->  Dans le cas où un MDN (Message Disposition Notification) n'a pas été explicitement demandé par le destinataire (via l'entête `Disposition-Notification-To` dans le message d'origine), et que, pour pouvoir gérer toutes les erreurs, on souhaite utiliser une BAL dédiée, un courriel 'standard' peut être utlisé. La structure du courriel est précisée [ici](struct-email-standard.md). 
+>  Dans le cas où un MDN (Message Disposition Notification) n'a pas été explicitement demandé par l'expéditeur (via l'entête `Disposition-Notification-To` dans le message d'origine), et que, pour pouvoir gérer toutes les erreurs, on souhaite utiliser une BAL dédiée, un courriel 'standard' peut être utlisé. La structure du courriel est précisée [ici](struct-email-standard.md). 
 
 **Figure 3 bis: Réception d’un CR de biologie médicale - Gestion des erreurs vers une BAL dédiée**
 
@@ -108,7 +108,7 @@ La Figure 5 illustre la gestion des erreurs par l’établissement destinataire 
 
 Le diagramme serait identique dans le cas d’une demande de remplacement ou de suppression du compte rendu.
 
->  Dans le cas où un MDN (Message Disposition Notification) n'a pas été explicitement demandé par le destinataire (via l'entête `Disposition-Notification-To` dans le message d'origine), et que, pour pouvoir gérer toutes les erreurs, on souhaite utiliser une BAL dédiée, un courriel 'standard' peut être utlisé. La structure du courriel est précisée [ici](struct-email-standard.md). 
+>  Dans le cas où un MDN (Message Disposition Notification) n'a pas été explicitement demandé par l'expéditeur (via l'entête `Disposition-Notification-To` dans le message d'origine), et que, pour pouvoir gérer toutes les erreurs, on souhaite utiliser une BAL dédiée, un courriel 'standard' peut être utlisé. La structure du courriel est précisée [ici](struct-email-standard.md). 
 
 **Figure 5 bis: Transmission d’un document clinique d’un patient d’un CH vers un autre CH - Gestion des erreurs vers une BAL dédiée**
 
