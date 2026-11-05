@@ -1,3 +1,18 @@
+### version 1.1.3
+
+* Revue des annexes MDN et courriel standard ([35](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/35))
+  * [Structure du MDN](struct-msg-mdn.html) :
+    * mise en conformité du champ `Disposition:` avec la [RFC 8098](https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.6) : en cas d'erreur, la valeur devient `processed/error` et la chaîne d'erreur, inchangée, est portée par le champ `Error:`, obligatoire en cas d'erreur — **un système qui lisait la chaîne d'erreur dans le champ `Disposition:` doit désormais la lire dans le champ `Error:`** ; ce champ n'admettant que des caractères US-ASCII, le libellé y est écrit sans accents, ce qui concerne les codes 901, 903 et 904
+    * pièces jointes du courriel d'origine restituées a minima dans la troisième partie `message/rfc822`, qui porte le courriel d'origine dans son intégralité — **elles doivent désormais y figurer, et un système qui les lisait au premier niveau du MDN doit les lire dans cette partie**
+    * mise en sections de la page, précisions sur le rôle des trois parties du MDN, les champs d'adressage, le champ `Reporting-UA:` et l'éligibilité au mécanisme MDN, ajout d'un point d'attention sur l'affichage du MDN selon le client de messagerie
+    * allègement des passages reprenant le contenu des RFC 8098 et 6522, remplacés par des renvois à leurs sections, dont la « Note 1 » détaillant le champ `Disposition:` ; le champ `Original-Recipient:` est renseigné selon la [RFC 8098 §3.2.3](https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.3), qui ne l'admet que si le courriel d'origine porte l'entête correspondant
+    * corrections de références et de typographie, correction et complétion de l'exemple
+  * [Structure d'un message de notification format courriel standard](struct-email-standard.html) :
+    * pièces jointes du courriel d'origine restituées a minima dans la partie `message/rfc822`, qui porte le courriel d'origine dans son intégralité — **elles doivent désormais y figurer, et un système qui les lisait au premier niveau de la notification doit les lire dans cette partie**
+    * ajout d'un point d'attention sur l'accès aux documents selon le client de messagerie
+    * allègement des passages reprenant le contenu des RFC, remplacés par des renvois ; correction du rôle de l'entête `Disposition-Notification-To`, positionné par l'expéditeur du courriel et non par son destinataire, également corrigé dans les deux notes des [cas d'usage](volume1.html#cas-dusage) renvoyant au courriel standard
+    * corrections de références et de typographie, correction et complétion de l'exemple
+
 ### version 1.1.2
 
 **Version mineure sans impact sur le développement (corrections de typo, précisions ou ajout d'informations)**
