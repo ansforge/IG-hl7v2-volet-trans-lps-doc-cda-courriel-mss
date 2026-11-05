@@ -10,6 +10,7 @@
   * [Structure d'un message de notification format courriel standard](struct-email-standard.html) :
     * pièces jointes du courriel d'origine restituées a minima dans la partie `message/rfc822`, qui porte le courriel d'origine dans son intégralité — **elles doivent désormais y figurer, et un système qui les lisait au premier niveau de la notification doit les lire dans cette partie**
     * ajout d'un point d'attention sur l'accès aux documents selon le client de messagerie
+    * allègement des passages reprenant le contenu des RFC, remplacés par des renvois ; correction du rôle de l'entête `Disposition-Notification-To`, positionné par l'expéditeur du courriel et non par son destinataire, également corrigé dans les deux notes des [cas d'usage](volume1.html#cas-dusage) renvoyant au courriel standard
     * corrections de références et de typographie, correction et complétion de l'exemple
 
 ### version 1.1.2
