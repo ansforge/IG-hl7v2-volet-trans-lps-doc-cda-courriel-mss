@@ -62,7 +62,7 @@ Cette partie, de type `message/disposition-notification`, est construite conform
 
     -   En cas d'erreur : « `Disposition: automatic-action/MDN-sent-automatically; processed/error` »
 
--   Le champ « `Error:` » ([RFC 8098 §3.2.7](https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.7)) est obligatoire en cas d'erreur. Il reprend la chaîne d'erreur retournée par le CONSOMMATEUR dans le segment `ERR` de son accusé de réception, qui porte au minimum `code erreur^libellé erreur`.
+-   Le champ « `Error:` » ([RFC 8098 §3.2.7](https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.7)) est obligatoire en cas d'erreur. Il reprend la chaîne d'erreur retournée par le CONSOMMATEUR dans le segment `ERR` de son accusé de réception, qui porte au minimum `code erreur^libellé erreur`. Ce champ n'admettant que des caractères US-ASCII ([RFC 8098 §3.2.7](https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.7)), le libellé y est écrit sans accents (par exemple « `Auteur non autorise a remplacer ou supprimer un document` » pour le code 901) ; le libellé exact figure dans la première partie.
 
 -   Le champ « `Original-Message-ID:` » ([RFC 8098 §3.2.5](https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.5)) est obligatoire : il permet à la PFI réceptrice de rapprocher le MDN du courriel d'origine.
 
