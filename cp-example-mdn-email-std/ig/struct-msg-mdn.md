@@ -50,6 +50,8 @@ Ces trois parties répondent à trois besoins distincts : la première permet à
 
 La RFC 6522 ne traite pas le cas de parties supplémentaires : elle ne les interdit pas, mais le traitement qu’un outillage MDN leur appliquerait n’est pas spécifié.
 
+>  **Point d'attention :** un MDN ne s'affiche pas de la même façon selon le client de messagerie qui le reçoit. Le texte de la première partie est affiché par la plupart des clients. En revanche, la deuxième et la troisième partie peuvent être présentées comme des fichiers joints, voire masquées, et le courriel d'origine peut n'être proposé qu'au téléchargement, sous la forme d'un fichier `.eml`. Une personne chargée de reprendre l'erreur peut donc ne voir d'emblée que la première partie, et devoir ouvrir le courriel d'origine pour accéder aux documents. C'est pourquoi la première partie doit au moins contenir le code et le libellé de l'erreur. Ce point mérite d'être vérifié à l'intégration. 
+
 #### Première partie : texte lisible par un être humain
 
 Cette partie contient du texte lisible par un être humain. Dans le contexte du présent volet, ce texte doit au moins contenir, en cas d’erreur, le code et le libellé de l’erreur retournés par le CONSOMMATEUR.
@@ -103,7 +105,7 @@ Cette partie contient le courriel d’origine restitué **dans son intégralité
 
 En cas d’erreur, l’objectif est que le destinataire du MDN dispose de tous les éléments nécessaires au retraitement sans avoir à retrouver le courriel d’origine par un autre moyen : identifier le document et l’usager concernés, corriger ce qui a fait échouer l’intégration, et soumettre à nouveau les documents. Le courriel d’origine étant restitué comme objet, il reste réinjectable tel quel dans une chaîne de traitement.
 
-Les pièces jointes envoyées avec le courriel d’origine (IHE_XDM.zip et le pdf) sont restituées au sein de cette partie, puisqu’elle porte le courriel d’origine complet. Elles n’y figurent qu’une seule fois : les reprendre en outre comme pièces jointes du MDN doublerait le volume du message sans apporter d’information supplémentaire, et placerait ces copies dans des parties dont la RFC 6522 ne spécifie pas le traitement.
+Les pièces jointes envoyées avec le courriel d’origine (IHE_XDM.zip et le pdf) sont restituées au sein de cette partie, puisqu’elle porte le courriel d’origine complet. Il n’est pas nécessaire de les reprendre en outre comme pièces jointes du MDN : cela doublerait le volume du message sans apporter d’information supplémentaire, et placerait ces copies dans des parties dont la RFC 6522 ne spécifie pas le traitement.
 
 Cet emplacement ne contrevient pas au [Référentiel socle MSSanté #2](https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2) : son exigence `ECO.2.1.1` — un courriel transmettant des documents de santé doit contenir « en pièces jointes du courriel » une archive `IHE_XDM.zip` et les mêmes documents médicaux au format PDF/A-1 — porte sur le courriel MSSanté qui transmet les documents, et non sur la notification qui en rend compte. La troisième partie restituant ce courriel tel quel, ses pièces jointes demeurent à l’emplacement que le référentiel prescrit.
 
