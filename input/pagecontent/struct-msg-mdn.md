@@ -69,6 +69,12 @@ Ces trois parties répondent à trois besoins distincts : la première permet à
 
 La RFC 6522 ne traite pas le cas de parties supplémentaires : elle ne les interdit pas, mais le traitement qu'un outillage MDN leur appliquerait n'est pas spécifié.
 
+<blockquote class="stu-note">
+    <p>
+    <b>Point d'attention :</b> un MDN ne s'affiche pas de la même façon selon le client de messagerie qui le reçoit. Le texte de la première partie est affiché par la plupart des clients. En revanche, la deuxième et la troisième partie peuvent être présentées comme des fichiers joints, voire masquées, et le courriel d'origine peut n'être proposé qu'au téléchargement, sous la forme d'un fichier <code>.eml</code>. Une personne chargée de reprendre l'erreur peut donc ne voir d'emblée que la première partie, et devoir ouvrir le courriel d'origine pour accéder aux documents. C'est pourquoi la première partie doit au moins contenir le code et le libellé de l'erreur. Ce point mérite d'être vérifié à l'intégration.
+    </p>
+</blockquote>
+
 #### Première partie : texte lisible par un être humain
 
 Cette partie contient du texte lisible par un être humain. Dans le contexte du présent volet, ce texte doit au moins contenir, en cas d'erreur, le code et le libellé de l'erreur retournés par le CONSOMMATEUR.
