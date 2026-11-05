@@ -1,20 +1,56 @@
 CISIS_CDA_HL7_LPS : Validation Results
 =========================================
 
-err = 2, warn = 5, info = 1
+err = 4, warn = 34, info = 1, broken links = 1
 $--
 Generated $--. FHIR version $-- for ans.hl7v2.fr.trans-cda-mss#$-- (canonical = https://interop.esante.gouv.fr/ig/hl7v2/trans-cda-mss)
- Build Errors : 1 / 5 / 0
+ Build Errors : 3 / 34 / 0
  /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/fsh-generated/resources/ImplementationGuide-ans.hl7v2.fr.trans-cda-mss : 2 / 0 / 2
 </table>
+
 == n/a ==
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/artifacts.html: The html source is not well formed: Found "</span>" expecting "</p>" at line 292 column 18
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/change-log.html: The html source is not well formed: Found "</span>" expecting "</p>" at line 968 column 18
 ERROR: change-log.html#/html/body/div/div/div/div/div/ul/li/ul/li/a at Line 347, column 12: The link 'volume2.html#document-masqué-aux-professionnels-de-santé' for "Document Masqué aux professionnels de Santé" cannot be resolved (valid targets: 59 targets)
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/doc-ref.html: The html source is not well formed: Found "</span>" expecting "</p>" at line 315 column 18
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/download.html: The html source is not well formed: Found "</span>" expecting "</p>" at line 311 column 18
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/error-codes.html: The html source is not well formed: Found "</span>" expecting "</p>" at line 543 column 18
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/exemples.html: The html source is not well formed: Found "</span>" expecting "</p>" at line 300 column 18
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/glossaire.html: The html source is not well formed: Found "</span>" expecting "</p>" at line 398 column 18
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/index.html: The html source is not well formed: Found "</span>" expecting "</p>" at line 532 column 18
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/lien-entete-cda-meta-xds.html: The html source is not well formed: Found "</span>" expecting "</p>" at line 306 column 18
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/meta-dmp-mss.html: The html source is not well formed: Found "</span>" expecting "</p>" at line 447 column 18
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/searchform.html: The html source is not well formed: Found "</a>" expecting "</img>" at line 47 column 162
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/searchform.html: The html source is not well formed: Found "</a>" expecting "</img>" at line 50 column 140
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/searchform.html: The html source is not well formed: Found "</span>" expecting "</img>" at line 60 column 19
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/searchform.html: The html source is not well formed: Found "</p>" expecting "</img>" at line 61 column 14
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/searchform.html: The html source is not well formed: Found "</div>" expecting "</body>" at line 102 column 10
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/searchform.html: The html source is not well formed: Found "</div>" expecting "</body>" at line 103 column 9
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/searchform.html: The html source is not well formed: Found "</div>" expecting "</body>" at line 135 column 8
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/searchform.html: The html source is not well formed: Found "</div>" expecting "</body>" at line 137 column 12
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/searchform.html: The html source is not well formed: Found "</div>" expecting "</body>" at line 138 column 20
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/searchform.html: The html source is not well formed: Found "</div>" expecting "</body>" at line 139 column 16
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/searchform.html: The html source is not well formed: Found "</div>" expecting "</body>" at line 141 column 12
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/searchform.html: The html source is not well formed: Found "</a>" expecting "</img>" at line 172 column 22
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/searchform.html: The html source is not well formed: Found "</a>" expecting "</img>" at line 179 column 22
 WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/searchform.html#/html/body/script at Line 255, column 7: The <script> containing the javascript '$( document ).ready('... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/struct-email-standard.html: The html source is not well formed: Found "</span>" expecting "</p>" at line 443 column 18
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/struct-msg-mdn.html: The html source is not well formed: Found "</span>" expecting "</p>" at line 672 column 18
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/testplan.html: The html source is not well formed: Found "</span>" expecting "</p>" at line 385 column 18
+ERROR: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/testplan.html: The page skips a heading level: <h5> 'Niveau 1 (N1)' (id=niveau-1-n1) follows <h3> 'Les niveaux des scénarios gazelle' (id=les-niveaux-des-scénarios-gazelle), so it should be <h4>. Heading levels must not skip a level going down (WCAG compliance test)
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/toc.html: The html source is not well formed: Found "</span>" expecting "</p>" at line 280 column 18
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/volume1.html: The html source is not well formed: Found "</span>" expecting "</p>" at line 854 column 18
+ERROR: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/volume1.html: The page skips a heading level: <h5> 'Les groupes de processus' (id=les-groupes-de-processus) follows <h3> 'Organisation du contexte métier' (id=organisation-du-contexte-métier), so it should be <h4>. Heading levels must not skip a level going down (WCAG compliance test)
+WARNING: /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/output/volume2.html: The html source is not well formed: Found "</span>" expecting "</p>" at line 3598 column 18
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+
+
 == fsh-generated/resources/ImplementationGuide-ans.hl7v2.fr.trans-cda-mss.json ==
 ERROR: ImplementationGuide/ans.hl7v2.fr.trans-cda-mss: ImplementationGuide.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. Valid display is 'France (la)' (fr) (for the language(s) 'fr-FR')
 ERROR: ImplementationGuide/ans.hl7v2.fr.trans-cda-mss: ImplementationGuide.definition: ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1)
-INFORMATION: Resource: The resource ImplementationGuide/ans.hl7v2.fr.trans-cda-mss could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+INFORMATION: Resource: The resource ImplementationGuide/ans.hl7v2.fr.trans-cda-mss could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
