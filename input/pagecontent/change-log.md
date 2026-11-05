@@ -1,7 +1,5 @@
 ### version 1.1.3
 
-**Version mineure sans impact sur le développement (corrections de typo, précisions ou ajout d'informations)**
-
 * Revue des annexes MDN et courriel standard ([35](https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/issues/35))
   * [Structure du MDN](struct-msg-mdn.html) :
     * mise en conformité du champ `Disposition:` avec la [RFC 8098](https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.6) : en cas d'erreur, la valeur devient `processed/error` et la chaîne d'erreur, inchangée, est portée par le champ `Error:`, obligatoire en cas d'erreur — **un système qui lisait la chaîne d'erreur dans le champ `Disposition:` doit désormais la lire dans le champ `Error:`**
