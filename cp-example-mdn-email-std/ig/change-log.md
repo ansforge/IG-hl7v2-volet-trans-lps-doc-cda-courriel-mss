@@ -12,6 +12,7 @@
 * mise en conformité du champ `Disposition:` avec la [RFC 8098](https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.6) : en cas d’erreur, la valeur devient `processed/error` et la chaîne d’erreur, inchangée, est portée par le champ `Error:`, obligatoire en cas d’erreur — **un système qui lisait la chaîne d’erreur dans le champ `Disposition:` doit désormais la lire dans le champ `Error:`**
 * pièces jointes du courriel d’origine restituées a minima dans la troisième partie `message/rfc822`, qui porte le courriel d’origine dans son intégralité — **elles doivent désormais y figurer, et un système qui les lisait au premier niveau du MDN doit les lire dans cette partie**
 * mise en sections de la page, précisions sur le rôle des trois parties du MDN, les champs d’adressage, le champ `Reporting-UA:` et l’éligibilité au mécanisme MDN, ajout d’un point d’attention sur l’affichage du MDN selon le client de messagerie
+* allègement des passages reprenant le contenu des RFC 8098 et 6522, remplacés par des renvois à leurs sections, dont la « Note 1 » détaillant le champ `Disposition:` ; le champ `Original-Recipient:` est renseigné selon la [RFC 8098 §3.2.3](https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.3), qui ne l’admet que si le courriel d’origine porte l’entête correspondant
 * corrections de références et de typographie, correction et complétion de l’exemple
  
 * [Structure d’un message de notification format courriel standard](struct-email-standard.md) : 

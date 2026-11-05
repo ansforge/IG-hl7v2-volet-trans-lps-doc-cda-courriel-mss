@@ -252,40 +252,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p>La <a href="https://datatracker.ietf.org/doc/html/rfc8098">RFC 8098</a> définit le type de contenu
-« message/disposition-notification » propre au MDN (Message
-Disposition Notification). Ce MDN est utilisé pour notifier
-l’émetteur d’un courriel de tout traitement qui survient après la
-livraison de ce courriel au niveau du récepteur. Conformément à la <a href="https://datatracker.ietf.org/doc/html/rfc8098">RFC
-8098</a>, ce MDN doit :</p>
+<p>Le MDN (Message Disposition Notification), défini par la <a href="https://datatracker.ietf.org/doc/html/rfc8098">RFC 8098</a>, permet de notifier l’émetteur d’un courriel du traitement de ce courriel par son destinataire. Il est produit conformément à cette RFC, qui en fixe la structure et les conditions d’émission (<a href="https://datatracker.ietf.org/doc/html/rfc8098#section-2.1">§2.1</a>) : en particulier, un MDN ne peut être émis que si le courriel reçu porte un entête <code class="language-plaintext highlighter-rouge">Disposition-Notification-To</code>.</p>
 
-<ul>
-  <li>
-    <p>Être lisible par un humain et par une machine,</p>
-  </li>
-  <li>
-    <p>Fournir suffisamment d’informations pour permettre à l’émetteur du
-message d’associer sans ambiguïté le MDN au message
-initialement envoyé et à l’adresse du récepteur initial au nom
-duquel le MDN a été produit,</p>
-  </li>
-  <li>
-    <p>Être structuré conformément à la <a href="https://datatracker.ietf.org/doc/html/rfc5322">RFC 5322</a> et la <a href="https://datatracker.ietf.org/doc/html/rfc8098">RFC 8098</a>,</p>
-  </li>
-</ul>
-
-<p>L’envoi du MDN à l’expéditeur du courriel initial est
-conditionné par la présence d’un entête <code class="language-plaintext highlighter-rouge">Disposition-Notification-To</code> au
-niveau du courriel expédié. D’autres informations peuvent également être
-fournies en utilisant les entêtes <code class="language-plaintext highlighter-rouge">Original-Recipient</code> et
-<code class="language-plaintext highlighter-rouge">Disposition-Notification-Options</code>.</p>
-
-<p>La <a href="https://datatracker.ietf.org/doc/html/rfc8098">RFC 8098</a> précise qu’un MDN ne devrait pas être renvoyé
-automatiquement par le récepteur du courriel dans le cas où l’entête
-<code class="language-plaintext highlighter-rouge">Disposition-Notification-To</code> diffère de l’adresse précisée dans l’entête
-<code class="language-plaintext highlighter-rouge">Return-Path</code> du courriel envoyé, ceci afin d’éviter une transmission de
-messages en boucle. Dans ce cas l’envoi du MDN nécessite une
-confirmation de l’utilisateur.</p>
+<blockquote class="stu-note">
+    <p>
+    La <a href="https://datatracker.ietf.org/doc/html/rfc8098">RFC 8098</a> demeure la référence pour la structure du MDN ; le présent volet se limite à préciser les informations que le MDN doit véhiculer pour permettre son traitement automatisé.
+    </p>
+</blockquote>
 
 <h3 id="éligibilité-au-mécanisme-mdn">Éligibilité au mécanisme MDN</h3>
 
@@ -304,12 +277,6 @@ confirmation de l’utilisateur.</p>
 
 <p>Le référentiel précise l’usage attendu du mécanisme : il « permet de savoir que le message a bien été reçu par le destinataire et quel traitement il a effectué lors de la réception du message : lecture, intégration des pièces jointes dans le système cible ». L’emploi que le présent volet en fait — rendre compte de l’intégration du document dans le DPI — relève donc de ce que le socle prévoit.</p>
 
-<blockquote class="stu-note">
-    <p>
-    <b>Point d'attention :</b> la production d'un MDN n'est donc pas garantie sur l'ensemble de la chaîne. Dans le cas d'usage décrit par ce volet, le courriel parvient à la BAL applicative après un transfert depuis la BAL organisationnelle du service destinataire. Si ce transfert est réalisé au moyen d'un webmail ou d'un client de messagerie standard — hors du périmètre de ce référentiel — rien ne garantit que l'entête <code>Disposition-Notification-To</code> soit positionné sur le courriel transféré. Or, sans cet entête, aucun MDN ne peut être émis en retour. C'est pour cette situation que le volet prévoit le <a href="struct-email-standard.html">courriel standard</a>.
-    </p>
-</blockquote>
-
 <h3 id="objet-du-mdn">Objet du MDN</h3>
 
 <p>Dans le cas d’un MDN en erreur, l’objet du MDN doit être précisé
@@ -319,10 +286,10 @@ de la façon suivante : <code class="language-plaintext highlighter-rouge">[KO 
 
 <h3 id="structure-du-corps-du-mdn">Structure du corps du MDN</h3>
 
-<p>Le MDN est de type « multipart/report » :
+<p>Le MDN est de type <code class="language-plaintext highlighter-rouge">multipart/report</code> (<a href="https://datatracker.ietf.org/doc/html/rfc6522#section-3">RFC 6522</a>) :
 <code class="language-plaintext highlighter-rouge">Content-Type: multipart/report; report-type=disposition-notification; boundary="&lt;frontière&gt;"</code></p>
 
-<p>La <a href="https://datatracker.ietf.org/doc/html/rfc6522#section-3">RFC 6522 §3</a> décrit deux ou trois parties, dans cet ordre, dont le rôle est fixé :</p>
+<p>Dans le contexte du présent volet, il comporte les trois parties suivantes :</p>
 
 <table>
   <thead>
@@ -330,7 +297,6 @@ de la façon suivante : <code class="language-plaintext highlighter-rouge">[KO 
       <th>#</th>
       <th><code class="language-plaintext highlighter-rouge">Content-Type</code></th>
       <th>Rôle</th>
-      <th>Statut</th>
     </tr>
   </thead>
   <tbody>
@@ -338,26 +304,21 @@ de la façon suivante : <code class="language-plaintext highlighter-rouge">[KO 
       <td>1</td>
       <td><code class="language-plaintext highlighter-rouge">text/plain</code></td>
       <td>Texte lisible par un être humain</td>
-      <td>requise</td>
     </tr>
     <tr>
       <td>2</td>
       <td><code class="language-plaintext highlighter-rouge">message/disposition-notification</code></td>
       <td>Compte rendu exploitable par une machine</td>
-      <td>requise</td>
     </tr>
     <tr>
       <td>3</td>
       <td><code class="language-plaintext highlighter-rouge">message/rfc822</code></td>
       <td>Courriel d’origine : ses entêtes, son corps et ses pièces jointes</td>
-      <td>optionnelle pour la RFC 6522, requise par le présent volet</td>
     </tr>
   </tbody>
 </table>
 
 <p>Ces trois parties répondent à trois besoins distincts : la première permet à un utilisateur de comprendre ce qui s’est passé, la deuxième permet à la PFI réceptrice de traiter la notification sans intervention humaine, et la troisième lui restitue le courriel d’origine, sans lequel elle ne pourrait ni identifier le document concerné ni le soumettre à nouveau après correction.</p>
-
-<p>La RFC 6522 ne traite pas le cas de parties supplémentaires : elle ne les interdit pas, mais le traitement qu’un outillage MDN leur appliquerait n’est pas spécifié.</p>
 
 <blockquote class="stu-note">
     <p>
@@ -370,65 +331,39 @@ de la façon suivante : <code class="language-plaintext highlighter-rouge">[KO 
 <p>Cette partie contient du texte lisible par un être humain. Dans le contexte du présent volet, ce texte doit au moins contenir, en cas d’erreur, le code et le libellé de l’erreur retournés par le CONSOMMATEUR.</p>
 
 <ul>
-  <li>Par exemple : « <code class="language-plaintext highlighter-rouge">Le message ci-dessous n’a pas pu être intégré automatiquement dans le DPI pour la raison suivante : &lt;libellé de l’erreur&gt;</code> ».</li>
+  <li>Par exemple : « <code class="language-plaintext highlighter-rouge">Le message ci-dessous n’a pas pu être intégré automatiquement dans le DPI pour la raison suivante : &lt;code erreur&gt; &lt;libellé de l’erreur&gt;</code> ».</li>
 </ul>
 
 <h4 id="deuxième-partie--compte-rendu-exploitable-par-une-machine">Deuxième partie : compte rendu exploitable par une machine</h4>
 
-<p>Cette partie est conforme au type de contenu message/disposition-notification constitué de différents champs d’entête formatés selon la <a href="https://datatracker.ietf.org/doc/html/rfc5322">RFC 5322</a>. Parmi ces champs, « <code class="language-plaintext highlighter-rouge">Disposition:</code> » et « <code class="language-plaintext highlighter-rouge">Final-Recipient:</code> » sont obligatoires :</p>
+<p>Cette partie, de type <code class="language-plaintext highlighter-rouge">message/disposition-notification</code>, est construite conformément à la <a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3">RFC 8098 §3</a>. Dans le contexte du présent volet, ses champs sont renseignés comme suit :</p>
 
 <ul>
   <li>
-    <p>Le champ « <code class="language-plaintext highlighter-rouge">Disposition:</code> » rend compte du résultat du traitement du courriel par le destinataire (voir le détail ci-dessous) :</p>
+    <p>Le champ « <code class="language-plaintext highlighter-rouge">Disposition:</code> » (<a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.6">RFC 8098 §3.2.6</a>) rend compte du résultat du traitement du courriel :</p>
 
     <ul>
       <li>
-        <p>En cas de succès, le contenu du champ « <code class="language-plaintext highlighter-rouge">Disposition:</code> » prend la valeur : « <code class="language-plaintext highlighter-rouge">Disposition: automatic-action/MDN-sent-automatically; processed</code> »</p>
+        <p>En cas de succès : « <code class="language-plaintext highlighter-rouge">Disposition: automatic-action/MDN-sent-automatically; processed</code> »</p>
       </li>
       <li>
-        <p>En cas d’erreur, le contenu du champ « <code class="language-plaintext highlighter-rouge">Disposition:</code> » prend la valeur : « <code class="language-plaintext highlighter-rouge">Disposition: automatic-action/MDN-sent-automatically; processed/error</code> », la chaîne d’erreur étant portée par le champ « <code class="language-plaintext highlighter-rouge">Error:</code> » décrit ci-dessous</p>
+        <p>En cas d’erreur : « <code class="language-plaintext highlighter-rouge">Disposition: automatic-action/MDN-sent-automatically; processed/error</code> »</p>
       </li>
     </ul>
   </li>
   <li>
-    <p>Le champ « <code class="language-plaintext highlighter-rouge">Error:</code> » (<a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.7">RFC 8098 §3.2.7</a>) porte le texte de diagnostic associé au modificateur <code class="language-plaintext highlighter-rouge">error</code>. En cas d’erreur, il est obligatoire et reprend la chaîne d’erreur retournée par le CONSOMMATEUR dans le segment <code class="language-plaintext highlighter-rouge">ERR</code> de son accusé de réception, qui porte au minimum <code class="language-plaintext highlighter-rouge">code erreur^libellé erreur</code>.</p>
+    <p>Le champ « <code class="language-plaintext highlighter-rouge">Error:</code> » (<a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.7">RFC 8098 §3.2.7</a>) est obligatoire en cas d’erreur. Il reprend la chaîne d’erreur retournée par le CONSOMMATEUR dans le segment <code class="language-plaintext highlighter-rouge">ERR</code> de son accusé de réception, qui porte au minimum <code class="language-plaintext highlighter-rouge">code erreur^libellé erreur</code>.</p>
   </li>
   <li>
-    <p>Le champ « <code class="language-plaintext highlighter-rouge">Final-Recipient:</code> » qui correspond à l’adresse du destinataire pour lequel le MDN est émis. La valeur de ce champ peut être différente de l’adresse initialement fournie par l’émetteur du courriel, notamment en cas de transfert du courriel initial par le destinataire.</p>
+    <p>Le champ « <code class="language-plaintext highlighter-rouge">Original-Message-ID:</code> » (<a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.5">RFC 8098 §3.2.5</a>) est obligatoire : il permet à la PFI réceptrice de rapprocher le MDN du courriel d’origine.</p>
+  </li>
+  <li>
+    <p>Les champs « <code class="language-plaintext highlighter-rouge">Final-Recipient:</code> » et « <code class="language-plaintext highlighter-rouge">Original-Recipient:</code> » sont renseignés selon le tableau ci-dessous.</p>
+  </li>
+  <li>
+    <p>Le champ « <code class="language-plaintext highlighter-rouge">Reporting-UA:</code> » (<a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.1">RFC 8098 §3.2.1</a>) identifie la PFI qui a produit le MDN.</p>
   </li>
 </ul>
-
-<p>Dans le contexte de ce volet, de façon à permettre le traitement du MDN par la PFI réceptrice, le MDN devra également préciser les champs suivants :</p>
-
-<ul>
-  <li>
-    <p>Le champ identifiant du courriel d’origine « <code class="language-plaintext highlighter-rouge">Original-Message-ID:</code> » qui indique l’identifiant du courriel initial pour lequel le MDN est produit. Il est obtenu à partir de l’entête <code class="language-plaintext highlighter-rouge">Message-ID</code> du courriel initial.</p>
-  </li>
-  <li>
-    <p>Le champ « <code class="language-plaintext highlighter-rouge">Original-Recipient:</code> » qui indique l’adresse du destinataire du courriel d’origine, telle que spécifiée par l’expéditeur du courriel pour lequel le MDN est émis. Cette valeur est obtenue à partir de l’entête <code class="language-plaintext highlighter-rouge">Original-Recipient</code> du courriel pour lequel le MDN est généré.</p>
-  </li>
-</ul>
-
-<p>Le champ « <code class="language-plaintext highlighter-rouge">Reporting-UA:</code> », qui identifie l’agent ayant produit le MDN, n’est pas obligatoire, mais la <a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.1">RFC 8098 §3.2.1</a> recommande (<code class="language-plaintext highlighter-rouge">SHOULD</code>) de le renseigner sauf configuration contraire. Dans le contexte de ce volet, il identifie la PFI qui a produit le MDN.</p>
-
-<blockquote class="stu-note">
-    <p>
-    <b>Point d'attention :</b> les versions antérieures du présent volet plaçaient la chaîne d'erreur dans le modificateur du champ <code>Disposition:</code>, sous la forme « <code>processed/Error: code erreur^libellé erreur</code> ». Cette valeur n'est pas conforme à la grammaire de la <a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.6">RFC 8098 §3.2.6</a>, qui n'admet après le <code>/</code> qu'un modificateur unique : le littéral <code>error</code>, ou un <code>extension-disposition-modifier</code> défini comme un <code>Atom</code> au sens de la <a href="https://datatracker.ietf.org/doc/html/rfc5322#section-3.2.3">RFC 5322 §3.2.3</a> — jeton qui n'admet ni les espaces ni le caractère « : ». Le texte de diagnostic dispose, quant à lui, de son propre champ <code>Error:</code>.
-    <br /><br />
-    Cette valeur contredisait au demeurant la grammaire que ces mêmes versions rappelaient par ailleurs (<code>disposition-modifier = "error"</code>). La présente version corrige cette incohérence <b>sans rien changer à la chaîne d'erreur elle-même</b>, qui est seulement déplacée dans le champ prévu pour elle :
-    </p>
-    <pre>Valeur prescrite par les versions antérieures :
-Disposition: automatic-action/MDN-sent-automatically; processed/Error: 902^Identifiant de patient inconnu^applicationErrorCondition| E^Error^errorSeverity
-
-Valeur prescrite par la présente version :
-Disposition: automatic-action/MDN-sent-automatically; processed/error
-Error: 902^Identifiant de patient inconnu^applicationErrorCondition| E^Error^errorSeverity</pre>
-    <p>
-    <b>Conséquence pour les implémentations :</b> un système qui extrayait la chaîne d'erreur du champ <code>Disposition:</code> doit désormais la lire dans le champ <code>Error:</code>. En contrepartie, le MDN devient interprétable par un outillage MDN standard, qui ne pouvait pas analyser le modificateur de la forme précédente et n'en retenait que « <code>processed</code> ».
-    <br /><br />
-    La <a href="https://datatracker.ietf.org/doc/html/rfc8098">RFC 8098</a> demeure la référence pour la structure du MDN ; le présent volet se limite à préciser les informations que le MDN doit véhiculer pour permettre son traitement automatisé.
-    </p>
-</blockquote>
 
 <h5 id="valeurs-attendues-des-champs-dadressage">Valeurs attendues des champs d’adressage</h5>
 
@@ -455,90 +390,16 @@ Error: 902^Identifiant de patient inconnu^applicationErrorCondition| E^Error^err
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">Original-Recipient:</code></td>
-      <td>L’adresse du destinataire telle que spécifiée par l’expéditeur du courriel traité, soit la BAL applicative</td>
+      <td>Lorsque ce champ est présent : l’adresse du destinataire telle que spécifiée par l’expéditeur du courriel traité, soit la BAL applicative</td>
       <td><a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.3">RFC 8098 §3.2.3</a></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">Final-Recipient:</code></td>
-      <td>L’adresse du destinataire pour lequel le MDN est émis, soit la BAL applicative ; elle peut différer de la précédente en cas de transfert</td>
+      <td>L’adresse du destinataire pour lequel le MDN est émis, soit la BAL applicative</td>
       <td><a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.4">RFC 8098 §3.2.4</a></td>
     </tr>
   </tbody>
 </table>
-
-<h5 id="détail-du-champ-disposition">Détail du champ « <code class="language-plaintext highlighter-rouge">Disposition:</code> »</h5>
-
-<p>Ce champ permet de préciser :</p>
-
-<ul>
-  <li>
-    <p>Le mode de traitement effectué sur le courriel : traitement automatique ou manuel</p>
-
-    <ul>
-      <li>
-        <p><code class="language-plaintext highlighter-rouge">action-mode = "manual-action" / "automatic-action"</code>.</p>
-
-        <ul>
-          <li>
-            <p>La valeur « manual-action » indique que le traitement du courriel résulte d’une action explicite réalisée par l’utilisateur.</p>
-          </li>
-          <li>
-            <p>La valeur « automatic-action » indique que le traitement du courriel a été réalisé de façon automatique.</p>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>Le mode d’envoi du MDN</p>
-
-    <ul>
-      <li>
-        <p><code class="language-plaintext highlighter-rouge">sending-mode = "MDN-sent-manually" / "MDN-sent-automatically"</code>.</p>
-
-        <ul>
-          <li>
-            <p>La valeur « MDN-sent-manually » est utilisée lorsque l’utilisateur a donné son autorisation explicite d’envoyer un MDN particulier.</p>
-          </li>
-          <li>
-            <p>La valeur « MDN-sent-automatically » permet de configurer l’envoi automatique des MDN.</p>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>Le type de traitement réalisé</p>
-
-    <ul>
-      <li>
-        <p><code class="language-plaintext highlighter-rouge">disposition-type = "displayed" / "dispatched" / "processed" / "deleted"</code></p>
-
-        <ul>
-          <li>
-            <p>displayed : le courriel a été affiché dans la BAL du destinataire</p>
-          </li>
-          <li>
-            <p>dispatched : le courriel a été dispatché (transféré, imprimé, faxé) sans que celui-ci ait nécessairement été affiché au destinataire.</p>
-          </li>
-          <li>
-            <p>processed : le message a été traité sans être affiché au destinataire. Il est possible qu’il n’y ait pas d’utilisateur associé à la BAL.</p>
-          </li>
-          <li>
-            <p>deleted : le courriel a été supprimé. Le destinataire peut ne pas avoir visualisé le message ou peut l’avoir visualisé.</p>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>Le cas échéant, l’erreur rencontrée</p>
-
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">disposition-modifier = "error"</code></li>
-    </ul>
-  </li>
-</ul>
 
 <h4 id="troisième-partie--courriel-dorigine">Troisième partie : courriel d’origine</h4>
 
@@ -576,22 +437,24 @@ Content-Type: text/plain; charset="UTF-8"
 Content-Transfer-Encoding: 8bit
 
 Le document n’a pas pu être intégré.
-Le système a retourné l'erreur 902^Identifiant de patient inconnu^applicationErrorCondition| E^Error^errorSeverity
+Le système a retourné l'erreur 902^Identifiant patient inconnu^applicationErrorCondition| E^Error^errorSeverity
 
 --RAA14128.773615765
 Content-Type: message/disposition-notification
 
-Reporting-UA: pfi.chb.mssante.fr; PFI de l'établissement-B
+Reporting-UA: pfi.chb.mssante.fr; PFI etablissement-B
 Original-Recipient: rfc822;serviceY_auto@chb.mssante.fr
 Final-Recipient: rfc822;serviceY_auto@chb.mssante.fr
 Original-Message-ID: &lt;20240219230100.23456@chb.mssante.fr&gt;
 Disposition: automatic-action/MDN-sent-automatically; processed/error
-Error: 902^Identifiant de patient inconnu^applicationErrorCondition| E^Error^errorSeverity
+Error: 902^Identifiant patient inconnu^applicationErrorCondition| E^Error^errorSeverity
 
 --RAA14128.773615765
 Content-Type: message/rfc822
 Content-Transfer-Encoding: 8bit
 
+Return-Path: &lt;serviceY@chb.mssante.fr&gt;
+Original-Recipient: rfc822;serviceY_auto@chb.mssante.fr
 Date: Mon, 19 Feb 2024 23:01:00 +0100 (CET)
 From: serviceY@chb.mssante.fr
 To: serviceY_auto@chb.mssante.fr
@@ -667,7 +530,7 @@ Ici apparaît le fichier 20220531_CR d'imagerie médicale_CORSE_FIGATELLIX.pdf e
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Nov 5, 2026 16:37+0000">2026-11-05</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.hl7v2.fr.trans-cda-mss#1.1.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Nov 5, 2026 18:24+0000">2026-11-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
