@@ -43,4 +43,4 @@ Generic: line 0, col 0, Warning - The HTML fragment 'globals-table.xhtml' is not
 /home/runner/work/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/igSource/fsh-generated/resources/ImplementationGuide-ans.hl7v2.fr.trans-cda-mss.json: line 0, col 0, Info - The resource ImplementationGuide/ans.hl7v2.fr.trans-cda-mss could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html) (BUSINESSRULE)
 
 err = 4, warn = 34, info = 1, broken links = 1
-IG Publisher Version: 3.0.2
+IG Publisher Version: 3.0.4

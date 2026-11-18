@@ -22,7 +22,7 @@
     <ul>
       <li>
 
-          IG &copy; 2020+ Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris.  Package ans.hl7v2.fr.trans-cda-mss#1.1.3 based on FHIR 4.0.1. Generated 2026-11-05
+          IG &copy; 2020+ Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris.  Package ans.hl7v2.fr.trans-cda-mss#1.1.3 based on FHIR 4.0.1. Generated 2026-11-18
           
           
             Liens: Table des matières  |
@@ -81,7 +81,7 @@ Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté - ve
 
           IG &copy; 2020+           <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>
 .  Package ans.hl7v2.fr.trans-cda-mss#1.1.3 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
-. Generated           <span title="Thu, Nov 5, 2026 18:44+0000">2026-11-05</span>
+. Generated           <span title="Wed, Nov 18, 2026 15:57+0000">2026-11-18</span>
 
                     <br/>
 
@@ -111,7 +111,7 @@ Volet Transmission au LPS de documents CDA provenant d'un courriel MSSanté - ve
 
           IG &copy; 2020+           <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>
 .  Package ans.hl7v2.fr.trans-cda-mss#1.1.3 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
-. Generated           <span title="Thu, Nov 5, 2026 18:44+0000">2026-11-05</span>
+. Generated           <span title="Wed, Nov 18, 2026 15:57+0000">2026-11-18</span>
 
                     <br/>
 
@@ -191,14 +191,12 @@ mise en conformité du champ                   <code class="language-plaintext h
  avec la                   <a href="https://datatracker.ietf.org/doc/html/rfc8098#section-3.2.6">RFC 8098</a>
  : en cas d’erreur, la valeur devient                   <code class="language-plaintext highlighter-rouge">processed/error</code>
  et la chaîne d’erreur, inchangée, est portée par le champ                   <code class="language-plaintext highlighter-rouge">Error:</code>
-, obligatoire en cas d’erreur —                   <strong>
-un système qui lisait la chaîne d’erreur dans le champ <code class="language-plaintext highlighter-rouge">Disposition:</code> doit désormais la lire dans le champ <code class="language-plaintext highlighter-rouge">Error:</code>                  </strong>
- ; ce champ n’admettant que des caractères US-ASCII, le libellé y est écrit sans accents, ce qui concerne les codes 901, 903 et 904
+, obligatoire en cas d’erreur; ce champ n’admettant que des caractères US-ASCII, le libellé y est écrit sans accents (concerne les codes 901, 903 et 904)
                 </li>
 
                           <li>
 pièces jointes du courriel d’origine restituées a minima dans la troisième partie                   <code class="language-plaintext highlighter-rouge">message/rfc822</code>
-, qui porte le courriel d’origine dans son intégralité —                   <strong>elles doivent désormais y figurer, et un système qui les lisait au premier niveau du MDN doit les lire dans cette partie</strong>
+, qui porte le courriel d’origine dans son intégralité
                 </li>
 
                           <li>
@@ -228,7 +226,7 @@ allègement des passages reprenant le contenu des RFC 8098 et 6522, remplacés p
 
                           <li>
 pièces jointes du courriel d’origine restituées a minima dans la partie                   <code class="language-plaintext highlighter-rouge">message/rfc822</code>
-, qui porte le courriel d’origine dans son intégralité —                   <strong>elles doivent désormais y figurer, et un système qui les lisait au premier niveau de la notification doit les lire dans cette partie</strong>
+, qui porte le courriel d’origine dans son intégralité
                 </li>
 
                           <li>ajout d’un point d’attention sur l’accès aux documents selon le client de messagerie</li>
@@ -418,7 +416,7 @@ correction typos/cohérence pour le type message en MSH-9.3 dans les           <
           <a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2">github.com</a>
         </td>
         <td>
-          <a name="l687">​</a>
+          <a name="l675">​</a>
           <a href="volume2.html#document-masqué-aux-professionnels-de-santé">Document Masqué aux professionnels de Santé</a>
  : métadonnée de masquage aux PS : Ajout de la valeur manquante Y (YES) (          <a href="https://github.com/ansforge/IG-hl7v2-volet-trans-lps-doc-cda-courriel-mss/pull/2">2</a>
 )

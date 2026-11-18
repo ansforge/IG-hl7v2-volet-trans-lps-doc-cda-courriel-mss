@@ -1,48 +1,48 @@
 {
-  "date" : "Thu, 05 Nov, 2026 18:44:22 +0000",
+  "date" : "Wed, 18 Nov, 2026 15:57:05 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [{
     "name" : "/fsh-generated/resources/ImplementationGuide-ans.hl7v2.fr.trans-cda-mss.json",
     "size" : 3441,
     "processes" : [{
       "activity" : "load",
-      "start" : 39,
+      "start" : 19,
       "length" : 15
     },
     {
-      "activity" : "checkR4R4B",
-      "start" : 40,
-      "length" : 12
-    },
-    {
-      "activity" : "generateNarratives",
-      "start" : 40,
-      "length" : 44
-    },
-    {
-      "activity" : "validate",
-      "start" : 40,
-      "length" : 3749
-    },
-    {
-      "activity" : "scanForUsageStats",
-      "start" : 44,
+      "activity" : "load",
+      "start" : 19,
       "length" : 1
     },
     {
+      "activity" : "checkR4R4B",
+      "start" : 20,
+      "length" : 10
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 20,
+      "length" : 39
+    },
+    {
+      "activity" : "validate",
+      "start" : 20,
+      "length" : 6140
+    },
+    {
       "activity" : "generate1",
-      "start" : 44,
-      "length" : 75
+      "start" : 27,
+      "length" : 35
     },
     {
       "activity" : "generate2",
-      "start" : 48,
-      "length" : 49
+      "start" : 29,
+      "length" : 43
     },
     {
       "activity" : "generateValidationPack",
-      "start" : 53,
-      "length" : 2
+      "start" : 33,
+      "length" : 1
     }]
   },
   {
@@ -50,7 +50,7 @@
     "size" : 3883,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 48,
+      "start" : 29,
       "length" : 1
     }]
   },
@@ -60,20 +60,15 @@
   },
   {
     "name" : "/input/pagecontent/autres_ressources.md",
-    "size" : 94,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 48,
-      "length" : 1
-    }]
+    "size" : 94
   },
   {
     "name" : "/input/pagecontent/profils-messages.md",
     "size" : 69420,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 48,
-      "length" : 7
+      "start" : 29,
+      "length" : 6
     }]
   },
   {
@@ -81,8 +76,8 @@
     "size" : 3698,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 48,
-      "length" : 3
+      "start" : 29,
+      "length" : 2
     }]
   },
   {
@@ -94,21 +89,26 @@
     "size" : 7445,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 48,
-      "length" : 2
+      "start" : 29,
+      "length" : 1
     }]
   },
   {
     "name" : "/input/pagecontent/evenements-declenchants.md",
-    "size" : 1746
+    "size" : 1746,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 29,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/pagecontent/meta-dmp-mss.md",
     "size" : 2870,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 48,
-      "length" : 2
+      "start" : 29,
+      "length" : 1
     }]
   },
   {
@@ -120,7 +120,7 @@
     "size" : 11965,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 48,
+      "start" : 29,
       "length" : 3
     }]
   },
@@ -137,7 +137,7 @@
     "size" : 15078,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 48,
+      "start" : 29,
       "length" : 1
     }]
   },
@@ -146,8 +146,8 @@
     "size" : 13750,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 48,
-      "length" : 3
+      "start" : 29,
+      "length" : 2
     }]
   },
   {
@@ -163,7 +163,7 @@
     "size" : 7503,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 48,
+      "start" : 29,
       "length" : 1
     }]
   },
@@ -180,17 +180,17 @@
     "size" : 1802,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 48,
+      "start" : 29,
       "length" : 1
     }]
   },
   {
     "name" : "/input/pagecontent/change-log.md",
-    "size" : 49588,
+    "size" : 49180,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 48,
-      "length" : 8
+      "start" : 29,
+      "length" : 6
     }]
   },
   {
@@ -198,8 +198,8 @@
     "size" : 6599,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 48,
-      "length" : 2
+      "start" : 29,
+      "length" : 1
     }]
   },
   {
@@ -214,19 +214,14 @@
     "name" : "/input/pagecontent/volume2.md",
     "size" : 908,
     "processes" : [{
-      "activity" : "scan",
-      "start" : 40,
+      "activity" : "generate2",
+      "start" : 29,
       "length" : 1
     }]
   },
   {
     "name" : "/input/pagecontent/standards.md",
-    "size" : 2050,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 48,
-      "length" : 1
-    }]
+    "size" : 2050
   },
   {
     "name" : "/input/pagecontent/identification-flux.md",
@@ -250,16 +245,16 @@
   },
   {
     "name" : "/input/images/image14.png",
-    "size" : 61448,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 48,
-      "length" : 1
-    }]
+    "size" : 61448
   },
   {
     "name" : "/input/images/image17.png",
-    "size" : 15568
+    "size" : 15568,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 29,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/images/image16.png",
@@ -281,8 +276,8 @@
     "name" : "/input/images/image7.png",
     "size" : 166901,
     "processes" : [{
-      "activity" : "generate2",
-      "start" : 48,
+      "activity" : "checkR4R4B",
+      "start" : 20,
       "length" : 1
     }]
   },
@@ -296,7 +291,12 @@
   },
   {
     "name" : "/input/images/image20.png",
-    "size" : 145118
+    "size" : 145118,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 29,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/images/image19.png",
@@ -304,12 +304,7 @@
   },
   {
     "name" : "/input/images/image10.png",
-    "size" : 176965,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 48,
-      "length" : 1
-    }]
+    "size" : 176965
   },
   {
     "name" : "/input/images/image8.png",
