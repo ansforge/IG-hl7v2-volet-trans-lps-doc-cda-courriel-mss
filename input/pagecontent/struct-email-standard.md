@@ -25,7 +25,7 @@ de la façon suivante afin de faciliter la lecture et le traitement de la notifi
 
 <blockquote class="stu-note">
     <p>
-    <b>Point d'attention :</b> le courriel d'origine étant restitué dans une partie <code>message/rfc822</code>, l'accès aux documents qu'il contient suppose de l'ouvrir. Le traitement de ce type de partie varie selon les clients de messagerie : certains l'affichent et donnent accès à ses pièces jointes en une manipulation, d'autres ne proposent que le téléchargement d'un fichier <code>.eml</code>, à ouvrir avec un autre outil. Cette annexe couvrant précisément les situations où la notification est reçue au moyen d'un webmail ou d'un client de messagerie standard, hors du périmètre du <a href="https://esante.gouv.fr/espace_documentation/mssante-clients-de-messageries-securisees-de-sante/referentiel-socle-mssante-2">Référentiel socle MSSanté #2</a>, ce point mérite d'être vérifié à l'intégration.
+    <b>Point d'attention :</b> le courriel d'origine étant restitué dans une partie <code>message/rfc822</code>, son affichage dépend du client de messagerie qui reçoit la notification : il peut être présenté comme un fichier joint, voire n'être proposé qu'au téléchargement, sous la forme d'un fichier <code>.eml</code>. Une personne chargée de reprendre l'erreur peut donc devoir ouvrir le courriel d'origine pour accéder aux documents. Ce point mérite d'être vérifié à l'intégration.
     </p>
 </blockquote>
 
