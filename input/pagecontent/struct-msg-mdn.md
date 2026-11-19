@@ -12,11 +12,7 @@ Pour MSSanté, le MDN est prescrit par le [Référentiel socle MSSanté #2](http
 
 -   `ECO.2.3.2` : le client émetteur doit pouvoir demander un accusé de lecture ;
 
--   `ECO.3.1.6` : le client destinataire doit retourner un MDN lorsque le message reçu le demande.
-
-Ce référentiel s'applique aux logiciels métier des professionnels habilités, pour des échanges manuels comme automatisés, mais « ne s'applique donc pas aux interfaces webmail ou clients de messageries standards (type Outlook ou Thunderbird) ».
-
-Le référentiel précise l'usage attendu du mécanisme : il « permet de savoir que le message a bien été reçu par le destinataire et quel traitement il a effectué lors de la réception du message : lecture, intégration des pièces jointes dans le système cible ». L'emploi que le présent volet en fait — rendre compte de l'intégration du document dans le DPI — relève donc de ce que le socle prévoit.
+-   `ECO.3.1.6` : le client destinataire doit permettre de retourner un MDN lorsque le message reçu le demande.
 
 ### Objet du MDN
 
