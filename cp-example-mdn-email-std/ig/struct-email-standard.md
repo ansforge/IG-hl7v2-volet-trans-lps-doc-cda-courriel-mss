@@ -62,7 +62,7 @@ Voici les détails de l’erreur rencontrée :
 - Code d’erreur : 902
 
 Vous trouverez en pièce jointe le courriel d'origine, avec son contenu et
-ses fichiers (archive IHE_XDM.zip et compte rendu au format PDF).
+ses fichiers (archive IHE_XDM.zip et PDF associés).
 
 Veuillez vérifier les informations fournies et soumettre à nouveau les documents après correction.
 Si le problème persiste, contactez notre service technique.
