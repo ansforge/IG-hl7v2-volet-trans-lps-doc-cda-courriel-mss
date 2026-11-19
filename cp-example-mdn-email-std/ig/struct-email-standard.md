@@ -40,8 +40,6 @@ Il est fourni à titre **illustratif et n’a pas valeur normative** : les exige
 
 On notera que le courriel d’origine ne porte pas d’entête `Disposition-Notification-To` : c’est précisément la raison pour laquelle la notification prend la forme d’un courriel standard et non d’un [MDN](struct-msg-mdn.md).
 
-Les entêtes d’un courriel ne peuvent porter que des caractères US-ASCII ([RFC 5322](https://datatracker.ietf.org/doc/html/rfc5322)) : dans un courriel réel, l’entête `Subject:` doit être encodé selon la [RFC 2047](https://datatracker.ietf.org/doc/html/rfc2047) et les paramètres `name` et `filename` selon la [RFC 2231](https://datatracker.ietf.org/doc/html/rfc2231). Ces formes ne sont pas reprises dans l’exemple, pour en préserver la lisibilité.
-
 ```
 Date: Tue, 20 Feb 2024 00:19:00 +0100 (CET)
 From: serviceY_auto@chb.mssante.fr
